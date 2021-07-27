@@ -24,7 +24,6 @@ body {
     color: var(--black);
 }
 
-
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
@@ -33,7 +32,8 @@ a, a:hover, a:focus, a:active {
 
 /* --- Navbar --- */
 nav {
-    border-bottom: 1px solid #333333;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--black);
 
 }
 #nav-logo {
@@ -53,6 +53,35 @@ nav {
 
 .nav-icon {
     color: var(--black);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--black);
+}
+
+.footer-title {
+    font-family: var(--title-font);
+    color: var(--yellow);
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.footer-text {
+    color: var(--white);
+    line-height: revert;
+}
+
+#footer-end {
+    font-family: var(--title-font);
+    color: var(--yellow);
+    font-size: 1rem;
+    padding: 20px 15px 10px 15px;
+}
+
+.footer-icons {
+    color: var(--yellow);
+    font-size: 1.7rem;
 }
 
 /* --- Media Queries -- */
