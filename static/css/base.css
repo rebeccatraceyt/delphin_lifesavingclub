@@ -1,3 +1,41 @@
+/* --- Font Imports --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Londrina+Solid&display=swap');
+
+
+/* --- Root Variables --- */
+
+:root {
+    /* Font Variables */
+    --body-font: 'Lato', sans-serif;
+    --title-font: 'Londrina Solid', cursive;
+
+    /* Colour Variables */
+    --white: #ffffff;
+    --yellow: #E5DC3F;
+    --red: #B8060B;
+    --black: #0A0A0A;
+    --blue: #BBF2ED;
+}
+
+/* --- Special Styling --- */
+body {
+    font-family: var(--body-font);
+    color: var(--black);
+}
+
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* --- Navbar --- */
+nav {
+    border-bottom: 1px solid #333333;
+
+}
 #nav-logo {
     margin-right: 0;
 }
@@ -5,4 +43,43 @@
 #nav-logo img {
     width: auto;
     height: 50px;
+}
+.nav-link, .dropdown-item {
+    font-size: 1.7rem;
+    font-family: var(--title-font);
+    color: var(--black);
+    letter-spacing: 1px;
+}
+
+.nav-icon {
+    color: var(--black);
+}
+
+/* --- Media Queries -- */
+
+/* Breakpoint on Tablet device */
+@media (min-width: 700px) and (max-width: 991px) {
+
+}
+
+/* Breakpoint on Larger Tablet device */
+@media (min-width: 992px) and (max-width: 1024px) {
+
+}
+
+/* Breakpoint on a Laptop Screen */
+@media (min-width: 1025px) {
+
+    /* -- Navbar -- */
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+
+    .nav-item:hover,
+    .nav-item:focus,
+    .nav-link i:hover,
+    .nav-link i:focus {
+        color: var(--red)
+    }
 }
