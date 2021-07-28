@@ -12,10 +12,10 @@ class ProductType(models.Model):
     friendly_name = models.CharField(max_length=254)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     def get_friendly_name(self):
-        return self.friendly_name
+        return str(self.friendly_name)
 
 
 # ------ Courses ------
@@ -28,7 +28,7 @@ class Time(models.Model):
     time = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.time
+        return str(self.time)
 
 
 class AgeRange(models.Model):
@@ -40,10 +40,10 @@ class AgeRange(models.Model):
     friendly_name = models.CharField(max_length=254)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     def get_friendly_name(self):
-        return self.friendly_name
+        return str(self.friendly_name)
 
 
 class Course(models.Model):
@@ -54,10 +54,10 @@ class Course(models.Model):
                                      null=True,
                                      blank=True,
                                      on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    lvl_age = models.CharField(max_length=254, default=0)
     age_range = models.ForeignKey('AgeRange',
                                   null=True,
                                   blank=True,
@@ -66,7 +66,7 @@ class Course(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 class CourseTime(models.Model):
@@ -79,7 +79,7 @@ class CourseTime(models.Model):
     stock_count = models.IntegerField(default=12)
 
     def __str__(self):
-        return self.stock_count
+        return str(self.stock_count)
 
 
 # ------ Apparel ------
@@ -92,7 +92,7 @@ class Size(models.Model):
     size = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.size
+        return str(self.size)
 
 
 class Category(models.Model):
@@ -108,10 +108,10 @@ class Category(models.Model):
     friendly_name = models.CharField(max_length=254)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     def get_friendly_name(self):
-        return self.friendly_name
+        return str(self.friendly_name)
 
 
 class Apparel(models.Model):
@@ -126,7 +126,6 @@ class Apparel(models.Model):
                                      null=True,
                                      blank=True,
                                      on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -139,7 +138,7 @@ class Apparel(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 class ApparelSize(models.Model):
@@ -149,7 +148,7 @@ class ApparelSize(models.Model):
     """
     size = models.ForeignKey(Size, on_delete=models.CASCADE)
     apparel = models.ForeignKey(Apparel, on_delete=models.CASCADE)
-    stock_count = models.IntegerField(default=12)
+    stock_count = models.IntegerField(default=30)
 
     def __str__(self):
-        return self.stock_count
+        return str(self.stock_count)

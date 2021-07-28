@@ -91,6 +91,7 @@ class TestCourseModel(TestCase):
         course = Course(name='test course',
                         description='test description',
                         price='90.00',
+                        lvl_age='3',
                         image='img.jpg',)
 
         # Save Test Course
@@ -103,6 +104,7 @@ class TestCourseModel(TestCase):
         self.assertEqual(course.name, "test course")
         self.assertEqual(course.description, "test description")
         self.assertEqual(course.price, "90.00")
+        self.assertEqual(course.lvl_age, "3")
         self.assertEqual(course.image, "img.jpg")
         self.assertEqual(course.product_type_id, 1)
         self.assertEqual(course.age_range_id, 1)
@@ -121,6 +123,7 @@ class TestCourseTimeModel(TestCase):
         course = Course.objects.create(name='test course',
                                        description='test description',
                                        price='90.00',
+                                       lvl_age='3',
                                        image='img.jpg',)
 
         # Create Test Stock Count
