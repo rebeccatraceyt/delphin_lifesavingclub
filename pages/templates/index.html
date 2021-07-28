@@ -1,6 +1,7 @@
+
 {% extends "base.html" %}
-{% block nav_home %}active{% endblock %}
 {% load static %}
+
 
 {% block content %}
     <div class="container-fluid">
@@ -19,6 +20,7 @@
                     </div>
                 </div>
             </div>
+            <hr class="divider">
 
             <!-- Home Content -->
             <div id="home-content" class="col-12">
@@ -29,7 +31,7 @@
                                 <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
                             </div>
                             <div class="col-12 home-btn">
-                                <a href="">Shop Apparel</a>
+                                <a class="btn-shadow" href="">Shop Apparel</a>
                             </div>
                         </div>
                     </div>
@@ -39,7 +41,7 @@
                                 <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
                             </div>
                             <div class="col-12 home-btn">
-                                <a href="">Shop Courses</a>
+                                <a class="btn-shadow" href="">Shop Courses</a>
                             </div>
                         </div>
                     </div>
