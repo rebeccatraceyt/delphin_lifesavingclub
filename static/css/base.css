@@ -23,12 +23,10 @@ body {
     font-family: var(--body-font);
     color: var(--black);
 }
-
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
-
 
 /* --- Navbar --- */
 nav {
@@ -39,7 +37,6 @@ nav {
 #nav-logo {
     margin-right: 0;
 }
-
 #nav-logo img {
     width: auto;
     height: 50px;
@@ -50,7 +47,6 @@ nav {
     color: var(--black);
     letter-spacing: 1px;
 }
-
 .nav-icon {
     color: var(--black);
 }
@@ -59,29 +55,89 @@ nav {
 footer {
     background-color: var(--black);
 }
-
 .footer-title {
     font-family: var(--title-font);
     color: var(--yellow);
     font-size: 2rem;
     padding-top: 10px;
 }
-
 .footer-text {
     color: var(--white);
     line-height: revert;
 }
-
 #footer-end {
     font-family: var(--title-font);
     color: var(--yellow);
     font-size: 1rem;
     padding: 20px 15px 10px 15px;
 }
-
 .footer-icons {
     color: var(--yellow);
     font-size: 1.7rem;
+}
+
+/* --- Home Page --- */
+#home-content {
+    padding: 5% 10%;
+    margin: 5% 0;
+}
+#home-hero {
+    background-image: url('../img/water-hero.png');
+    height: 92vh;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0 5%;
+}
+#home-logo {
+    margin: 5% auto;
+    padding: 5%;
+    max-width: 80%;
+    max-height: 80%;
+}
+#home-logo img {
+    width: 100%;
+    height: 100%;
+}
+#home-intro {
+    background-color: var(--black);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1.2rem;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 20px;
+}
+#home-intro h3 {
+    font-family: var(--title-font);
+    color: var(--yellow);
+
+}
+.home-link {
+    padding: 20px;
+}
+.home-img {
+    padding: 20px;
+}
+.home-img img {
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--black);
+}
+.home-btn a {
+    background-color: var(--black);
+    color: var(--yellow);
+    font-family: var(--title-font);
+    font-size: 2rem;
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+.home-btn a:hover, .home-btn a:focus {
+    background-color: var(--yellow);
+    color: var(--black);
 }
 
 /* --- Media Queries -- */
@@ -89,6 +145,24 @@ footer {
 /* Breakpoint on Tablet device */
 @media (min-width: 700px) and (max-width: 991px) {
 
+    /* -- Home Page -- */
+    #home-content {
+        padding: 5%;
+    }
+    #home-hero {
+        height: 93vh;
+    }
+    #home-logo {
+        max-width: 60%;
+        max-height: 60%;
+    }
+    #home-intro {
+        font-size: 1.6rem;
+        max-width: 90%;
+    }
+    #home-intro h3 {
+        font-size: 1.8rem;
+    }
 }
 
 /* Breakpoint on Larger Tablet device */
@@ -104,11 +178,47 @@ footer {
         padding-right: .5rem;
         padding-left: .5rem;
     }
-
     .nav-item:hover,
     .nav-item:focus,
     .nav-link i:hover,
     .nav-link i:focus {
         color: var(--red)
+    }
+
+    /* -- Home Page -- */
+    #home-content {
+        padding: 5%;
+        margin: 1% 0;
+    }
+    #home-hero {
+        height: 93vh;
+    }
+    #home-logo {
+        margin: 2% auto;
+        padding: 10%;
+        max-width: 70%;
+        max-height: 70%;
+    }
+    #home-intro {
+        padding: 40px;
+        margin: auto;
+        border-radius: 15px;
+        font-size: 1.6rem;
+        max-width: 50%;
+        max-height: 60%;
+    }
+    #home-intro h3 {
+        font-size: 3rem;
+    }
+    .home-link {
+        padding: 0;
+        max-width: 30%;
+    }
+    .home-img {
+        padding: 2px;
+    }
+    .home-img img {
+        height: 90%;
+        width: 90%;
     }
 }
