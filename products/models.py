@@ -4,7 +4,7 @@ from django.db import models
 
 
 class ProductType(models.Model):
-    """"
+    """
     Defines the product type
      (Apparel or Course)
     """
