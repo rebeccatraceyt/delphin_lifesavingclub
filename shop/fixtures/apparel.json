@@ -56,7 +56,7 @@
        "pk":5,
        "fields":{
           "product_type":2,
-          "name":"Ladies Racerback Swimwear - Black",
+          "name":"Ladies Racerback - Black",
           "description":"Featuring a racer back and shape retentive fabric, with comfort fit. The racer back offers flexibility and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
           "price":"35.00",
           "category":4,
@@ -108,7 +108,7 @@
        "pk":9,
        "fields":{
           "product_type":2,
-          "name":"Ladies Scooped Back Swimwear - Black",
+          "name":"Ladies Scooped  - Black",
           "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
           "price":"35.00",
           "category":4,
@@ -238,7 +238,7 @@
        "pk":19,
        "fields":{
           "product_type":2,
-          "name":"Ladies Racerback Swimwear - Red",
+          "name":"Ladies Racerback - Red",
           "description":"Featuring a racer back and shape retentive fabric, with comfort fit. The racer back offers flexibility and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
           "price":"35.00",
           "category":4,
@@ -277,7 +277,7 @@
        "pk":22,
        "fields":{
           "product_type":2,
-          "name":"Ladies Scooped Back Swimwear - Red",
+          "name":"Ladies Scooped - Red",
           "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
           "price":"35.00",
           "category":4,
