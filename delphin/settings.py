@@ -36,7 +36,7 @@ INSTALLED_APPS = [
 
     # my apps
     'pages',
-    'products',
+    'shop',
 
     # django apps
     'django.contrib.admin',

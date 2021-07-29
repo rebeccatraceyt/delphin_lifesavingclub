@@ -1,6 +1,6 @@
 [
     {
-        "model":"products.producttype",
+        "model":"shop.producttype",
         "pk":1,
         "fields":{
         "name":"courses",
@@ -8,7 +8,7 @@
         }
     },
     {
-        "model":"products.producttype",
+        "model":"shop.producttype",
         "pk":2,
         "fields":{
         "name":"apparel",

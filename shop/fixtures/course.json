@@ -1,6 +1,6 @@
 [
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":1,
        "fields":{
           "product_type":1,
@@ -13,7 +13,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":2,
        "fields":{
           "product_type":1,
@@ -26,7 +26,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":3,
        "fields":{
           "product_type":1,
@@ -39,7 +39,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":4,
        "fields":{
           "product_type":1,
@@ -52,7 +52,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":5,
        "fields":{
           "product_type":1,
@@ -65,7 +65,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":6,
        "fields":{
           "product_type":1,
@@ -78,7 +78,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":7,
        "fields":{
           "product_type":1,
@@ -91,7 +91,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":8,
        "fields":{
           "product_type":1,
@@ -104,7 +104,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":9,
        "fields":{
           "product_type":1,
@@ -117,7 +117,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":10,
        "fields":{
           "product_type":1,
@@ -130,7 +130,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":11,
        "fields":{
           "product_type":1,
@@ -143,7 +143,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":12,
        "fields":{
           "product_type":1,
@@ -156,7 +156,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":13,
        "fields":{
           "product_type":1,
@@ -169,7 +169,7 @@
        }
     },
     {
-       "model":"products.course",
+       "model":"shop.course",
        "pk":14,
        "fields":{
           "product_type":1,

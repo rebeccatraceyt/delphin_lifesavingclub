@@ -1,6 +1,6 @@
 [
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":1,
        "fields":{
           "product_type":2,
@@ -13,7 +13,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":2,
        "fields":{
           "product_type":2,
@@ -26,7 +26,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":3,
        "fields":{
           "product_type":2,
@@ -39,7 +39,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":4,
        "fields":{
           "product_type":2,
@@ -52,7 +52,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":5,
        "fields":{
           "product_type":2,
@@ -65,7 +65,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":6,
        "fields":{
           "product_type":2,
@@ -78,7 +78,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":7,
        "fields":{
           "product_type":2,
@@ -91,7 +91,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":8,
        "fields":{
           "product_type":2,
@@ -104,7 +104,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":9,
        "fields":{
           "product_type":2,
@@ -117,7 +117,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":10,
        "fields":{
           "product_type":2,
@@ -130,7 +130,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":11,
        "fields":{
           "product_type":2,
@@ -143,7 +143,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":12,
        "fields":{
           "product_type":2,
@@ -156,7 +156,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":13,
        "fields":{
           "product_type":2,
@@ -169,7 +169,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":14,
        "fields":{
           "product_type":2,
@@ -182,7 +182,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":15,
        "fields":{
           "product_type":2,
@@ -195,7 +195,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":16,
        "fields":{
           "product_type":2,
@@ -208,7 +208,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":17,
        "fields":{
           "product_type":2,
@@ -221,7 +221,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":18,
        "fields":{
           "product_type":2,
@@ -234,7 +234,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":19,
        "fields":{
           "product_type":2,
@@ -247,7 +247,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":20,
        "fields":{
           "product_type":2,
@@ -260,7 +260,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":21,
        "fields":{
           "product_type":2,
@@ -273,7 +273,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":22,
        "fields":{
           "product_type":2,
@@ -286,7 +286,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":23,
        "fields":{
           "product_type":2,
@@ -299,7 +299,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":24,
        "fields":{
           "product_type":2,
@@ -312,7 +312,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":25,
        "fields":{
           "product_type":2,
@@ -325,7 +325,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":26,
        "fields":{
           "product_type":2,
@@ -338,7 +338,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":27,
        "fields":{
           "product_type":2,
@@ -351,7 +351,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":28,
        "fields":{
           "product_type":2,
@@ -364,7 +364,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":29,
        "fields":{
           "product_type":2,
@@ -377,7 +377,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":30,
        "fields":{
           "product_type":2,
@@ -390,7 +390,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":31,
        "fields":{
           "product_type":2,
@@ -403,7 +403,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":32,
        "fields":{
           "product_type":2,
@@ -416,7 +416,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":33,
        "fields":{
           "product_type":2,
@@ -429,7 +429,7 @@
        }
     },
     {
-       "model":"products.apparel",
+       "model":"shop.apparel",
        "pk":34,
        "fields":{
           "product_type":2,

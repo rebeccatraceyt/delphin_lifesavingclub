@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', view_home, name='home'),
-    path('products/', include('products.urls')),
+    path('shop/', include('shop.urls')),
 ]
 
 # Check debug status

@@ -49,7 +49,7 @@ class Migration(migrations.Migration):
                 ('description', models.TextField()),
                 ('price', models.DecimalField(decimal_places=2, max_digits=6)),
                 ('image', models.ImageField(blank=True, null=True, upload_to='')),
-                ('age_range', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.agerange')),
+                ('age_range', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='shop.agerange')),
             ],
         ),
         migrations.CreateModel(
@@ -79,42 +79,42 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('stock_count', models.IntegerField(default=12)),
-                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.course')),
-                ('time', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.time')),
+                ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.course')),
+                ('time', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.time')),
             ],
         ),
         migrations.AddField(
             model_name='course',
             name='product_type',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.producttype'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='shop.producttype'),
         ),
         migrations.AddField(
             model_name='course',
             name='time',
-            field=models.ManyToManyField(through='products.CourseTime', to='products.Time'),
+            field=models.ManyToManyField(through='shop.CourseTime', to='shop.Time'),
         ),
         migrations.CreateModel(
             name='ApparelSize',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('stock_count', models.IntegerField(default=12)),
-                ('apparel', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.apparel')),
-                ('size', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.size')),
+                ('apparel', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.apparel')),
+                ('size', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.size')),
             ],
         ),
         migrations.AddField(
             model_name='apparel',
             name='category',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.category'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='shop.category'),
         ),
         migrations.AddField(
             model_name='apparel',
             name='product_type',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.producttype'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='shop.producttype'),
         ),
         migrations.AddField(
             model_name='apparel',
             name='size',
-            field=models.ManyToManyField(through='products.ApparelSize', to='products.Size'),
+            field=models.ManyToManyField(through='shop.ApparelSize', to='shop.Size'),
         ),
     ]

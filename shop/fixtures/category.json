@@ -1,6 +1,6 @@
 [
     {
-       "model":"products.category",
+       "model":"shop.category",
        "pk":1,
        "fields":{
           "name":"clothes_tshirts",
@@ -8,7 +8,7 @@
        }
     },
     {
-       "model":"products.category",
+       "model":"shop.category",
        "pk":2,
        "fields":{
           "name":"clothes_hoodies",
@@ -16,7 +16,7 @@
        }
     },
     {
-       "model":"products.category",
+       "model":"shop.category",
        "pk":3,
        "fields":{
           "name":"clothes_acc",
@@ -24,7 +24,7 @@
        }
     },
     {
-       "model":"products.category",
+       "model":"shop.category",
        "pk":4,
        "fields":{
           "name":"swim_wear",
@@ -32,7 +32,7 @@
        }
     },
     {
-       "model":"products.category",
+       "model":"shop.category",
        "pk":5,
        "fields":{
           "name":"swim_acc",

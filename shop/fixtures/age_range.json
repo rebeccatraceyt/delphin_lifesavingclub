@@ -1,6 +1,6 @@
 [
     {
-       "model":"products.agerange",
+       "model":"shop.agerange",
        "pk":1,
        "fields":{
           "name":"swimming_jnr",
@@ -8,7 +8,7 @@
        }
     },
     {
-       "model":"products.agerange",
+       "model":"shop.agerange",
        "pk":2,
        "fields":{
           "name":"swimming_snr",
@@ -16,7 +16,7 @@
        }
     },
     {
-       "model":"products.agerange",
+       "model":"shop.agerange",
        "pk":3,
        "fields":{
           "name":"lifesaving",
@@ -24,7 +24,7 @@
        }
     },
     {
-       "model":"products.agerange",
+       "model":"shop.agerange",
        "pk":4,
        "fields":{
           "name":"lifeguarding",

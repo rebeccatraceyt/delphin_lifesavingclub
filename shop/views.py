@@ -13,4 +13,4 @@ def all_courses(request):
         'courses': courses
     }
 
-    return render(request, 'products/all_courses.html', context)
+    return render(request, 'shop/all_courses.html', context)
