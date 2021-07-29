@@ -2,17 +2,15 @@ from django.shortcuts import render
 from .models import Course, Apparel
 
 
-def all_products(request):
+def all_courses(request):
     """
     Returns All Apparel
     """
 
     courses = Course.objects.all()
-    apparel = Apparel.objects.all()
 
     context = {
-        'apparel': apparel,
         'courses': courses
     }
 
-    return render(request, 'products/products.html', context)
+    return render(request, 'products/all_courses.html', context)
