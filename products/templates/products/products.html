@@ -4,14 +4,60 @@
 
 
 {% block content %}
-    <div class="container">
+    <div class="container page-margins">
+
+        <!-- Page Breadcrumbs -->
         <div class="row">
-            <!-- Home Hero -->
             <div class="col-12">
-                {{ apparel }}
-                {{ courses }}
+                <nav aria-label="page breadcrumbs">
+                    <ol class="breadcrumb bg-white">
+                        <li class="breadcrumb-item"><a href="#" class="text-dark">Home</a></li>
+                        <li class="breadcrumb-item active text-secondary" aria-current="page">All Products</li>
+                    </ol>
+                </nav>
             </div>
-            <hr class="divider">
+        </div>
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-12 page-title">
+                <h3>All Products</h3>
+                <hr class="section-divider">
+            </div>
+            <div class="col-12 category-links text-center">
+                <a href="" >Apparel</a>
+                <a href="">Courses</a>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="row">
+            {% for product in apparel %}
+                <div class="card h-100 border-0">
+                    {% if product.image.url %}
+                        <a href="">
+                            <img src="{{ product.image }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img src="{% static 'img/no-image.png' %}" alt="" class="card-img-top img-fluid">
+                        </a>
+                    {% endif %}
+
+                    <div class="card-body pb-0">
+                        <p class="mb-0">{{ product.name }}</p>
+                    </div>
+                    <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead mb-0 text-left">
+                                    €{{ product.price }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
