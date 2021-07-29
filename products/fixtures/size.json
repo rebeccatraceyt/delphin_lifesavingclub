@@ -1,0 +1,72 @@
+[
+    {
+       "model":"products.size",
+       "pk":1,
+       "fields":{
+          "size":"XS"
+       }
+    },
+    {
+       "model":"products.size",
+       "pk":2,
+       "fields":{
+          "size":"S"
+       }
+    },
+    {
+       "model":"products.size",
+       "pk":3,
+       "fields":{
+          "size":"M"
+       }
+    },
+    {
+       "model":"products.size",
+       "pk":4,
+       "fields":{
+          "size":"L"
+       }
+    },
+    {
+       "model":"products.size",
+       "pk":5,
+       "fields":{
+          "size":"XL"
+       }
+    },
+    {
+       "model":"products.size",
+       "pk":6,
+       "fields":{
+          "size":"Youth XS"
+       }
+    },
+    {
+       "model":"products.size",
+       "pk":7,
+       "fields":{
+          "size":"Youth S"
+       }
+    },
+    {
+       "model":"products.size",
+       "pk":8,
+       "fields":{
+          "size":"Youth M"
+       }
+    },
+    {
+       "model":"products.size",
+       "pk":9,
+       "fields":{
+          "size":"Youth L"
+       }
+    },
+    {
+       "model":"products.size",
+       "pk":10,
+       "fields":{
+          "size":"Youth XL"
+       }
+    }
+ ]

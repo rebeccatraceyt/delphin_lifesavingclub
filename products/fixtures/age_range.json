@@ -1,0 +1,34 @@
+[
+    {
+       "model":"products.agerange",
+       "pk":1,
+       "fields":{
+          "name":"swimming_jnr",
+          "friendly_name":"0 - 4 years"
+       }
+    },
+    {
+       "model":"products.agerange",
+       "pk":2,
+       "fields":{
+          "name":"swimming_snr",
+          "friendly_name":"5 - 12 years"
+       }
+    },
+    {
+       "model":"products.agerange",
+       "pk":3,
+       "fields":{
+          "name":"lifesaving",
+          "friendly_name":"13 - 16 years"
+       }
+    },
+    {
+       "model":"products.agerange",
+       "pk":4,
+       "fields":{
+          "name":"lifeguarding",
+          "friendly_name":"16+ years"
+       }
+    }
+ ]

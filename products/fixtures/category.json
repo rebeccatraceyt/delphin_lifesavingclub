@@ -1,0 +1,42 @@
+[
+    {
+       "model":"products.category",
+       "pk":1,
+       "fields":{
+          "name":"clothes_tshirts",
+          "friendly_name":"T-Shirts"
+       }
+    },
+    {
+       "model":"products.category",
+       "pk":2,
+       "fields":{
+          "name":"clothes_hoodies",
+          "friendly_name":"Jackets & Hoodies"
+       }
+    },
+    {
+       "model":"products.category",
+       "pk":3,
+       "fields":{
+          "name":"clothes_acc",
+          "friendly_name":"Accessories"
+       }
+    },
+    {
+       "model":"products.category",
+       "pk":4,
+       "fields":{
+          "name":"swim_wear",
+          "friendly_name":"Swimwear"
+       }
+    },
+    {
+       "model":"products.category",
+       "pk":5,
+       "fields":{
+          "name":"swim_acc",
+          "friendly_name":"Swim Accessories"
+       }
+    }
+ ]
