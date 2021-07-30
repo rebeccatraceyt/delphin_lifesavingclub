@@ -12,8 +12,7 @@
                 <nav aria-label="page breadcrumbs">
                     <ol class="breadcrumb bg-white">
                         <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-dark">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{% url 'all_products' %}" class="text-dark">All Products</a></li>
-                        <li class="breadcrumb-item active text-secondary" aria-current="page">All Apparel</li>
+                        <li class="breadcrumb-item active text-secondary" aria-current="page">All Products</li>
                     </ol>
                 </nav>
             </div>
@@ -22,44 +21,39 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-12 page-title">
-                <h3>All Apparel</h3>
+                <h3>All Products</h3>
                 <hr class="section-divider">
             </div>
             <div class="col-12 d-flex d-lg-none category-dropdown">
                 <div class="dropdown show">
                     <button class="btn category-toggle dropdown-toggle" type="button" id="courseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Refine By Category
+                        Refine By Type
                     </button>
                     <div class="dropdown-menu dropdown-menu-right category-items" aria-labelledby="courseDropdown">
-                        <a class="dropdown-item" href="#">T-shirts</a>
-                        <a class="dropdown-item" href="#">Jackets & Hoodies</a>
-                        <a class="dropdown-item" href="#">Accessories</a>
-                        <a class="dropdown-item" href="#">Swimwear</a>
-                        <a class="dropdown-item" href="#">Swim Accessories</a>
+                        <a class="dropdown-item" href="{% url 'all_apparel' %}">Apparel</a>
+                        <a class="dropdown-item" href="{% url 'all_courses' %}">Courses</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 d-none d-lg-block category-links text-center">
-                <a href="" >T-shirts</a>
-                <a href="">Jackets & Hoodies</a>
-                <a href="">Accessories</a>
-                <a href="">Swimwear</a>
-                <a href="">Swim Accessories</a>
+                <a href="{% url 'all_apparel' %}" >Apparel</a>
+                <a href="{% url 'all_courses' %}">Courses</a>
             </div>
         </div>
 
         <!-- Page Content -->
         <div class="row products-sec">
-            {% for product in apparel %}
-                <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3 px-md-1">
+            {% for product in products %}
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
                     <div class="row product-card">
                         <div class="col-12 p-0">
                             {% if product.image.url %}
-                                <a class="product-img" href="">
+                                <a class="product-img" href="#">
                                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                             {% else %}
-                                <a class="product-img" href="">
+
+                                <a class="product-img" href="#">
                                     <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
                                 </a>
                             {% endif %}
@@ -67,11 +61,18 @@
                         <div class="col-12">
                             <h3 class="product-name">{{ product.name }}</h3>
                         </div>
-                        <div class="col-12 text-right font-weight-bolder">
+                        <div class="col-6 text-left font-weight-bolder">
+                            {% if product.name != 'lifeguarding' %}
+                                <p>10 weeks</p>
+                            {% else %}
+                                <p>12 weeks</p>
+                            {% endif %}
+                        </div>
+                        <div class="col-6 text-right font-weight-bolder">
                             <p>€{{ product.price }}</p>
                         </div>
                         <div class="col-6 product-info">
-                            <a href="">
+                            <a href="#">
                                 Product Info
                             </a>
                         </div>
