@@ -27,7 +27,7 @@ body {
     color: var(--black);
 }
 .page-margins {
-    padding: 2% 8%;
+    padding: 2% 7%;
     margin: auto;
 }
 a, a:hover, a:focus, a:active {
@@ -57,6 +57,13 @@ a, a:hover, a:focus, a:active {
     width: 100%; 
     height: 1px;
     background-image: linear-gradient(to bottom right, var(--border-light), var(--border-dark), var(--border-light));
+}
+.page-title {
+    padding-bottom: 10px;
+}
+.page-title h3 {
+    font-family: var(--title-font);
+    font-size: 2.1rem;
 }
 .btn-shadow {
     -webkit-box-shadow: var(--grey) 0 0 10px;
@@ -192,13 +199,6 @@ ol.breadcrumb {
     margin: 0;
     font-size: .8rem;
 }
-.page-title {
-    padding-bottom: 10px;
-}
-.page-title h3 {
-    font-family: var(--title-font);
-    font-size: 2.1rem;
-}
 .category-links {
     padding: 20px 10px 10px 10px;
 }
@@ -280,11 +280,66 @@ ol.breadcrumb {
     color: var(--yellow);
 }
 
+/* --- Individual Product Pages --- */
+.detail-sec {
+    padding: 15px 0;
+}
+.detail-img img {
+    width: 100%;
+    height: 100%;
+}
+.detail-text {
+    margin: 0 auto;
+    padding: 30px 20px 10px 20px;
+    font-size: 1.1rem;
+}
+.detail-btns {
+    padding-top: 20px;
+}
+.detail-return,
+.detail-add {
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    font-size: .9rem;
+    border: 1px solid var(--black);
+}
+.detail-price {
+    font-weight: bolder;
+    text-align: right;
+}
+.detail-price p {
+    padding: 0 20px;
+    font-size: 1.4rem;
+}
+.detail-return a,
+.detail-add a {
+    width: 100%;
+    padding: 0 10px;
+    transition: all 0.5s ease 0s;
+}
+.detail-add {
+    background-color: var(--black);
+    color: var(--white);
+}
+.detail-return:hover,
+.detail-return:focus {
+    font-weight: bold;
+}
+.detail-add:hover,
+.detail-add:focus {
+    color: var(--yellow);
+}
 
 /* --- Media Queries --- */
 
 /* Breakpoint on Tablet device */
 @media (min-width: 700px) and (max-width: 991px) {
+
+    /* -- Special Styling -- */
+    .page-title h3 {
+        font-size: 2.5rem;
+    }
 
     /* -- Home Page -- */
     #home-content {
@@ -305,8 +360,14 @@ ol.breadcrumb {
         font-size: 1.8rem;
     }
 
-    /* -- Shop Pages -- */
-    
+    /* -- Individual Product Pages -- */
+    .detail-price {
+        text-align: left;
+    }
+    .detail-price p {
+        font-size: 1.6rem;
+        padding: 0;
+    }
 }
 
 /* Breakpoint on Larger Tablet device */
@@ -317,9 +378,12 @@ ol.breadcrumb {
 /* Breakpoint on a Laptop Screen */
 @media (min-width: 1025px) {
 
-    /* --- Special Styling --- */
+    /* -- Special Styling -- */
     .page-margins {
         padding: 1%;
+    }
+    .page-title h3 {
+        font-size: 2.5rem;
     }
 
     /* -- Navbar -- */
@@ -378,5 +442,18 @@ ol.breadcrumb {
     .product-info,
     .product-add {
         font-size: 1.1rem;
+    }
+
+    /* -- Individual Product Pages -- */
+    .detail-price {
+        text-align: left;
+    }
+    .detail-price p {
+        font-size: 1.6rem;
+        padding: 0;
+    }
+    .detail-return,
+    .detail-add {
+        max-width: 80%;
     }
 }

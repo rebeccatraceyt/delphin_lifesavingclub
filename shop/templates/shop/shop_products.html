@@ -47,25 +47,39 @@
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
                     <div class="row product-card">
                         <div class="col-12 p-0">
-                            {% if product.image.url %}
-                                <a class="product-img" href="#">
-                                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
+                            {% if product in courses %}
+                                {% if product.image.url %}
+                                    <a class="product-img" href="{% url 'course_detail' product.id %}">
+                                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                {% else %}
+                                    <a class="product-img" href="#">
+                                        <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
+                                    </a>
+                                {% endif %}
                             {% else %}
-
-                                <a class="product-img" href="#">
-                                    <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
-                                </a>
+                            {% if product.image.url %}
+                            <a class="product-img" href="{% url 'apparel_detail' product.id %}">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                        {% else %}
+                            <a class="product-img" href="#">
+                                <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
+                            </a>
+                        {% endif %} 
                             {% endif %}
                         </div>
                         <div class="col-12">
                             <h3 class="product-name">{{ product.name }}</h3>
                         </div>
                         <div class="col-6 text-left font-weight-bolder">
-                            {% if product.name != 'lifeguarding' %}
-                                <p>10 weeks</p>
+                            {% if product in courses %}
+                                {% if course.name == 'Lifeguards' %}
+                                    <p>12 weeks</p>
+                                {% else %}
+                                    <p>10 weeks</p>
+                                {% endif %}
                             {% else %}
-                                <p>12 weeks</p>
                             {% endif %}
                         </div>
                         <div class="col-6 text-right font-weight-bolder">

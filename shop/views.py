@@ -11,10 +11,15 @@ def all_products(request):
     Returns all products
     ref: https://pypi.org/project/django-querysetsequence/
     """
+
+    courses = Course.objects.all()
+    apparel = Apparel.objects.all()
     products = QuerySetSequence(Course.objects.all(), Apparel.objects.all())
 
     context = {
-        'products': products
+        'products': products,
+        'courses': courses,
+        'apparel': apparel,
     }
 
     return render(request, 'shop/shop_products.html', context)

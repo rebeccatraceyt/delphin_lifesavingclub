@@ -67,10 +67,10 @@
                             <h3 class="product-name">{{ product.name }}</h3>
                         </div>
                         <div class="col-6 text-left font-weight-bolder">
-                            {% if product.name != 'lifeguarding' %}
-                                <p>10 weeks</p>
-                            {% else %}
+                            {% if course.name == 'Lifeguards' %}
                                 <p>12 weeks</p>
+                            {% else %}
+                                <p>10 weeks</p>
                             {% endif %}
                         </div>
                         <div class="col-6 text-right font-weight-bolder">

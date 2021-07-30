@@ -30,16 +30,16 @@
 
         <!-- Page Content -->
         <div class="row detail-sec">
-            <div class="col-12 col-lg-6 detail-img">
+            <div class="col-12 col-md-6 col-lg-6 detail-img">
                 {% if apparel.image.url %}
                     <img src="{{ apparel.image.url }}" alt="{{ apparel.name }}">
                 {% else %}
                     <img src="{% static 'img/no-image.png' %}" alt="{{ apparel.name}}">
                 {% endif %}
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6 detail-text">
                 <div class="row">
-                    <div class="col-6 text-left font-weight-bolder">
+                    <div class="col-12 detail-price">
                         <p>€{{ apparel.price }}</p>
                     </div>
                 </div>
@@ -50,23 +50,23 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        Choose a class....
+                        Choose a size....
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <a href="{% url 'all_apparel' %}">
-                            <span>
-                                <i class="fas fa-angle-left"></i>Keep Shopping
-                            </span>
-                        </a>
+                <div class="row detail-btns">
+                    <div class="col-6 no-gutters">
+                        <div class="detail-return">
+                            <a href="{% url 'all_apparel' %}">
+                                <i class="fas fa-angle-left"></i> Go Back
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <a href="">
-                            <span>
-                                Add to Bag<i class="fas fa-cart-plus"></i>
-                            </span>
-                        </a>
+                    <div class="col-6 no-gutters">
+                        <div class="detail-add">
+                            <a href="">
+                                Add to Bag <i class="fas fa-cart-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
