@@ -25,6 +25,9 @@
 body {
     font-family: var(--body-font);
     color: var(--black);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 .page-margins {
     padding: 2% 7%;
@@ -200,7 +203,7 @@ ol.breadcrumb {
     font-size: .8rem;
 }
 .category-links {
-    padding: 20px 10px 10px 10px;
+    padding: 10px;
 }
 .category-links a {
     font-family: var(--title-font);
@@ -228,7 +231,7 @@ ol.breadcrumb {
 .category-toggle:hover,
 .category-toggle:focus {
     background-color: var(--black);
-    color: var(--yellow);
+    color: var(--white);
 }
 .category-items .dropdown-item {
     font-family: var(--body-font);
@@ -278,6 +281,16 @@ ol.breadcrumb {
 .product-add:hover,
 .product-add:focus {
     color: var(--yellow);
+}
+
+/* --- Search Page --- */
+.search-bar input {
+    border: 1px solid var(--black);
+}
+.search-btn button {
+    background-color: var(--black);
+    color: var(--yellow);
+    border: 1px solid var(--black);
 }
 
 /* --- Individual Product Pages --- */

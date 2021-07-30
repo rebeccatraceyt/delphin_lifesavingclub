@@ -24,18 +24,7 @@
                 <h3>All Products</h3>
                 <hr class="section-divider">
             </div>
-            <div class="col-12 d-flex d-lg-none category-dropdown">
-                <div class="dropdown show">
-                    <button class="btn category-toggle dropdown-toggle" type="button" id="courseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Refine By Type
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right category-items" aria-labelledby="courseDropdown">
-                        <a class="dropdown-item" href="{% url 'all_apparel' %}">Apparel</a>
-                        <a class="dropdown-item" href="{% url 'all_courses' %}">Courses</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 d-none d-lg-block category-links text-center">
+            <div class="col-12 category-links text-center">
                 <a href="{% url 'all_apparel' %}" >Apparel</a>
                 <a href="{% url 'all_courses' %}">Courses</a>
             </div>

@@ -121,7 +121,7 @@
        "pk":10,
        "fields":{
           "product_type":2,
-          "name":"T-Shirt - Black",
+          "name":"Tshirt - Black",
           "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth sizes.",
           "price":"8.99",
           "category":1,
@@ -290,7 +290,7 @@
        "pk":23,
        "fields":{
           "product_type":2,
-          "name":"T-Shirt - Red",
+          "name":"Tshirt - Red",
           "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth sizes.",
           "price":"8.99",
           "category":1,
@@ -342,7 +342,7 @@
        "pk":27,
        "fields":{
           "product_type":2,
-          "name":"T-Shirt - White",
+          "name":"Tshirt - White",
           "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth sizes.",
           "price":"8.99",
           "category":1,
@@ -420,7 +420,7 @@
        "pk":33,
        "fields":{
           "product_type":2,
-          "name":"T-Shirt - Yellow",
+          "name":"Tshirt - Yellow",
           "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth sizes.",
           "price":"8.99",
           "category":1,

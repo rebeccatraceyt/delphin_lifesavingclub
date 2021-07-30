@@ -53,12 +53,12 @@
                     <div class="row product-card">
                         <div class="col-12 p-0">
                             {% if product.image.url %}
-                                <a class="product-img" href="#">
+                                <a class="product-img" href="{% url 'course_detail' product.id %}">
                                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                             {% else %}
 
-                                <a class="product-img" href="#">
+                                <a class="product-img" href="{% url 'course_detail' product.id %}">
                                     <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
                                 </a>
                             {% endif %}

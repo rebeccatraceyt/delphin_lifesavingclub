@@ -1,0 +1,132 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container page-margins">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-12 page-title">
+                <h3>Search</h3>
+                <hr class="section-divider">
+            </div>
+            <div class="col-12">
+                <form action="">
+                    <div class="input-group mb-4 search-bar">
+                        <input type="search" name="q" placeholder="Search Products" aria-describedby="searchBtn" class="form-control">
+                        <div class="input-group-append search-btn">
+                          <button id="searchBtn" type="submit" class="form-control btn">
+                              <span>
+                                  Search <i class="fa fa-search"></i>
+                              </span>
+                            </button>
+                        </div>
+                      </div>
+                </form>
+            </div>
+
+            <div class="col-12 category-links text-center">
+                <a href="{% url 'all_apparel' %}" >Apparel</a>
+                <a href="{% url 'all_courses' %}">Courses</a>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="row products-sec">
+            {% if products|length < 1 %}
+                <div class="col-12">
+                    <h3>
+                        We're sorry! <i class="far fa-frown"></i>
+                    </h3>
+                    <p>
+                        We were not able to find a match. 
+                        <br class="d-block d-md-none"> 
+                        Search again, or select a category:
+                    </p>
+                </div>
+                <div class="col-12">
+                    <div class="row text-center d-flex justify-content-center">
+                        <div class="col-12 col-md-6 col-lg-6 home-link d-flex justify-content-center">
+                            <div class="row">
+                                <div class="col-12 home-img">
+                                    <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
+                                </div>
+                                <div class="col-12 home-btn">
+                                    <a class="btn-shadow" href="{% url 'all_apparel' %}">Shop Apparel</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 home-link d-flex justify-content-center">
+                            <div class="row">
+                                <div class="col-12 home-img">
+                                    <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
+                                </div>
+                                <div class="col-12 home-btn">
+                                    <a class="btn-shadow" href="{% url 'all_courses' %}">Shop Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                {% for product in products %}
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
+                        <div class="row product-card">
+                            <div class="col-12 p-0">
+                                {% if product in courses %}
+                                    {% if product.image.url %}
+                                        <a class="product-img" href="{% url 'course_detail' product.id %}">
+                                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                    {% else %}
+                                        <a class="product-img" href="#">
+                                            <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
+                                        </a>
+                                    {% endif %}
+                                {% else %}
+                                {% if product.image.url %}
+                                <a class="product-img" href="{% url 'apparel_detail' product.id %}">
+                                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a>
+                            {% else %}
+                                <a class="product-img" href="#">
+                                    <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
+                                </a>
+                            {% endif %} 
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <h3 class="product-name">{{ product.name }}</h3>
+                            </div>
+                            <div class="col-6 text-left font-weight-bolder">
+                                {% if product in courses %}
+                                    {% if product.name == 'Lifeguards' %}
+                                        <p>12 weeks</p>
+                                    {% else %}
+                                        <p>10 weeks</p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
+                            </div>
+                            <div class="col-6 text-right font-weight-bolder">
+                                <p>€{{ product.price }}</p>
+                            </div>
+                            <div class="col-6 product-info">
+                                <a href="#">
+                                    Product Info
+                                </a>
+                            </div>
+                            <div class="col-6 product-add">
+                                <a href="">
+                                    Add to bag
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
