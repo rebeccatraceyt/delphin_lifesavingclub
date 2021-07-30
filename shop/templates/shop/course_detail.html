@@ -1,0 +1,82 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container page-margins">
+
+        <!-- Page Breadcrumbs -->
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="page breadcrumbs">
+                    <ol class="breadcrumb bg-white">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-dark">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'all_courses' %}" class="text-dark">All Courses</a></li>
+                        <li class="breadcrumb-item active text-secondary" aria-current="page">{{ course.name }}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-12 page-title">
+                <h3>{{ course.name }}</h3>
+                <hr class="section-divider">
+            </div>
+            
+        </div>
+
+        <!-- Page Content -->
+        <div class="row detail-sec">
+            <div class="col-12 col-lg-6 detail-img">
+                {% if course.image.url %}
+                    <img src="{{ course.image.url }}" alt="{{ course.name }}">
+                {% else %}
+                    <img src="{% static 'img/no-image.png' %}" alt="{{ course.name}}">
+                {% endif %}
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row">
+                    <div class="col-6 text-left font-weight-bolder">
+                        <p>€{{ product.price }}</p>
+                    </div>
+                    <div class="col-6 text-right font-weight-bolder">
+                        {% if product.name != 'lifeguarding' %}
+                            <p>10 weeks</p>
+                        {% else %}
+                            <p>12 weeks</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>{{ course.description }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        Choose a class....
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="{% url 'all_courses' %}">
+                            <span>
+                                <i class="fas fa-angle-left"></i>Keep Shopping
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="">
+                            <span>
+                                Add to Bag<i class="fas fa-cart-plus"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
