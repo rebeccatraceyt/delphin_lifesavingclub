@@ -48,23 +48,23 @@
 
         <!-- Page Content -->
         <div class="row products-sec">
-            {% for product in courses %}
-                <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
+            {% for course in courses %}
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3 px-md-1">
                     <div class="row product-card">
                         <div class="col-12 p-0">
-                            {% if product.image.url %}
-                                <a class="product-img" href="{% url 'course_detail' product.id %}">
-                                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                            {% if course.image.url %}
+                                <a class="product-img" href="{% url 'course_detail' course.id %}">
+                                    <img src="{{ course.image.url }}" alt="{{ course.name }}">
                                 </a>
                             {% else %}
 
-                                <a class="product-img" href="{% url 'course_detail' product.id %}">
-                                    <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
+                                <a class="product-img" href="{% url 'course_detail' course.id %}">
+                                    <img src="{% static 'img/no-image.png' %}" alt="{{ course.name }}">
                                 </a>
                             {% endif %}
                         </div>
                         <div class="col-12">
-                            <h3 class="product-name">{{ product.name }}</h3>
+                            <h3 class="product-name">{{ course.name }}</h3>
                         </div>
                         <div class="col-6 text-left font-weight-bolder">
                             {% if course.name == 'Lifeguards' %}
@@ -74,10 +74,10 @@
                             {% endif %}
                         </div>
                         <div class="col-6 text-right font-weight-bolder">
-                            <p>€{{ product.price }}</p>
+                            <p>€{{ course.price }}</p>
                         </div>
                         <div class="col-6 product-info">
-                            <a href="#">
+                            <a href="{% url 'course_detail' course.id %}">
                                 Course Info
                             </a>
                         </div>

@@ -37,6 +37,7 @@ def search(request):
     courses = Course.objects.all()
     products = QuerySetSequence(Course.objects.all(), Apparel.objects.all())
 
+    # set default to none to avoid errors
     query = None
 
     if request.GET:

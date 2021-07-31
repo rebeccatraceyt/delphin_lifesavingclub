@@ -3,6 +3,9 @@ from django.urls import reverse
 from .models import Course, Apparel
 
 
+# ------ All Products ------
+
+
 class TestAllProductsView(TestCase):
     def test_view_url_exists_at_desired_location(self):
         response = self.client.get('/shop/')
@@ -31,6 +34,9 @@ class TestSearchProductsView(TestCase):
         response = self.client.get(reverse('search'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'shop/search_shop.html')
+
+
+# ------ Courses ------
 
 
 class TestAllCoursesView(TestCase):
@@ -70,6 +76,9 @@ class TestCourseDetailView(TestCase):
             '/shop/course/{0}'.format(course.id))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'shop/course_detail.html')
+
+
+# ------ Apparel ------
 
 
 class TestAllApparelView(TestCase):
