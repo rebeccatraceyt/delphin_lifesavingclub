@@ -22,7 +22,21 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-12 page-title">
-                <h3>All Apparel</h3>
+                <!-- Conditional Page Titles
+                    ref: https://tinyurl.com/jfktjads-->
+                {% if request.get_full_path == '/shop/all_apparel?category=tshirts' %}
+                    <h3>All T-Shirts</h3>
+                {% elif request.get_full_path == '/shop/all_apparel?category=jacket_hoodies' %}
+                    <h3>All Jackets & Hoodies</h3>
+                {% elif request.get_full_path == '/shop/all_apparel?category=accessories' %}
+                    <h3>All Accessories</h3>
+                {% elif request.get_full_path == '/shop/all_apparel?category=swimwear' %}
+                    <h3>All Swimwear</h3>
+                {% elif request.get_full_path == '/shop/all_apparel?category=swim_accessories' %}
+                    <h3>All Swim Accessories</h3>
+                {% else %}
+                    <h3>All Apparel</h3>
+                {% endif %}
                 <hr class="section-divider">
             </div>
             <div class="col-12 d-flex d-lg-none category-dropdown">
@@ -31,20 +45,23 @@
                         Refine By Category
                     </button>
                     <div class="dropdown-menu dropdown-menu-right category-items" aria-labelledby="courseDropdown">
-                        <a class="dropdown-item" href="#">T-shirts</a>
-                        <a class="dropdown-item" href="#">Jackets & Hoodies</a>
-                        <a class="dropdown-item" href="#">Accessories</a>
-                        <a class="dropdown-item" href="#">Swimwear</a>
-                        <a class="dropdown-item" href="#">Swim Accessories</a>
+                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=tshirts">T-shirts</a>
+                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=jacket_hoodies">Jackets & Hoodies</a>
+                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=accessories">Accessories</a>
+                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=swimwear">Swimwear</a>
+                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=swim_accessories">Swim Accessories</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bolder" href="{% url 'all_apparel' %}">View All</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 d-none d-lg-block category-links text-center">
-                <a href="" >T-shirts</a>
-                <a href="">Jackets & Hoodies</a>
-                <a href="">Accessories</a>
-                <a href="">Swimwear</a>
-                <a href="">Swim Accessories</a>
+                <a href="{% url 'all_apparel' %}?category=tshirts" >T-shirts</a>
+                <a href="{% url 'all_apparel' %}?category=jacket_hoodies">Jackets & Hoodies</a>
+                <a href="{% url 'all_apparel' %}?category=accessories">Accessories</a>
+                <a href="{% url 'all_apparel' %}?category=swimwear">Swimwear</a>
+                <a href="{% url 'all_apparel' %}?category=swim_accessories">Swim Accessories</a>
+                <a href="{% url 'all_apparel' %}">View All</a>
             </div>
         </div>
 

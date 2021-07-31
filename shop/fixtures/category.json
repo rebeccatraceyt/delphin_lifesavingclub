@@ -3,7 +3,7 @@
        "model":"shop.category",
        "pk":1,
        "fields":{
-          "name":"clothes_tshirts",
+          "name":"tshirts",
           "friendly_name":"T-Shirts"
        }
     },
@@ -11,7 +11,7 @@
        "model":"shop.category",
        "pk":2,
        "fields":{
-          "name":"clothes_hoodies",
+          "name":"jacket_hoodies",
           "friendly_name":"Jackets & Hoodies"
        }
     },
@@ -19,7 +19,7 @@
        "model":"shop.category",
        "pk":3,
        "fields":{
-          "name":"clothes_acc",
+          "name":"accessories",
           "friendly_name":"Accessories"
        }
     },
@@ -27,7 +27,7 @@
        "model":"shop.category",
        "pk":4,
        "fields":{
-          "name":"swim_wear",
+          "name":"swimwear",
           "friendly_name":"Swimwear"
        }
     },
@@ -35,7 +35,7 @@
        "model":"shop.category",
        "pk":5,
        "fields":{
-          "name":"swim_acc",
+          "name":"swim_accessories",
           "friendly_name":"Swim Accessories"
        }
     }

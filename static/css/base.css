@@ -212,12 +212,12 @@ ol.breadcrumb {
     padding: 4px;
     margin: 0 10px;
     width: 100%;
-    border-radius: 5px;
     transition: all 0.5s ease 0s;
 }
 .category-links a:hover,
 .category-links a:focus {
-    font-weight: bold;
+    background-color: var(--black);
+    color: var(--white);
 }
 .category-dropdown {
     justify-content: flex-end;
@@ -232,6 +232,7 @@ ol.breadcrumb {
 .category-toggle:focus {
     background-color: var(--black);
     color: var(--white);
+    font-size: .8rem;
 }
 .category-items .dropdown-item {
     font-family: var(--body-font);
@@ -371,6 +372,13 @@ ol.breadcrumb {
     }
     #home-intro h3 {
         font-size: 1.8rem;
+    }
+
+    /* -- Shop Pages -- */
+    .category-toggle,
+    .category-toggle:hover,
+    .category-toggle:focus {
+        font-size: .9rem;
     }
 
     /* -- Individual Product Pages -- */

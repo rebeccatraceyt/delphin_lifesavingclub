@@ -22,7 +22,19 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-12 page-title">
-                <h3>All Courses</h3>
+                <!-- Conditional Page Titles
+                    ref: https://tinyurl.com/jfktjads-->
+                {% if request.get_full_path == '/shop/all_courses?age_range=swimming_jnr' %}
+                    <h3>0 - 4 years</h3>
+                {% elif request.get_full_path == '/shop/all_courses?age_range=swimming_snr' %}
+                    <h3>5 - 12 years</h3>
+                {% elif request.get_full_path == '/shop/all_courses?age_range=lifesaving' %}
+                    <h3>13 - 16 years</h3>
+                {% elif request.get_full_path == '/shop/all_courses?age_range=lifeguarding' %}
+                    <h3>16+ years</h3>
+                {% else %}
+                    <h3>All Courses</h3>
+                {% endif %}
                 <hr class="section-divider">
             </div>
             <div class="col-12 d-flex d-lg-none category-dropdown">
@@ -31,18 +43,21 @@
                         Refine By Age
                     </button>
                     <div class="dropdown-menu dropdown-menu-right category-items" aria-labelledby="courseDropdown">
-                        <a class="dropdown-item" href="#">0 - 4 years</a>
-                        <a class="dropdown-item" href="#">5 - 12 years</a>
-                        <a class="dropdown-item" href="#">13 - 16 years</a>
-                        <a class="dropdown-item" href="#">16+ years</a>
+                        <a class="dropdown-item" href="{% url 'all_courses' %}?age_range=swimming_jnr">0 - 4 years</a>
+                        <a class="dropdown-item" href="{% url 'all_courses' %}?age_range=swimming_snr">5 - 12 years</a>
+                        <a class="dropdown-item" href="{% url 'all_courses' %}?age_range=lifesaving">13 - 16 years</a>
+                        <a class="dropdown-item" href="{% url 'all_courses' %}?age_range=lifeguarding">16+ years</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bolder" href="{% url 'all_courses' %}">View All</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 d-none d-lg-block category-links text-center">
-                <a href="" >0 - 4 years</a>
-                <a href="">5 - 12 years</a>
-                <a href="">13 - 16 years</a>
-                <a href="">16+ years</a>
+                <a href="{% url 'all_courses' %}?age_range=swimming_jnr" >0 - 4 years</a>
+                <a href="{% url 'all_courses' %}?age_range=swimming_snr">5 - 12 years</a>
+                <a href="{% url 'all_courses' %}?age_range=lifesaving">13 - 16 years</a>
+                <a href="{% url 'all_courses' %}?age_range=lifeguarding">16+ years</a>
+                <a href="{% url 'all_courses' %}">View All</a>
             </div>
         </div>
 

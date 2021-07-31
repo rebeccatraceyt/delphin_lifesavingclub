@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from queryset_sequence import QuerySetSequence
 from django.contrib import messages
 from django.db.models import Q
-from .models import Course, Apparel
+from .models import Course, Apparel, Category, AgeRange
 
 
 # ------ All Products ------
@@ -70,9 +70,17 @@ def all_courses(request):
     """
 
     courses = Course.objects.all()
+    age_range = None
+
+    if request.GET:
+        if 'age_range' in request.GET:
+            age_range = request.GET['age_range'].split(',')
+            courses = courses.filter(age_range__name__in=age_range)
+            age_range = AgeRange.objects.filter(name__in=age_range)
 
     context = {
-        'courses': courses
+        'courses': courses,
+        'age_range': age_range,
     }
 
     return render(request, 'shop/all_courses.html', context)
@@ -100,9 +108,17 @@ def all_apparel(request):
     """
 
     apparel = Apparel.objects.all()
+    categories = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            apparel = apparel.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
     context = {
-        'apparel': apparel
+        'apparel': apparel,
+        'current_category': categories,
     }
 
     return render(request, 'shop/all_apparel.html', context)
