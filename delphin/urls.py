@@ -2,13 +2,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from pages.views import view_home
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', view_home, name='home'),
+    path('', include('pages.urls')),
     path('shop/', include('shop.urls')),
 ]
 
