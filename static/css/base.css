@@ -105,6 +105,23 @@ button.navbar-toggler {
     font-size: 1.7rem;
     padding: 15px;
 }
+.bag-icon-sm i {
+    font-size: 2.4rem;
+}
+.bag-icon-sm span {
+    /* adapted from https://tinyurl.com/57sa5sj7 */
+    font-family: var(--body-font);
+    font-weight: bold;
+    font-size: 1rem;
+    position: absolute;
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    color: var(--white);
+    border-radius: 50%;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
 
 /* --- Footer --- */
 
@@ -406,6 +423,22 @@ ol.breadcrumb {
     .nav-link i:hover,
     .nav-link i:focus {
         color: var(--red)
+    }
+    .bag-icon-lg i {
+        font-size: 2.4rem;
+    }
+    .bag-icon-lg span {
+        /* adapted from https://tinyurl.com/57sa5sj7 */
+        font-family: var(--body-font);
+        font-weight: bold;
+        font-size: 1rem;
+        position: absolute;
+        top: 27px;
+        right: 26px;
+        width: 15px;
+        height: 15px;
+        color: var(--white);
+        border-radius: 50%;
     }
 
     /* -- Home Page -- */
