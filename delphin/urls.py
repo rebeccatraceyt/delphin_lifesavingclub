@@ -2,13 +2,16 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from pages.views import view_home
 
 
 urlpatterns = [
+    path('', view_home, name="home"),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', include('pages.urls')),
+    path('pages/', include('pages.urls')),
     path('shop/', include('shop.urls')),
+    path('shopping_bag/', include('shopping_bag.urls')),
 ]
 
 # Check debug status

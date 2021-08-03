@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # my apps
     'pages',
     'shop',
+    'shopping_bag',
 
     # django apps
     'django.contrib.admin',
