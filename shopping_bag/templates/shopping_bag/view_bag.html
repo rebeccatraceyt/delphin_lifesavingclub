@@ -30,7 +30,8 @@
         <div class="row bag-content">
             <div class="col-12">
                 {% if bag_items %}
-                    <p>this is your bag</p>
+                    {{ bag_items }}
+                    {{ grand_total }}
                 {% else %}
                     <div class="row">
                         <div class="col-12">

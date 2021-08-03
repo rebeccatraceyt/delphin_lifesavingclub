@@ -28,5 +28,4 @@ def add_to_bag(request, item_id):
 
     # override session variable with update
     request.session['current_bag'] = current_bag
-    print(request.session['current_bag'])
     return redirect(redirect_url)

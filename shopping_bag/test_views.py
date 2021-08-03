@@ -18,4 +18,3 @@ class TestShoppingBagView(TestCase):
         response = self.client.get(reverse('view_bag'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'shopping_bag/view_bag.html')
-
