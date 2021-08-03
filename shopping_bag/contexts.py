@@ -14,6 +14,8 @@ def bag_content(request):
     https://tinyurl.com/5f7ypxcc
     """
 
+    courses = Course.objects.all()
+    apparel = Apparel.objects.all()
     products = QuerySetSequence(Course.objects.all(), Apparel.objects.all())
     bag_items = []
     total = 0
@@ -47,6 +49,8 @@ def bag_content(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
+        'courses': courses,
+        'apparel': apparel,
     }
 
     return context

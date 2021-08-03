@@ -354,6 +354,24 @@ ol.breadcrumb {
     color: var(--yellow);
 }
 
+/* --- Shopping Bag Pages --- */
+.bag-content {
+    background-color: var(--border-light);
+    padding: 0 15px;
+}
+.bag-items {
+    padding: 10px;
+    font-size: .9rem;
+}
+.bag-img {
+    padding: 0;
+}
+.bag-img img {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
 /* --- Media Queries --- */
 
 /* Breakpoint on Tablet device */

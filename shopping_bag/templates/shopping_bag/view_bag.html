@@ -28,12 +28,100 @@
 
         <!-- Page Content -->
         <div class="row bag-content">
-            <div class="col-12">
-                {% if bag_items %}
-                    {{ bag_items }}
-                    {{ grand_total }}
-                {% else %}
+            {% if bag_items %}
+                {% for bag_item in bag_items %}
+                    <div class="col-12 bag-items">
+                        <div class="row">
+                            <div class="col-5 bag-img">
+                                {% if bag_item.product.image.url %}
+                                    <img src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
+                                {% else %}
+                                    <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
+                                {% endif %}
+                            </div>
+                            <div class="col-7">
+                                <div class="row">
+                                    <!-- Product Name -->
+                                    <div class="col-8">
+                                        {% if bag_item.product in courses %}
+                                            <a href="{% url 'course_detail' bag_item.product.id %}">
+                                                {{ bag_item.product.name }}
+                                            </a>
+                                        {% else %}
+                                            <a href="{% url 'apparel_detail' bag_item.product.id %}">
+                                                {{ bag_item.product.name }}
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                    <!-- Remove Product -->
+                                    <div class="col-4">
+                                        <a class="remove-item float-right" id="remove_{{ bag_item.item_id }}" title="Remove Item" data-product_size="{{ bag_item.size }}">
+                                            <i class="far fa-times-circle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Size/Class Info -->
+                                    <div class="col-12">
+                                        {% if bag_item.product in courses %}
+                                            Time: {{ product.time }}
+                                        {% else %}
+                                            Size: {{ product.size }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Update Box-->
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                                    data-item_id="{{ bag_item.item_id }}" id="decrement-qty_{{ bag_item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-minus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control form-control-sm qty_input" type="number"
+                                                name="quantity" value="{{ bag_item.quantity }}" min="1" max="99"
+                                                data-item_id="{{ bag_item.item_id }}"
+                                                id="id_qty_{{ bag_item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                    data-item_id="{{ itbag_itemem.item_id }}" id="increment-qty_{{ bag_item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-plus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            {% if bag_item.product.has_sizes %}
+                                                <input type="hidden" name="product_size" value="{{ bag_item.size }}">
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Update Btn -->
+                                    <div class="col-5">
+                                        <a href="">Update</a>
+                                    </div>
+                                    <!-- Price -->
+                                    <div class="col-7 text-right">
+                                        €{{ bag_item.product.price }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="section-divider">
+                {% endfor %}
+            {% else %}
+                <div class="col-12">
                     <div class="row">
+                        <!-- When Bag is empty -->
                         <div class="col-12">
                             <p>Your bag is empty</p>
                             <a href="{% url 'all_products' %}">
@@ -69,8 +157,8 @@
                             </div>
                         </div>
                     </div>
-                {% endif %}
-            </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
