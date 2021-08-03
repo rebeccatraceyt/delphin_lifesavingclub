@@ -42,7 +42,7 @@
                                         <img src="{{ product.image.url }}" alt="{{ product.name }}">
                                     </a>
                                 {% else %}
-                                    <a class="product-img" href="#">
+                                    <a class="product-img" href="{% url 'course_detail' product.id %}">
                                         <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
                                     </a>
                                 {% endif %}
@@ -52,7 +52,7 @@
                                         <img src="{{ product.image.url }}" alt="{{ product.name }}">
                                     </a>
                                 {% else %}
-                                    <a class="product-img" href="#">
+                                    <a class="product-img" href="{% url 'apparel_detail' product.id %}">
                                         <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
                                     </a>
                                 {% endif %} 
@@ -75,7 +75,7 @@
                         <div class="col-6 detail-price">
                             <p>€{{ product.price }}</p>
                         </div>
-                        <div class="col-6 product-info">
+                        <div class="col-12 product-info">
                             <!-- defines detail url to be used -->
                             {% if product in courses %}
                                 <a href="{% url 'course_detail' product.id %}">
@@ -87,11 +87,7 @@
                                 </a>
                             {% endif %}
                         </div>
-                        <div class="col-6 product-add">
-                            <a href="">
-                                Add to bag
-                            </a>
-                        </div>
+                        
                     </div>
                 </div>
             {% endfor %}

@@ -26,7 +26,7 @@ def bag_content(request):
 
     context = {
         'bag_items': bag_items,
-        'total': total, 
+        'total': total,
         'product_count': product_count,
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,

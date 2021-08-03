@@ -26,13 +26,19 @@
 body {
     font-family: var(--body-font);
     color: var(--black);
+
+    /* for footer placement
+    ref: https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14 */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+input {
+    border: none;
+}
 .page-margins {
     padding: 2% 7%;
-    margin: auto;
+    margin: 0 auto;
 }
 a, a:hover, a:focus, a:active {
     text-decoration: none;
@@ -104,6 +110,7 @@ button.navbar-toggler {
 
 footer {
     background-color: var(--black);
+    margin-top: auto;
 }
 .footer-title {
     font-family: var(--title-font);
@@ -257,31 +264,16 @@ ol.breadcrumb {
     font-size: 1.3rem;
     margin: .5rem 0;
 }
-.product-info,
-.product-add {
+.product-info {
     border-top: 1px solid var(--black);
     text-align: center;
     padding: 5px 10px;
     font-size: 1rem;
-}
-.product-info a,
-.product-add a {
-    width: 100%;
-    transition: all 0.5s ease 0s;
-} 
-.product-info {
-    border-right: 1px solid var(--black);
-}
-.product-add {
     background-color: var(--black);
     color: var(--white);
 }
 .product-info:hover,
 .product-info:focus {
-    font-weight: bold;
-}
-.product-add:hover,
-.product-add:focus {
     color: var(--yellow);
 }
 
@@ -308,32 +300,31 @@ ol.breadcrumb {
     padding: 30px 20px 10px 20px;
     font-size: 1.1rem;
 }
+.detail-price {
+    font-weight: bolder;
+    text-align: right;
+    font-size: 1.4rem;
+}
 .detail-btns {
     padding-top: 20px;
 }
 .detail-return,
 .detail-add {
+    max-width: 85%;
     text-align: center;
     margin: auto;
     padding: 5px;
     font-size: .9rem;
     border: 1px solid var(--black);
 }
-.detail-price {
-    font-weight: bolder;
-    text-align: right;
-}
-.detail-price p {
-    padding: 0 20px;
-    font-size: 1.4rem;
-}
 .detail-return a,
-.detail-add a {
+.detail-add input {
     width: 100%;
     padding: 0 10px;
     transition: all 0.5s ease 0s;
 }
-.detail-add {
+.detail-add,
+.detail-add input {
     background-color: var(--black);
     color: var(--white);
 }
@@ -341,8 +332,8 @@ ol.breadcrumb {
 .detail-return:focus {
     font-weight: bold;
 }
-.detail-add:hover,
-.detail-add:focus {
+.detail-add input:hover,
+.detail-add input:focus {
     color: var(--yellow);
 }
 
@@ -385,10 +376,7 @@ ol.breadcrumb {
     /* -- Individual Product Pages -- */
     .detail-price {
         text-align: left;
-    }
-    .detail-price p {
         font-size: 1.6rem;
-        padding: 0;
     }
 }
 
@@ -469,13 +457,10 @@ ol.breadcrumb {
     /* -- Individual Product Pages -- */
     .detail-price {
         text-align: left;
-    }
-    .detail-price p {
         font-size: 1.6rem;
-        padding: 0;
     }
     .detail-return,
-    .detail-add {
+    .detail-add input {
         max-width: 80%;
     }
 }

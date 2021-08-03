@@ -30,7 +30,7 @@
 
         <!-- Page Content -->
         <div class="row detail-sec">
-            <div class="col-12 col-lg-6 detail-img">
+            <div class="col-12 col-md-6 col-lg-6 detail-img">
                 {% if course.image.url %}
                     <img src="{{ course.image.url }}" alt="{{ course.name }}">
                 {% else %}
@@ -46,7 +46,7 @@
                             <p>10 weeks</p>
                         {% endif %}
                     </div>
-                    <div class="col-6 detail-price">
+                    <div class="col-6 text-right detail-price">
                         <p>€{{ course.price }}</p>
                     </div>
                 </div>
@@ -55,28 +55,39 @@
                         <p>{{ course.description }}</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        Choose a class....
-                    </div>
-                </div>
-                <div class="row detail-btns">
-                    <div class="col-6 no-gutters">
-                        <div class="detail-return">
-                            <a id="back_btn" href="#">
-                                <!-- Returns user to previous page -->
-                                <i class="fas fa-angle-left"></i> Go Back
-                            </a>
+                <form action="{% url 'add_to_bag' course.id %}" class="form" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row px-3">
+                        <div class="col-6 no-gutters">
+                            Choose a class....
+                        </div>
+                        <div class="col-6 d-flex flex-wrap justify-content-end">
+                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <input type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ apparel.id }}" id="id_qty_{{ apparel.id }}" class="form-control qty_input">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 no-gutters">
-                        <div class="detail-add">
-                            <a href="">
-                                Add to Bag <i class="fas fa-cart-plus"></i>
-                            </a>
+                    <div class="form-row detail-btns">
+                        <!-- Returns user to previous page -->
+                        <div class="col-6 no-gutters">
+                            <div class="detail-return">
+                                <a id="back_btn" href="#">
+                                    <i class="fas fa-angle-left"></i> Go Back
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Adds item to shopping bag -->
+                        <div class="col-6 no-gutters">
+                            <div class="detail-add">
+                                <input type="submit" value="Add to bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
