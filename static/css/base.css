@@ -365,10 +365,12 @@ ol.breadcrumb {
 .bag-content {
     background-color: var(--border-light);
     padding: 0 15px;
+
+    display: flex;
+    flex-direction: row;
 }
 .bag-items {
     padding: 10px;
-    font-size: .9rem;
 }
 .bag-img {
     padding: 0;
@@ -377,6 +379,13 @@ ol.breadcrumb {
     width: 100%;
     height: 100%;
     padding: 10px;
+}
+.bag-row {
+    line-height: 2;
+    font-size: .8rem;
+}
+.bag-qty {
+    padding: 5px;
 }
 
 /* --- Media Queries --- */
