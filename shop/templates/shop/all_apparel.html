@@ -82,15 +82,12 @@
                             {% endif %}
                         </div>
                         <div class="col-12">
-                            <h3 class="product-name">{{ product.name }}</h3>
+                            <a href="{% url 'apparel_detail' product.id %}">
+                                <h3 class="product-name">{{ product.name }}</h3>
+                            </a>
                         </div>
                         <div class="col-12 text-right font-weight-bolder">
                             <p>€{{ product.price }}</p>
-                        </div>
-                        <div class="col-12 product-info">
-                            <a href="{% url 'apparel_detail' product.id %}">
-                                Product Info
-                            </a>
                         </div>
                     </div>
                 </div>
