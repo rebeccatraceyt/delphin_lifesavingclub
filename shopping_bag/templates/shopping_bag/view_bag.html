@@ -34,10 +34,26 @@
                     <div class="col-12 bag-items">
                         <div class="row justify-content-center align-items-stretch">
                             <div class="col-5 bag-img">
-                                {% if bag_item.product.image.url %}
-                                    <img class="img-fluid" src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
+                                {% if product in courses %}
+                                    {% if bag_item.product.image.url %}
+                                        <a href="{% url 'course_detail' bag_item.product.id %}">
+                                            <img src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
+                                        </a>
+                                    {% else %}
+                                        <a href="{% url 'course_detail' bag_item.product.id %}">
+                                            <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
+                                        </a>
+                                    {% endif %}
                                 {% else %}
-                                    <img class="img-fluid" src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
+                                    {% if bag_item.product.image.url %}
+                                        <a href="{% url 'apparel_detail' bag_item.product.id %}">
+                                            <img src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
+                                        </a>
+                                    {% else %}
+                                        <a href="{% url 'apparel_detail' bag_item.product.id %}">
+                                            <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
+                                        </a>
+                                    {% endif %} 
                                 {% endif %}
                             </div>
                             <div class="col-7">

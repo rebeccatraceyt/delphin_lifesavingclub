@@ -62,7 +62,9 @@ class Course(models.Model):
                                   null=True,
                                   blank=True,
                                   on_delete=models.SET_NULL)
-    time = models.ManyToManyField(Time, through='CourseTime')
+    times = models.ManyToManyField(Time,
+                                   through='CourseTime',
+                                   related_name='course_time')
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
@@ -75,7 +77,9 @@ class CourseTime(models.Model):
     Counts stock
     """
     time = models.ForeignKey(Time, on_delete=models.CASCADE)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course,
+                               on_delete=models.CASCADE,
+                               related_name='course_times')
     stock_count = models.IntegerField(default=12)
 
     def __str__(self):
@@ -87,7 +91,7 @@ class CourseTime(models.Model):
 
 class Size(models.Model):
     """
-    Defines course times
+    Defines apparel size
     """
     size = models.CharField(max_length=255)
 
@@ -134,7 +138,9 @@ class Apparel(models.Model):
                                  blank=True,
                                  on_delete=models.SET_NULL)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    size = models.ManyToManyField(Size, through='ApparelSize')
+    sizes = models.ManyToManyField(Size,
+                                   through='ApparelSize',
+                                   related_name='apparel_size')
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
@@ -145,9 +151,12 @@ class ApparelSize(models.Model):
     """
     Establishes relationship between Apparel and Size.
     Counts stock
+    ref: https://tinyurl.com/ps257c2r
     """
     size = models.ForeignKey(Size, on_delete=models.CASCADE)
-    apparel = models.ForeignKey(Apparel, on_delete=models.CASCADE)
+    apparel = models.ForeignKey(Apparel,
+                                on_delete=models.CASCADE,
+                                related_name='apparel_sizes')
     stock_count = models.IntegerField(default=30)
 
     def __str__(self):

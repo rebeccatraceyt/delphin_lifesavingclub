@@ -58,8 +58,13 @@
                 <form action="{% url 'add_to_bag' course.id %}" class="form" method="POST">
                     {% csrf_token %}
                     <div class="form-row px-3">
-                        <div class="col-6 no-gutters">
-                            Choose a class....
+                        <div class="col-6 d-flex flex-wrap justify-content-start">
+                            <select class="custom-select" id="courseTimeSelect">
+                                <option selected>Select Class</option>
+                                {% for times in course.course_times.all %}
+                                    <option value="{{ times.time }}">{{ times.time }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
                         <div class="col-6 d-flex flex-wrap justify-content-end">
                             <p class="mt-3"><strong>Quantity:</strong></p>
