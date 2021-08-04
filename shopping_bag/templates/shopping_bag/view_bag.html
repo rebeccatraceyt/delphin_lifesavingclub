@@ -28,15 +28,16 @@
 
         <!-- Page Content -->
         <div class="row bag-content">
+            <!-- Bag Items -->
             {% if bag_items %}
                 {% for bag_item in bag_items %}
                     <div class="col-12 bag-items">
-                        <div class="row">
+                        <div class="row justify-content-center align-items-stretch">
                             <div class="col-5 bag-img">
                                 {% if bag_item.product.image.url %}
-                                    <img src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
+                                    <img class="img-fluid" src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
                                 {% else %}
-                                    <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
+                                    <img class="img-fluid" src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
                                 {% endif %}
                             </div>
                             <div class="col-7">
@@ -112,7 +113,7 @@
 
                                     <div class="row bag-row">
                                         <!-- Price -->
-                                        <div class="col-12 text-right">
+                                        <div class="col-12 text-right font-weight-bolder">
                                             €{{ bag_item.product.price }}
                                         </div>
                                     </div>
@@ -122,10 +123,35 @@
                     </div>
                     <hr class="section-divider">
                 {% endfor %}
+
+                <!-- Totals -->
+                <div class="col-12 bag-total py-2 px-1">
+                    <h6>Subtotal: €{{ total|floatformat:2 }}</h6>
+                    <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                    <hr>
+                    <h5>Grand Total: €{{ grand_total|floatformat:2 }}</h5>
+                    {% if free_delivery_delta > 0 %}
+                        <p>
+                            Spend just €{{ free_delivery_delta }} more to get <strong>free delivery</strong>
+                        </p>
+                    {% endif %}
+                </div>
+
+                <!-- Checkout Btns -->
+                <div class="col-12 bag-btns">
+
+                    <a class="bag-back-btn" href="{% url 'all_products' %}">
+                        <i class="fas fa-angle-left"></i> Keep Shopping
+                    </a>
+                    <a class="bag-checkout-btn" href="">
+                        Secure Checkout <i class="fas fa-lock"></i>
+                    </a>
+                </div>
+
             {% else %}
+                <!-- When Bag is empty -->
                 <div class="col-12">
                     <div class="row">
-                        <!-- When Bag is empty -->
                         <div class="col-12">
                             <p>Your bag is empty</p>
                             <a href="{% url 'all_products' %}">

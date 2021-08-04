@@ -20,7 +20,7 @@
     /* Misc Colour Variables */
     --border-shadow: rgba(10, 10, 10, 0.663);
     --border-dark: rgba(0, 0, 0, 0.6);
-    --border-light: rgba(0, 0, 0, 0);
+    --border-light: rgba(0, 0, 0, 0.3);
     --dark-box: rgba(0,0,0,0.8);
 }
 
@@ -65,11 +65,9 @@ a, a:hover, a:focus, a:active {
 .section-divider {
     margin: 2px;
     border: 0;
-    clear:both;
-    display:block;
     width: 100%; 
     height: 1px;
-    background-image: linear-gradient(to bottom right, var(--border-light), var(--border-dark), var(--border-light));
+    background-color: var(--border-dark);
 }
 .page-title {
     padding-bottom: 10px;
@@ -363,11 +361,10 @@ ol.breadcrumb {
 
 /* --- Shopping Bag Pages --- */
 .bag-content {
-    background-color: var(--border-light);
     padding: 0 15px;
-
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .bag-items {
     padding: 10px;
@@ -386,6 +383,61 @@ ol.breadcrumb {
 }
 .bag-qty {
     padding: 5px;
+}
+.bag-qty button,
+.bag-qty input {
+    border: 1px solid var(--black);
+}
+.bag-qty button {
+    background-color: var(--black);
+    color: var(--white);
+}
+.bag-qty button:hover,
+.bag-qty button:focus {
+    color: var(--yellow);
+}
+.bag-total {
+    text-align: right;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.bag-total h6,
+.bag-total h5 {
+    font-family: var(--title-font);
+    font-size: 1.3rem;
+}
+.bag-total hr {
+    margin-right: 0;
+    width: 70%;
+    height: 1px;
+    border: 0;
+    background-color: var(--border-dark);
+}
+.bag-btns {
+    padding: 15px 5px;
+    text-align: center;
+}
+.bag-back-btn,
+.bag-checkout-btn {
+    font-family: var(--title-font);
+    margin: 10px 2px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.5s ease 0s;
+    border: 1px solid var(--black);
+}
+.bag-checkout-btn {
+    background-color: var(--black);
+    color: var(--white);
+}
+.bag-back-btn:hover,
+.bag-back-btn:focus {
+    font-weight: bold;
+}
+.bag-checkout-btn:hover,
+.bag-checkout-btn:focus {
+    color: var(--yellow);
 }
 
 /* --- Media Queries --- */
@@ -429,11 +481,71 @@ ol.breadcrumb {
         text-align: left;
         font-size: 1.6rem;
     }
+
+    /* -- Shopping Bag Pages -- */
+    .bag-items {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .bag-img {
+        max-width: 200px;
+    }
+    .bag-row {
+        line-height: 1.6;
+        font-size: 1.4rem;
+    }
+    .bag-qty {
+        width: 40%;
+    }
+    .bag-total h6,
+    .bag-total h5 {
+        font-size: 1.8rem;
+    }
+    .bag-total hr {
+        width: 50%;
+    }
+    .bag-btns {
+        text-align: right;
+    }
+    .bag-back-btn,
+    .bag-checkout-btn {
+        margin: 10px 0px 10px 5px;
+        font-size: 1.7rem;
+    }
 }
 
 /* Breakpoint on Larger Tablet device */
 @media (min-width: 992px) and (max-width: 1024px) {
-
+    /* -- Shopping Bag Pages -- */
+    .bag-items {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .bag-img {
+        max-width: 200px;
+    }
+    .bag-row {
+        line-height: 1.3;
+        font-size: 1.4rem;
+    }
+    .bag-qty {
+        width: 40%;
+    }
+    .bag-total h6,
+    .bag-total h5 {
+        font-size: 1.8rem;
+    }
+    .bag-total hr {
+        width: 50%;
+    }
+    .bag-btns {
+        text-align: right;
+    }
+    .bag-back-btn,
+    .bag-checkout-btn {
+        margin: 10px 5px;
+        font-size: 1.7rem;
+    }
 }
 
 /* Breakpoint on a Laptop Screen */
@@ -529,5 +641,37 @@ ol.breadcrumb {
     .detail-return,
     .detail-add input {
         max-width: 80%;
+    }
+
+    /* -- Shopping Bag Pages -- */
+    .bag-items {
+        width: 50px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .bag-img {
+        max-width: 200px;
+    }
+    .bag-row {
+        line-height: 1.3;
+        font-size: 1.4rem;
+    }
+    .bag-qty {
+        width: 40%;
+    }
+    .bag-total h6,
+    .bag-total h5 {
+        font-size: 1.8rem;
+    }
+    .bag-total hr {
+        width: 50%;
+    }
+    .bag-btns {
+        text-align: right;
+    }
+    .bag-back-btn,
+    .bag-checkout-btn {
+        margin: 10px 5px;
+        font-size: 1.7rem;
     }
 }
