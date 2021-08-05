@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 
 def view_bag(request):
@@ -54,3 +54,73 @@ def add_to_bag(request, item_id):
     # override session variable with update
     request.session['current_bag'] = current_bag
     return redirect(redirect_url)
+
+
+def update_bag(request, item_id):
+    """
+    Submit update form to view to update shopping bag
+    """
+
+    # Get quantity of item and add to current bag
+    quantity = int(request.POST.get('quantity'))
+
+    # get apparel products
+    product_select = None
+    if 'apparel_size' in request.POST:
+        product_select = request.POST['apparel_size']
+
+    # get course products
+    if 'course_time' in request.POST:
+        product_select = request.POST['course_time']
+
+    current_bag = request.session.get('current_bag', {})
+
+    # checks if item has size or time
+    if product_select:
+        if quantity > 0:
+            current_bag[item_id]['items_by_select'][product_select] = quantity
+        else:
+            del current_bag[item_id]['items_by_select'][product_select]
+            if not current_bag[item_id]['items_by_select']:
+                current_bag.pop(item_id)
+    else:
+        if quantity > 0:
+            current_bag[item_id] = quantity
+        else:
+            current_bag.pop(item_id)
+
+    # override session variable with update
+    request.session['current_bag'] = current_bag
+    return redirect(reverse('view_bag'))
+
+
+def remove_from_bag(request, item_id):
+    """
+    Submit remove form to view to remove item from shopping bag
+    """
+
+    try:
+        # get apparel products
+        product_select = None
+        if 'apparel_size' in request.POST:
+            product_select = request.POST['apparel_size']
+
+        # get course products
+        if 'course_time' in request.POST:
+            product_select = request.POST['course_time']
+
+        current_bag = request.session.get('current_bag', {})
+
+        # checks if item has size or time
+        if product_select:
+            del current_bag[item_id]['items_by_select'][product_select]
+            if not current_bag[item_id]['items_by_select']:
+                current_bag.pop(item_id)
+        else:
+            current_bag.pop(item_id)
+
+        request.session['current_bag'] = current_bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
