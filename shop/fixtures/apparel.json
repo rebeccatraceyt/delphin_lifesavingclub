@@ -57,7 +57,7 @@
        "fields":{
           "product_type":2,
           "name":"Racerbacks",
-          "description":"Featuring a racer back and shape retentive fabric, with comfort fit. The racer back offers flexibility and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
+          "description":"Featuring a racerback and shape retentive fabric, with comfort fit offering flexibility and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Swimwear is made to order.)",
           "price":"35.00",
           "category":4,
           "has_sizes":true,
@@ -70,7 +70,7 @@
        "fields":{
           "product_type":2,
           "name":"Swim Shorts",
-          "description":"Lightweight and breathable, with elasticated waistband and inner mesh. External drawstring fastening for a secure fit. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
+          "description":"Lightweight and breathable, with elasticated waistband and inner mesh. External drawstring fastening for a secure fit. Also available in Youth sizes. (Swimwear is made to order.)",
           "price":"29.99",
           "category":4,
           "has_sizes":true,
@@ -109,7 +109,7 @@
        "fields":{
           "product_type":2,
           "name":"Scooped",
-          "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
+          "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Swimwear is made to order.)",
           "price":"35.00",
           "category":4,
           "has_sizes":true,
@@ -239,7 +239,7 @@
        "fields":{
           "product_type":2,
           "name":"Racerbacks",
-          "description":"Featuring a racer back and shape retentive fabric, with comfort fit. The racer back offers flexibility and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
+          "description":"Featuring a racerback and shape retentive fabric, with comfort fit offering flexibility and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Swimwear is made to order.)",
           "price":"35.00",
           "category":4,
           "has_sizes":true,
@@ -252,7 +252,7 @@
        "fields":{
           "product_type":2,
           "name":"Swim Shorts",
-          "description":"Lightweight and breathable, with elasticated waistband and inner mesh. External drawstring fastening for a secure fit. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
+          "description":"Lightweight and breathable, with elasticated waistband and inner mesh. External drawstring fastening for a secure fit. Also available in Youth sizes. (Swimwear is made to order.)",
           "price":"29.99",
           "category":4,
           "has_sizes":true,
@@ -278,7 +278,7 @@
        "fields":{
           "product_type":2,
           "name":"Scooped",
-          "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Digital rendering, Swimwear is made to order.)",
+          "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Swimwear is made to order.)",
           "price":"35.00",
           "category":4,
           "has_sizes":true,

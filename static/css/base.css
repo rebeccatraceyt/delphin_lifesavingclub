@@ -325,10 +325,7 @@ ol.breadcrumb {
 .detail-price {
     font-weight: bolder;
     text-align: right;
-    font-size: 1.4rem;
-}
-.detail-btns {
-    padding-top: 20px;
+    font-size: 1.2rem;
 }
 .detail-return,
 .detail-add {
@@ -477,9 +474,11 @@ ol.breadcrumb {
     }
 
     /* -- Individual Product Pages -- */
+    .detail-text {
+        font-size: 1rem;
+    }
     .detail-price {
         text-align: left;
-        font-size: 1.6rem;
     }
 
     /* -- Shopping Bag Pages -- */
