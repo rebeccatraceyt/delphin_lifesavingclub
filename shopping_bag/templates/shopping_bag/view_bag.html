@@ -81,18 +81,14 @@
     
                                     <div class="row bag-row">
                                         <!-- Size/Class Info -->
-                                        <div class="col-12">
+                                        <div class="col-12 bag-info">
                                             {% if bag_item.product in courses %}
-                                                {% for times in product.course_times.all %}
-                                                    Time: {{ times.time }}
-                                                {% endfor %}
+                                                <p>Time: {{ bag_item.product_select }}</p>
                                             {% else %}
                                                 {% if bag_item.product.has_sizes %}
-                                                    {% for sizes in product.apparel_sizes.all %}
-                                                        Size: {{ sizes.size }}
-                                                    {% endfor %}
+                                                    <p>Size: {{ bag_item.product_select }}</p>
                                                 {% else %}
-                                                    Size: one size
+                                                    <p>Size: one size</p>
                                                 {% endif %}
                                             {% endif %}
                                         </div>
@@ -101,7 +97,7 @@
                                     <div class="row bag-row">
                                         <!-- Update Box-->
                                         <div class="col-12">
-                                            <div class="input-group bag-qty">
+                                            <div class="input-group bag-qty qty-btns">
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-sm btn-black rounded-0" 
                                                         data-item_id="{{ bag_item.item_id }}" id="decrement-qty_{{ bag_item.item_id }}">
@@ -116,7 +112,7 @@
                                                     id="id_qty_{{ bag_item.item_id }}">
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                        data-item_id="{{ itbag_itemem.item_id }}" id="increment-qty_{{ bag_item.item_id }}">
+                                                        data-item_id="{{ bag_item.item_id }}" id="increment-qty_{{ bag_item.item_id }}">
                                                         <span>
                                                             <i class="fas fa-plus fa-sm"></i>
                                                         </span>

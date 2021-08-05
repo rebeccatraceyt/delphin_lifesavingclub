@@ -53,7 +53,7 @@
                     <div class="form-row d-flex flex-wrap justify-content-center">
                         <div class="col-12 py-sm-1">
                             <p class="m-0"><strong>Size:</strong></p>
-                            <select class="custom-select w-50" id="apparelSizeSelect">
+                            <select class="form-control custom-select w-50" name="apparel_size" id="id_apparel_size">
                                 {% if apparel.has_sizes %}
                                     <option selected>Select Size...</option>
                                     {% for sizes in apparel.apparel_sizes.all %}

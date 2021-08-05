@@ -327,6 +327,9 @@ ol.breadcrumb {
     text-align: right;
     font-size: 1.2rem;
 }
+.detail-btns {
+    padding-top: 10px;
+}
 .detail-return,
 .detail-add {
     max-width: 85%;
@@ -378,19 +381,23 @@ ol.breadcrumb {
     line-height: 2;
     font-size: .8rem;
 }
+.bag-info p {
+    font-size: .7rem;
+    margin-bottom: 0;
+}
 .bag-qty {
     padding: 5px;
 }
-.bag-qty button,
-.bag-qty input {
+.qty-btns button,
+.qty-btns input {
     border: 1px solid var(--black);
 }
-.bag-qty button {
+.qty-btns button {
     background-color: var(--black);
     color: var(--white);
 }
-.bag-qty button:hover,
-.bag-qty button:focus {
+.qty-btns button:hover,
+.qty-btns button:focus {
     color: var(--yellow);
 }
 .bag-total {
@@ -493,6 +500,9 @@ ol.breadcrumb {
         line-height: 1.6;
         font-size: 1.4rem;
     }
+    .bag-info p {
+        font-size: 1rem;
+    }
     .bag-qty {
         width: 40%;
     }
@@ -526,6 +536,9 @@ ol.breadcrumb {
     .bag-row {
         line-height: 1.3;
         font-size: 1.4rem;
+    }
+    .bag-info p {
+        font-size: 1rem;
     }
     .bag-qty {
         width: 40%;
@@ -654,6 +667,9 @@ ol.breadcrumb {
     .bag-row {
         line-height: 1.3;
         font-size: 1.4rem;
+    }
+    .bag-info p {
+        font-size: 1rem;
     }
     .bag-qty {
         width: 40%;

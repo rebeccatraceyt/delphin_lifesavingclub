@@ -60,7 +60,7 @@
                     <div class="form-row d-flex flex-wrap justify-content-center">
                         <div class="col-12 py-sm-1">
                             <p class="m-0"><strong>Class:</strong></p>
-                            <select class="custom-select w-50" id="courseTimeSelect">
+                            <select class="form-control custom-select w-50" name="course_time" id="id_course_time">
                                 <option selected>Select Class...</option>
                                 {% for times in course.course_times.all %}
                                     <option value="{{ times.time }}">{{ times.time }}</option>

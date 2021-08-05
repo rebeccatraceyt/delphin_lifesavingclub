@@ -17,20 +17,36 @@ def bag_content(request):
     courses = Course.objects.all()
     apparel = Apparel.objects.all()
     products = QuerySetSequence(Course.objects.all(), Apparel.objects.all())
+
     bag_items = []
     total = 0
     product_count = 0
     current_bag = request.session.get('current_bag', {})
 
-    for item_id, quantity in current_bag.items():
-        product = get_object_or_404(products, pk=item_id)
-        total += quantity * product.price
-        product_count += quantity
-        bag_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'product': product,
-        })
+    # for items/quantity in session bag
+    for item_id, item_data in current_bag.items():
+        if isinstance(item_data, int):
+            # if item_data = int: quantity
+            product = get_object_or_404(products, pk=item_id)
+            total += item_data * product.price
+            product_count += item_data
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'product': product,
+            })
+        else:
+            product = get_object_or_404(products, pk=item_id)
+            # if item_data != int: not just quantity
+            for product_select, quantity in item_data['items_by_select'].items():
+                total += quantity * product.price
+                product_count += quantity
+                bag_items.append({
+                    'item_id': item_id,
+                    'quantity': quantity,
+                    'product': product,
+                    'product_select': product_select,
+                })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
