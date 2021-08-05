@@ -53,7 +53,7 @@
                                         <a href="{% url 'apparel_detail' bag_item.product.id %}">
                                             <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
                                         </a>
-                                    {% endif %} 
+                                    {% endif %}
                                 {% endif %}
                             </div>
                             <div class="col-7">
@@ -83,9 +83,17 @@
                                         <!-- Size/Class Info -->
                                         <div class="col-12">
                                             {% if bag_item.product in courses %}
-                                                Time: {{ product.time }}
+                                                {% for times in product.course_times.all %}
+                                                    Time: {{ times.time }}
+                                                {% endfor %}
                                             {% else %}
-                                                Size: {{ product.size }}
+                                                {% if bag_item.product.has_sizes %}
+                                                    {% for sizes in product.apparel_sizes.all %}
+                                                        Size: {{ sizes.size }}
+                                                    {% endfor %}
+                                                {% else %}
+                                                    Size: one size
+                                                {% endif %}
                                             {% endif %}
                                         </div>
                                     </div>

@@ -52,15 +52,16 @@
                     {% csrf_token %}
                     <div class="form-row px-3">
                         <div class="col-6 d-flex flex-wrap justify-content-start">
-                            {% if apparel.has_sizes %}
-                                <select class="custom-select" id="apparelSizeSelect">
+                            <select class="custom-select" id="apparelSizeSelect">
+                                {% if apparel.has_sizes %}
                                     <option selected>Select Size</option>
                                     {% for sizes in apparel.apparel_sizes.all %}
                                         <option value="{{ sizes.size }}">{{ sizes.size }}</option>
                                     {% endfor %}
-                                </select>
-                            {% else %}
-                            {% endif %}
+                                {% else %}
+                                    <option selected>one size</option>
+                                {% endif %}
+                            </select>
                         </div>
                         <div class="col-6 d-flex flex-wrap justify-content-end">
                             <p class="mt-3"><strong>Quantity:</strong></p>
