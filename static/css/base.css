@@ -179,6 +179,9 @@ footer {
 .toast-msg {
     padding-bottom: 5px;
 }
+.toast-msg p {
+    margin-bottom: 0;
+}
 .toast-count {
     margin-bottom: .2rem;
     padding: 10px 5px;

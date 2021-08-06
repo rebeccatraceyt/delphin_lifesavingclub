@@ -33,7 +33,6 @@ def add_to_bag(request, item_id):
 
     current_bag = request.session.get('current_bag', {})
 
-    # checks if item has size or time
     if item_id in list(current_bag.keys()):
         # if item is currently in bag
         if select in current_bag[item_id]['items_by_select'].keys():
@@ -41,15 +40,15 @@ def add_to_bag(request, item_id):
             current_bag[item_id]['items_by_select'][select] += quantity
             messages.success(
                 request,
-                f'QTY updated for: {product.name}')
+                f'{product.name} qty updated')
         else:
             # if item is different size/time, add new item
             current_bag[item_id]['items_by_select'][select] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
+            messages.success(request, f'Added {product.name} to bag')
     else:
         # if not currently in bag, add new item
         current_bag[item_id] = {'items_by_select': {select: quantity}}
-        messages.success(request, f'Added {product.name} to your bag')
+        messages.success(request, f'Added {product.name} to bag')
 
     # override session variable with update
     request.session['current_bag'] = current_bag
@@ -67,7 +66,7 @@ def update_bag(request, item_id):
     # Get quantity of item and add to current bag
     quantity = int(request.POST.get('quantity'))
 
-    # get apparel products
+    # get products
     select = None
     if 'product_select' in request.POST:
         select = request.POST['product_select']
@@ -78,12 +77,12 @@ def update_bag(request, item_id):
         current_bag[item_id]['items_by_select'][select] = quantity
         messages.success(
                 request,
-                f'QTY updated for: {product.name}')
+                f'{product.name} qty updated')
     else:
         del current_bag[item_id]['items_by_select'][select]
         if not current_bag[item_id]['items_by_select']:
             current_bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        messages.success(request, f'{product.name} removed from bag')
 
     # override session variable with update
     request.session['current_bag'] = current_bag
@@ -100,7 +99,7 @@ def remove_from_bag(request, item_id):
                                     Apparel.objects.all())
         product = get_object_or_404(products, pk=item_id)
 
-        # get apparel products
+        # get products
         select = None
         if 'product_select' in request.POST:
             select = request.POST['product_select']
@@ -110,7 +109,7 @@ def remove_from_bag(request, item_id):
         del current_bag[item_id]['items_by_select'][select]
         if not current_bag[item_id]['items_by_select']:
             current_bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        messages.success(request, f'{product.name} removed from bag')
 
         request.session['current_bag'] = current_bag
         return HttpResponse(status=200)
