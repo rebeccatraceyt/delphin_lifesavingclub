@@ -5,11 +5,11 @@ from shop.models import Course, Apparel
 from queryset_sequence import QuerySetSequence
 
 
-def view_bag(request):
+def shopping_bag(request):
     """
     Returns Shopping Bag
     """
-    return render(request, 'shopping_bag/view_bag.html')
+    return render(request, 'shopping_bag/shopping_bag.html')
 
 
 def add_to_bag(request, item_id):
@@ -86,7 +86,7 @@ def update_bag(request, item_id):
 
     # override session variable with update
     request.session['current_bag'] = current_bag
-    return redirect(reverse('view_bag'))
+    return redirect(reverse('shopping_bag'))
 
 
 def remove_from_bag(request, item_id):

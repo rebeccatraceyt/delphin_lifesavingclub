@@ -10,4 +10,3 @@ def calc_subtotal(price, quantity):
     ref Boutique Ado lesson: https://tinyurl.com/2ktsebwu
     """
     return price * quantity
-

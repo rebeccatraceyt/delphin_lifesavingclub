@@ -10,7 +10,7 @@
 
     <!-- centered bag icon in mobile view -->
     <div class="d-lg-none">
-        <a class="bag-icon-sm nav-link position-relative" href="{% url 'view_bag' %}" title="Shopping Bag">
+        <a class="bag-icon-sm nav-link position-relative" href="{% url 'shopping_bag' %}" title="Shopping Bag">
             <i class="fas fa-shopping-bag d-flex align-items-center justify-content-center">
                 <span>
                     {% if bag_items %}
@@ -92,7 +92,7 @@
 
     <!-- right-aligned bag icon in desktop view -->
     <div class="d-none d-lg-inline-block">
-        <a href="{% url 'view_bag' %}" class="bag-icon-lg nav-link position-relative d-inline-flex {% if url_name == 'view_bag' %}active{% endif %}" title="Shopping Bag" aria-label="View Shopping Bag">
+        <a href="{% url 'shopping_bag' %}" class="bag-icon-lg nav-link position-relative d-inline-flex {% if url_name == 'shopping_bag' %}active{% endif %}" title="Shopping Bag" aria-label="View Shopping Bag">
             <i class="fas fa-shopping-bag"></i>
             <span class="d-flex align-items-center justify-content-center">
                 {% if bag_items %}
