@@ -91,9 +91,11 @@ def course_detail(request, course_id):
     Returns specified course
     """
     course = get_object_or_404(Course, pk=course_id)
+    course_times = course.times.all()
 
     context = {
-        'course': course
+        'course': course,
+        'course_times': course_times,
     }
 
     return render(request, 'shop/course_detail.html', context)

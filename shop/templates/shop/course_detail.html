@@ -60,9 +60,9 @@
                     <div class="form-row d-flex flex-wrap justify-content-center">
                         <div class="col-12 py-sm-1">
                             <p class="m-0"><strong>Class:</strong></p>
-                            <select class="form-control custom-select w-50" name="product_select" id="id_course_time">
+                            <select class="form-control custom-select w-50" name="product_select" id="id_product_select">
                                 {% for times in course.course_times.all %}
-                                    <option value="{{ times.time }}" selected>{{ times.time }}</option>
+                                    <option value="{{ times.time }}" selected>{{ times.time.time_name }}</option>
                                 {% endfor %}
                             </select>
                         </div>

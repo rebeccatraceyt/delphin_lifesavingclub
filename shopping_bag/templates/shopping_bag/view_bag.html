@@ -83,14 +83,7 @@
                                     <div class="row bag-row">
                                         <!-- Size/Class Info -->
                                         <div class="col-12 bag-info">
-                                            {% if bag_item.product in courses %}
-                                                <p>Time: {{ bag_item.product_select }}</p>
-                                            {% else %}
-                                                {% if bag_item.product.has_sizes %}
-                                                    <p>Size: {{ bag_item.product_select }}</p>
-                                                {% else %}
-                                                {% endif %}
-                                            {% endif %}
+                                            <p>SKU: {{ bag_item.product_select }}</p>
                                         </div>
                                     </div>
     
@@ -103,7 +96,7 @@
                                                     <div class="input-group bag-qty qty-btns">
                                                         <div class="input-group-prepend">
                                                             <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                                                                data-item_id="{{ bag_item.item_id }}" id="decrement-qty_{{ bag_item.item_id }}">
+                                                                data-item_id="{{ bag_item.product_select }}" id="decrement-qty_{{ bag_item.product_select }}">
                                                                 <span>
                                                                     <i class="fas fa-minus fa-sm"></i>
                                                                 </span>
@@ -111,19 +104,17 @@
                                                         </div>
                                                         <input class="form-control form-control-sm qty_input" type="number"
                                                             name="quantity" value="{{ bag_item.quantity }}" min="1" max="99"
-                                                            data-item_id="{{ bag_item.item_id }}"
-                                                            id="id_qty_{{ bag_item.item_id }}">
+                                                            data-item_id="{{ bag_item.product_select }}"
+                                                            id="id_qty_{{ bag_item.product_select }}">
                                                         <div class="input-group-append">
                                                             <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                                data-item_id="{{ bag_item.item_id }}" id="increment-qty_{{ bag_item.item_id }}">
+                                                                data-item_id="{{ bag_item.product_select }}" id="increment-qty_{{ bag_item.product_select }}">
                                                                 <span>
                                                                     <i class="fas fa-plus fa-sm"></i>
                                                                 </span>
                                                             </button>
                                                         </div>
-                                                        {% if bag_item.product_select %}
-                                                            <input type="hidden" name="product_select" value="{{ bag_item.product_select }}">
-                                                        {% endif %}
+                                                        <input type="hidden" name="product_select" value="{{ bag_item.product_select }}">
                                                     </div>
                                                 </div>
                                             </form>

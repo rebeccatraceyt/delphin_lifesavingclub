@@ -1,444 +1,410 @@
 [
-    {
-       "model":"shop.apparel",
-       "pk":1,
-       "fields":{
-          "product_type":2,
-          "name":"Jersey Shirt",
-          "description":"Soft, comfy cotton jersey shirt in club colours. Also available in Youth sizes.",
-          "price":"25.99",
-          "category":1,
-          "has_sizes":true,
-          "image":"blk-bball.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":2,
-       "fields":{
-          "product_type":2,
-          "name":"Water Bottle",
-          "description":"Lightweight stainless steel with double walled insulation. Keeps drink warm for up to eight hours and cold for up to 24 hours. Capacity: 750ml",
-          "price":"11.99",
-          "category":3,
-          "has_sizes":false,
-          "image":"blk-bottle.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":3,
-       "fields":{
-          "product_type":2,
-          "name":"Sports Hat",
-          "description":"Lightweight and breathable material with Delphin Logo.",
-          "price":"10.99",
-          "category":3,
-          "has_sizes":false,
-          "image":"blk-hat.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":4,
-       "fields":{
-          "product_type":2,
-          "name":"Club Hoodie",
-          "description":"Soft touch fleece fabric in an oversized fit. Also available in Youth sizes.",
-          "price":"32.99",
-          "category":2,
-          "has_sizes":true,
-          "image":"blk-hoodie.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":5,
-       "fields":{
-          "product_type":2,
-          "name":"Racerbacks",
-          "description":"Featuring a racerback and shape retentive fabric, with comfort fit offering flexibility and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Swimwear is made to order.)",
-          "price":"35.00",
-          "category":4,
-          "has_sizes":true,
-          "image":"blk-racers.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":6,
-       "fields":{
-          "product_type":2,
-          "name":"Swim Shorts",
-          "description":"Lightweight and breathable, with elasticated waistband and inner mesh. External drawstring fastening for a secure fit. Also available in Youth sizes. (Swimwear is made to order.)",
-          "price":"29.99",
-          "category":4,
-          "has_sizes":true,
-          "image":"blk-shorts.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":7,
-       "fields":{
-          "product_type":2,
-          "name":"Sports Bag",
-          "description":"Sports bag holdall for sports gear. Zipped main compartment and front pocket. Coated bottom panel for moisture defense.",
-          "price":"35.99",
-          "category":3,
-          "has_sizes":false,
-          "image":"blk-sports.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":8,
-       "fields":{
-          "product_type":2,
-          "name":"Wet Bag",
-          "description":"Designed with one main compartment and a discreet inner pocket. Secure pulled closure with two shoulder straps.",
-          "price":"9.99",
-          "category":3,
-          "has_sizes":false,
-          "image":"blk-string.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":9,
-       "fields":{
-          "product_type":2,
-          "name":"Scooped",
-          "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Swimwear is made to order.)",
-          "price":"35.00",
-          "category":4,
-          "has_sizes":true,
-          "image":"blk-togs.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":10,
-       "fields":{
-          "product_type":2,
-          "name":"Club Tshirt",
-          "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth sizes.",
-          "price":"8.99",
-          "category":1,
-          "has_sizes":true,
-          "image":"blk-tshirt.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":11,
-       "fields":{
-          "product_type":2,
-          "name":"Club Jacket",
-          "description":"Durable and lightweight rain jacket, with breathable inner mesh. Full zip fastening and fold away hood. Also available in Youth sizes.",
-          "price":"30.00",
-          "category":2,
-          "has_sizes":true,
-          "image":"blk-zipper.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":12,
-       "fields":{
-          "product_type":2,
-          "name":"Mirror Goggles",
-          "description":"Streamlined lens profile with interchangable nose bridges and double silicone strap. Anti-fog coating and UV Protection.",
-          "price":"15.00",
-          "category":5,
-          "has_sizes":false,
-          "image":"goggles-mirror.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":13,
-       "fields":{
-          "product_type":2,
-          "name":"Junior Goggles",
-          "description":"Shape and style designed for juniors aged 5-15. Flexible with soft material and secure fit with easy to adjust clips. Clear lense for maximum visiblity. Anti-fog coating and UV Protection.",
-          "price":"10.99",
-          "category":5,
-          "has_sizes":false,
-          "image":"goggles-junior.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":14,
-       "fields":{
-          "product_type":2,
-          "name":"Jersey Shirt",
-          "description":"Soft, comfy cotton jersey shirt in Lifeguard colours.",
-          "price":"25.99",
-          "category":1,
-          "has_sizes":true,
-          "image":"red-bball.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":15,
-       "fields":{
-          "product_type":2,
-          "name":"Water Bottle",
-          "description":"Lightweight stainless steel with double walled insulation. Keeps drink warm for up to eight hours and cold for up to 24 hours. Capacity: 750ml",
-          "price":"11.99",
-          "category":3,
-          "has_sizes":false,
-          "image":"red-bottle.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":16,
-       "fields":{
-          "product_type":2,
-          "name":"Flip Flops",
-          "description":"Footstrap with single toe post and grip tread sole. Cushioned footbed.",
-          "price":"14.99",
-          "category":5,
-          "has_sizes":true,
-          "image":"red-ff.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":17,
-       "fields":{
-          "product_type":2,
-          "name":"Sports Hat",
-          "description":"Lightweight and breathable material with Delphin Logo.",
-          "price":"10.99",
-          "category":3,
-          "has_sizes":false,
-          "image":"red-hat.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":18,
-       "fields":{
-          "product_type":2,
-          "name":"Club Hoodie",
-          "description":"Soft touch fleece fabric in an oversized fit. Also available in Youth sizes.",
-          "price":"32.99",
-          "category":2,
-          "has_sizes":true,
-          "image":"red-hoodie.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":19,
-       "fields":{
-          "product_type":2,
-          "name":"Racerbacks",
-          "description":"Featuring a racerback and shape retentive fabric, with comfort fit offering flexibility and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Swimwear is made to order.)",
-          "price":"35.00",
-          "category":4,
-          "has_sizes":true,
-          "image":"red-racers.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":20,
-       "fields":{
-          "product_type":2,
-          "name":"Swim Shorts",
-          "description":"Lightweight and breathable, with elasticated waistband and inner mesh. External drawstring fastening for a secure fit. Also available in Youth sizes. (Swimwear is made to order.)",
-          "price":"29.99",
-          "category":4,
-          "has_sizes":true,
-          "image":"red-shorts.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":21,
-       "fields":{
-          "product_type":2,
-          "name":"Baby Swimwear",
-          "description":"Lightweight and breathable all-in-one with short sleeves and crew neck. Full zip fastening.",
-          "price":"13.99",
-          "category":4,
-          "has_sizes":true,
-          "image":"red-suit.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":22,
-       "fields":{
-          "product_type":2,
-          "name":"Scooped",
-          "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth sizes. (Swimwear is made to order.)",
-          "price":"35.00",
-          "category":4,
-          "has_sizes":true,
-          "image":"red-togs.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":23,
-       "fields":{
-          "product_type":2,
-          "name":"Club Tshirt",
-          "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth sizes.",
-          "price":"8.99",
-          "category":1,
-          "has_sizes":true,
-          "image":"red-tshirt.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":24,
-       "fields":{
-          "product_type":2,
-          "name":"Jersey Shirt",
-          "description":"Soft, comfy cotton jersey shirt in club colours. Also available in Youth sizes.",
-          "price":"25.99",
-          "category":1,
-          "has_sizes":true,
-          "image":"wht-bball.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":25,
-       "fields":{
-          "product_type":2,
-          "name":"Water Bottle",
-          "description":"Lightweight stainless steel with double walled insulation. Keeps drink warm for up to eight hours and cold for up to 24 hours. Capacity: 750ml",
-          "price":"11.99",
-          "category":3,
-          "has_sizes":false,
-          "image":"wht-bottle.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":26,
-       "fields":{
-          "product_type":2,
-          "name":"Club Towel",
-          "description":"Soft and durable towel, highly absorbant and quick drying. 100% combed cotton.",
-          "price":"10.99",
-          "category":5,
-          "has_sizes":false,
-          "image":"wht-towel.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":27,
-       "fields":{
-          "product_type":2,
-          "name":"Club Tshirt",
-          "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth sizes.",
-          "price":"8.99",
-          "category":1,
-          "has_sizes":true,
-          "image":"wht-tshirt.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":28,
-       "fields":{
-          "product_type":2,
-          "name":"Armbands",
-          "description":"High quality PVC with safety valves. Duel chamber inflation. Designed for ages 2- 6. (Children must be under supervision when using inflatable equipment.)",
-          "price":"5.99",
-          "category":5,
-          "has_sizes":false,
-          "image":"yellow-armbands.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":29,
-       "fields":{
-          "product_type":2,
-          "name":"Club Swim Hat",
-          "description":"Moulded silicone with hydrodynamic outline. Durable and comfortable fit.",
-          "price":"7.99",
-          "category":5,
-          "has_sizes":false,
-          "image":"yellow-cap.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":30,
-       "fields":{
-          "product_type":2,
-          "name":"Flip Flops",
-          "description":"Footstrap with single toe post and grip tread sole. Cushioned footbed.",
-          "price":"14.99",
-          "category":5,
-          "has_sizes":true,
-          "image":"yellow-ff.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":31,
-       "fields":{
-          "product_type":2,
-          "name":"Wet Bag",
-          "description":"Designed with one main compartment and a discreet inner pocket. Secure pulled closure with two shoulder straps.",
-          "price":"9.99",
-          "category":3,
-          "has_sizes":false,
-          "image":"yellow-string.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":32,
-       "fields":{
-          "product_type":2,
-          "name":"Club Towel",
-          "description":"Soft and durable towel, highly absorbant and quick drying. 100% combed cotton.",
-          "price":"10.99",
-          "category":5,
-          "has_sizes":false,
-          "image":"yellow-towel.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":33,
-       "fields":{
-          "product_type":2,
-          "name":"Club Tshirt",
-          "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth sizes.",
-          "price":"8.99",
-          "category":1,
-          "has_sizes":true,
-          "image":"yellow-tshirt.png"
-       }
-    },
-    {
-       "model":"shop.apparel",
-       "pk":34,
-       "fields":{
-          "product_type":2,
-          "name":"Club Jacket",
-          "description":"Durable and lightweight rain jacket, with breathable inner mesh. Full zip fastening and fold away hood. Also available in Youth sizes.",
-          "price":"30.00",
-          "category":2,
-          "has_sizes":true,
-          "image":"yellow-zipper.png"
-       }
-    }
- ]
+   {
+      "model":"shop.apparel",
+      "pk":1,
+      "fields":{
+         "product_type":2,
+         "name":"Jersey Shirt",
+         "description":"Soft, comfy cotton jersey shirt in club colours. Also available in Youth(Y) sizes.",
+         "price":"25.99",
+         "category":1,
+         "image":"blk-bball.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":2,
+      "fields":{
+         "product_type":2,
+         "name":"Water Bottle",
+         "description":"Lightweight stainless steel with double walled insulation. Keeps drink warm for up to eight hours and cold for up to 24 hours. Capacity: 750ml",
+         "price":"11.99",
+         "category":3,
+         "image":"blk-bottle.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":3,
+      "fields":{
+         "product_type":2,
+         "name":"Sports Hat",
+         "description":"Lightweight and breathable material with Delphin Logo.",
+         "price":"10.99",
+         "category":3,
+         "image":"blk-hat.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":4,
+      "fields":{
+         "product_type":2,
+         "name":"Club Hoodie",
+         "description":"Soft touch fleece fabric in an oversized fit. Also available in Youth(Y) sizes.",
+         "price":"32.99",
+         "category":2,
+         "image":"blk-hoodie.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":5,
+      "fields":{
+         "product_type":2,
+         "name":"Racerbacks",
+         "description":"Featuring a racerback and shape retentive fabric, with comfort fit offering flexibility and freedom of movement. Chlorine resistant. Also available in Youth(Y) sizes. (Swimwear is made to order.)",
+         "price":"35.00",
+         "category":4,
+         "image":"blk-racers.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":6,
+      "fields":{
+         "product_type":2,
+         "name":"Swim Shorts",
+         "description":"Lightweight and breathable, with elasticated waistband and inner mesh. External drawstring fastening for a secure fit. Also available in Youth(Y) sizes. (Swimwear is made to order.)",
+         "price":"29.99",
+         "category":4,
+         "image":"blk-shorts.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":7,
+      "fields":{
+         "product_type":2,
+         "name":"Sports Bag",
+         "description":"Sports bag holdall for sports gear. Zipped main compartment and front pocket. Coated bottom panel for moisture defense.",
+         "price":"35.99",
+         "category":3,
+         "image":"blk-sports.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":8,
+      "fields":{
+         "product_type":2,
+         "name":"Wet Bag",
+         "description":"Designed with one main compartment and a discreet inner pocket. Secure pulled closure with two shoulder straps.",
+         "price":"9.99",
+         "category":3,
+         "image":"blk-string.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":9,
+      "fields":{
+         "product_type":2,
+         "name":"Scooped",
+         "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth(Y) sizes. (Swimwear is made to order.)",
+         "price":"35.00",
+         "category":4,
+         "image":"blk-togs.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":10,
+      "fields":{
+         "product_type":2,
+         "name":"Club Tshirt",
+         "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth(Y) sizes.",
+         "price":"8.99",
+         "category":1,
+         "image":"blk-tshirt.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":11,
+      "fields":{
+         "product_type":2,
+         "name":"Club Jacket",
+         "description":"Durable and lightweight rain jacket, with breathable inner mesh. Full zip fastening and fold away hood. Also available in Youth(Y) sizes.",
+         "price":"30.00",
+         "category":2,
+         "image":"blk-zipper.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":12,
+      "fields":{
+         "product_type":2,
+         "name":"Mirror Goggles",
+         "description":"Streamlined lens profile with interchangable nose bridges and double silicone strap. Anti-fog coating and UV Protection.",
+         "price":"15.00",
+         "category":5,
+         "image":"goggles-mirror.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":13,
+      "fields":{
+         "product_type":2,
+         "name":"Junior Goggles",
+         "description":"Shape and style designed for juniors aged 5-15. Flexible with soft material and secure fit with easy to adjust clips. Clear lense for maximum visiblity. Anti-fog coating and UV Protection.",
+         "price":"10.99",
+         "category":5,
+         "image":"goggles-junior.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":14,
+      "fields":{
+         "product_type":2,
+         "name":"Jersey Shirt",
+         "description":"Soft, comfy cotton jersey shirt in Lifeguard colours.",
+         "price":"25.99",
+         "category":1,
+         "image":"red-bball.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":15,
+      "fields":{
+         "product_type":2,
+         "name":"Water Bottle",
+         "description":"Lightweight stainless steel with double walled insulation. Keeps drink warm for up to eight hours and cold for up to 24 hours. Capacity: 750ml",
+         "price":"11.99",
+         "category":3,
+         "image":"red-bottle.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":16,
+      "fields":{
+         "product_type":2,
+         "name":"Flip Flops",
+         "description":"Footstrap with single toe post and grip tread sole. Cushioned footbed.",
+         "price":"14.99",
+         "category":5,
+         "image":"red-ff.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":17,
+      "fields":{
+         "product_type":2,
+         "name":"Sports Hat",
+         "description":"Lightweight and breathable material with Delphin Logo.",
+         "price":"10.99",
+         "category":3,
+         "image":"red-hat.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":18,
+      "fields":{
+         "product_type":2,
+         "name":"Club Hoodie",
+         "description":"Soft touch fleece fabric in an oversized fit. Also available in Youth(Y) sizes.",
+         "price":"32.99",
+         "category":2,
+         "image":"red-hoodie.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":19,
+      "fields":{
+         "product_type":2,
+         "name":"Racerbacks",
+         "description":"Featuring a racerback and shape retentive fabric, with comfort fit offering flexibility and freedom of movement. Chlorine resistant. Also available in Youth(Y) sizes. (Swimwear is made to order.)",
+         "price":"35.00",
+         "category":4,
+         "image":"red-racers.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":20,
+      "fields":{
+         "product_type":2,
+         "name":"Swim Shorts",
+         "description":"Lightweight and breathable, with elasticated waistband and inner mesh. External drawstring fastening for a secure fit. Also available in Youth(Y) sizes. (Swimwear is made to order.)",
+         "price":"29.99",
+         "category":4,
+         "image":"red-shorts.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":21,
+      "fields":{
+         "product_type":2,
+         "name":"Baby Swimwear",
+         "description":"Lightweight and breathable all-in-one with short sleeves and crew neck. Full zip fastening.",
+         "price":"13.99",
+         "category":4,
+         "image":"red-suit.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":22,
+      "fields":{
+         "product_type":2,
+         "name":"Scooped",
+         "description":"Featuring a scooped back and shape retentive fabric, with comfort fit and freedom of movement. Chlorine resistant. Also available in Youth(Y) sizes. (Swimwear is made to order.)",
+         "price":"35.00",
+         "category":4,
+         "image":"red-togs.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":23,
+      "fields":{
+         "product_type":2,
+         "name":"Club Tshirt",
+         "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth(Y) sizes.",
+         "price":"8.99",
+         "category":1,
+         "image":"red-tshirt.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":24,
+      "fields":{
+         "product_type":2,
+         "name":"Jersey Shirt",
+         "description":"Soft, comfy cotton jersey shirt in club colours. Also available in Youth(Y) sizes.",
+         "price":"25.99",
+         "category":1,
+         "image":"wht-bball.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":25,
+      "fields":{
+         "product_type":2,
+         "name":"Water Bottle",
+         "description":"Lightweight stainless steel with double walled insulation. Keeps drink warm for up to eight hours and cold for up to 24 hours. Capacity: 750ml",
+         "price":"11.99",
+         "category":3,
+         "image":"wht-bottle.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":26,
+      "fields":{
+         "product_type":2,
+         "name":"Club Towel",
+         "description":"Soft and durable towel, highly absorbant and quick drying. 100% combed cotton.",
+         "price":"10.99",
+         "category":5,
+         "image":"wht-towel.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":27,
+      "fields":{
+         "product_type":2,
+         "name":"Club Tshirt",
+         "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth(Y) sizes.",
+         "price":"8.99",
+         "category":1,
+         "image":"wht-tshirt.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":28,
+      "fields":{
+         "product_type":2,
+         "name":"Armbands",
+         "description":"High quality PVC with safety valves. Duel chamber inflation. Designed for ages 2- 6. (Children must be under supervision when using inflatable equipment.)",
+         "price":"5.99",
+         "category":5,
+         "image":"yellow-armbands.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":29,
+      "fields":{
+         "product_type":2,
+         "name":"Club Swim Hat",
+         "description":"Moulded silicone with hydrodynamic outline. Durable and comfortable fit.",
+         "price":"7.99",
+         "category":5,
+         "image":"yellow-cap.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":30,
+      "fields":{
+         "product_type":2,
+         "name":"Flip Flops",
+         "description":"Footstrap with single toe post and grip tread sole. Cushioned footbed.",
+         "price":"14.99",
+         "category":5,
+         "image":"yellow-ff.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":31,
+      "fields":{
+         "product_type":2,
+         "name":"Wet Bag",
+         "description":"Designed with one main compartment and a discreet inner pocket. Secure pulled closure with two shoulder straps.",
+         "price":"9.99",
+         "category":3,
+         "image":"yellow-string.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":32,
+      "fields":{
+         "product_type":2,
+         "name":"Club Towel",
+         "description":"Soft and durable towel, highly absorbant and quick drying. 100% combed cotton.",
+         "price":"10.99",
+         "category":5,
+         "image":"yellow-towel.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":33,
+      "fields":{
+         "product_type":2,
+         "name":"Club Tshirt",
+         "description":"Short sleeved, crew neck T-Shirt. 100% cotton for a breathable, comfortable fit. Also available in Youth(Y) sizes.",
+         "price":"8.99",
+         "category":1,
+         "image":"yellow-tshirt.png"
+      }
+   },
+   {
+      "model":"shop.apparel",
+      "pk":34,
+      "fields":{
+         "product_type":2,
+         "name":"Club Jacket",
+         "description":"Durable and lightweight rain jacket, with breathable inner mesh. Full zip fastening and fold away hood. Also available in Youth(Y) sizes.",
+         "price":"30.00",
+         "category":2,
+         "image":"yellow-zipper.png"
+      }
+   }
+]

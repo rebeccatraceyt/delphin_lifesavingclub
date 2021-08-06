@@ -3,70 +3,89 @@
        "model":"shop.size",
        "pk":1,
        "fields":{
-          "size":"XS"
+          "size":"XS",
+          "size_name": "XSmall"
        }
     },
     {
        "model":"shop.size",
        "pk":2,
        "fields":{
-          "size":"S"
+          "size":"S",
+          "size_name": "Small"
        }
     },
     {
        "model":"shop.size",
        "pk":3,
        "fields":{
-          "size":"M"
+          "size":"M",
+          "size_name": "Medium"
        }
     },
     {
        "model":"shop.size",
        "pk":4,
        "fields":{
-          "size":"L"
+          "size":"L",
+          "size_name": "Large"
        }
     },
     {
        "model":"shop.size",
        "pk":5,
        "fields":{
-          "size":"XL"
+          "size":"XL",
+          "size_name":"XLarge"
        }
     },
     {
        "model":"shop.size",
        "pk":6,
        "fields":{
-          "size":"Youth XS"
+          "size":"Y-XS",
+          "size_name":"Youth XSmall"
        }
     },
     {
        "model":"shop.size",
        "pk":7,
        "fields":{
-          "size":"Youth S"
+          "size":"Y-S",
+          "size_name":"Youth Small"
        }
     },
     {
        "model":"shop.size",
        "pk":8,
        "fields":{
-          "size":"Youth M"
+          "size":"Y-M",
+          "size_name":"Youth Medium"
        }
     },
     {
        "model":"shop.size",
        "pk":9,
        "fields":{
-          "size":"Youth L"
+          "size":"Y-L",
+          "size_name":"Youth Large"
        }
     },
     {
        "model":"shop.size",
        "pk":10,
        "fields":{
-          "size":"Youth XL"
+          "size":"Y-XL",
+          "size_name":"Youth XLarge"
        }
-    }
+    },
+    {
+      "model":"shop.size",
+      "pk":11,
+      "fields":{
+         "size":"OneSize",
+         "size_name":"ONE SIZE"
+      }
+   }
+
  ]

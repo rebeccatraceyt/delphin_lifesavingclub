@@ -34,30 +34,20 @@ def add_to_bag(request, item_id):
     current_bag = request.session.get('current_bag', {})
 
     # checks if item has size or time
-    if select:
-        if item_id in list(current_bag.keys()):
-            # if item is currently in bag
-            if select in current_bag[item_id]['items_by_select'].keys():
-                # if item is same size/time, increment quantity
-                current_bag[item_id]['items_by_select'][select] += quantity
-                messages.success(request, f'Added {product.name} to your bag')
-            else:
-                # if item is different size/time, add new item
-                current_bag[item_id]['items_by_select'][select] = quantity
-                messages.success(request, f'Added {product.name} to your bag')
+    if item_id in list(current_bag.keys()):
+        # if item is currently in bag
+        if select in current_bag[item_id]['items_by_select'].keys():
+            # if item is same size/time, increment quantity
+            current_bag[item_id]['items_by_select'][select] += quantity
+            messages.success(request, f'Added {product.name} to your bag')
         else:
-            # if not currently in bag, add new item
-            current_bag[item_id] = {'items_by_select': {select: quantity}}
-            messages.error(request, f'Added {product.name} to your bag')
+            # if item is different size/time, add new item
+            current_bag[item_id]['items_by_select'][select] = quantity
+            messages.success(request, f'Added {product.name} to your bag')
     else:
-        # if apparel item has no size
-        # check if item exists already in bag
-        if item_id in list(current_bag.keys()):
-            # if it does, increment quantity number
-            current_bag[item_id] += quantity
-        else:
-            current_bag[item_id] = quantity
-            messages.error(request, f'Added {product.name} to your bag')
+        # if not currently in bag, add new item
+        current_bag[item_id] = {'items_by_select': {select: quantity}}
+        messages.error(request, f'Added {product.name} to your bag')
 
     # override session variable with update
     request.session['current_bag'] = current_bag
@@ -84,18 +74,11 @@ def update_bag(request, item_id):
 
     current_bag = request.session.get('current_bag', {})
 
-    # checks if item has size or time
-    if select:
-        if quantity > 0:
-            current_bag[item_id]['items_by_select'][select] = quantity
-        else:
-            del current_bag[item_id]['items_by_select'][select]
-            if not current_bag[item_id]['items_by_select']:
-                current_bag.pop(item_id)
+    if quantity > 0:
+        current_bag[item_id]['items_by_select'][select] = quantity
     else:
-        if quantity > 0:
-            current_bag[item_id] = quantity
-        else:
+        del current_bag[item_id]['items_by_select'][select]
+        if not current_bag[item_id]['items_by_select']:
             current_bag.pop(item_id)
 
     # override session variable with update
@@ -121,12 +104,8 @@ def remove_from_bag(request, item_id):
 
         current_bag = request.session.get('current_bag', {})
 
-        # checks if item has size or time
-        if select:
-            del current_bag[item_id]['items_by_select'][select]
-            if not current_bag[item_id]['items_by_select']:
-                current_bag.pop(item_id)
-        else:
+        del current_bag[item_id]['items_by_select'][select]
+        if not current_bag[item_id]['items_by_select']:
             current_bag.pop(item_id)
 
         request.session['current_bag'] = current_bag

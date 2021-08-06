@@ -398,6 +398,9 @@ ol.breadcrumb {
     line-height: 2;
     font-size: .8rem;
 }
+.bag-row .form-group {
+    margin-bottom: 0;
+}
 .bag-info p {
     font-size: .7rem;
     margin-bottom: 0;

@@ -26,9 +26,13 @@ class Time(models.Model):
     Defines course times
     """
     time = models.CharField(max_length=255)
+    time_name = models.CharField(max_length=255, default='monday')
 
     def __str__(self):
         return str(self.time)
+
+    def get_time_name(self):
+        return str(self.time_name)
 
 
 class AgeRange(models.Model):
@@ -94,9 +98,13 @@ class Size(models.Model):
     Defines apparel size
     """
     size = models.CharField(max_length=255)
+    size_name = models.CharField(max_length=255, default='small')
 
     def __str__(self):
         return str(self.size)
+
+    def get_size_name(self):
+        return str(self.size_name)
 
 
 class Category(models.Model):
@@ -137,7 +145,6 @@ class Apparel(models.Model):
                                  null=True,
                                  blank=True,
                                  on_delete=models.SET_NULL)
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
     sizes = models.ManyToManyField(Size,
                                    through='ApparelSize',
                                    related_name='apparel_size')

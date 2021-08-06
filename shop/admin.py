@@ -43,6 +43,7 @@ class TimeAdmin(admin.ModelAdmin):
     inlines = (CourseTimeInline,)
     list_display = (
         'time',
+        'time_name',
     )
 
 
@@ -88,6 +89,10 @@ class SizeAdmin(admin.ModelAdmin):
     Create admin views for Apparel Sizes
     """
     inlines = (ApparelSizeInline,)
+    list_display = (
+        'size',
+        'size_name',
+    )
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -111,7 +116,6 @@ class ApparelAdmin(admin.ModelAdmin):
         'description',
         'price',
         'category',
-        'has_sizes',
         'image',
     )
 
@@ -123,4 +127,3 @@ admin.site.register(Course, CourseAdmin)
 admin.site.register(Size, SizeAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Apparel, ApparelAdmin)
-
