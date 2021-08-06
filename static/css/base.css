@@ -153,20 +153,56 @@ footer {
 }
 
 /* --- Toasts --- */
+.toast {
+    background-color: var(--white);
+    font-size: .9rem;
+}
 .message-container {
     position: fixed;
-    top: 72px;
-    right: 15px;
+    width: 300px;
+    top: 75px;
+    right: 0;
     z-index: 2000;
 }
-
 .custom-toast {
     overflow: visible;
 }
-
 .toast-capper {
+    background-color: var(--yellow);
     height: 2px;
 }
+.bag-snippet {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.toast-msg {
+    padding-bottom: 5px;
+}
+.toast-count {
+    margin-bottom: .2rem;
+    padding: 10px 5px;
+    font-size: .8rem;
+}
+.toast-count span{
+    font-size: 1.2rem;
+    font-family: var(--title-font);
+}
+.toast-highlighted {
+    background-color: var(--yellow);
+    color: var(--black);
+    text-align: center;
+    padding: 10px;
+}
+.toast-btn {
+    background-color: var(--black);
+    color: var(--white);
+}
+.toast-btn:hover,
+.toast-btn:focus {
+    color: var(--yellow);
+}
+
 
 /* --- Home Page --- */
 
@@ -617,6 +653,23 @@ ol.breadcrumb {
         height: 15px;
         color: var(--white);
         border-radius: 50%;
+    }
+
+    /* -- Toasts -- */
+
+    .message-container {
+        right: 15px;
+    }
+    .arrow-up {
+        /* ref: https://css-tricks.com/snippets/css/css-triangle/  */
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 10px solid var(--yellow);
+        position: absolute;
+        top: -10px;
+        right: 30px;
     }
 
     /* -- Home Page -- */
