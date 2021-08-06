@@ -1,8 +1,11 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 from django.urls import reverse
 
 
 class TestShoppingBagView(TestCase):
+    def setUp(self):
+        self.client = Client()
+
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
         response = self.client.get('/shopping_bag/')

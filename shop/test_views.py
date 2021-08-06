@@ -1,4 +1,4 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 from django.urls import reverse
 from .models import Course, Apparel, Category, AgeRange
 
@@ -7,6 +7,9 @@ from .models import Course, Apparel, Category, AgeRange
 
 
 class TestAllProductsView(TestCase):
+    def setUp(self):
+        self.client = Client()
+
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
         response = self.client.get('/shop/')
@@ -25,6 +28,9 @@ class TestAllProductsView(TestCase):
 
 
 class TestSearchProductsView(TestCase):
+    def setUp(self):
+        self.client = Client()
+
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
         response = self.client.get('/shop/')
@@ -46,6 +52,9 @@ class TestSearchProductsView(TestCase):
 
 
 class TestAllCoursesView(TestCase):
+    def setUp(self):
+        self.client = Client()
+
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
         response = self.client.get('/shop/all_courses')
@@ -80,6 +89,9 @@ class TestAllCoursesView(TestCase):
 
 
 class TestCourseDetailView(TestCase):
+    def setUp(self):
+        self.client = Client()
+
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
         course = Course.objects.create(name='test course',
@@ -109,13 +121,16 @@ class TestCourseDetailView(TestCase):
 
 
 class TestAllApparelView(TestCase):
+    def setUp(self):
+        self.client = Client()
+
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
         response = self.client.get('/shop/all_apparel')
         self.assertEqual(response.status_code, 200)
 
     def test_view_sort_by_category(self):
-        """ Test sorting functionalirt """
+        """ Test sorting functionality """
         category = Category.objects.create(name='test category')
         apparel = Apparel.objects.create(name='test apparel',
                                          price='22',
@@ -143,6 +158,9 @@ class TestAllApparelView(TestCase):
 
 
 class TestApparelDetailView(TestCase):
+    def setUp(self):
+        self.client = Client()
+
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
         apparel = Apparel.objects.create(name='test apparel',

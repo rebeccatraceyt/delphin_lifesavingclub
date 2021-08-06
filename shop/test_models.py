@@ -197,7 +197,6 @@ class TestApparelModel(TestCase):
         apparel = Apparel(name='test apparel',
                           description='test description',
                           price='90.00',
-                          has_sizes=True,
                           image='img.jpg',)
 
         # Save Test Apparel
@@ -210,7 +209,6 @@ class TestApparelModel(TestCase):
         self.assertEqual(apparel.name, "test apparel")
         self.assertEqual(apparel.description, "test description")
         self.assertEqual(apparel.price, "90.00")
-        self.assertEqual(apparel.has_sizes, True)
         self.assertEqual(apparel.image, "img.jpg")
         self.assertEqual(apparel.product_type_id, 1)
         self.assertEqual(apparel.category_id, 1)
