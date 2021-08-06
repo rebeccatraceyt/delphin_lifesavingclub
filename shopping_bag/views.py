@@ -1,4 +1,7 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.contrib import messages
+from shop.models import Course, Apparel
+from queryset_sequence import QuerySetSequence
 
 
 def view_bag(request):
@@ -14,34 +17,38 @@ def add_to_bag(request, item_id):
         defines quantity of product added to shopping bag
     """
 
+    courses = Course.objects.all()
+    apparel = Apparel.objects.all()
+    products = QuerySetSequence(Course.objects.all(), Apparel.objects.all())
+    product = get_object_or_404(products, pk=item_id)
+
     # Get quantity of item and add to current bag
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
 
     # get apparel products
-    product_select = None
-    if 'apparel_size' in request.POST:
-        product_select = request.POST['apparel_size']
-
-    # get course products
-    if 'course_time' in request.POST:
-        product_select = request.POST['course_time']
+    select = None
+    if 'product_select' in request.POST:
+        select = request.POST['product_select']
 
     current_bag = request.session.get('current_bag', {})
 
     # checks if item has size or time
-    if product_select:
+    if select:
         if item_id in list(current_bag.keys()):
             # if item is currently in bag
-            if product_select in current_bag[item_id]['items_by_select'].keys():
+            if select in current_bag[item_id]['items_by_select'].keys():
                 # if item is same size/time, increment quantity
-                current_bag[item_id]['items_by_select'][product_select] += quantity
+                current_bag[item_id]['items_by_select'][select] += quantity
+                messages.success(request, f'Added {product.name} to your bag')
             else:
                 # if item is different size/time, add new item
-                current_bag[item_id]['items_by_select'][product_select] = quantity
+                current_bag[item_id]['items_by_select'][select] = quantity
+                messages.success(request, f'Added {product.name} to your bag')
         else:
             # if not currently in bag, add new item
-            current_bag[item_id] = {'items_by_select': {product_select: quantity}}
+            current_bag[item_id] = {'items_by_select': {select: quantity}}
+            messages.error(request, f'Added {product.name} to your bag')
     else:
         # if apparel item has no size
         # check if item exists already in bag
@@ -50,6 +57,7 @@ def add_to_bag(request, item_id):
             current_bag[item_id] += quantity
         else:
             current_bag[item_id] = quantity
+            messages.error(request, f'Added {product.name} to your bag')
 
     # override session variable with update
     request.session['current_bag'] = current_bag
@@ -61,26 +69,27 @@ def update_bag(request, item_id):
     Submit update form to view to update shopping bag
     """
 
+    courses = Course.objects.all()
+    apparel = Apparel.objects.all()
+    products = QuerySetSequence(Course.objects.all(), Apparel.objects.all())
+    product = get_object_or_404(products, pk=item_id)
+
     # Get quantity of item and add to current bag
     quantity = int(request.POST.get('quantity'))
 
     # get apparel products
-    product_select = None
-    if 'apparel_size' in request.POST:
-        product_select = request.POST['apparel_size']
-
-    # get course products
-    if 'course_time' in request.POST:
-        product_select = request.POST['course_time']
+    select = None
+    if 'product_select' in request.POST:
+        select = request.POST['product_select']
 
     current_bag = request.session.get('current_bag', {})
 
     # checks if item has size or time
-    if product_select:
+    if select:
         if quantity > 0:
-            current_bag[item_id]['items_by_select'][product_select] = quantity
+            current_bag[item_id]['items_by_select'][select] = quantity
         else:
-            del current_bag[item_id]['items_by_select'][product_select]
+            del current_bag[item_id]['items_by_select'][select]
             if not current_bag[item_id]['items_by_select']:
                 current_bag.pop(item_id)
     else:
@@ -100,20 +109,21 @@ def remove_from_bag(request, item_id):
     """
 
     try:
-        # get apparel products
-        product_select = None
-        if 'apparel_size' in request.POST:
-            product_select = request.POST['apparel_size']
+        courses = Course.objects.all()
+        apparel = Apparel.objects.all()
+        products = QuerySetSequence(Course.objects.all(), Apparel.objects.all())
+        product = get_object_or_404(products, pk=item_id)
 
-        # get course products
-        if 'course_time' in request.POST:
-            product_select = request.POST['course_time']
+        # get apparel products
+        select = None
+        if 'product_select' in request.POST:
+            select = request.POST['product_select']
 
         current_bag = request.session.get('current_bag', {})
 
         # checks if item has size or time
-        if product_select:
-            del current_bag[item_id]['items_by_select'][product_select]
+        if select:
+            del current_bag[item_id]['items_by_select'][select]
             if not current_bag[item_id]['items_by_select']:
                 current_bag.pop(item_id)
         else:

@@ -51,19 +51,17 @@
                 <form action="{% url 'add_to_bag' apparel.id %}" class="form" method="POST">
                     {% csrf_token %}
                     <div class="form-row d-flex flex-wrap justify-content-center">
-                        <div class="col-12 py-sm-1">
-                            <p class="m-0"><strong>Size:</strong></p>
-                            <select class="form-control custom-select w-50" name="apparel_size" id="id_apparel_size">
-                                {% if apparel.has_sizes %}
-                                    <option selected>Select Size...</option>
+                        {% if apparel.has_sizes %}
+                            <div class="col-12 py-sm-1">
+                                <p class="m-0"><strong>Size:</strong></p>
+                                <select class="form-control custom-select w-50" name="product_select" id="id_apparel_size">
                                     {% for sizes in apparel.apparel_sizes.all %}
-                                        <option value="{{ sizes.size }}">{{ sizes.size }}</option>
+                                        <option value="{{ sizes.size }}" selected>{{ sizes.size }}</option>
                                     {% endfor %}
-                                {% else %}
-                                    <option selected>one size</option>
-                                {% endif %}
-                            </select>
-                        </div>
+                                </select>
+                            </div>
+                        {% else %}
+                        {% endif %}
                         <div class="col-12 py-1">
                             <p class="m-0"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">

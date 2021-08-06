@@ -129,9 +129,11 @@ def apparel_detail(request, apparel_id):
     Returns specified apparel
     """
     apparel = get_object_or_404(Apparel, pk=apparel_id)
+    apparel_sizes = apparel.sizes.all()
 
     context = {
-        'apparel': apparel
+        'apparel': apparel,
+        'apparel_sizes': apparel_sizes,
     }
 
     return render(request, 'shop/apparel_detail.html', context)

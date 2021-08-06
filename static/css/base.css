@@ -152,6 +152,22 @@ footer {
     font-size: 1.7rem;
 }
 
+/* --- Toasts --- */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 2000;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* --- Home Page --- */
 
 .home-content {
