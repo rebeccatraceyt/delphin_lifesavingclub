@@ -13,10 +13,31 @@ def checkout(request):
         messages.error(request, "There is nothing in your bag")
         return redirect(reverse('all_products'))
 
-    return redirect(reverse('order_info'))
+    return redirect(reverse('order_review'))
 
 
-def order_info(request):
+def order_review(request):
+    """
+    Crispy form allowing user to enter their information.
+    Removes navbar and footer from page to follow eCommerce conventions.
+    Hide Elements ref: https://tinyurl.com/yp2buee3
+    """
+
+    current_bag = request.session.get('current_bag', {})
+    if not current_bag:
+        messages.error(request, "There is nothing in your bag")
+        return redirect(reverse('all_products'))
+
+    context = {
+        'active_page': 'order_review',
+        'navbar': False,
+        'footer': False,
+    }
+
+    return render(request, 'checkout/order_review.html', context)
+
+
+def order_details(request):
     """
     Crispy form allowing user to enter their information.
     Removes navbar and footer from page to follow eCommerce conventions.
@@ -31,9 +52,9 @@ def order_info(request):
     order_form = OrderForm()
     context = {
         'order_form': order_form,
-        'active_page': 'order_info',
+        'active_page': 'order_details',
         'navbar': False,
         'footer': False,
     }
 
-    return render(request, 'checkout/order_info.html', context)
+    return render(request, 'checkout/order_details.html', context)

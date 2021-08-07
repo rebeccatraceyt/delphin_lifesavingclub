@@ -38,8 +38,19 @@
 </div>
 
 <!-- Checkout Btns -->
-<div class="col-12 edit-btn d-flex align-items-end justify-content-end">
-    <a href="{% url 'shopping_bag' %}">
-        <i class="fas fa-angle-left"></i> Edit Bag
-    </a>
-</div>
+{% if active_page == 'order_review' %}
+    <div class="col-12 bag-btns">
+        <a class="bag-back-btn" href="{% url 'all_products' %}">
+            <i class="fas fa-angle-left"></i> Keep Shopping
+        </a>
+        <a class="bag-checkout-btn" href="{% url 'order_details' %}">
+            Secure Checkout <i class="fas fa-lock"></i>
+        </a>
+    </div>
+{% else %}
+    <div class="col-12 edit-btn d-flex align-items-end justify-content-end">
+        <a href="{% url 'shopping_bag' %}">
+            <i class="fas fa-angle-left"></i> Edit Bag
+        </a>
+    </div>
+{% endif %}

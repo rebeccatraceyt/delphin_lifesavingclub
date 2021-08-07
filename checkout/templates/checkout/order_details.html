@@ -15,7 +15,7 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-12 page-title">
-                <h3>Checkout</h3>
+                <h3>Order Information</h3>
                 <hr class="section-divider">
             </div>
         </div>
@@ -24,17 +24,17 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="text-muted">
-                    Please fill out the form below to complete your order
+                    Fill all required fields to complete your order
                 </p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                    <fieldset class="my-2">
+                        <legend class="form-label">Customer Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                    <fieldset class="my-2">
+                        <legend class="form-label">Delivery Details</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
@@ -88,6 +88,12 @@
                         </p>
                     </div>
                 </form>
+            </div>
+            <div class="d-none d-lg-block col-lg-6">
+                <p class="text-muted">
+                    Order Summary ({{ product_count }} items)
+                </p>
+                {% include 'checkout/includes/lineitems.html' %}
             </div>
         </div>
     </div>
