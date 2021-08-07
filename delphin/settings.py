@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'pages',
     'shop',
     'shopping_bag',
+    'checkout',
 
     # django apps
     'django.contrib.admin',
