@@ -12,6 +12,7 @@ urlpatterns = [
     path('pages/', include('pages.urls')),
     path('shop/', include('shop.urls')),
     path('shopping_bag/', include('shopping_bag.urls')),
+    path('checkout/', include('checkout.urls')),
 ]
 
 # Check debug status

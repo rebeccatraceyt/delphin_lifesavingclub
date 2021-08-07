@@ -51,6 +51,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    # other apps
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +67,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'delphin.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -81,6 +86,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'shopping_bag.contexts.bag_content',
+            ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
             ],
         },
     },

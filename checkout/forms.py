@@ -10,7 +10,7 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
-                  'street_address_1', 'street_address_2',
+                  'street_address1', 'street_address2',
                   'town_or_city', 'eircode', 'country',
                   'county',)
 
