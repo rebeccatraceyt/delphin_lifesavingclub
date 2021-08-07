@@ -37,11 +37,11 @@
                             <div class="col-5 bag-img">
                                 {% if bag_item.product.image.url %}
                                     <a href="{% url 'product_detail' bag_item.product.id %}">
-                                        <img src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
+                                        <img src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}" class="w-100">
                                     </a>
                                 {% else %}
                                     <a href="{% url 'product_detail' bag_item.product.id %}">
-                                        <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
+                                        <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}" class="w-100">
                                     </a>
                                 {% endif %}
                             </div>

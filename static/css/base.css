@@ -93,7 +93,6 @@ nav.navbar {
     margin-right: 0;
 }
 #nav-logo img {
-    width: auto;
     height: 50px;
 }
 .nav-link, .dropdown-item {
@@ -228,10 +227,6 @@ footer {
     padding: 5%;
     max-width: 80%;
     max-height: 80%;
-}
-#home-logo img {
-    width: 100%;
-    height: 100%;
 }
 #home-intro {
     background-color: var(--border-shadow);
@@ -369,10 +364,6 @@ ol.breadcrumb {
 .detail-sec {
     padding: 15px 0;
 }
-.detail-img img {
-    width: 100%;
-    height: 100%;
-}
 .detail-text {
     margin: 0 auto;
     padding: 30px 20px 10px 20px;
@@ -427,11 +418,6 @@ ol.breadcrumb {
 }
 .bag-img {
     padding: 0;
-}
-.bag-img img {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
 }
 .bag-row {
     line-height: 2;

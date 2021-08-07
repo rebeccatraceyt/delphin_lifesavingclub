@@ -36,9 +36,9 @@
         <div class="row detail-sec">
             <div class="col-12 col-md-6 col-lg-6 detail-img">
                 {% if product.image.url %}
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-100 h-100">
                 {% else %}
-                    <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
+                    <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}" class="w-100 h-100">
                 {% endif %}
             </div>
             <div class="col-12 col-md-6 col-lg-6 detail-text p-sm-4 p-md-1">
