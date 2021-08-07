@@ -592,7 +592,8 @@ ol.breadcrumb {
     font-size: 1.5rem;
     position: relative;
 }
-#payment-form .form-control {
+#payment-form .form-control,
+#card-element {
     color: var(--black);
     border: 1px solid var(--black);
 }

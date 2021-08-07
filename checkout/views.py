@@ -55,6 +55,8 @@ def order_details(request):
         'active_page': 'order_details',
         'navbar': False,
         'footer': False,
+        'stripe_public_key': 'pk_test_51JDxKJCHUP04Cb9HrW3UPsfOwTGD8E6p2OGKvyVse9wvgLuWkgQpq94UzpIiwAoZTjGo65KgEQLLZBKozfl7tIgV00XUByFHlU',
+        'client_secret': 'test client secret',
     }
 
     return render(request, 'checkout/order_details.html', context)
