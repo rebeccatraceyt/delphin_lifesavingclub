@@ -7,6 +7,9 @@
 
         <!-- Checkout Logo and Progress Bar -->
         {% include 'checkout/includes/checkout_header.html' %}
+
+        <!-- Orderline items for mobile (accordian menu) -->
+        {% include 'checkout/includes/order_summary.html' %}
         
 
         <!-- Page Header -->
@@ -19,51 +22,6 @@
 
         <!-- Page Content -->
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ product_count }})</p>
-                <div class="row">
-                    <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-                    </div>
-                </div>
-                {% for bag_item in bag_items %}
-                    <div class="row">
-                        <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' bag_item.product.id %}">
-                                {% if bag_item.product.image %}
-                                    <img src="{{ bag_item.product.image.url }}" alt="{{ product.name }}" class="w-100">
-                                {% else %}
-                                    <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}" class="w-100">
-                                {% endif %}
-                            </a>
-                        </div>
-                        <div class="col-7">
-                            <p class="my-0"><strong>{{ bag_item.product.name }}</strong></p>
-                            <p class="my-0 small">SKU: {{ bag_item.product_select }}</p>
-                            <p class="my-0 small text-muted">Qty: {{ bag_item.quantity }}</p>
-                        </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">${{ bag_item.product.price | calc_subtotal:bag_item.quantity }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
-                <hr class="my-0">
-                <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
-                        <p class="my-0">Order Total:</p>
-                        <p class="my-0">Delivery:</p>
-                        <p class="my-0">Grand Total:</p>
-                    </div>
-                    <div class="col-3">
-                        <p class="my-0">${{ total | floatformat:2 }}</p>
-                        <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
-                    </div>
-                </div>
-            </div>
             <div class="col-12 col-lg-6">
                 <p class="text-muted">
                     Please fill out the form below to complete your order

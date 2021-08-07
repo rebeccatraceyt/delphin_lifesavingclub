@@ -20,7 +20,7 @@
     /* Misc Colour Variables */
     --border-shadow: rgba(10, 10, 10, 0.663);
     --border-dark: rgba(0, 0, 0, 0.6);
-    --border-light: rgba(0, 0, 0, 0.3);
+    --border-light: rgba(0,0,0,.1);
     --dark-box: rgba(0,0,0,0.8);
 }
 
@@ -39,6 +39,14 @@ body {
 input {
     border: none;
 }
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
 .page-margins {
     padding: 2% 7%;
     margin: 0 auto;
@@ -51,7 +59,7 @@ a, a:hover, a:focus, a:active {
 .active a {
     color: var(--red);
 }
-.page-divider {
+#home-divider {
     /*ref: https://stackoverflow.com/questions/12639823/hr-not-showing*/
     margin: 0;
     border: 0;
@@ -433,6 +441,15 @@ ol.breadcrumb {
 .bag-qty {
     padding: 5px;
 }
+.update-btn {
+    font-size: .9rem;
+    padding: 0 5px;
+    transition: all 0.5s ease 0s;
+}
+.update-btn:hover,
+.update-btn:focus {
+    font-weight: bolder;
+}
 .qty-btns button,
 .qty-btns input {
     border: 1px solid var(--black);
@@ -445,22 +462,25 @@ ol.breadcrumb {
 .qty-btns button:focus {
     color: var(--yellow);
 }
+.bag-divider {
+    margin: auto;
+    width: 96%;
+}
 .bag-total {
     text-align: right;
-    text-transform: uppercase;
     line-height: 1;
 }
-.bag-total h6,
-.bag-total h5 {
+.bag-total h6 {
+    text-transform: uppercase;
     font-family: var(--title-font);
     font-size: 1.3rem;
+}
+.bag-total p {
+    font-size: .9rem;
 }
 .bag-total hr {
     margin-right: 0;
     width: 70%;
-    height: 1px;
-    border: 0;
-    background-color: var(--border-dark);
 }
 .bag-btns {
     padding: 15px 5px;
@@ -490,12 +510,11 @@ ol.breadcrumb {
 }
 
 /* --- Checkout Pages --- */
-.checkout-logo a {
-    width: 200px;
-}
+
+/* Checkout Header */
 .progress-line {
     border: 1px solid var(--border-dark);
-    width: 70%;
+    width: 80%;
     margin: 2rem auto;
 }
 #progress-steps {
@@ -521,6 +540,44 @@ ol.breadcrumb {
 .active-circle,
 .complete-circle {
     background-color: var(--yellow);
+}
+
+/* Lineitems */
+
+.order-content {
+    padding: 20px;
+}
+.edit-btn {
+    padding: 5px;
+    text-align: center;
+}
+.edit-btn a {
+    font-family: var(--title-font);
+    padding: 8px;
+    width: 60%;
+    border-radius: 10px;
+    transition: all 0.5s ease 0s;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+}
+.edit-btn a:hover,
+.edit-btn a:focus {
+    font-weight: bold;
+}
+
+/* Order Summary */
+.summary-mobile {
+    padding: 20px 0;
+}
+.summary-btn {
+    background-color: var(--yellow);
+    border: 1px solid var(--black);
+}
+.collapse .summary-box {
+    border: 1px solid var(--border-light);
+}
+.summary-box {
+    padding: 15px;
 }
 
 /* --- Media Queries --- */
@@ -599,6 +656,23 @@ ol.breadcrumb {
     .bag-checkout-btn {
         margin: 10px 0px 10px 5px;
         font-size: 1.7rem;
+    }
+
+    /* -- Checkout Pages -- */
+    /* Checkout Header */
+    .progress-step {
+        width: 90px;
+    }
+    .step-label {
+        font-size: .9rem;
+    }
+
+    /* Lineitems */
+    .order-content {
+        padding: 40px;
+    }
+    .order-items p {
+        font-size: 1rem;
     }
 }
 

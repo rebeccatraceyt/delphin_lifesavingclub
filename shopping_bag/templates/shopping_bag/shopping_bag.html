@@ -100,13 +100,7 @@
                                                     </div>
                                                 </div>
                                             </form>
-                                            <a class="update-btn"><small>Update</small></a>
-                                        </div>
-                                    </div>
-
-                                    <div class="row bag-row">
-                                        <div class="col-12 text-right">
-                                           ({{ bag_item.quantity }} x €{{ bag_item.product.price }})
+                                            <a class="update-btn">Update</a>
                                         </div>
                                     </div>
 
@@ -120,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <hr class="section-divider">
+                    <hr class="bag-divider">
                 {% endfor %}
 
                 <!-- Totals -->
@@ -128,10 +122,10 @@
                     <h6>Subtotal: €{{ total|floatformat:2 }}</h6>
                     <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                     <hr>
-                    <h5>Grand Total: €{{ grand_total|floatformat:2 }}</h5>
+                    <h6>Grand Total: €{{ grand_total|floatformat:2 }}</h6>
                     {% if free_delivery_delta > 0 %}
                         <p>
-                            Spend just €{{ free_delivery_delta }} more to get <strong>free delivery</strong>
+                            Spend just €{{ free_delivery_delta }} more to get <strong class="text-uppercase">free delivery</strong>
                         </p>
                     {% endif %}
                 </div>
