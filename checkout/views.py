@@ -17,6 +17,11 @@ def checkout(request):
 
 
 def order_info(request):
+    """
+    Crispy form allowing user to enter their information.
+    Removes navbar and footer from page to follow eCommerce conventions.
+    Hide Elements ref: https://tinyurl.com/yp2buee3
+    """
 
     current_bag = request.session.get('current_bag', {})
     if not current_bag:
@@ -26,6 +31,9 @@ def order_info(request):
     order_form = OrderForm()
     context = {
         'order_form': order_form,
+        'active_page': 'order_info',
+        'navbar': False,
+        'footer': False,
     }
 
     return render(request, 'checkout/order_info.html', context)

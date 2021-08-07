@@ -46,7 +46,9 @@
 
     </head>
     <body>
-        {% include 'includes/navbar.html' %}
+        {% if navbar != False %}
+            {% include 'includes/navbar.html' %}
+        {% endif %}
 
         {% if messages %}
             <div class="message-container">
@@ -71,8 +73,10 @@
 
         {% block content %}
         {% endblock %}
-
-        {% include 'includes/footer.html' %}
+        
+        {% if footer != False %}
+            {% include 'includes/footer.html' %}
+        {% endif %}
 
         {% block postloadjs %}
             <script type="module" src="{% static 'js/base.js' %}"></script>

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
@@ -6,17 +5,9 @@
 {% block content %}
     <div class="container page-margins">
 
-        <!-- Page Breadcrumbs -->
-        <div class="row">
-            <div class="col-12">
-                <nav aria-label="page breadcrumbs">
-                    <ol class="breadcrumb bg-white">
-                        <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-dark">Home</a></li>
-                        <li class="breadcrumb-item active text-secondary" aria-current="page">View Shopping Bag</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+        <!-- Checkout Logo and Progress Bar -->
+        {% include 'checkout/includes/checkout_header.html' %}
+        
 
         <!-- Page Header -->
         <div class="row">

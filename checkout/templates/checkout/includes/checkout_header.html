@@ -1,0 +1,54 @@
+{% load static %}
+
+<!-- Checkout Logo -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center checkout-logo">
+            <a href="{% url 'shopping_bag' %}" title="Return to Shopping Bag">
+                <img src="{% static 'img/checkout_logo.png' %}" alt="Delphin Logo" class="w-100">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Checkout Progress Bar -->
+<div class="container">
+    <!-- Inspired by https://github.com/AJGreaves/thehouseofmouse -->
+    <div class="row justify-content-center">
+        <div class="col-10 col-md-8 col-lg-6">
+            <hr class="progress-line">
+            <div  id="progress-steps" class="d-flex justify-content-between">
+                <div class="progress-step">
+                    <div class="progress-circle {% if active_page == 'order_info' %}active-circle{% endif %}">
+                        {% if active_page == 'order_info' %}
+                            1
+                        {% else %}
+                            <i class="fas fa-check"></i>
+                        {% endif %}
+                    </div>
+                    <p class="step-label">Info</p>
+                </div>
+                <div class="progress-step">
+                    <div class="progress-circle {% if active_page == 'order_payment' %}active-circle{% endif %}">
+                        {% if active_page == 'order_info' or active_page == 'order_payment' %}
+                            2
+                        {% else %}
+                            <i class="fas fa-check"></i>
+                        {% endif %}
+                    </div>
+                    <p class="step-label">Payment</p>
+                </div>
+                <div class="progress-step">
+                    <div class="progress-circle {% if active_page == 'order_confirm' %}active-circle{% endif %}">
+                        {% if active_page != 'order_confirm' %}
+                            3
+                        {% else %}
+                            <i class="fas fa-check"></i>
+                        {% endif %}
+                    </div>
+                    <p class="step-label">Confirm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

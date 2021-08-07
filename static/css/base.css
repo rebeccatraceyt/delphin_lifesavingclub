@@ -503,6 +503,40 @@ ol.breadcrumb {
     color: var(--yellow);
 }
 
+/* --- Checkout Pages --- */
+.checkout-logo a {
+    width: 200px;
+}
+.progress-line {
+    border: 1px solid var(--border-dark);
+    width: 70%;
+    margin: 2rem auto;
+}
+#progress-steps {
+    margin-top: -3rem;
+}
+.progress-step {
+    text-align: center;
+    display: inline-block;
+    width: 70px;
+}
+.step-label {
+    font-size: .7rem;
+}
+.progress-circle {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    margin: 0 auto;
+}
+.active-circle,
+.complete-circle {
+    background-color: var(--yellow);
+}
+
 /* --- Media Queries --- */
 
 /* Breakpoint on Tablet device */
