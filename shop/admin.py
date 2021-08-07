@@ -1,23 +1,20 @@
 from django.contrib import admin
 from .models import (
-    ProductType,
-    Time,
-    AgeRange,
-    Course,
-    CourseTime,
-    Size,
     Category,
-    Apparel,
-    ApparelSize
+    Time,
+    Size,
+    Product,
+    CourseTime,
+    ApparelSize,
 )
 
 
-# ------ Product Types ------
+# ------ Product Categories ------
 
 
-class ProductTypeAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     """
-    Create admin views for Product Types
+    Create admin views for Categories
     """
     list_display = (
         'name',
@@ -25,7 +22,7 @@ class ProductTypeAdmin(admin.ModelAdmin):
     )
 
 
-# ------ Courses ------
+# ------ Courses Tables and Filters ------
 
 
 class CourseTimeInline(admin.TabularInline):
@@ -47,33 +44,7 @@ class TimeAdmin(admin.ModelAdmin):
     )
 
 
-class AgeRangeAdmin(admin.ModelAdmin):
-    """
-    Create admin views for Ages
-    """
-    list_display = (
-        'name',
-        'friendly_name',
-    )
-
-
-class CourseAdmin(admin.ModelAdmin):
-    """
-    Create admin views for Course
-    """
-    inlines = (CourseTimeInline,)
-    list_display = (
-        'product_type',
-        'name',
-        'description',
-        'price',
-        'lvl_age',
-        'age_range',
-        'image',
-    )
-
-
-# ------ Apparel ------
+# ------ Apparel Tables and Filters ------
 
 
 class ApparelSizeInline(admin.TabularInline):
@@ -95,35 +66,27 @@ class SizeAdmin(admin.ModelAdmin):
     )
 
 
-class CategoryAdmin(admin.ModelAdmin):
-    """
-    Create admin views for Categories
-    """
-    list_display = (
-        'name',
-        'friendly_name',
-    )
+# ------ All Products ------
 
 
-class ApparelAdmin(admin.ModelAdmin):
+class ProductAdmin(admin.ModelAdmin):
     """
-    Create admin views for Apparel
+    Create admin views for all Products
     """
-    inlines = (ApparelSizeInline,)
+    inlines = (CourseTimeInline,
+               ApparelSizeInline,)
     list_display = (
-        'product_type',
         'name',
         'description',
         'price',
         'category',
+        'is_course',
+        'is_apparel',
         'image',
     )
 
 
-admin.site.register(ProductType, ProductTypeAdmin)
-admin.site.register(Time, TimeAdmin)
-admin.site.register(AgeRange, AgeRangeAdmin)
-admin.site.register(Course, CourseAdmin)
-admin.site.register(Size, SizeAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Apparel, ApparelAdmin)
+admin.site.register(Time, TimeAdmin)
+admin.site.register(Size, SizeAdmin)
+admin.site.register(Product, ProductAdmin)

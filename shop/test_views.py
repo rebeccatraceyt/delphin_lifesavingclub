@@ -1,6 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from .models import Course, Apparel, Category, AgeRange
+from .models import Product, Category
 
 
 # ------ All Products ------
@@ -57,64 +57,64 @@ class TestAllCoursesView(TestCase):
 
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
-        response = self.client.get('/shop/all_courses')
+        response = self.client.get('/shop/courses')
         self.assertEqual(response.status_code, 200)
 
-    def test_view_sort_by_age_range(self):
+    def test_view_sort_by_category(self):
         """ Test sorting functionality """
-        age_range = AgeRange.objects.create(name='test range')
-        course = Course.objects.create(name='test course',
-                                       price='22',
-                                       image='test.png',
-                                       description='test desc',
-                                       )
-        course.age_range = age_range
+        category = Category.objects.create(name='test category')
+        course = Product.objects.create(name='test course',
+                                        price='22',
+                                        image='test.png',
+                                        description='test desc',
+                                        )
+        course.category = category
         course.save()
 
         response = self.client.get(
-            '/shop/all_courses?age_range={age_range}')
+            '/shop/courses?category={category}')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'shop/all_courses.html')
+        self.assertTemplateUsed(response, 'shop/courses.html')
 
     def test_view_url_accessible_by_name(self):
         """ Test URL is accessible """
-        response = self.client.get(reverse('all_courses'))
+        response = self.client.get(reverse('courses'))
         self.assertEqual(response.status_code, 200)
 
     def test_view_uses_correct_template(self):
         """ Test correct template """
-        response = self.client.get(reverse('all_courses'))
+        response = self.client.get(reverse('courses'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'shop/all_courses.html')
+        self.assertTemplateUsed(response, 'shop/courses.html')
 
 
-class TestCourseDetailView(TestCase):
+class TestProductDetailView(TestCase):
     def setUp(self):
         self.client = Client()
 
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
-        course = Course.objects.create(name='test course',
-                                       price='22',
-                                       image='test.png',
-                                       description='test desc',
-                                       )
+        product = Product.objects.create(name='test product',
+                                         price='22',
+                                         image='test.png',
+                                         description='test desc',
+                                         )
         response = self.client.get(
-            '/shop/course/{0}'.format(course.id))
+            '/shop/product/{0}'.format(product.id))
         self.assertEqual(response.status_code, 200)
 
     def test_view_uses_correct_template(self):
         """ Test correct template """
-        course = Course.objects.create(name='test course',
-                                       price='22',
-                                       image='test.png',
-                                       description='test desc',
-                                       pk='4',
-                                       )
+        product = Product.objects.create(name='test product',
+                                         price='22',
+                                         image='test.png',
+                                         description='test desc',
+                                         pk='4',
+                                         )
         response = self.client.get(
-            '/shop/course/{0}'.format(course.id))
+            '/shop/product/{0}'.format(product.id))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'shop/course_detail.html')
+        self.assertTemplateUsed(response, 'shop/product.html')
 
 
 # ------ Apparel ------
@@ -126,13 +126,13 @@ class TestAllApparelView(TestCase):
 
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
-        response = self.client.get('/shop/all_apparel')
+        response = self.client.get('/shop/apparel')
         self.assertEqual(response.status_code, 200)
 
     def test_view_sort_by_category(self):
         """ Test sorting functionality """
         category = Category.objects.create(name='test category')
-        apparel = Apparel.objects.create(name='test apparel',
+        apparel = Product.objects.create(name='test apparel',
                                          price='22',
                                          image='test.png',
                                          description='test desc',
@@ -141,46 +141,17 @@ class TestAllApparelView(TestCase):
         apparel.save()
 
         response = self.client.get(
-            '/shop/all_apparel?category={category}')
+            '/shop/apparel?category={category}')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'shop/all_apparel.html')
+        self.assertTemplateUsed(response, 'shop/apparel.html')
 
     def test_view_url_accessible_by_name(self):
         """ Test URL is accessible """
-        response = self.client.get(reverse('all_apparel'))
+        response = self.client.get(reverse('apparel'))
         self.assertEqual(response.status_code, 200)
 
     def test_view_uses_correct_template(self):
         """ Test correct template """
-        response = self.client.get(reverse('all_apparel'))
+        response = self.client.get(reverse('apparel'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'shop/all_apparel.html')
-
-
-class TestApparelDetailView(TestCase):
-    def setUp(self):
-        self.client = Client()
-
-    def test_view_url_exists_at_desired_location(self):
-        """ Test URL is in correct location """
-        apparel = Apparel.objects.create(name='test apparel',
-                                         price='22',
-                                         image='test.png',
-                                         description='test desc',
-                                         )
-        response = self.client.get(
-            '/shop/apparel/{0}'.format(apparel.id))
-        self.assertEqual(response.status_code, 200)
-
-    def test_view_uses_correct_template(self):
-        """ Test correct template """
-        apparel = Apparel.objects.create(name='test apparel',
-                                         price='22',
-                                         image='test.png',
-                                         description='test desc',
-                                         pk='4',
-                                         )
-        response = self.client.get(
-            '/shop/apparel/{0}'.format(apparel.id))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'shop/apparel_detail.html')
+        self.assertTemplateUsed(response, 'shop/apparel.html')

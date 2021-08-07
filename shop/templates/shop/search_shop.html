@@ -28,8 +28,8 @@
             </div>
 
             <div class="col-12 category-links text-center">
-                <a href="{% url 'all_apparel' %}" >Apparel</a>
-                <a href="{% url 'all_courses' %}">Courses</a>
+                <a href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories" >Apparel</a>
+                <a href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Courses</a>
             </div>
         </div>
 
@@ -54,7 +54,7 @@
                                     <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
                                 </div>
                                 <div class="col-12 home-btn">
-                                    <a class="btn-shadow" href="{% url 'all_apparel' %}">Shop Apparel</a>
+                                    <a class="btn-shadow" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">Shop Apparel</a>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                                     <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
                                 </div>
                                 <div class="col-12 home-btn">
-                                    <a class="btn-shadow" href="{% url 'all_courses' %}">Shop Courses</a>
+                                    <a class="btn-shadow" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>
                                 </div>
                             </div>
                         </div>
@@ -80,27 +80,14 @@
                     <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3 px-md-1">
                         <div class="row product-card">
                             <div class="col-12 p-0">
-                                <!-- defines detail url to be used -->
-                                {% if product in courses %}
-                                    {% if product.image.url %}
-                                        <a class="product-img" href="{% url 'course_detail' product.id %}">
-                                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                                        </a>
-                                    {% else %}
-                                        <a class="product-img" href="{% url 'course_detail' product.id %}">
-                                            <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
-                                        </a>
-                                    {% endif %}
+                                {% if product.image.url %}
+                                    <a class="product-img" href="{% url 'product_detail' product.id %}">
+                                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
                                 {% else %}
-                                    {% if product.image.url %}
-                                        <a class="product-img" href="{% url 'apparel_detail' product.id %}">
-                                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                                        </a>
-                                    {% else %}
-                                        <a class="product-img" href="{% url 'apparel_detail' product.id %}">
-                                            <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
-                                        </a>
-                                    {% endif %} 
+                                    <a class="product-img" href="{% url 'product_detail' product.id %}">
+                                        <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
+                                    </a>
                                 {% endif %}
                             </div>
                             <div class="col-12">

@@ -1,42 +1,74 @@
 [
-    {
-       "model":"shop.category",
-       "pk":1,
-       "fields":{
-          "name":"tshirts",
-          "friendly_name":"T-Shirts"
-       }
-    },
-    {
-       "model":"shop.category",
-       "pk":2,
-       "fields":{
-          "name":"jacket_hoodies",
-          "friendly_name":"Jackets & Hoodies"
-       }
-    },
-    {
-       "model":"shop.category",
-       "pk":3,
-       "fields":{
-          "name":"accessories",
-          "friendly_name":"Accessories"
-       }
-    },
-    {
-       "model":"shop.category",
-       "pk":4,
-       "fields":{
-          "name":"swimwear",
-          "friendly_name":"Swimwear"
-       }
-    },
-    {
-       "model":"shop.category",
-       "pk":5,
-       "fields":{
-          "name":"swim_accessories",
-          "friendly_name":"Swim Accessories"
-       }
-    }
- ]
+   {
+      "model":"shop.category",
+      "pk":1,
+      "fields":{
+         "name":"tshirts",
+         "friendly_name":"T-Shirts"
+      }
+   },
+   {
+      "model":"shop.category",
+      "pk":2,
+      "fields":{
+         "name":"jacket_hoodies",
+         "friendly_name":"Jackets & Hoodies"
+      }
+   },
+   {
+      "model":"shop.category",
+      "pk":3,
+      "fields":{
+         "name":"accessories",
+         "friendly_name":"Accessories"
+      }
+   },
+   {
+      "model":"shop.category",
+      "pk":4,
+      "fields":{
+         "name":"swimwear",
+         "friendly_name":"Swimwear"
+      }
+   },
+   {
+      "model":"shop.category",
+      "pk":5,
+      "fields":{
+         "name":"swim_accessories",
+         "friendly_name":"Swim Accessories"
+      }
+   },
+   {
+      "model":"shop.category",
+      "pk":6,
+      "fields":{
+         "name":"swimming_jnr",
+         "friendly_name":"0 - 4 years"
+      }
+   },
+   {
+      "model":"shop.category",
+      "pk":7,
+      "fields":{
+         "name":"swimming_snr",
+         "friendly_name":"5 - 12 years"
+      }
+   },
+   {
+      "model":"shop.category",
+      "pk":8,
+      "fields":{
+         "name":"lifesaving",
+         "friendly_name":"13 - 16 years"
+      }
+   },
+   {
+      "model":"shop.category",
+      "pk":9,
+      "fields":{
+         "name":"lifeguarding",
+         "friendly_name":"16+ years"
+      }
+   }
+]

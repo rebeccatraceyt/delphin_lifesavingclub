@@ -12,8 +12,12 @@
                 <nav aria-label="page breadcrumbs">
                     <ol class="breadcrumb bg-white">
                         <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-dark">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{% url 'all_apparel' %}" class="text-dark">All Apparel</a></li>
-                        <li class="breadcrumb-item active text-secondary" aria-current="page">{{ apparel.name }}</li>
+                        {% if product.is_course %}
+                            <li class="breadcrumb-item"><a href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding" class="text-dark">All Courses</a></li>
+                        {% else %}
+                            <li class="breadcrumb-item"><a href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories" class="text-dark">All Apparel</a></li>
+                        {% endif %}
+                        <li class="breadcrumb-item active text-secondary" aria-current="page">{{ product.name }}</li>
                     </ol>
                 </nav>
             </div>
@@ -22,7 +26,7 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-12 page-title">
-                <h3>{{ apparel.name }}</h3>
+                <h3>{{ product.name }}</h3>
                 <hr class="section-divider">
             </div>
             
@@ -31,33 +35,53 @@
         <!-- Page Content -->
         <div class="row detail-sec">
             <div class="col-12 col-md-6 col-lg-6 detail-img">
-                {% if apparel.image.url %}
-                    <img src="{{ apparel.image.url }}" alt="{{ apparel.name }}">
+                {% if product.image.url %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
                 {% else %}
-                    <img src="{% static 'img/no-image.png' %}" alt="{{ apparel.name}}">
+                    <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
                 {% endif %}
             </div>
             <div class="col-12 col-md-6 col-lg-6 detail-text p-sm-4 p-md-1">
                 <div class="row">
-                    <div class="col-12 detail-price">
-                        <p class="m-0">€{{ apparel.price }}</p>
+                    <div class="col-6 text-left">
+                        {% if product.is_course %}
+                            {% if product.name == 'Lifeguards' %}
+                                <p class="m-0">12 weeks</p>
+                            {% else %}
+                                <p class="m-0">10 weeks</p>
+                            {% endif %}
+                        {% else %}
+                            <!-- Blank for apparel-->
+                        {% endif %}
+                    </div>
+                    <div class="col-6 text-right detail-price">
+                        <p class="m-0">€{{ product.price }}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <p>{{ apparel.description }}</p>
+                        <p>{{ product.description }}</p>
                     </div>
                 </div>
-                <form action="{% url 'add_to_bag' apparel.id %}" class="form" method="POST">
+                <form action="{% url 'add_to_bag' product.id %}" class="form" method="POST">
                     {% csrf_token %}
                     <div class="form-row d-flex flex-wrap justify-content-center">
                         <div class="col-12 py-sm-1">
-                            <p class="m-0"><strong>Size:</strong></p>
-                            <select class="form-control custom-select w-50" name="product_select" id="id_product_select">
-                                {% for sizes in apparel.apparel_sizes.all %}
-                                    <option value="{{ sizes.size }}" selected>{{ sizes.size.size_name }}</option>
-                                {% endfor %}
-                            </select>
+                            {% if product.is_course %}
+                                <p class="m-0"><strong>Class:</strong></p>
+                                <select class="form-control custom-select w-50" name="product_select" id="id_product_select">
+                                    {% for times in product.course_times.all %}
+                                        <option value="{{ times.time }}" selected>{{ times.time.time_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% else %}
+                                <p class="m-0"><strong>Size:</strong></p>
+                                <select class="form-control custom-select w-50" name="product_select" id="id_product_select">
+                                    {% for sizes in product.apparel_sizes.all %}
+                                        <option value="{{ sizes.size }}" selected>{{ sizes.size.size_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% endif %}
                         </div>
                         <div class="col-12 py-1">
                             <p class="m-0"><strong>Quantity:</strong></p>
@@ -65,18 +89,18 @@
                                 <div class="input-group qty-btns">
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn btn-sm btn-black rounded-0"
-                                                data-item_id="{{ apparel.id }}" id="decrement-qty_{{ apparel.id }}">
+                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                             <span>
                                                 <i class="fas fa-minus fa-sm"></i>
                                             </span>
                                         </button>
                                     </div>
-                                    <input id="id_qty_{{ apparel.id }}" class="form-control form-control-sm qty_input"
+                                    <input id="id_qty_{{ product.id }}" class="form-control form-control-sm qty_input"
                                            type="number" name="quantity" value="1" min="1" max="99"
-                                           data-item_id="{{ apparel.id }}">
+                                           data-item_id="{{ product.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                data-item_id="{{ apparel.id }}" id="increment-qty_{{ apparel.id }}">
+                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                             <span>
                                                 <i class="fas fa-plus fa-sm"></i>
                                             </span>

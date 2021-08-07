@@ -24,15 +24,15 @@
             <div class="col-12 page-title">
                 <!-- Conditional Page Titles
                     ref: https://tinyurl.com/jfktjads-->
-                {% if request.get_full_path == '/shop/all_apparel?category=tshirts' %}
+                {% if request.get_full_path == '/shop/apparel?category=tshirts' %}
                     <h3>All T-Shirts</h3>
-                {% elif request.get_full_path == '/shop/all_apparel?category=jacket_hoodies' %}
+                {% elif request.get_full_path == '/shop/apparel?category=jacket_hoodies' %}
                     <h3>All Jackets & Hoodies</h3>
-                {% elif request.get_full_path == '/shop/all_apparel?category=accessories' %}
+                {% elif request.get_full_path == '/shop/apparel?category=accessories' %}
                     <h3>All Accessories</h3>
-                {% elif request.get_full_path == '/shop/all_apparel?category=swimwear' %}
+                {% elif request.get_full_path == '/shop/apparel?category=swimwear' %}
                     <h3>All Swimwear</h3>
-                {% elif request.get_full_path == '/shop/all_apparel?category=swim_accessories' %}
+                {% elif request.get_full_path == '/shop/apparel?category=swim_accessories' %}
                     <h3>All Swim Accessories</h3>
                 {% else %}
                     <h3>All Apparel</h3>
@@ -41,48 +41,48 @@
             </div>
             <div class="col-12 d-flex d-lg-none category-dropdown">
                 <div class="dropdown show">
-                    <button class="btn category-toggle dropdown-toggle" type="button" id="courseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn category-toggle dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Refine By Category
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right category-items" aria-labelledby="courseDropdown">
-                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=tshirts">T-shirts</a>
-                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=jacket_hoodies">Jackets & Hoodies</a>
-                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=accessories">Accessories</a>
-                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=swimwear">Swimwear</a>
-                        <a class="dropdown-item" href="{% url 'all_apparel' %}?category=swim_accessories">Swim Accessories</a>
+                    <div class="dropdown-menu dropdown-menu-right category-items" aria-labelledby="categoryDropdown">
+                        <a class="dropdown-item" href="{% url 'apparel' %}?category=tshirts">T-shirts</a>
+                        <a class="dropdown-item" href="{% url 'apparel' %}?category=jacket_hoodies">Jackets & Hoodies</a>
+                        <a class="dropdown-item" href="{% url 'apparel' %}?category=accessories">Accessories</a>
+                        <a class="dropdown-item" href="{% url 'apparel' %}?category=swimwear">Swimwear</a>
+                        <a class="dropdown-item" href="{% url 'apparel' %}?category=swim_accessories">Swim Accessories</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item font-weight-bolder" href="{% url 'all_apparel' %}">View All</a>
+                        <a class="dropdown-item font-weight-bolder" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">View All</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 d-none d-lg-block category-links text-center">
-                <a href="{% url 'all_apparel' %}?category=tshirts" >T-shirts</a>
-                <a href="{% url 'all_apparel' %}?category=jacket_hoodies">Jackets & Hoodies</a>
-                <a href="{% url 'all_apparel' %}?category=accessories">Accessories</a>
-                <a href="{% url 'all_apparel' %}?category=swimwear">Swimwear</a>
-                <a href="{% url 'all_apparel' %}?category=swim_accessories">Swim Accessories</a>
-                <a href="{% url 'all_apparel' %}">View All</a>
+                <a href="{% url 'apparel' %}?category=tshirts" >T-shirts</a>
+                <a href="{% url 'apparel' %}?category=jacket_hoodies">Jackets & Hoodies</a>
+                <a href="{% url 'apparel' %}?category=accessories">Accessories</a>
+                <a href="{% url 'apparel' %}?category=swimwear">Swimwear</a>
+                <a href="{% url 'apparel' %}?category=swim_accessories">Swim Accessories</a>
+                <a href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">View All</a>
             </div>
         </div>
 
         <!-- Page Content -->
         <div class="row products-sec">
-            {% for product in apparel %}
+            {% for product in products %}
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3 px-md-1">
                     <div class="row product-card">
                         <div class="col-12 p-0">
                             {% if product.image.url %}
-                                <a class="product-img" href="{% url 'apparel_detail' product.id %}">
+                                <a class="product-img" href="{% url 'product_detail' product.id %}">
                                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                             {% else %}
-                                <a class="product-img" href="{% url 'apparel_detail' product.id %}">
+                                <a class="product-img" href="{% url 'product_detail' product.id %}">
                                     <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
                                 </a>
                             {% endif %}
                         </div>
                         <div class="col-12">
-                            <a href="{% url 'apparel_detail' product.id %}">
+                            <a href="{% url 'product_detail' product.id %}">
                                 <h3 class="product-name">{{ product.name }}</h3>
                             </a>
                         </div>

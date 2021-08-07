@@ -35,26 +35,14 @@
                     <div class="col-12 bag-items">
                         <div class="row justify-content-center align-items-stretch">
                             <div class="col-5 bag-img">
-                                {% if bag_item.product in courses %}
-                                    {% if bag_item.product.image.url %}
-                                        <a href="{% url 'course_detail' bag_item.product.id %}">
-                                            <img src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
-                                        </a>
-                                    {% else %}
-                                        <a href="{% url 'course_detail' bag_item.product.id %}">
-                                            <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
-                                        </a>
-                                    {% endif %}
+                                {% if bag_item.product.image.url %}
+                                    <a href="{% url 'product_detail' bag_item.product.id %}">
+                                        <img src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
+                                    </a>
                                 {% else %}
-                                    {% if bag_item.product.image.url %}
-                                        <a href="{% url 'apparel_detail' bag_item.product.id %}">
-                                            <img src="{{ bag_item.product.image.url }}" alt="{{ bag_item.product.name }}">
-                                        </a>
-                                    {% else %}
-                                        <a href="{% url 'apparel_detail' bag_item.product.id %}">
-                                            <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
-                                        </a>
-                                    {% endif %}
+                                    <a href="{% url 'product_detail' bag_item.product.id %}">
+                                        <img src="{% static 'img/no-image.png' %}" alt="{{ bag_item.product.name }}">
+                                    </a>
                                 {% endif %}
                             </div>
                             <div class="col-7">
@@ -62,15 +50,9 @@
                                     <div class="row bag-row">
                                         <!-- Product Name -->
                                         <div class="col-8">
-                                            {% if bag_item.product in courses %}
-                                                <a href="{% url 'course_detail' bag_item.product.id %}">
-                                                    {{ bag_item.product.name }}
-                                                </a>
-                                            {% else %}
-                                                <a href="{% url 'apparel_detail' bag_item.product.id %}">
-                                                    {{ bag_item.product.name }}
-                                                </a>
-                                            {% endif %}
+                                            <a href="{% url 'product_detail' bag_item.product.id %}">
+                                                {{ bag_item.product.name }}
+                                            </a>
                                         </div>
                                         <!-- Remove Product -->
                                         <div class="col-4">
@@ -187,7 +169,7 @@
                                             <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
                                         </div>
                                         <div class="col-12 home-btn">
-                                            <a class="btn-shadow" href="{% url 'all_apparel' %}">Shop Apparel</a>
+                                            <a class="btn-shadow" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">Shop Apparel</a>
                                         </div>
                                     </div>
                                 </div>
@@ -197,7 +179,7 @@
                                             <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
                                         </div>
                                         <div class="col-12 home-btn">
-                                            <a class="btn-shadow" href="{% url 'all_courses' %}">Shop Courses</a>
+                                            <a class="btn-shadow" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>
                                         </div>
                                     </div>
                                 </div>

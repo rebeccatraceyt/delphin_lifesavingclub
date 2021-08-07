@@ -1,8 +1,7 @@
 from django.shortcuts import get_object_or_404
-from queryset_sequence import QuerySetSequence
 from decimal import Decimal
 from django.conf import settings
-from shop.models import Course, Apparel
+from shop.models import Product
 
 
 def bag_content(request):
@@ -14,10 +13,6 @@ def bag_content(request):
     https://tinyurl.com/5f7ypxcc
     """
 
-    courses = Course.objects.all()
-    apparel = Apparel.objects.all()
-    products = QuerySetSequence(Course.objects.all(), Apparel.objects.all())
-
     bag_items = []
     total = 0
     product_count = 0
@@ -25,7 +20,7 @@ def bag_content(request):
 
     # for items/quantity in session bag
     for item_id, item_data in current_bag.items():
-        product = get_object_or_404(products, pk=item_id)
+        product = get_object_or_404(Product, pk=item_id)
 
         for select, quantity in item_data['items_by_select'].items():
 
@@ -55,8 +50,6 @@ def bag_content(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
-        'courses': courses,
-        'apparel': apparel,
     }
 
     return context

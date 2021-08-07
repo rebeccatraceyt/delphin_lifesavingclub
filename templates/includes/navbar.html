@@ -41,8 +41,8 @@
                         Shop
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'all_apparel' %}">Shop Apparel</a>
-                        <a class="dropdown-item" href="{% url 'all_courses' %}">Shop Courses</a>
+                        <a class="dropdown-item" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">Shop Apparel</a>
+                        <a class="dropdown-item" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{% url 'all_products' %}">View All</a>
                     </div>

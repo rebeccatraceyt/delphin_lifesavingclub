@@ -24,13 +24,13 @@
             <div class="col-12 page-title">
                 <!-- Conditional Page Titles
                     ref: https://tinyurl.com/jfktjads-->
-                {% if request.get_full_path == '/shop/all_courses?age_range=swimming_jnr' %}
+                {% if request.get_full_path == '/shop/courses?category=swimming_jnr' %}
                     <h3>0 - 4 years</h3>
-                {% elif request.get_full_path == '/shop/all_courses?age_range=swimming_snr' %}
+                {% elif request.get_full_path == '/shop/courses?category=swimming_snr' %}
                     <h3>5 - 12 years</h3>
-                {% elif request.get_full_path == '/shop/all_courses?age_range=lifesaving' %}
+                {% elif request.get_full_path == '/shop/courses?category=lifesaving' %}
                     <h3>13 - 16 years</h3>
-                {% elif request.get_full_path == '/shop/all_courses?age_range=lifeguarding' %}
+                {% elif request.get_full_path == '/shop/courses?category=lifeguarding' %}
                     <h3>16+ years</h3>
                 {% else %}
                     <h3>All Courses</h3>
@@ -39,59 +39,58 @@
             </div>
             <div class="col-12 d-flex d-lg-none category-dropdown">
                 <div class="dropdown show">
-                    <button class="btn category-toggle dropdown-toggle" type="button" id="courseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn category-toggle dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Refine By Age
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right category-items" aria-labelledby="courseDropdown">
-                        <a class="dropdown-item" href="{% url 'all_courses' %}?age_range=swimming_jnr">0 - 4 years</a>
-                        <a class="dropdown-item" href="{% url 'all_courses' %}?age_range=swimming_snr">5 - 12 years</a>
-                        <a class="dropdown-item" href="{% url 'all_courses' %}?age_range=lifesaving">13 - 16 years</a>
-                        <a class="dropdown-item" href="{% url 'all_courses' %}?age_range=lifeguarding">16+ years</a>
+                    <div class="dropdown-menu dropdown-menu-right category-items" aria-labelledby="categoryDropdown">
+                        <a class="dropdown-item" href="{% url 'courses' %}?category=swimming_jnr">0 - 4 years</a>
+                        <a class="dropdown-item" href="{% url 'courses' %}?category=swimming_snr">5 - 12 years</a>
+                        <a class="dropdown-item" href="{% url 'courses' %}?category=lifesaving">13 - 16 years</a>
+                        <a class="dropdown-item" href="{% url 'courses' %}?category=lifeguarding">16+ years</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item font-weight-bolder" href="{% url 'all_courses' %}">View All</a>
+                        <a class="dropdown-item font-weight-bolder" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">View All</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 d-none d-lg-block category-links text-center">
-                <a href="{% url 'all_courses' %}?age_range=swimming_jnr" >0 - 4 years</a>
-                <a href="{% url 'all_courses' %}?age_range=swimming_snr">5 - 12 years</a>
-                <a href="{% url 'all_courses' %}?age_range=lifesaving">13 - 16 years</a>
-                <a href="{% url 'all_courses' %}?age_range=lifeguarding">16+ years</a>
-                <a href="{% url 'all_courses' %}">View All</a>
+                <a href="{% url 'courses' %}?category=swimming_jnr" >0 - 4 years</a>
+                <a href="{% url 'courses' %}?category=swimming_snr">5 - 12 years</a>
+                <a href="{% url 'courses' %}?category=lifesaving">13 - 16 years</a>
+                <a href="{% url 'courses' %}?category=lifeguarding">16+ years</a>
+                <a href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">View All</a>
             </div>
         </div>
 
         <!-- Page Content -->
         <div class="row products-sec">
-            {% for course in courses %}
+            {% for product in products %}
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3 px-md-1">
                     <div class="row product-card">
                         <div class="col-12 p-0">
-                            {% if course.image.url %}
-                                <a class="product-img" href="{% url 'course_detail' course.id %}">
-                                    <img src="{{ course.image.url }}" alt="{{ course.name }}">
+                            {% if product.image.url %}
+                                <a class="product-img" href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                             {% else %}
-
-                                <a class="product-img" href="{% url 'course_detail' course.id %}">
-                                    <img src="{% static 'img/no-image.png' %}" alt="{{ course.name }}">
+                                <a class="product-img" href="{% url 'product_detail' product.id %}">
+                                    <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
                                 </a>
                             {% endif %}
                         </div>
                         <div class="col-12">
-                            <a href="{% url 'course_detail' course.id %}">
-                                <h3 class="product-name">{{ course.name }}</h3>
+                            <a href="{% url 'product_detail' product.id %}">
+                                <h3 class="product-name">{{ product.name }}</h3>
                             </a>
                         </div>
                         <div class="col-6 text-left font-weight-bolder">
-                            {% if course.name == 'Lifeguards' %}
+                            {% if product.name == 'Lifeguards' %}
                                 <p>12 weeks</p>
                             {% else %}
                                 <p>10 weeks</p>
                             {% endif %}
                         </div>
                         <div class="col-6 text-right font-weight-bolder">
-                            <p>€{{ course.price }}</p>
+                            <p>€{{ product.price }}</p>
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,7 @@
 from django.shortcuts import (render, redirect, reverse,
                               HttpResponse, get_object_or_404)
 from django.contrib import messages
-from shop.models import Course, Apparel
-from queryset_sequence import QuerySetSequence
+from shop.models import Product
 
 
 def shopping_bag(request):
@@ -17,10 +16,7 @@ def add_to_bag(request, item_id):
     Submit form to view
         defines quantity of product added to shopping bag
     """
-
-    products = QuerySetSequence(Course.objects.all(),
-                                Apparel.objects.all())
-    product = get_object_or_404(products, pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
 
     # Get quantity of item and add to current bag
     quantity = int(request.POST.get('quantity'))
@@ -60,8 +56,7 @@ def update_bag(request, item_id):
     Submit update form to view to update shopping bag
     """
 
-    products = QuerySetSequence(Course.objects.all(), Apparel.objects.all())
-    product = get_object_or_404(products, pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
 
     # Get quantity of item and add to current bag
     quantity = int(request.POST.get('quantity'))
@@ -95,9 +90,7 @@ def remove_from_bag(request, item_id):
     """
 
     try:
-        products = QuerySetSequence(Course.objects.all(),
-                                    Apparel.objects.all())
-        product = get_object_or_404(products, pk=item_id)
+        product = get_object_or_404(Product, pk=item_id)
 
         # get products
         select = None
