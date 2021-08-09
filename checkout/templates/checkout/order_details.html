@@ -48,15 +48,8 @@
                         {{ order_form.country | as_crispy_field }}
                         
                         <div class="form-check form-check-inline float-right mr-0">
-                            {% if user.is_authenticated %}
-                                <label for="id-save-info" class="form-check-label">Save this delivery information to my profile</label>
-                                <input type="checkbox" class="form-check-input ml-2 mr-0" id="id-save-info" name="save-info" checked>
-                            {% else %}
-                                <label for="id-save-info" class="form-check-label">
-                                    <a href="{% url 'account_signup' %}" class="text-info">Create an account</a> or
-                                    <a href="{% url 'account_login' %}" class="text-info">login</a> to save this information
-                                </label>
-                            {% endif %}
+                            <label for="id-save-info" class="form-check-label">Save information to my profile</label>
+                            <input type="checkbox" class="form-check-input ml-2 mr-0" id="id-save-info" name="save-info" checked>
                         </div>
 
                     </fieldset>
@@ -69,27 +62,31 @@
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
 
                     </fieldset>
-                    <div class="submit-button text-right mt-5 mb-2">
-                        <a href="{% url 'shopping_bag' %}" class="btn btn-ouline-black rounded-0">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="font-weight-bold">Adjust Bag</span>
-                        </a>
-                        <button id="submit-button" class="btn btn-black rounded-0">
-                            <span class="font-weight-bold">
-                                Complete Order
-                            </span>
-                            <span class="icon">
-                                <i class="fas fa-lock"></i>
-                            </span>
-                        </button>
-                        <p class="small text-danger my-0">
-                            <span class="icon">
-                                <i class="fas fa-exclamation-circle"></i>
-                            </span>
-                            <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-                        </p>
+                    <div class="submit-button col-12 bag-btns">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="{% url 'shopping_bag' %}" class="bag-back-btn">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="font-weight-bold">Adjust Bag</span>
+                                </a>
+                                <a id="submit-button" class="bag-checkout-btn">
+                                    <span class="font-weight-bold">
+                                        Complete Order
+                                    </span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </a>
+                                <p class="small text-danger">
+                                    <span class="icon">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </span>
+                                    <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>

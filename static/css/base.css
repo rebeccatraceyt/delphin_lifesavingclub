@@ -508,6 +508,9 @@ ol.breadcrumb {
 .bag-checkout-btn:focus {
     color: var(--yellow);
 }
+.bag-btns p {
+    margin: 1rem;
+}
 
 /* --- Checkout Pages --- */
 
@@ -554,13 +557,13 @@ ol.breadcrumb {
     padding: 20px;
 }
 .edit-btn {
-    padding: 5px;
+    padding: 5px 2px;
     text-align: center;
 }
 .edit-btn a {
     font-family: var(--title-font);
     padding: 8px;
-    width: 60%;
+    width: 40%;
     border-radius: 10px;
     transition: all 0.5s ease 0s;
     background-color: var(--white);
@@ -591,11 +594,6 @@ ol.breadcrumb {
     font-family: var(--title-font);
     font-size: 1.5rem;
     position: relative;
-}
-#payment-form .form-control,
-#card-element {
-    color: var(--black);
-    border: 1px solid var(--black);
 }
 
 /* --- Media Queries --- */
@@ -674,6 +672,7 @@ ol.breadcrumb {
     .bag-checkout-btn {
         margin: 10px 0px 10px 5px;
         font-size: 1.7rem;
+        width: 80%;
     }
 
     /* -- Checkout Pages -- */
@@ -687,10 +686,13 @@ ol.breadcrumb {
 
     /* Lineitems */
     .order-content {
-        padding: 40px;
+        padding: 10px;
     }
     .order-items p {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+    .edit-btn a {
+        width: 30%;
     }
 }
 
@@ -886,7 +888,6 @@ ol.breadcrumb {
     }
     .checkout-img {
         width: 90%;
-        height: 90%;
     }
     .progress-step {
         width: 90px;
@@ -896,5 +897,15 @@ ol.breadcrumb {
     }
     .edit-btn a {
         width: 40%;
+    }
+    /* Lineitems */
+    .review-items .order-content {
+        padding: 10px 200px;
+    }
+    .order-items p {
+        font-size: 1.2rem;
+    }
+    .edit-btn a {
+        width: 30%;
     }
 }
