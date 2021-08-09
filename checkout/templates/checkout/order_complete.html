@@ -23,21 +23,121 @@
 
         <!-- Page Content -->
         <div class="row">
-            <div class="col-12">
-                <h2>Thank You!</h2>
-                <p>Your order is complete. Please find your order information below.</p>
-                <p>A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
-                <p>For Course bookings: Please bring this email with you for your first session to complete club registration.</p>
+            <div class="col-12 confirm-text">
+                <p>Thank you for your order, your order number is: <small>{{ order.order_number }}</small></p>
+                <p>A confirmation email has been sent to: <strong>{{ order.email }}</strong>.</p>
+                <hr class="sm-divider">
+            </div>
+        </div>
+        <div class="row confirm-row">
+            <div class="col-12 confirm-text">
+                <h5>For Course bookings:</h5>
                 <p>Commencement for courses booked will begin on the next calendar week (Sunday to Sunday).</p>
-                <p class="text-muted">Please Note: All course bookings do not guarantee class placement. 
+                <p>Please present your confirmation email with you on your first session, to complete club registration at the check-in desk.</p>
+                <p><strong>Please Note:</strong> All course bookings do not guarantee class placement. 
                     The Teacher will assesss all swimmers on their first session to ensure they are in the correct course/level. 
                     Any adjusts will be made accordingly with the utmost effort made to maintain day and time.
-                    Further information can be found in our <a href="">FAQ section</a>.
+                    Further information can be found in our <strong><a href="">FAQ</a></strong> section.
                 </p>
-                <p>Contact our Club Administrator for further information.</p>
+                <p>Contact Club Administrator for further information via our <strong><a href="">Contact</a></strong> page.</p>
+            </div>
+            <hr class="sm-divider">
+        </div>
+        <div class="row confirm-row">
+            <div class="col-12 confirm-text">
+                <h5>Order Summary:</h5>
+            </div>
+            <div class="col-12">
+                {% for bag_item in order.lineitems.all %}
+                    <div class="row order-content">
+                        <div class="col-3 d-flex align-items-center p-0">
+                            <a href="{% url 'product_detail' bag_item.product.id %}">
+                                {% if bag_item.product.image %}
+                                    <img src="{{ bag_item.product.image.url }}" alt="{{ product.name }}" class="w-100">
+                                {% else %}
+                                    <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}" class="w-100">
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="col-6 order-items">
+                            <p class="my-0"><strong>{{ bag_item.product.name }}</strong></p>
+                            <p class="my-0 small">SKU: {{ bag_item.product_select }}</p>
+                            <p class="my-0 small text-muted">Qty: {{ bag_item.quantity }}</p>
+                        </div>
+                        <div class="col-3 order-items text-muted text-right d-flex align-items-end justify-content-end">
+                            <p class="my-0">€{{ bag_item.product.price | calc_subtotal:bag_item.quantity }}</p>
+                        </div>
+                    </div>
+                    <hr class="m-0">
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row confirm-row">
+            <div class="col-12 confirm-text">
+                <h5>Delivering To:</h5>
+            </div>
+            <div class="col-12 confirm-table d-flex justify-content-center">
+                <table>
+                    <tr>
+                        <td class="font-weight-bold">Full Name:</td>
+                        <td class="text-right">{{ order.full_name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">Address 1:</td>
+                        <td class="text-right">{{ order.street_address1 }}</td>
+                    </tr>
+                    {% if order.street_address2 %}
+                    <tr>
+                        <td class="font-weight-bold">Address 2:</td>
+                        <td class="text-right">{{ order.street_address2 }}</td>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <td class="font-weight-bold">Town or City:</td>
+                        <td class="text-right">{{ order.town_or_city }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">County:</td>
+                        <td class="text-right">{{ order.county }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">Eircode:</td>
+                        <td class="text-right">{{ order.eircode }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">Country:</td>
+                        <td class="text-right">{{ order.country }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">Phone Number:</td>
+                        <td class="text-right">{{ order.phone_number }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row confirm-row">
+            <div class="col-12 confirm-text">
+                <h5>Billing Info:</h5>
+            </div>
+            <div class="col-12 confirm-table d-flex justify-content-center">
+                <table>
+                    <tr>
+                        <td class="font-weight-bold">Order Total:</td>
+                        <td class="text-right">€{{ order.order_total }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">Delivery:</td>
+                        <td class="text-right">€{{ order.delivery_cost }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-weight-bold">Grand Total:</td>
+                        <td class="text-right">€{{ order.grand_total }}</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
+        
 {% endblock %}
 
 {% block postloadjs %}

@@ -78,6 +78,10 @@ a, a:hover, a:focus, a:active {
     height: 1px;
     background-color: var(--border-dark);
 }
+.sm-divider {
+    margin: auto;
+    width: 96%;
+}
 .page-title {
     padding-bottom: 10px;
 }
@@ -462,10 +466,6 @@ ol.breadcrumb {
 .qty-btns button:focus {
     color: var(--yellow);
 }
-.bag-divider {
-    margin: auto;
-    width: 96%;
-}
 .bag-total {
     text-align: right;
     line-height: 1;
@@ -611,6 +611,25 @@ ol.breadcrumb {
     margin: 0 1rem;
 }
 
+/* --- Checkout Complete Page --- */
+.confirm-row {
+    padding-bottom: 30px;
+}
+.confirm-text {
+    padding: 10px 15px;
+}
+.confirm-text h5 {
+    font-family: var(--title-font);
+    font-size: 1.6rem;
+}
+.confirm-table table {
+    width: 90%;
+}
+.confirm-table table td {
+    border-bottom: 1px solid var(--border-light);
+    padding: 10px;
+}
+
 /* --- Media Queries --- */
 
 /* Breakpoint on Tablet device */
@@ -711,6 +730,14 @@ ol.breadcrumb {
     }
     .bag-submit-btn {
         font-size: 1.3rem;
+    }
+
+    /* -- Checkout Complete Page -- */
+    .confirm-text {
+        padding: 10px 20px;
+    }
+    .confirm-table table {
+        width: 98%;
     }
 }
 
@@ -925,5 +952,13 @@ ol.breadcrumb {
     }
     .edit-btn a {
         width: 30%;
+    }
+
+    /* -- Checkout Complete Page -- */
+    .confirm-text {
+        padding: 10px 20px;
+    }
+    .confirm-table table {
+        width: 98%;
     }
 }
