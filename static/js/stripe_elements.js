@@ -69,33 +69,87 @@ form.addEventListener('submit', function(ev) {
     $('#submit-button').attr('disabled', true);
     $('#loading-overlay').fadeToggle(100);
 
-    // Call Confirm Card method
-    stripe.confirmCardPayment(clientSecret, {
-        // provide card to stripe
-        payment_method: {
-            card: card,
-        }
-    }).then(function(result) {
-        // Then execute this function
-        if (result.error) {
-            // put error message in card-error div
-            var errorDiv = document.getElementById('card-errors');
-            var html = `
-                <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
-                </span>
-                <span>${result.error.message}</span>
-            `;
+    // Get boolean value of save info box (checked or not)
+    var saveInfo = Boolean($('#id-save-info').attr('checked'));
 
-            // if there is an error, re-enable card element and submit button
-            $(errorDiv).html(html);
-            card.update({ 'disabled': false});
-            $('#submit-button').attr('disabled', false);
-        } else {
-            // if status of payment intent is succeeded, submit form
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
+    // From using {% csrf_token %} in the form
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+
+    // pass information to new view 
+    // and clients secret for payment intent
+    var postData = {
+        'csrfmiddlewaretoken' : csrfToken,
+        'client_secret': clientSecret,
+        'save_info': saveInfo,
+    };
+
+    // url variable
+    var url = '/checkout/cache_checkout_data/';
+
+    // post data to the view (the url) which updates payment intent
+    // .done waits for response that payment intent was updated,
+    // before calling the confirmed payment method
+    $.post(url, postData).done(function() {
+        // Call Confirm Card method
+        stripe.confirmCardPayment(clientSecret, {
+            // provide card to stripe
+            payment_method: {
+                card: card,
+                // apply form data into payment intent object
+                // allows it to be retrieved once a webhook is received
+                billing_details: {
+                    name: $.trim(form.full_name.value),
+                    phone: $.trim(form.phone_number.value),
+                    email: $.trim(form.email.value),
+                    address: {
+                        line1: $.trim(form.street_address1.value),
+                        line2: $.trim(form.street_address2.value),
+                        city: $.trim(form.town_or_city.value),
+                        country: $.trim(form.country.value),
+                        state: $.trim(form.county.value),
+                    }
+                }
+            },
+            shipping: {
+                name: $.trim(form.full_name.value),
+                phone: $.trim(form.phone_number.value),
+                address: {
+                    line1: $.trim(form.street_address1.value),
+                    line2: $.trim(form.street_address2.value),
+                    city: $.trim(form.town_or_city.value),
+                    country: $.trim(form.country.value),
+                    // billing postal code comes from card element
+                    // Stripe would over ride it
+                    postal_code: $.trim(form.eircode.value),
+                    state: $.trim(form.county.value),
+                }
             }
-        }
-    });
+        }).then(function(result) {
+            // Then execute this function
+            if (result.error) {
+                // put error message in card-error div
+                var errorDiv = document.getElementById('card-errors');
+                var html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>
+                `;
+    
+                // if there is an error, re-enable card element and submit button
+                $(errorDiv).html(html);
+                card.update({ 'disabled': false});
+                $('#submit-button').attr('disabled', false);
+            } else {
+                // if status of payment intent is succeeded, submit form
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
+            }
+        });
+    }).fail(function() {
+        // reloads page, the error will be in django messages
+        location.reload();
+    })
+
 });

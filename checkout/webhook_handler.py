@@ -21,6 +21,8 @@ class StripeWH_Handler:
         Ensure orders are entered in database
             - even if there is a user error
         """
+        intent = event.data.object
+        print(intent)
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
