@@ -4,6 +4,11 @@ from checkout.webhook_handler import StripeWH_Handler
 
 import stripe
 
+"""
+Webhook functionality adapted from Boutique Ado
+ref: https://tinyurl.com/3e9u45u4
+"""
+
 # reject GET methods
 from django.views.decorators.http import require_POST
 
@@ -39,5 +44,22 @@ def webhook(request):
         # additional error
         return HttpResponse(content=e, status=400)
 
-    print('Success!')
-    return HttpResponse(status=200)
+    # Set up webhook handler
+    handler = StripeWH_Handler(request)
+
+    # Map webhook events to relevent handler functions
+    event_map = {
+        'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
+        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
+    }
+
+    # Get the webhook type from Stripe
+    event_type = event['type']
+
+    # IF there's a handler for it, get if from the event map
+    # Use the generic one by default
+    event_handler = event_map.get(event_type, handler.handle_event)
+
+    # Call the event handler with the event
+    response = event_handler(event)
+    return response

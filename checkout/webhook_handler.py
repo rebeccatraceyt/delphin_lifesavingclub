@@ -32,5 +32,5 @@ class StripeWH_Handler:
             - even if there is a user error
         """
         return HttpResponse(
-            content=f'Failed Webhook received: {event["type"]}',
+            content=f'Payment Failed Webhook received: {event["type"]}',
             status=200)
