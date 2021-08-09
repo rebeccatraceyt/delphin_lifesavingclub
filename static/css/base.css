@@ -490,11 +490,12 @@ ol.breadcrumb {
 .bag-checkout-btn {
     font-family: var(--title-font);
     margin: 10px 2px;
-    padding: 8px;
+    padding: 8px 5px;
     width: 100%;
     border-radius: 10px;
     transition: all 0.5s ease 0s;
     border: 1px solid var(--black);
+    font-size: 1rem;
 }
 .bag-checkout-btn {
     background-color: var(--black);
@@ -507,9 +508,6 @@ ol.breadcrumb {
 .bag-checkout-btn:hover,
 .bag-checkout-btn:focus {
     color: var(--yellow);
-}
-.bag-btns p {
-    margin: 1rem;
 }
 
 /* --- Checkout Pages --- */
@@ -595,6 +593,23 @@ ol.breadcrumb {
     font-size: 1.5rem;
     position: relative;
 }
+.submit-button.bag-btns {
+    padding: 5px;
+}
+.bag-submit-btn {
+    font-family: var(--title-font);
+    margin: 10px 2px;
+    padding: 9px 15px;
+    border-radius: 10px;
+    transition: all 0.5s ease 0s;
+    border: 0;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.2rem;
+}
+.bag-btns p {
+    margin: 0 1rem;
+}
 
 /* --- Media Queries --- */
 
@@ -671,8 +686,8 @@ ol.breadcrumb {
     .bag-back-btn,
     .bag-checkout-btn {
         margin: 10px 0px 10px 5px;
-        font-size: 1.7rem;
         width: 80%;
+        font-size: 1.3rem;
     }
 
     /* -- Checkout Pages -- */
@@ -689,10 +704,13 @@ ol.breadcrumb {
         padding: 10px;
     }
     .order-items p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     .edit-btn a {
         width: 30%;
+    }
+    .bag-submit-btn {
+        font-size: 1.3rem;
     }
 }
 
@@ -729,7 +747,7 @@ ol.breadcrumb {
     .bag-back-btn,
     .bag-checkout-btn {
         margin: 10px 5px;
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -877,7 +895,7 @@ ol.breadcrumb {
     .bag-back-btn,
     .bag-checkout-btn {
         margin: 10px 5px;
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 
     /* -- Checkout Pages -- */
