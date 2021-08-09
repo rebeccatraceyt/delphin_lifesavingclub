@@ -28,7 +28,9 @@
                     <div class="col-12 col-md-6 col-lg-6 home-link d-flex justify-content-center">
                         <div class="row">
                             <div class="col-12 home-img">
-                                <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
+                                <a href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">
+                                    <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
+                                </a>
                             </div>
                             <div class="col-12 home-btn">
                                 <a class="btn-shadow" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">Shop Apparel</a>
@@ -38,7 +40,9 @@
                     <div class="col-12 col-md-6 col-lg-6 home-link d-flex justify-content-center">
                         <div class="row">
                             <div class="col-12 home-img">
-                                <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
+                                <a href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">
+                                    <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
+                                </a>
                             </div>
                             <div class="col-12 home-btn">
                                 <a class="btn-shadow" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>

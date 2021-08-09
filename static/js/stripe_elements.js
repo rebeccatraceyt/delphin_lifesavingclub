@@ -120,7 +120,7 @@ form.addEventListener('submit', function(ev) {
                     country: $.trim(form.country.value),
                     // billing postal code comes from card element
                     // Stripe would over ride it
-                    postal_code: $.trim(form.eircode.value),
+                    postal_code: $.trim(form.postcode.value),
                     state: $.trim(form.county.value),
                 }
             }

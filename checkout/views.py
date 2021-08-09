@@ -91,7 +91,7 @@ def order_details(request):
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
             'country': request.POST['country'],
-            'eircode': request.POST['eircode'],
+            'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
@@ -100,11 +100,25 @@ def order_details(request):
         order_form = OrderForm(form_data)
 
         if order_form.is_valid():
-            order = order_form.save()
+            # Get payment intent id if order is valid
+            # false commit prevents multiple save events being executed
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+
+            # dump shopping bag in json string
+            order.original_bag = json.dumps(current_bag)
+
+            # save order
+            order.save()
+
+            # get products
             for item_id, item_data in current_bag.items():
                 try:
+                    # get product id out of bag
                     product = Product.objects.get(id=item_id)
-                    for select, quantity in item_data['items_by_select'].items():
+                    for select, quantity in item_data[
+                                'items_by_select'].items():
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
