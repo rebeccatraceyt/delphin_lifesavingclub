@@ -36,9 +36,13 @@
     border: 1px solid #000;
 }
 
+#div_id_country select {
+  padding: 0px 8px;
+}
+
 select,
 select option {
-  color: #000000;
+  color: #0A0A0A;
 }
 
 select:invalid,

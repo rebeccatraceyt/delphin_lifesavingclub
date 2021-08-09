@@ -32,7 +32,6 @@ class OrderForm(forms.ModelForm):
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'county': 'County',
-            'country': 'Counry',
         }
 
         # cursor will start in full name field
