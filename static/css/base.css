@@ -629,6 +629,13 @@ ol.breadcrumb {
     border-bottom: 1px solid var(--border-light);
     padding: 10px;
 }
+.confirm-link {
+    transition: all 0.5s ease 0s;
+}
+.confirm-link:hover,
+.confirm-link:focus {
+    color: var(--red);
+}
 
 /* --- Media Queries --- */
 
