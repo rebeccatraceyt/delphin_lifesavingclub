@@ -45,7 +45,7 @@ class Order(models.Model):
         """
 
         self.order_total = self.lineitems.aggregate(
-            Sum('lineitem_total'))['lineitem_total__sum']
+            Sum('lineitem_total'))['lineitem_total__sum'] or 0
 
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = (self.order_total * settings
@@ -90,13 +90,15 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override original save method to set order number,
-        if one hasn't be created already
+        Override the original save method to set the line item total
+        and update the order total
         """
 
         self.lineitem_total = self.product.price * self.quantity
+
+        # execute original save method
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return
-        f'SKU {self.product.product_select} on order {self.order.order_number}'
+        # string to return SKU of the product
+        return f'SKU {self.product_select} on order {self.order.order_number}'

@@ -3,7 +3,7 @@
 <!-- Checkout Logo -->
 <div class="container">
     <div class="row">
-        <div class="col-12 text-center checkout-logo">
+        <div class="col-12 text-center checkout-logo {% if active_page == 'order_complete' %}d-none{% endif %}">
             <a href="{% url 'shopping_bag' %}" title="Return to Shopping Bag">
                 <img src="{% static 'img/checkout_logo.png' %}" alt="Delphin Logo" class="checkout-img">
             </a>
@@ -21,10 +21,12 @@
                 <div class="progress-step">
                     <div class="progress-circle {% if active_page == 'order_review' %}active-circle{% endif %}">
                         {% if active_page == 'order_review' %}
-                            1
-                        {% else %}
-                            <i class="fas fa-check"></i>
-                        {% endif %}
+                            <a href="{% url 'order_review' %}">
+                                1
+                            </a>
+                            {% else %}
+                                <i class="fas fa-check"></i>
+                            {% endif %}
                     </div>
                     <p class="step-label">Review</p>
                 </div>
@@ -39,8 +41,8 @@
                     <p class="step-label">Details</p>
                 </div>
                 <div class="progress-step">
-                    <div class="progress-circle {% if active_page == 'order_confirm' %}active-circle{% endif %}">
-                        {% if active_page != 'order_confirm' %}
+                    <div class="progress-circle {% if active_page == 'order_complete' %}active-circle{% endif %}">
+                        {% if active_page != 'order_complete' %}
                             3
                         {% else %}
                             <i class="fas fa-check"></i>

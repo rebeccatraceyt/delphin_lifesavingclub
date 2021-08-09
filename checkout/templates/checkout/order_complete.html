@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bag_tools %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container page-margins">
+
+        <!-- Checkout Logo and Progress Bar -->
+        {% include 'checkout/includes/checkout_header.html' %}
+        
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-12 page-title">
+                <h3>Order Complete</h3>
+                <hr class="section-divider">
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="row">
+            <div class="col-12">
+                <h2>Thank You!</h2>
+                <p>Your order is complete. Please find your order information below.</p>
+                <p>A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                <p>For Course bookings: Please bring this email with you for your first session to complete club registration.</p>
+                <p>Commencement for courses booked will begin on the next calendar week (Sunday to Sunday).</p>
+                <p class="text-muted">Please Note: All course bookings do not guarantee class placement. 
+                    The Teacher will assesss all swimmers on their first session to ensure they are in the correct course/level. 
+                    Any adjusts will be made accordingly with the utmost effort made to maintain day and time.
+                    Further information can be found in our <a href="">FAQ section</a>.
+                </p>
+                <p>Contact our Club Administrator for further information.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'js/stripe_elements.js' %}"></script>
+{% endblock %}
