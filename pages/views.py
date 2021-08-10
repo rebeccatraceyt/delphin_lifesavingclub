@@ -5,4 +5,7 @@ def view_home(request):
     """
     Returns homepage
     """
-    return render(request, 'index.html')
+    context = {
+        'active_page': 'home',
+    }
+    return render(request, 'index.html', context)

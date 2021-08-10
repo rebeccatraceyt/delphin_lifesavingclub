@@ -94,6 +94,10 @@ a, a:hover, a:focus, a:active {
     -moz-box-shadow: var(--grey) 0 0 10px;
     box-shadow: var(--grey) 0 0 10px;
 }
+.extra-p-btm {
+    /* for sections needing more bottom padding for UI */
+    padding-bottom: 10rem;
+}
 
 /* --- Navbar --- */
 
@@ -371,6 +375,10 @@ ol.breadcrumb {
     color: var(--yellow);
     border: 1px solid var(--black);
 }
+.search-btn button:hover,
+.search-btn button:focus {
+    color: var(--white);
+}
 
 /* --- Individual Product Pages --- */
 .detail-sec {
@@ -637,6 +645,59 @@ ol.breadcrumb {
     color: var(--red);
 }
 
+/* --- Accounts Pages --- */
+.account-text {
+    padding: 10px 20px;
+}
+.account-text h4{
+    font-family: var(--title-font);
+    font-size: 1.7rem;
+    text-align: center;
+}
+.account-btn,
+.account-btn-link {
+    background-color: var(--black);
+    border-radius: 5px;
+    text-align: center;
+}
+.account-btn {
+    padding: 6px 10px;
+}
+.account-btn-link {
+    padding: 7px 10px;
+}
+.account-btn button,
+.account-btn-link a {
+    background-color: var(--black);
+    color: var(--yellow);
+    border: 1px solid var(--black);
+}
+.account-btn button:hover,
+.account-btn button:focus,
+.account-btn a:hover,
+.account-btn a:focus {
+    color: var(--white);
+}
+.account-hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 94%;               
+    background-color:var(--border-dark);
+    height: 1px;
+}
+.account-reg-text {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+.account-link {
+    transition: all 0.5s ease 0s;
+}
+.account-link:hover,
+.account-link:focus {
+    color: var(--red);
+}
+
 /* --- Media Queries --- */
 
 /* Breakpoint on Tablet device */
@@ -746,10 +807,60 @@ ol.breadcrumb {
     .confirm-table table {
         width: 98%;
     }
+
+    /* -- Accounts Pages -- */
+    .account-form {
+        padding: 0 40% 0 2%;
+    }
+    .lg-border {
+        border-right: 1px solid var(--border-light);
+    }
+    .account-reg-text {
+        padding-bottom: 2.6rem;
+        padding-top: 2.7rem;
+    }
 }
 
 /* Breakpoint on Larger Tablet device */
 @media (min-width: 992px) and (max-width: 1024px) {
+
+    /* -- Home Page -- */
+    .home-content {
+        padding: 5%;
+        margin: 1% 0;
+    }
+    #home-hero {
+        height: 93vh;
+    }
+    #home-logo {
+        margin: 2% auto;
+        padding: 10%;
+        max-width: 80%;
+        max-height: 80%;
+    }
+    #home-intro {
+        padding: 30px;
+        margin: auto;
+        border-radius: 15px;
+        font-size: 1.1rem;
+        max-width: 50%;
+        max-height: 60%;
+    }
+    #home-intro h3 {
+        font-size: 3rem;
+    }
+    .home-link {
+        padding: 0;
+        max-width: 30%;
+    }
+    .home-img {
+        padding: 2px;
+    }
+    .home-img img {
+        height: 90%;
+        width: 90%;
+    }
+
     /* -- Shopping Bag Pages -- */
     .bag-items {
         height: 200px;
@@ -782,6 +893,21 @@ ol.breadcrumb {
     .bag-checkout-btn {
         margin: 10px 5px;
         font-size: 1.3rem;
+    }
+
+    /* -- Accounts Pages -- */
+    .account-form {
+        padding: 0 40% 0 2%;
+    }
+    .account-text {
+        padding: 10px 50px;
+    }
+    .lg-border {
+        border-right: 1px solid var(--border-light);
+    }
+    .account-reg-text {
+        padding-bottom: 2.7rem;
+        padding-top: 2.6rem;
     }
 }
 
@@ -967,5 +1093,20 @@ ol.breadcrumb {
     }
     .confirm-table table {
         width: 98%;
+    }
+
+    /* -- Accounts Pages -- */
+    .account-form {
+        padding: 0 40% 0 2%;
+    }
+    .account-text {
+        padding: 10px 100px;
+    }
+    .lg-border {
+        border-right: 1px solid var(--border-light);
+    }
+    .account-reg-text {
+        padding-bottom: 2.7rem;
+        padding-top: 2.6rem;
     }
 }

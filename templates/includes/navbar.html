@@ -66,18 +66,18 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
-                <li class="nav-item {% if url_name == 'account' %}active{% endif %}">
-                    <a class="nav-link" href="">Account</a>
+                <li class="nav-item {% if url_name == 'profile' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'profile' %}">Account</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Log out</a>
+                <li class="nav-item {% if url_name == 'profile' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'account_logout' %}">Log out</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link {% if url_name == 'register' %}active{% endif %}" href="">Register</a>
+                    <a class="nav-link {% if url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if url_name == 'login' %}active{% endif %}" href="">Login</a>
+                    <a class="nav-link {% if url_name == 'account_login' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
                 </li>
                 {% endif  %}
                 <li class="nav-item">
