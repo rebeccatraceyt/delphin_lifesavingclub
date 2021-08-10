@@ -645,7 +645,8 @@ ol.breadcrumb {
     color: var(--red);
 }
 
-/* --- Accounts Pages --- */
+/* --- AllAuth Accounts Pages --- */
+
 .account-inner-content {
     margin-left: 2%;
     margin-right: 2%;
@@ -697,6 +698,9 @@ ol.breadcrumb {
 .account-link:focus {
     color: var(--red);
 }
+
+/* --- Profile Page --- */
+
 
 /* --- Media Queries --- */
 

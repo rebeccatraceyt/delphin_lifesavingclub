@@ -32,8 +32,8 @@
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+    color: #0A0A0A;
+    border: 1px solid #0A0A0A;
 }
 
 #div_id_country select {
