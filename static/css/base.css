@@ -646,8 +646,12 @@ ol.breadcrumb {
 }
 
 /* --- Accounts Pages --- */
-.account-text {
-    padding: 10px 20px;
+.account-inner-content {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.account-content .account-text {
+    padding: 1% 2%;
 }
 .account-text h4{
     font-family: var(--title-font);
@@ -659,23 +663,19 @@ ol.breadcrumb {
     background-color: var(--black);
     border-radius: 5px;
     text-align: center;
+    color: var(--yellow);
+    border: 1px solid var(--black);
 }
 .account-btn {
     padding: 6px 10px;
 }
 .account-btn-link {
-    padding: 7px 10px;
+    padding: 5px 10px;
 }
-.account-btn button,
-.account-btn-link a {
-    background-color: var(--black);
-    color: var(--yellow);
-    border: 1px solid var(--black);
-}
-.account-btn button:hover,
-.account-btn button:focus,
-.account-btn a:hover,
-.account-btn a:focus {
+.account-btn:hover,
+.account-btn:focus,
+.account-btn-link:hover,
+.account-btn-link:focus {
     color: var(--white);
 }
 .account-hr {
@@ -824,6 +824,24 @@ ol.breadcrumb {
 /* Breakpoint on Larger Tablet device */
 @media (min-width: 992px) and (max-width: 1024px) {
 
+    /* -- Navbar -- */
+    .bag-icon-lg i {
+        font-size: 2.4rem;
+    }
+    .bag-icon-lg span {
+        /* adapted from https://tinyurl.com/57sa5sj7 */
+        font-family: var(--body-font);
+        font-weight: bold;
+        font-size: 1rem;
+        position: absolute;
+        top: 27px;
+        right: 26px;
+        width: 15px;
+        height: 15px;
+        color: var(--white);
+        border-radius: 50%;
+    }
+
     /* -- Home Page -- */
     .home-content {
         padding: 5%;
@@ -899,8 +917,8 @@ ol.breadcrumb {
     .account-form {
         padding: 0 40% 0 2%;
     }
-    .account-text {
-        padding: 10px 50px;
+    .account-content .account-text {
+        padding: 1% 5%;
     }
     .lg-border {
         border-right: 1px solid var(--border-light);
@@ -1099,8 +1117,8 @@ ol.breadcrumb {
     .account-form {
         padding: 0 40% 0 2%;
     }
-    .account-text {
-        padding: 10px 100px;
+    .account-content .account-text {
+        padding: 1% 10%;
     }
     .lg-border {
         border-right: 1px solid var(--border-light);
