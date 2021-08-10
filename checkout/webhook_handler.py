@@ -6,6 +6,11 @@ from shop.models import Product
 import json
 import time
 
+"""
+Webhook Handler functionality adapted from Boutique Ado
+ref: https://tinyurl.com/bfwrev8u
+"""
+
 
 class StripeWH_Handler:
     """Handle Stripe Webhooks"""
@@ -92,7 +97,8 @@ class StripeWH_Handler:
 
         if order_exists:
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} | \
+                SUCCESS: Verified order already in database',
                 status=200)
         else:
             # if order doesn't exist, create a new one

@@ -24,9 +24,13 @@
                             <a href="{% url 'order_review' %}">
                                 1
                             </a>
-                            {% else %}
+                        {% elif active_page == 'order_details' %}
+                            <a href="{% url 'order_review' %}">
                                 <i class="fas fa-check"></i>
-                            {% endif %}
+                            </a>
+                        {% else %}
+                            <i class="fas fa-check"></i>
+                        {% endif %}
                     </div>
                     <p class="step-label">Review</p>
                 </div>

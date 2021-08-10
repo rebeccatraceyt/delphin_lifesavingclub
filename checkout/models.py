@@ -7,6 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from shop.models import Product
+from profile.models import UserProfile
 
 
 class Order(models.Model):
@@ -16,11 +17,14 @@ class Order(models.Model):
     https://tinyurl.com/22x9pdbm
     """
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True,
+                                     related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     country = CountryField(blank_label="Country *",
-                                  null=False, blank=False)
+                           null=False, blank=False)
     postcode = models.CharField(max_length=20, null=False, blank=False)
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
