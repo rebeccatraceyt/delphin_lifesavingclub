@@ -34,6 +34,7 @@ def profile(request):
     orders = profile.orders.all()
 
     context = {
+        'profile': profile,
         'form': form,
         'orders': orders,
         'just_message': True,
@@ -48,12 +49,6 @@ def order_history(request, order_number):
     """
     # get past orders
     order = get_object_or_404(Order, order_number=order_number)
-
-    # informative message on previous orders
-    messages.info(request, (
-        f'This a past order confirmation for order number {order_number}.'
-        'A confirmation email was sent on order date.'
-    ))
 
     context = {
         'order': order,

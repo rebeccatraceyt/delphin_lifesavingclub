@@ -7,7 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from shop.models import Product
-from profile.models import UserProfile
+from users.models import UserProfile
 
 
 class Order(models.Model):

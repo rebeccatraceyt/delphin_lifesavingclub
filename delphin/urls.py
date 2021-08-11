@@ -13,7 +13,7 @@ urlpatterns = [
     path('shop/', include('shop.urls')),
     path('shopping_bag/', include('shopping_bag.urls')),
     path('checkout/', include('checkout.urls')),
-    path('profile/', include('profile.urls')),
+    path('users/', include('users.urls')),
 ]
 
 # Check debug status
