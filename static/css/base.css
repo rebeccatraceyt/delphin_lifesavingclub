@@ -804,6 +804,12 @@ ol.breadcrumb {
 .contact-btn:focus {
     color: var(--yellow);
 }
+.error {
+    /* Default class with JQuery Form Validator plugin */
+    color: var(--red);
+    font-size: .8rem;
+    font-weight: 700;
+}
 
 
 /* --- Media Queries --- */
