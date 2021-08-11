@@ -7,8 +7,12 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+
 from shop.models import Product
 from shopping_bag.contexts import bag_content
+
+from users.models import UserProfile
+from users.forms import ProfileForm
 
 import stripe
 import json
@@ -19,6 +23,7 @@ def cache_checkout_data(request):
     """
     Determines whether user has save info box checked
     Returns this to the webhook
+    Adapted from Boutique Ado
     """
     try:
         # POST request with client secret and payment intent
@@ -151,8 +156,13 @@ def order_details(request):
             messages.error(request, "There is nothing in your bag")
             return redirect(reverse('all_products'))
 
+        # get order bag dictionary
         order_bag = bag_content(request)
+
+        # get bag total key
         total = order_bag['grand_total']
+
+        # x100 and rounded to 0.00 (gets integer)
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
@@ -160,7 +170,24 @@ def order_details(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        order_form = OrderForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.default_full_name,
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'town_or_city': profile.default_town_or_city,
+                    'county': profile.default_county,
+                    'postcode': profile.default_postcode,
+                    'country': profile.default_country,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe Public Key is missing, \
@@ -187,6 +214,30 @@ def order_complete(request, order_number):
 
     # get order to send to template
     order = get_object_or_404(Order, order_number=order_number)
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        order.user_profile = profile
+        order.save()
+
+        # Save the user's info
+        if save_info:
+            profile_data = {
+                'default_full_name': order.full_name,
+                'default_phone_number': order.phone_number,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_county': order.county,
+                'default_town_or_city': order.town_or_city,
+                'default_postcode': order.postcode,
+                'defalt_country': order.country,
+            }
+
+            # update profile info updated above
+            user_profile_form = ProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
 
     # delete session bag
     if 'current_bag' in request.session:

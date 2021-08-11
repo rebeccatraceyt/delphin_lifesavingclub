@@ -51,6 +51,9 @@ input {
     padding: 2% 7%;
     margin: 0 auto;
 }
+.page-content {
+    padding: 3% 1%;
+}
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;

@@ -18,7 +18,11 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-12 page-title">
-                <h3>Order Complete</h3>
+                {% if not from_profile %}
+                    <h3>Order Complete</h3>
+                {% else %}
+                    <h3>Past Order</h3>
+                {% endif %}
                 <hr class="section-divider">
             </div>
         </div>
@@ -26,8 +30,13 @@
         <!-- Page Content -->
         <div class="row">
             <div class="col-12 confirm-text">
-                <p>Thank you for your order, your order number is: <small>{{ order.order_number }}</small></p>
-                <p>A confirmation email has been sent to: <strong>{{ order.email }}</strong>.</p>
+                {% if not from_profile %}
+                    <p>Thank you for your order, your order number is: <small>{{ order.order_number }}</small>.</p>
+                    <p>A confirmation email has been sent to: <strong>{{ order.email }}</strong>.</p>
+                {% else %}
+                    <p>This is a past confirmation for order number: <small>{{ order.order_number }}</small>.</p>
+                    <p>A confirmation email was sent to: <strong>{{ order.email }}</strong> on the order date: <strong>{{ order.date }}</strong>.</p>
+                {% endif %}
             </div>
             <hr class="sm-divider">
         </div>
