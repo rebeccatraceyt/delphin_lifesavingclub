@@ -159,6 +159,16 @@ footer {
     color: var(--white);
     line-height: revert;
 }
+.footer-icons>.row>.col-4>a>i,
+.footer-text a {
+    transition: all 0.5s ease 0s;
+}
+.footer-icons>.row>.col-4>a>i:hover,
+.footer-icons>.row>.col-4>a>i:focus,
+.footer-text a:hover,
+.footer-text a:focus {
+    font-weight: bolder;
+}
 #footer-end {
     font-family: var(--title-font);
     color: var(--yellow);
