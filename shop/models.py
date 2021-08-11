@@ -6,7 +6,7 @@ from django.db import models
 
 class Category(models.Model):
     """
-    Defines size of selected product
+    Defines category of selected product
      (for filtering purposes)
     """
 
