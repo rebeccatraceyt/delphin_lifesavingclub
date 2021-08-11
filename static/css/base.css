@@ -274,18 +274,16 @@ footer {
 }
 .home-btn a {
     background-color: var(--black);
-    color: var(--yellow);
-    font-family: var(--title-font);
+    color: var(--white);
     font-size: 2rem;
     padding: 15px 20px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: all 0.5s ease 0s;
 }
 .home-btn a:hover,
 .home-btn a:focus {
-    background-color: var(--yellow);
-    color: var(--black);
+    color: var(--yellow);
 }
 
 /* --- Shop Pages --- */
@@ -499,11 +497,10 @@ ol.breadcrumb {
 }
 .bag-back-btn,
 .bag-checkout-btn {
-    font-family: var(--title-font);
     margin: 10px 2px;
-    padding: 8px 5px;
+    padding: 13px;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 2px;
     transition: all 0.5s ease 0s;
     border: 1px solid var(--black);
     font-size: 1rem;
@@ -570,10 +567,9 @@ ol.breadcrumb {
     text-align: center;
 }
 .edit-btn a {
-    font-family: var(--title-font);
     padding: 8px;
     width: 40%;
-    border-radius: 10px;
+    border-radius: 2px;
     transition: all 0.5s ease 0s;
     background-color: var(--white);
     border: 1px solid var(--black);
@@ -608,10 +604,9 @@ ol.breadcrumb {
     padding: 5px;
 }
 .bag-submit-btn {
-    font-family: var(--title-font);
     margin: 10px 2px;
     padding: 9px 15px;
-    border-radius: 10px;
+    border-radius: 2px;
     transition: all 0.5s ease 0s;
     border: 0;
     background-color: var(--black);
@@ -665,7 +660,7 @@ ol.breadcrumb {
 .account-btn,
 .account-btn-link {
     background-color: var(--black);
-    border-radius: 5px;
+    border-radius: 2px;
     text-align: center;
     color: var(--yellow);
     border: 1px solid var(--black);
