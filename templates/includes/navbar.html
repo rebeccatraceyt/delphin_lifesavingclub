@@ -53,14 +53,16 @@
                         About
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item {% if url_name == 'about' %}active{% endif %}" href="">Club Mission</a>
+                        <a class="dropdown-item {% if url_name == 'view_programme' %}active{% endif %}" href="{% url 'view_programme' %}">Learn To Swim Programme</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'blog' %}active{% endif %}" href="">Club Newsletter</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'faqs' %}active{% endif %}" href="">FAQs</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'contact' %}active{% endif %}" href="">Contact</a>
-
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item {% if url_name == 'about' %}active{% endif %}" href="">Club Mission</a>
+                        
                     </div>
                 </li>
             </ul>

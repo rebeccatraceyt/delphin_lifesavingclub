@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container page-margins">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-12 page-title">
+                    <h3>Learn To Swim</h3>
+                <hr class="section-divider">
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="row page-content">
+            <div class="col-12">
+                <p>Our Learn to Swim Programme has been carefully designed to promote Long-Term Athlete Development.</p>
+                <p>Each stage of the LTAD Pathway encourages swimmers to enhance their aquatic learning, through interactive classes co-ordinated to build confidence and develop Core Aquatic Skills.</p>
+                <p>Our Swimming Programme follows the guidelines set out by Swim Ireland's <strong><a class="account-link" href="https://www.swimireland.ie/get-swimming" target="_blank" rel="noopener noreferrer">Learn To Swim</a></strong> initiative, allowing swimmers to reach their full aquatic potential.</p>
+                <p>Our Lifesaving Programme is delivered through the <strong><a class="account-link" href="https://www.rlss.org.uk/Pages/Category/our-awards" target="_blank" rel="noopener noreferrer">Royal Lifesaving Society</a></strong> , with course criteria, materials and exams produced by RLSS UK and delivered through our RLSS Instructors and Tutors</p>
+            </div>
+            <div class="col-12 col-toggle d-flex justify-content-center justify-content-md-start">
+                <button class="btn" id="hideAccordianCards">Hide All</button>
+                <button class="btn" id="showAccordianCards">Show All</button>
+            </div>
+            <div class="col-12 w-100">
+                {% for programme in programmes %}
+                    <div id="accordion">
+                        <div class="card">
+                        <div class="col-title card-header" id="programmeCollapse">
+                            <h5 class="mb-0 text-center text-md-left">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#col_{{ programme.id }}" aria-expanded="false" aria-controls="col_{{ programme.id }}">
+                                    {{ programme.name }} ({{ programme.age }})
+                                </button>
+                            </h5>
+                        </div>
+                    
+                        <div id="col_{{ programme.id }}" class="programme-col collapse show" aria-labelledby="programmeCollapse" data-parent="#accordion">
+                            <div class="card-body col-text container-fluid">
+                                {{ programme.description }}
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script>
+        // ref: https://stackoverflow.com/questions/22057505/bootstrap-collapse-expand-all
+        $("#hideAccordianCards").click(function() {
+            $('.programme-col.collapse').removeClass('show');
+        });
+        $("#showAccordianCards").click(function() {
+            $('.programme-col.collapse').addClass('show');
+        });
+    </script>
+{% endblock %}

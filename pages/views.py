@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import SwimProgramme, SwimCategory
 
 
 def view_home(request):
@@ -15,7 +16,9 @@ def view_programme(request):
     """
     Returns Learn To Swim Programme Page
     """
+    programmes = SwimProgramme.objects.all()
+
     context = {
-        'active_page': 'swim_programme',
+        'programmes': programmes,
     }
     return render(request, 'swim_programme.html', context)

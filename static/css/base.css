@@ -707,8 +707,32 @@ ol.breadcrumb {
     color: var(--red);
 }
 
-/* --- Profile Page --- */
+/* --- General Pages --- */
 
+.col-toggle button {
+    margin: 15px;
+    padding: 4px 12px;
+    border-radius: 2px;
+    border: 0;
+    background-color: var(--black);
+    color: var(--white);
+    transition: all 0.5s ease 0s;
+}
+.col-toggle button:hover,
+.col-toggle button:focus {
+    color: var(--yellow);
+}
+.col-title.card-header {
+    background-color: var(--blue);
+    outline: 1px solid var(--black);
+    border-radius: 2px;
+}
+.col-title h5 > button,
+.col-title h5 > button:hover,
+.col-title h5 > button:focus {
+    color: var(--black);
+    text-decoration: none;
+}
 
 /* --- Media Queries --- */
 
@@ -831,6 +855,15 @@ ol.breadcrumb {
         padding-bottom: 2.6rem;
         padding-top: 2.7rem;
     }
+
+    /* -- General Pages -- */
+    .col-toggle button {
+        margin: 10px 10px 10px 0;
+    }
+    .col-title h5 > button {
+        font-size: 1.1rem;
+    }
+
 }
 
 /* Breakpoint on Larger Tablet device */
@@ -938,6 +971,14 @@ ol.breadcrumb {
     .account-reg-text {
         padding-bottom: 2.7rem;
         padding-top: 2.6rem;
+    }
+
+    /* -- General Pages -- */
+    .col-toggle button {
+        margin: 10px 10px 10px 0;
+    }
+    .col-title h5 > button {
+        font-size: 1.1rem;
     }
 }
 
@@ -1138,5 +1179,13 @@ ol.breadcrumb {
     .account-reg-text {
         padding-bottom: 2.7rem;
         padding-top: 2.6rem;
+    }
+
+    /* -- General Pages -- */
+    .col-toggle button {
+        margin: 10px 10px 10px 0;
+    }
+    .col-title h5 > button {
+        font-size: 1.1rem;
     }
 }
