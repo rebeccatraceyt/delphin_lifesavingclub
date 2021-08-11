@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Email Confirmation" content="Order Confirmation Email "/>
+
+        <title>Email Confirmation - Order: {{ order.order_number }}</title>
+    </head>
+    <body>
+        <h4>Hello {{ order.full_name }},</h4>
+
+        <p>Thank you for your order!</p>
+        <p>This is a confirmation of your order at Delphin Lifesaving Club. Your order information is below:</p>
+        
+        <p><strong>Order Number:</strong> <small>{{ order.order_number }}</small></p>
+        <p><strong>Order Date:</strong> <small>{{ order.date }}</small></p>
+
+        {% for item in order.Lineitems.all %}
+            <p>
+                {{ item.product.name }} - {{ item.product_select }}: {{ item.quantity }} x €{{ item.price }}
+            </p>
+        {% endfor %}
+
+        <h5>Order Total: €{{ order.grand_total }}</h5>
+
+        <hr>
+        <h4>For Apparel Orders</h4>
+        <p>Your order will be shipped to:</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>{{ order.street_address1 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ order.town_or_city }}</td>
+                </tr>
+                <tr>
+                    <td>{{ order.county }}</td>
+                </tr>
+                <tr>
+                    <td>{{ order.postcode }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+        <h4>For Course Orders</h4>
+        <p>Present this email, as proof of purchase, upon registration on your first session.</p>
+        <p><small>Please Note: All course bookings do not guarantee class placement. 
+            The Teacher will assesss all swimmers on their first session to ensure they are in the correct course/level. 
+            Any adjusts will be made accordingly with the utmost effort made to maintain day and time.
+        </small></p>
+        <p> Further information can be found on our <a href="">FAQs</a> page.</p>
+
+        <hr>
+        <p>If you have any questions, feel free to get in touch at {{ contact_email }}</p>
+        <p>
+            See you soon!
+        </p>
+        <p>
+            The Delphin Team
+        </p>
+    </body>
+</html>

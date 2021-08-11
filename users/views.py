@@ -41,7 +41,7 @@ def profile(request):
         'just_message': True,
     }
 
-    return render(request, 'profile/profile.html', context)
+    return render(request, 'users/profile.html', context)
 
 
 def order_history(request, order_number):
