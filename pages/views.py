@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import SwimProgramme, SwimCategory
+from .models import SwimProgramme
 
 
 def view_home(request):
