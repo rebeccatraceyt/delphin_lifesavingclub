@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container page-margins">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-12 page-title">
+                    <h3>Get In Contact</h3>
+                <hr class="section-divider">
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="row page-content contact-box">
+            <div class="col-12 col-md-6 contact-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-12 contact-text">
+                            <h4>Address</h4>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            ALSAA Pool
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Dublin Airport, 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Old Airport Rd, Corballis, 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Co. Dublin
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-6 col-md-12 contact-text phone-email">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4>Phone</h4>
+                                    <p>+353 (89) 4832297</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 contact-text">
+                                    <h4>Email:</h4>
+                                    <a href="mailto:delphin.lifesavingclub@gmail.com?subject=Delphin%20Enquiry">delphin.lifesavingclub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-lg-block col-6 contact-content">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="800" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%20ALSAA%20Swimming%20Pool%20Dublin%20Airport,%20Old%20Airport%20Rd,%20Corballis,%20Co.%20Dublin&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen=""></iframe>
+                        <a href="https://fmovies-online.net"></a>
+                        <br>
+                        <style>.mapouter{position:relative;text-align:right;height:500px;width:800px;}</style>
+                        <a href="https://www.embedgooglemap.net">google map html widget</a>
+                        <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-md-block d-lg-none col-6 contact-content">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="300" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=%20ALSAA%20Swimming%20Pool%20Dublin%20Airport,%20Old%20Airport%20Rd,%20Corballis,%20Co.%20Dublin&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <a href="https://fmovies-online.net"></a>
+                        <br>
+                        <style>.mapouter{position:relative;text-align:right;height:300px;width:300px;}</style>
+                        <a href="https://www.embedgooglemap.net">google map html widget</a>
+                        <style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:300px;}</style>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-block d-md-none contact-content">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="250" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=%20ALSAA%20Swimming%20Pool%20Dublin%20Airport,%20Old%20Airport%20Rd,%20Corballis,%20Co.%20Dublin&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <a href="https://fmovies-online.net"></a>
+                        <br>
+                        <style>.mapouter{position:relative;text-align:right;height:400px;width:250px;}</style>
+                        <a href="https://www.embedgooglemap.net">google map html widget</a>
+                        <style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:250px;}</style>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <hr class="sm-divider">
+        <div class="row page-content">
+            <div class="col-12 contact-form contact-text form-group">
+                <h4>Send a messsage</h4>
+                <p class="text-muted m-0">Please complete all fields</p>
+                <form id="contactForm" aria-label="Contact Form">                                
+                    <input class="contact-style-input form-control" type="text" name="uname" id="uname" placeholder="Name" aria-label="Enter Name" required>
+                    <input class="contact-style-input form-control" type="email" name="uemail" id="uemail" placeholder="Email" aria-label="Enter Email" required>
+                    <textarea class="contact-style-input form-control" name="umessage" id="umessage" placeholder="Leave a message" aria-label="Enter Message" rows="4" required></textarea>
+                    <input id="form-submit" type="submit" class="btn contact-btn" aria-label="Submit Button" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

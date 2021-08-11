@@ -12,6 +12,16 @@ def view_home(request):
     return render(request, 'index.html', context)
 
 
+def view_contact(request):
+    """
+    Returns homepage
+    """
+    context = {
+        'active_page': 'contact',
+    }
+    return render(request, 'contact.html', context)
+
+
 def view_programme(request):
     """
     Returns Learn To Swim Programme Page
