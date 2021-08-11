@@ -29,7 +29,7 @@
                 {% elif request.get_full_path == '/shop/courses?category=swimming_snr' %}
                     <h3>5 - 12 years</h3>
                 {% elif request.get_full_path == '/shop/courses?category=lifesaving' %}
-                    <h3>13 - 16 years</h3>
+                    <h3>8 - 16 years</h3>
                 {% elif request.get_full_path == '/shop/courses?category=lifeguarding' %}
                     <h3>16+ years</h3>
                 {% else %}
@@ -45,7 +45,7 @@
                     <div class="dropdown-menu dropdown-menu-right category-items" aria-labelledby="categoryDropdown">
                         <a class="dropdown-item" href="{% url 'courses' %}?category=swimming_jnr">0 - 4 years</a>
                         <a class="dropdown-item" href="{% url 'courses' %}?category=swimming_snr">5 - 12 years</a>
-                        <a class="dropdown-item" href="{% url 'courses' %}?category=lifesaving">13 - 16 years</a>
+                        <a class="dropdown-item" href="{% url 'courses' %}?category=lifesaving">8 - 16 years</a>
                         <a class="dropdown-item" href="{% url 'courses' %}?category=lifeguarding">16+ years</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item font-weight-bolder" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">View All</a>
@@ -55,7 +55,7 @@
             <div class="col-12 d-none d-lg-block category-links text-center">
                 <a href="{% url 'courses' %}?category=swimming_jnr" >0 - 4 years</a>
                 <a href="{% url 'courses' %}?category=swimming_snr">5 - 12 years</a>
-                <a href="{% url 'courses' %}?category=lifesaving">13 - 16 years</a>
+                <a href="{% url 'courses' %}?category=lifesaving">8 - 16 years</a>
                 <a href="{% url 'courses' %}?category=lifeguarding">16+ years</a>
                 <a href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">View All</a>
             </div>
