@@ -2,7 +2,7 @@ from django.test import TestCase
 from .forms import ProfileForm
 
 
-class TestProfileRegistrationModel(TestCase):
+class TestProfileRegistrationForm(TestCase):
     """Test User Profile Form for registration """
 
     def test_a_valid_registration(self):
