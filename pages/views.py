@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import SwimProgramme
+from .models import SwimProgramme, FAQ
 
 
 def view_home(request):
@@ -32,3 +32,15 @@ def view_programme(request):
         'programmes': programmes,
     }
     return render(request, 'swim_programme.html', context)
+
+
+def view_faqs(request):
+    """
+    Returns FAQs Page
+    """
+    questions = FAQ.objects.all()
+
+    context = {
+        'questions': questions,
+    }
+    return render(request, 'faqs.html', context)

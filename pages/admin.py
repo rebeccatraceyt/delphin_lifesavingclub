@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SwimCategory, SwimProgramme
+from .models import SwimCategory, SwimProgramme, FAQ
 
 
 # ------ Swim Categories ------
@@ -30,5 +30,19 @@ class SwimProgrammeAdmin(admin.ModelAdmin):
     )
 
 
+# ------ FAQs ------
+
+
+class FAQAdmin(admin.ModelAdmin):
+    """
+    Create admin views for FAQs
+    """
+    list_display = (
+        'question',
+        'answer',
+    )
+
+
 admin.site.register(SwimCategory, SwimCategoryAdmin)
 admin.site.register(SwimProgramme, SwimProgrammeAdmin)
+admin.site.register(FAQ, FAQAdmin)

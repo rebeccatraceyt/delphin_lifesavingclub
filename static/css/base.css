@@ -724,7 +724,7 @@ ol.breadcrumb {
     color: var(--yellow);
 }
 .col-title.card-header {
-    background-color: var(--blue);
+    background-color: var(--border-light);
     outline: 1px solid var(--black);
     border-radius: 2px;
 }

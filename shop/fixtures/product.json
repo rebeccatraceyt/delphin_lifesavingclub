@@ -446,7 +446,7 @@
       "pk":35,
       "fields":{
          "name":"Adult & Babies",
-         "description":"This is a test description",
+         "description":"Age 6 to 18 months - Introduction to the aquatic environment supported by their parent/guardian in the water.",
          "price":"90.00",
          "category":6,
          "is_course":true,
@@ -459,7 +459,7 @@
       "pk":36,
       "fields":{
          "name":"Adult & Toddlers",
-         "description":"This is a test description",
+         "description":"Age 19 to 36 months - Becoming independent swimming alongside parent/guardian.",
          "price":"90.00",
          "category":6,
          "is_course":true,
@@ -472,7 +472,7 @@
       "pk":37,
       "fields":{
          "name":"Splash",
-         "description":"This is a test description",
+         "description":"Age 3 upwards - Developing confidence in aquatic independence",
          "price":"90.00",
          "category":6,
          "is_course":true,
@@ -485,7 +485,7 @@
       "pk":38,
       "fields":{
          "name":"Level 1",
-         "description":"This is a test description",
+         "description":"Age 5 upwards - Introduction to a structured learning environment",
          "price":"90.00",
          "category":7,
          "is_course":true,
@@ -498,7 +498,7 @@
       "pk":39,
       "fields":{
          "name":"Level 2",
-         "description":"This is a test description",
+         "description":"Age 5 upwards - Developing the foundations of all strokes – buoyancy and balance",
          "price":"90.00",
          "category":7,
          "is_course":true,
@@ -511,7 +511,7 @@
       "pk":40,
       "fields":{
          "name":"Level 3",
-         "description":"This is a test description",
+         "description":"Age 6 upwards - Developing propulsion from leg kick while introducing arm pull",
          "price":"90.00",
          "category":7,
          "is_course":true,
@@ -524,7 +524,7 @@
       "pk":41,
       "fields":{
          "name":"Level 4",
-         "description":"This is a test description",
+         "description":"Age 6 upwards - Developing the stroke mastering arm pull",
          "price":"90.00",
          "category":7,
          "is_course":true,
@@ -537,7 +537,7 @@
       "pk":42,
       "fields":{
          "name":"Level 5",
-         "description":"This is a test description",
+         "description":"Age 7 upwards - Introduction to deep water and swimming lengths",
          "price":"90.00",
          "category":7,
          "is_course":true,
@@ -550,7 +550,7 @@
       "pk":43,
       "fields":{
          "name":"Level 6",
-         "description":"This is a test description",
+         "description":"Age 7 upwards - Developing stamina and endurance while maintaining stroke technique",
          "price":"90.00",
          "category":7,
          "is_course":true,
@@ -563,7 +563,7 @@
       "pk":44,
       "fields":{
          "name":"Level 7",
-         "description":"This is a test description",
+         "description":"Age 8 upwards - Longer sessions introducing set training",
          "price":"90.00",
          "category":7,
          "is_course":true,
@@ -576,7 +576,7 @@
       "pk":45,
       "fields":{
          "name":"Level 8",
-         "description":"This is a test description",
+         "description":"Age 8 upwards - Introduction to multi aquatic disciplines",
          "price":"90.00",
          "category":7,
          "is_course":true,
@@ -588,21 +588,8 @@
       "model":"shop.product",
       "pk":46,
       "fields":{
-         "name":"Survive & Save",
-         "description":"This is a test description",
-         "price":"110.00",
-         "category":8,
-         "is_course":true,
-         "is_apparel":false,
-         "image":"swim-sands.png"
-      }
-   },
-   {
-      "model":"shop.product",
-      "pk":47,
-      "fields":{
          "name":"Rookie Lifeguard",
-         "description":"This is a test description",
+         "description":"Age 8 upwards - Starting your Lifesaving journey, learn survival skills and basic land-based rescue techniques",
          "price":"110.00",
          "category":8,
          "is_course":true,
@@ -612,10 +599,23 @@
    },
    {
       "model":"shop.product",
+      "pk":47,
+      "fields":{
+         "name":"Survive & Save",
+         "description":"Age 12 upwards - Developing Lifesaving skills, through Bronze, Silver and Gold awards, in pool and open water.",
+         "price":"110.00",
+         "category":8,
+         "is_course":true,
+         "is_apparel":false,
+         "image":"swim-sands.png"
+      }
+   },
+   {
+      "model":"shop.product",
       "pk":48,
       "fields":{
          "name":"Lifeguards",
-         "description":"This is a test description",
+         "description":"Age 16 upwards - Obtain a professional National Pool Lifeguard Qualification",
          "price":"250.00",
          "category":9,
          "is_course":true,

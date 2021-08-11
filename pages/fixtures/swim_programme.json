@@ -4,8 +4,8 @@
         "pk":1,
         "fields":{
            "name":"Adult & Babies",
-           "description":"Our Adult and Baby classes familiarise babies with the aquatic environment. The adult will be guided as to how to interact and engage with their child safely in the water. The Class focuses on fun, using toys and songs introducing floating, kicking and other fundamental aquatic skills",
-           "age":"3 to 18 months",
+           "description":"Our Adult & Baby sessions familiarize babies with the aquatic environment. The adult will be guided how to support and engage with their child safely in the water. The class focuses on fun, using toys and songs introducing floating, kicking, and other fundamental aquatic skills supported by parent/guardian in the water.",
+           "age":"6 to 18 months",
            "swim_category":1
         }
     },
@@ -14,7 +14,7 @@
         "pk":2,
         "fields":{
            "name":"Adult & Toddler",
-           "description":"Our Adult and Toddler class has been designed to develop your child’s independence in the water. The Class focuses on developing kicking, paddling, floating and aquatic breathing skills with the aim of providing your child with the skills to be able to move short distances through the water unassisted. Your child will progress from this class armed with the confidence of taking their next step on their swimming journey, swimming without their adult in the water",
+           "description":"Our Adult & Toddler class has been designed to develop your child’s independence in the water. The class focuses on developing kicking, paddling, floating and aquatic breathing. The aim of this class is to gradually introduce independent swimming with and without aquatic aids.",
            "age":"19 to 36 months",
            "swim_category":1
         }
@@ -24,7 +24,7 @@
         "pk":3,
         "fields":{
            "name":"Splash",
-           "description":"Our Splash class is designed for children aged 3 upwards who have progressed from our Adult and Toddler class. It also caters for children who are coming into our programme for the 1st time who are comfortable swimming without a parent present in the water. This class is divided into subgroups that allow us to give the time and attention needed to work with the child at their own development stage of their aquatics journey. The Class focuses on teaching submersion, independent swimming, kicking, floating and introducing propulsion through the water. For the comfort and reassurance of your child at least one accompanying parent/ guardian must always be poolside for the duration of the class",
+           "description":"The first step for the independent swimmer developing confidence been on their own in the water. Moving short distances using sculling action with hands and leg kick and introducing submersion and jumping into the water.",
            "age":"3+ years",
            "swim_category":1
         }
@@ -34,7 +34,7 @@
         "pk":4,
         "fields":{
            "name":"Level 1",
-           "description":" If your child can try at putting their face in the water, move independently and attempt floating on their front and back with or without an aid.; they can book into our level 1 class. After mastering the foundation skills in our Splash class swimmers are now at the starting point for developing the essential technique for each stoke and other aquatic skills, helping them along their swimming pathway. This class focuses on good body position on front and back, aquatic breathing and submersion while allowing swimmers to explore and discover movement through the water",
+           "description":"After mastering the foundation skills in our Splash classes swimmers are now at the starting point for developing the essential technique for each stroke and other aquatic skills, helping them along their swimming pathway. The class focuses on good body position on front and back, aquatic breathing and submersion while allowing swimmers to explore and discover movement through the water.",
            "age":"5+ years",
            "swim_category":2
         }
@@ -44,7 +44,7 @@
         "pk":5,
         "fields":{
            "name":"Level 2",
-           "description":"This level focuses on moving through the water with a more refined and productive streamline body position. When swimmers progress from this level they will be able to maintain a good streamline body position while using the appropriate leg kick for each stroke. Class is taught with the teacher out of the water",
+           "description":"This level focuses on moving through the water with a more refined and productive streamline body position. When swimmers progress from this level they will be able to maintain a good streamline body position while using the appropriate leg kick for each stroke.",
            "age":"5+ years",
            "swim_category":2
         }
@@ -54,7 +54,7 @@
         "pk":6,
         "fields":{
            "name":"Level 3",
-           "description":"This level focuses on moving through the water with an effective leg action while using the appropriate arm action for each stroke",
+           "description":"This level focuses on moving through the water with an effective leg action while using the appropriate arm action for each stroke. Building on previously learnt skills for body position and streamlining this is the start of the full stroke. With repetition muscle memory will occur allowing the swimmer to master leg kick while introducing arm action for each stroke.",
            "age":"5+ years",
            "swim_category":2
         }
@@ -64,7 +64,7 @@
         "pk":7,
         "fields":{
            "name":"Level 4",
-           "description":"This level combines all the skills learnt from previous levels to develop the four competitive strokes; Front crawl, Backstroke, Breaststroke and Butterfly",
+           "description":"This level combines all previously learnt skills to develop the four competitive strokes; Frontcrawl, Backstroke, Breaststroke and Butterfly. Developing push and glide skills with transition into stroke starting with leg kick the swimmer focuses on developing the propulsive arm action for each stroke.",
            "age":"6+ years",
            "swim_category":2
         }
@@ -74,7 +74,7 @@
         "pk":8,
         "fields":{
            "name":"Level 5",
-           "description":"Your child will progress from swimming widths to lengths they will now start building the endurance & foundations for competitive swimming and continuous participation in the aquatic environment",
+           "description":"Swimming lengths in deep water, building stamina and developing the last stage of the stroke – timing. This class focuses on discovering how we move in water, what action makes us move forward. Developing the most valuable skill in swimming, how to feel the water to create the propulsive phase for arms and leg action.",
            "age":"7+ years",
            "swim_category":2
         }
@@ -84,7 +84,7 @@
         "pk":9,
         "fields":{
            "name":"Level 6",
-           "description":"This level focuses on developing stamina and endurance",
+           "description":"This level focuses on developing endurance. First step in learning how to train, building the stroke while combining other aquatic skills such as starts and turns with the introduction to the pace clock and understanding stroke length to increase speed while reducing effort.",
            "age":"8+ years",
            "swim_category":2
         }
@@ -94,7 +94,7 @@
         "pk":10,
         "fields":{
            "name":"Level 7",
-           "description":"This level focuses on skill and technique development, building stamina through endurance with the introduction of set training. Swimmers will gain knowledge in aspects of coaching sessions from reading the clock to understanding warmup and cool down. Sessions are delivered by staff who come from a swim and coaching background, a good basis for passing on their knowledge and opening the aquatic pathway to the next generation",
+           "description":"This level focuses on skill and technique development building stamina and endurance covering more distance in longer sessions. Swimmers will gain knowledge in aspects of a coaching session from reading the pace clock to understanding how sets work breaking the session into – warmup, main set, contrasting set and cooldown.",
            "age":"8+ years",
            "swim_category":2
         }
@@ -104,7 +104,7 @@
         "pk":11,
         "fields":{
            "name":"Level 8",
-           "description":"Progressing from the introduction to set training, this level focuses on a higher level of training with greater intensity. Introducing multiple aspects of aquatic sports including competitive training, water polo and survival skills. Social interaction plays a big part from level 7 where the swimmers are involved in group training session for the 1st time, by level 8 they have bonded into a Team encouraging each other and having fun",
+           "description":"Progressing from the introduction to set training to completing sets designed to develop stroke technique and increase speed. This level focuses on introducing the swimmer to other aquatic sports including water polo and survival skills.",
            "age":"8+ years",
            "swim_category":2
         }
@@ -113,9 +113,9 @@
         "model":"pages.swimprogramme",
         "pk":12,
         "fields":{
-           "name":"Survive & Save",
-           "description":"The Survive & Save programme is the RLSS UK lifesaving award scheme for anyone aged 12 years and over. The awards are challenging but fun to complete and are arranged into Bronze, Silver and Gold levels to ensure that participants get the opportunity to develop their lifesaving skills as they progress through the awards",
-           "age":"13+ years",
+           "name":"Rookie Lifesaving",
+           "description":"RLSS UK’s Rookie Lifeguard programme is taught using colourful materials, and fun, varied lifesaving and rescue activities to give children the skills they need to be confident in the pool or the sea and enjoy water safely, whether in shallow or deeper water",
+           "age":"8+ years",
            "swim_category":3
         }
     },
@@ -123,9 +123,9 @@
         "model":"pages.swimprogramme",
         "pk":13,
         "fields":{
-           "name":"Rookie Lifesaving",
-           "description":"RLSS UK’s Rookie Lifeguard programme is taught using colourful materials, and fun, varied lifesaving and rescue activities to give children the skills they need to be confident in the pool or the sea and enjoy water safely, whether in shallow or deeper water",
-           "age":"13+ years",
+           "name":"Survive & Save",
+           "description":"The Survive & Save programme is the RLSS UK lifesaving award scheme for anyone aged 12 years and over. The awards are challenging but fun to complete and are arranged into Bronze, Silver and Gold levels to ensure that participants get the opportunity to develop their lifesaving skills as they progress through the awards",
+           "age":"12+ years",
            "swim_category":3
         }
     },

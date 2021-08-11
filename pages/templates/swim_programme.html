@@ -7,7 +7,7 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-12 page-title">
-                    <h3>Learn To Swim</h3>
+                    <h3>Academy Programme</h3>
                 <hr class="section-divider">
             </div>
         </div>
@@ -15,7 +15,7 @@
         <!-- Page Content -->
         <div class="row page-content">
             <div class="col-12">
-                <p>Our Learn to Swim Programme has been carefully designed to promote Long-Term Athlete Development.</p>
+                <p>Our Academy has been carefully designed to promote Long-Term Athlete Development.</p>
                 <p>Each stage of the LTAD Pathway encourages swimmers to enhance their aquatic learning, through interactive classes co-ordinated to build confidence and develop Core Aquatic Skills.</p>
                 <p>Our Swimming Programme follows the guidelines set out by Swim Ireland's <strong><a class="account-link" href="https://www.swimireland.ie/get-swimming" target="_blank" rel="noopener noreferrer">Learn To Swim</a></strong> initiative, allowing swimmers to reach their full aquatic potential.</p>
                 <p>Our Lifesaving Programme is delivered through the <strong><a class="account-link" href="https://www.rlss.org.uk/Pages/Category/our-awards" target="_blank" rel="noopener noreferrer">Royal Lifesaving Society</a></strong> , with course criteria, materials and exams produced by RLSS UK and delivered through our RLSS Instructors and Tutors</p>
@@ -24,8 +24,8 @@
                 <button class="btn" id="hideAccordianCards">Hide All</button>
                 <button class="btn" id="showAccordianCards">Show All</button>
             </div>
-            <div class="col-12 w-100">
-                {% for programme in programmes %}
+            {% for programme in programmes %}
+                <div class="col-12 w-100">
                     <div id="accordion">
                         <div class="card">
                         <div class="col-title card-header" id="programmeCollapse">
@@ -43,8 +43,8 @@
                         </div>
                         </div>
                     </div>
-                {% endfor %}
-            </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
