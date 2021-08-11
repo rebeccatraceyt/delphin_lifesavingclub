@@ -1,6 +1,9 @@
-from django.shortcuts import (render, redirect,
-                              reverse, get_object_or_404,
-                              HttpResponse)
+from django.shortcuts import (
+    render, redirect,
+    reverse, get_object_or_404,
+    HttpResponse
+)
+from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -45,6 +48,7 @@ def cache_checkout_data(request):
         return HttpResponse(content=e, status=400)
 
 
+@login_required
 def checkout(request):
     """
     Begins checkout process.
@@ -58,6 +62,7 @@ def checkout(request):
     return redirect(reverse('order_review'))
 
 
+@login_required
 def order_review(request):
     """
     Crispy form allowing user to enter their information.
@@ -205,6 +210,7 @@ def order_details(request):
     return render(request, 'checkout/order_details.html', context)
 
 
+@login_required
 def order_complete(request, order_number):
     """
     Handle successful checkouts

@@ -2,8 +2,10 @@ from django.shortcuts import (render, redirect, reverse,
                               HttpResponse, get_object_or_404)
 from django.contrib import messages
 from shop.models import Product
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def shopping_bag(request):
     """
     Returns Shopping Bag
@@ -11,6 +13,7 @@ def shopping_bag(request):
     return render(request, 'shopping_bag/shopping_bag.html')
 
 
+@login_required
 def add_to_bag(request, item_id):
     """
     Submit form to view
@@ -51,6 +54,7 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 
+@login_required
 def update_bag(request, item_id):
     """
     Submit update form to view to update shopping bag
@@ -84,6 +88,7 @@ def update_bag(request, item_id):
     return redirect(reverse('shopping_bag'))
 
 
+@login_required
 def remove_from_bag(request, item_id):
     """
     Submit remove form to view to remove item from shopping bag
