@@ -754,12 +754,24 @@ ol.breadcrumb {
     align-items: center;
     margin-bottom: 20px;
 }
-.contact-content .mapouter {
-    width: 100%;
-    height: 100%;
+.contact-content iframe {
+    border: none;
+    width: inherit;
+    height: inherit;
+}
+.mapouter {
+    margin: auto;
+    position: relative;
+    text-align: right;
+    height: 450px;
+    width: 300px;
 }
 .gmap_canvas {
     margin: auto !important;
+    overflow: hidden;
+    background: none!important;
+    height: 100%;
+    width: 100%;
 }
 .contact-form {
     padding: 5% 6% 0 6%;
@@ -923,7 +935,28 @@ ol.breadcrumb {
     .col-title h5 > button {
         font-size: 1.1rem;
     }
-
+    /* Contact Page */
+    .contact-content {
+        margin: auto;
+        padding: 10px;
+    }
+    .contact-text {
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
+    .contact-text table {
+        margin-bottom: 20px;
+    }
+    .contact-text h4 {
+        font-size: 1.6rem;
+    }
+    .mapouter {
+        height: 300px;
+        width: 350px;
+    }
+    .contact-form {
+        padding: 5% 20% 0 20%;
+    }
 }
 
 /* Breakpoint on Larger Tablet device */
@@ -1039,6 +1072,28 @@ ol.breadcrumb {
     }
     .col-title h5 > button {
         font-size: 1.1rem;
+    }
+    /* Contact Page */
+    .contact-content {
+        margin: auto;
+        padding: 10px;
+    }
+    .contact-text {
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
+    .contact-text h4 {
+        font-size: 1.6rem;
+    }
+    .contact-text table {
+        margin-bottom: 20px;
+    }
+    .mapouter {
+        height: 300px;
+        width: 350px;
+    }
+    .contact-form {
+        padding: 5% 20% 0 20%;
     }
 }
 
@@ -1247,5 +1302,27 @@ ol.breadcrumb {
     }
     .col-title h5 > button {
         font-size: 1.1rem;
+    }
+    /* Contact Page */
+    .contact-content {
+        margin: auto;
+        padding: 10px;
+    }
+    .contact-text {
+        font-size: 1.3rem;
+        padding-bottom: 5px;
+    }
+    .contact-text table {
+        margin-bottom: 20px;
+    }
+    .contact-text h4 {
+        font-size: 1.6rem;
+    }
+    .mapouter {
+        height: 450px;
+        width: 600px;
+    }
+    .contact-form {
+        padding: 5% 20% 0 20%;
     }
 }
