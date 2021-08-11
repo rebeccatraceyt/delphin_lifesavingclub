@@ -7,7 +7,9 @@ class CheckoutConfig(AppConfig):
 
     def ready(self):
         """
-        Override ready method and import signals and calls
-        custom update total method to update totals automatically
+        Override the ready method and import signals module
+        Everytime a line item is saved or deleted,
+        Custom update total model method will be called.
+        Update order totals automatically.
         """
         import checkout.signals
