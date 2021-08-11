@@ -1,7 +1,5 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-
-from .models import Order
 from shop.models import Product
 
 
