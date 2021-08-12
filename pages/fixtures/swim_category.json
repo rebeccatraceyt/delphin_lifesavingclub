@@ -1,34 +1,34 @@
 [
-    {
-       "model":"pages.swimcategory",
-       "pk":1,
-       "fields":{
-          "name":"jnr_swimming",
-          "friendly_name":"Junior Swimming"
-       }
-    },
-    {
-       "model":"pages.swimcategory",
-       "pk":2,
-       "fields":{
-          "name":"snr_swimming",
-          "friendly_name":"Senior Swimming"
-       }
-    },
-    {
-       "model":"pages.swimcategory",
-       "pk":3,
-       "fields":{
-          "name":"jnr_lifesaving",
-          "friendly_name":"Junior Lifesaving"
-       }
-    },
-    {
-       "model":"pages.swimcategory",
-       "pk":4,
-       "fields":{
-          "name":"snr_lifesaving",
-          "friendly_name":"Senior Lifesaving"
-       }
-    }
+   {
+      "model":"pages.swimcategory",
+      "pk":1,
+      "fields":{
+         "name":"jnr_swimming",
+         "friendly_name":"Junior Swimming"
+      }
+   },
+   {
+      "model":"pages.swimcategory",
+      "pk":2,
+      "fields":{
+         "name":"snr_swimming",
+         "friendly_name":"Senior Swimming"
+      }
+   },
+   {
+      "model":"pages.swimcategory",
+      "pk":3,
+      "fields":{
+         "name":"jnr_lifesaving",
+         "friendly_name":"Junior Lifesaving"
+      }
+   },
+   {
+      "model":"pages.swimcategory",
+      "pk":4,
+      "fields":{
+         "name":"snr_lifesaving",
+         "friendly_name":"Senior Lifesaving"
+      }
+   }
 ]

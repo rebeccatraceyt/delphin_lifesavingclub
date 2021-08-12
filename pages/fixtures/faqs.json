@@ -8,99 +8,99 @@
        }
     },
     {
-        "model":"pages.faq",
-        "pk":2,
-        "fields":{
-           "question":"I have booked my child into a class, what do I do next?",
-           "answer":"You are eligible to begin your 10-week course on the next calendar week (Sunday to Monday). Present your order confirmation email to reception on your first session to complete registration."
-        }
+       "model":"pages.faq",
+       "pk":2,
+       "fields":{
+          "question":"I have booked my child into a class, what do I do next?",
+          "answer":"You are eligible to begin your 10-week course on the next calendar week (Sunday to Monday). Present your order confirmation email to reception on your first session to complete registration."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":3,
-        "fields":{
-           "question":"Is my booking confirmed when booked?",
-           "answer":"All course bookings do not guarantee class placement. The Swim Teachers will assess all swimmers on their first session to ensure they are in the correct course/level. Any adjustments will be made accordingly, with the utmost effort made to maintain day and time."
-        }
+       "model":"pages.faq",
+       "pk":3,
+       "fields":{
+          "question":"Is my booking confirmed when booked?",
+          "answer":"All course bookings do not guarantee class placement. The Swim Teachers will assess all swimmers on their first session to ensure they are in the correct course/level. Any adjustments will be made accordingly, with the utmost effort made to maintain day and time."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":4,
-        "fields":{
-           "question":"Can I hold credits for medical or holiday breaks?",
-           "answer":"Swimmers may hold credits due to medical reasons when they provide a doctor’s note indicating they are unable to swim at this time. Holiday breaks cannot be catered for during term time, breaks are scheduled during school midterm breaks, Bank holidays, Easter, Summer from 1st July to 31st August and Christmas time. "
-        }
+       "model":"pages.faq",
+       "pk":4,
+       "fields":{
+          "question":"Can I hold credits for medical or holiday breaks?",
+          "answer":"Swimmers may hold credits due to medical reasons when they provide a doctor’s note indicating they are unable to swim at this time. Holiday breaks cannot be catered for during term time, breaks are scheduled during school midterm breaks, Bank holidays, Easter, Summer from 1st July to 31st August and Christmas time. "
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":5,
-        "fields":{
-           "question":"What is the starting age?",
-           "answer":"We offer classes from 6 months old, please see ages beside class criteria."
-        }
+       "model":"pages.faq",
+       "pk":5,
+       "fields":{
+          "question":"What is the starting age?",
+          "answer":"We offer classes from 6 months old, please see ages beside class criteria."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":6,
-        "fields":{
-           "question":"What level of experience do you need?",
-           "answer":"We cater for all levels from Beginners to Advanced swimmers."
-        }
+       "model":"pages.faq",
+       "pk":6,
+       "fields":{
+          "question":"What level of experience do you need?",
+          "answer":"We cater for all levels from Beginners to Advanced swimmers."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":7,
-        "fields":{
-           "question":"Do you cater for Adults learning to swim?",
-           "answer":"We are not currently delivering an Adult programme."
-        }
+       "model":"pages.faq",
+       "pk":7,
+       "fields":{
+          "question":"Do you cater for Adults learning to swim?",
+          "answer":"We are not currently delivering an Adult programme."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":8,
-        "fields":{
-           "question":"When will my child move to the next level?",
-           "answer":"Swimmers are continuously assessed and moved to the next level once they have passed their current level. All effort will be made to find a place in the next course/level on the same day and time, please be aware this may not always be possible."
-        }
+       "model":"pages.faq",
+       "pk":8,
+       "fields":{
+          "question":"When will my child move to the next level?",
+          "answer":"Swimmers are continuously assessed and moved to the next level once they have passed their current level. All effort will be made to find a place in the next course/level on the same day and time, please be aware this may not always be possible."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":9,
-        "fields":{
-           "question":"How long will it take to learn how to swim?",
-           "answer":"All swimmers are different, please read the criteria for each level for a guide to what is being taught in each level and average age in each course/level to determine how long it will take your child to finish the Learn to Swim section of the Academy."
-        }
+       "model":"pages.faq",
+       "pk":9,
+       "fields":{
+          "question":"How long will it take to learn how to swim?",
+          "answer":"All swimmers are different, please read the criteria for each level for a guide to what is being taught in each level and average age in each course/level to determine how long it will take your child to finish the Learn to Swim section of the Academy."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":10,
-        "fields":{
-            "question":"At what age can you begin lifesaving?",
-            "answer":"You can begin your lifesaving journey from 8 years of age, once you have completed our Level 8 Swimming course."
-        }
+       "model":"pages.faq",
+       "pk":10,
+       "fields":{
+          "question":"At what age can you begin lifesaving?",
+          "answer":"You can begin your lifesaving journey from 8 years of age, once you have completed our Level 8 Swimming course."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":11,
-        "fields":{
-            "question":"How many lifesaving exams are there?",
-           "answer":" Rookie lifesaving has 3 stages – Bronze, Silver and Gold, each are examined. Survive and Save also has 3 stages – Bronze, Silver and Gold, each examined. The Pool Lifeguard has two stages of examination, Theory and Practical. Teachers endeavour to carry out exams each term, but this may not be the case for all swimmers."
-        }
+       "model":"pages.faq",
+       "pk":11,
+       "fields":{
+          "question":"How many lifesaving exams are there?",
+          "answer":" Rookie lifesaving has 3 stages – Bronze, Silver and Gold, each are examined. Survive and Save also has 3 stages – Bronze, Silver and Gold, each examined. The Pool Lifeguard has two stages of examination, Theory and Practical. Teachers endeavour to carry out exams each term, but this may not be the case for all swimmers."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":12,
-        "fields":{
-            "question":"What age can you become a Lifeguard at?",
-           "answer":"Lifesavers must be 16 years to start training as a lifeguard."
-        }
+       "model":"pages.faq",
+       "pk":12,
+       "fields":{
+          "question":"What age can you become a Lifeguard at?",
+          "answer":"Lifesavers must be 16 years to start training as a lifeguard."
+       }
     },
     {
-        "model":"pages.faq",
-        "pk":13,
-        "fields":{
-            "question":"What qualification do you get at the end of the Lifeguard?",
-            "answer":"National Pool Lifeguard with a bolt on for National Beach Lifeguard qualifying the lifesaver to work as a lifeguard in Ireland and Great Britain with equivalency to Australia, New Zealand and South Africa Lifeguard qualifications."
-        }
+       "model":"pages.faq",
+       "pk":13,
+       "fields":{
+          "question":"What qualification do you get at the end of the Lifeguard?",
+          "answer":"National Pool Lifeguard with a bolt on for National Beach Lifeguard qualifying the lifesaver to work as a lifeguard in Ireland and Great Britain with equivalency to Australia, New Zealand and South Africa Lifeguard qualifications."
+       }
     }
-]
+ ]
