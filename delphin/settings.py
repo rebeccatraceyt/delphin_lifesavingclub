@@ -30,7 +30,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1',
+                 'delphin-lifesavingclub.herokuapp.com',
+                 'localhost'
+                 ]
 
 
 # Application definition
@@ -124,15 +127,17 @@ WSGI_APPLICATION = 'delphin.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
-DATABASES = {
-    'default': dj_database_url.parse('postgres://giruabywtwdbit:70c0ef9f0d2750add9912d5b1c01dcfe740db759079871c773e92c89716cc28b@ec2-54-228-9-90.eu-west-1.compute.amazonaws.com:5432/ddjohvijnmln06')
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse('postgres://giruabywtwdbit:70c0ef9f0d2750add9912d5b1c01dcfe740db759079871c773e92c89716cc28b@ec2-54-228-9-90.eu-west-1.compute.amazonaws.com:5432/ddjohvijnmln06')
+    }
+else:
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 
