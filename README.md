@@ -1,11 +1,11 @@
 <h1 align="center">
-     <a href="" target="_blank"><img src="" alt="Delphin Logo"></a>
+     <a href="https://ibb.co/MGb0ZWX" target="_blank"><img src="https://i.ibb.co/VQd4JrK/readme-logo.png" alt="Delphin Logo"></a>
 </h1>
 
 <div align="center">
 <p>The <strong>Delphin Lifesaving Club</strong> e-shop was designed, built and deployed by Rebecca Tracey-Timoney as the fourth and final Milestone Project to be completed for the duel Software Development Diploma from The Code Institute and UCD. The purpose of this online shop is to provide a virtual shopping environment for club members (future and current) to browse and purchase Delphin products, including classes and club apparel. The website provides a smooth and uncomplicated online shopping experience for users, with its simplistic and intuitive design.</p>
 
-[View the live project here]( "Link to Delphin page")
+[View the live project here](https://delphin-lifesavingclub.herokuapp.com/ "Link to Delphin page")
 <hr>
 </div>
 
@@ -65,18 +65,18 @@ The Developer is looking to:
 1. View all products, to purchase my desired items.
 2. Filter through categories, to only see relevant products.
 3. Use a search query, to find a specific product or product type.
-4. Sort items by price, name or category to identify products of interest.
-5. Add items to my shopping bag, to begin the order process.
-6. Receive visual feedback that my item has been added to the bag, to confirm my selection.
-7. Select a course on a specific day, to suit my needs.
-8. Select clothing in a specific size, to suit my needs.
-9. View contact information for the club, to communicate with team.
-10. Connect with the club on one of their social apps, to communicate with the team.
-11. Read the latest posts of the club newsletter, to keep up to date with current club news.
+4. Add items to my shopping bag, to begin the order process.
+5. Receive visual feedback that my item has been added to the bag, to confirm my selection.
+6. Select a course on a specific day, to suit my needs.
+7. Select apparel in a specific size, to suit my needs.
+8. View contact information for the club, to communicate with team.
+9. Connect with the club on one of their social apps, to communicate with the team.
+10. Get a breakdown of classes offered, to find one that suits my needs.
+11. Navigate to a page that could help me with my enquiry, to answer my question.
 
 **As a new visitor, I want to:**
 
-1. View the club's mission, to ascertain if the club is right fit.
+1. View the club's Academy programme, to ascertain if the club is right fit.
 2. Complete the registration process, to create an account.
 
 **As a returning visitor, I want to:**
@@ -126,12 +126,14 @@ Broken into three categories, the website will focus on the following target aud
           - Outgoing
 
 The website needs to enable the **user** to:
+- Create an account or log in to an existing one
 - Purchase a course
 - Purchase Club Apparel
+- View past purchases
+- Edit/Save Delivery Information
 - Find out more about the club:
-    - Club Mission
-    - Club Origins/History
-- Browse the Club newsletter
+    - Academy Programme
+    - General Questions
 - Get in contact:
     - WhatsApp
     - Facebook
@@ -143,8 +145,8 @@ The website needs to enable the **client** to:
 - Display all available course
 - Provide a virtual shop for Club Apparel
 - Provide club information:
-    - Club Mission
-    - Club Origins/History
+    - Academy Programme
+    - General Questions
 - Provide a point of contact:
     - WhatsApp
     - Facebook
@@ -154,12 +156,9 @@ The website needs to enable the **client** to:
 
 With these goals in mind, a strategy table was created to determine the trade-off between importance and viability with the following results:
 
-**Opportunity Matrix for User Management:**
-[Strategy Table for User Management]( "User Management Strategy Table")
-
-**Opportunity Matrix for Transaction Management:**
-[Strategy Table for Transaction Management]( "Transaction Management Strategy Table")
-
+<div align='center'>
+<a href="https://ibb.co/ZB371pN"><img src="https://i.ibb.co/2vwHY15/opportunity-matrix.png" alt="opportunity-matrix" width='600'></a>
+</div>
 
 <strong>2. <u>Scope</u></strong>
 
@@ -178,7 +177,8 @@ A scope was defined to identify what needed to be done in order to align feature
             - Email(mailto)
             - Phone Number
             - Contact Form
-        - Club Newsletter
+        - Academy Programme
+        - General Questions
         - Create/Login to Profile
             - Save default information
             - View Previous Orders
@@ -191,12 +191,11 @@ A scope was defined to identify what needed to be done in order to align feature
         - Search Products
             - Courses:
                 - By Age
-            - Clothing / SwimShop
+            - Apparel
                 - By Type
         - Make Transactions
         - Sign Up / Login to profile
             - Edit Profile information
-            - Delete profile
             - View Previous orders
             - View shopping bag
         - Interact with shopping bag
@@ -204,28 +203,26 @@ A scope was defined to identify what needed to be done in order to align feature
             - Review bag contents
             - Update bag contents (increase quantity)
             - Remove from bag
-        - Read the latest newsletter posts
+        - Read the Academy Programme
+        - Find answers to frequent questions
 
 <strong>3. <u>Structure</u></strong>
 
 The website's navigation was organized in order to ensure that users could navigate through the site with ease and efficiency, with the following results: 
 
-**Navigation Structure for User Management:**
-![Navigation Structure for User Management]( "User Management Navigation Structure")
 
-**Navigation Structure for Product Management:**
-![Navigation Structure for Product Management]( "Product Navigation Structure")
+<strong>Navigation Structure for User Management:</strong>
+<a href="https://ibb.co/XbyBWtJ"><img src="https://i.ibb.co/6mvhyFs/user-mng-ia.png" alt="user-mng-ia" border="0"></a>
 
-**Navigation Structure for Transaction Management:**
-![Navigation Structure for Transaction Management]( "Transaction Navigation Structure")
+<strong>Navigation Structure for Product Management:</strong>
+<a href="https://ibb.co/YBFCJ3V"><img src="https://i.ibb.co/VYc1btk/product-mng-ia.png" alt="product-mng-ia" border="0"></a>
+
+<strong>Navigation Structure for Transaction Management:</strong>
+<a href="https://ibb.co/k2SjcHL"><img src="https://i.ibb.co/QvKLmbW/transaction-mng-ia.png" alt="transaction-mng-ia" border="0"></a>
 
 <strong>4. <u>Skeleton</u></strong>
 
 Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file/Hx5A1pBFoMZs2BYT781Te6/Delphin "Link to Delphin Workspace") with providing a positive user experience in mind:
-
-
-**Post Mock-Up Design Changes:** </br>
-While the developer relied heavily on these Wireframes in order to maintain the desired design, there are several differences between the Mockups and the final product:
 
 
 <strong>5. <u>Surface</u></strong>
@@ -238,19 +235,27 @@ While the developer relied heavily on these Wireframes in order to maintain the 
      - The red colour is specific to Lifeguarding and is used to highlight anything Lifeguarding related.
 
      - The Blus is an accent colour used in the club logo and beyond for colour contrast.
+<div align='center'>
+<a href="https://ibb.co/bP75jTv"><img src="https://i.ibb.co/mGS5rky/delphin-cp.png" alt="delphin-cp" width='400'></a>
+</div>
+
 
 
 - <strong>Typography</strong>
 
      - The primary font chosen is [Lato](https://fonts.google.com/specimen/Lato "Link to Lato Google Fonts page"). A humanist sans-serif typeface, Lato is semi-rounded with a structured, but friendly warmth.
 
-        ![Lato Typeface Example]( "Lato Typeface Example")
 
      - The Secondary font (accent font) chosen is [Londrina Solid](https://fonts.google.com/specimen/Londrina+Solid "Link to Londrina Solid Google Fonts page"). A newfolk typeface, with a rough, handwritten feel, for versatile screen display.
 
-        ![Londrina Solid Typeface Example]( "Londrina Solid Typeface Example")
+
 
      - The secondary font is an updated version of the font used in the club's typography for logo and official letters. The font is paired well with the primary font, in order provide a minimally contrasting font combination serving as a practical and professional typeface with a hint of playfulness. This highlights the club's character for being professional, yet friendly, setting the tone for new and unfamiliar vistiors.
+
+<div align='center'>
+<a href="https://ibb.co/7Vtnr4t"><img src="https://i.ibb.co/1KGrR6G/lato.png" alt="lato" width='600'></a>
+<a href="https://ibb.co/Z28KWkQ"><img src="https://i.ibb.co/z6RbG03/londrina.png" alt="londrina" width='600'></a>
+</div>
 
 - <strong>Imagery</strong>
 
@@ -297,17 +302,16 @@ While the developer relied heavily on these Wireframes in order to maintain the 
 - [Python](https://www.python.org/ "Link to Python Homepage")
 
 ### Tools
-- [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/ "Link to download Visual Studio Code Insiders") 
-     - VSCode was used as the preferred IDE.
 - [Git](https://git-scm.com/ "Link to Git homepage")
      - Git was used for version control to commit to Git and push to Heroku.
 - [GitHub](https://github.com/ "Link to GitHub")
      - GitHub was used to store the project repository, after pushing.
 - [Heroku](https://id.heroku.com/login "Link to Heroku login page")
      -  Heroku was used in order to deploy the website.
-purposes.
 - [Django](https://www.djangoproject.com/ "Link to Django Homepage")
      - Django was used as the web framework for the application.
+- [AWS](https://aws.amazon.com/ "Link to AWS Homepage")
+     - The Amazon Web Service **s3 Bucket** was used to store static and media files in the production database.
 - [Figma](https://www.figma.com/ "Link to Figma homepage")
      - Figma was used to create the wireframes during the design phase of the project.
 - [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
@@ -316,8 +320,6 @@ purposes.
      - Procreate was used to create and edit images as well as using the colour picker tool to ensure consistency throughout.
 - [Imgbb](https://imgbb.com/ "Link to Imgbb site") 
      - ImgBB was used to externally host images used.
-- [Transparent Textures](https://www.transparenttextures.com/ "Link to Transparent Texures site")
-     - Transparent Textures was used to create the textured background heavily featured on the website.
 - [Font Awesome](https://fontawesome.com/ "Link to Font Awesome site")
      - Font Awesome was used in conjunction with Iconify for icons used throughout the website.
 
@@ -332,8 +334,6 @@ purposes.
      - jQuery Validation was used to simplify form validation for the **Contact Form**.
 - [SweetAlert2](https://sweetalert2.github.io/ "Link to Sweet Alert 2 page")
      - SweetAlert2 was used to customise the **Contact Form** success message for UX 
-- [Pagination](https://flask-paginate.readthedocs.io/en/master/ "Link to flask-paginate documentation")
-     - `flask_paginate` extension was used to implement pagination functionality on select pages.
 - [Jinja](http://jinja.pocoo.org/docs/2.10/ "Link to Jinja information")
      - Jinja templating language was used to simplify and display backend data in html.
 
@@ -343,6 +343,11 @@ purposes.
 - [Heroku Postgres](https://www.heroku.com/postgres "Link to Heroku Postgres site")
      - Heroku Postgres was used for production database, provided by Heroku.
 
+### Packages
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to Crispy Forms Doc")
+     - Crispy Forms was used to style Django Forms
+- [Pillow](https://pillow.readthedocs.io/en/stable/ "Link to Pillow Doc")
+     - Pillow was used to aid in image processing on the database
 
 [Back to top ⇧](#table-of-contents)
 
