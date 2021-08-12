@@ -59,8 +59,11 @@ a, a:hover, a:focus, a:active {
     color: inherit;
     cursor: pointer;
 }
+.dropdown-item.active,
+.dropdown-item:focus,
 .active a {
     color: var(--red);
+    background-color: var(--white);
 }
 #home-divider {
     /*ref: https://stackoverflow.com/questions/12639823/hr-not-showing*/

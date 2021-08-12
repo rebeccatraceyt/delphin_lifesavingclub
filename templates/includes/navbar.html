@@ -53,11 +53,9 @@
                         About
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item {% if url_name == 'about' %}active{% endif %}" href="">Club Mission</a>
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'view_programme' %}active{% endif %}" href="{% url 'view_programme' %}">Academy Programme</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item {% if url_name == 'faqs' %}active{% endif %}" href="">FAQs</a>
+                        <a class="dropdown-item {% if url_name == 'view_faqs' %}active{% endif %}" href="{% url 'view_faqs' %}">FAQs</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'view_contact' %}active{% endif %}" href="{% url 'view_contact' %}">Contact</a>
                         
