@@ -50,8 +50,6 @@
                             {% else %}
                                 <p class="m-0">10 weeks</p>
                             {% endif %}
-                        {% else %}
-                            <!-- Blank for apparel-->
                         {% endif %}
                     </div>
                     <div class="col-6 text-right detail-price">
@@ -61,6 +59,9 @@
                 <div class="row">
                     <div class="col-12">
                         <p>{{ product.description }}</p>
+                        {% if product.is_course %}
+                            <p class="text-muted"><strong><a href="{% url 'view_programme' %}" class="account-link">Course Information</a></strong></p>
+                        {% endif %}
                     </div>
                 </div>
                 <form action="{% url 'add_to_bag' product.id %}" class="form" method="POST">
