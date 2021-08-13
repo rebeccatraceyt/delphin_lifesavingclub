@@ -13,6 +13,7 @@
     /* Colour Variables */
     --white: #ffffff;
     --yellow: #E5DC3F;
+    --yellow-opaque: #e5dd3f9a;
     --red: #B8060B;
     --black: #0A0A0A;
     --blue: #BBF2ED;
@@ -241,6 +242,23 @@ footer {
     color: var(--yellow);
 }
 
+/* --- Pagination --- */
+
+.step-links {
+    margin: 5px;
+}
+.step-links span,
+.step-links a {
+    padding: 5px 7px;
+    margin: 3px;
+}
+.step-links a {
+    border: 2px solid var(--black);
+    font-size: 1.1rem;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
 
 /* --- Home Page --- */
 
@@ -395,6 +413,13 @@ ol.breadcrumb {
 .search-btn button:hover,
 .search-btn button:focus {
     color: var(--white);
+}
+.search-text {
+    padding: 0 20px;
+    font-size: .9rem;
+}
+.search-text p {
+    margin: 0;
 }
 
 /* --- Individual Product Pages --- */
@@ -739,7 +764,7 @@ ol.breadcrumb {
     box-shadow: var(--grey) 0 0 5px;
 }
 .col-title.card-header {
-    background-color: var(--light-grey);
+    background-color: var(--yellow-opaque);
     border-radius: 1px;
 }
 .col-title h5 > button,
@@ -860,6 +885,9 @@ ol.breadcrumb {
     .category-toggle:hover,
     .category-toggle:focus {
         font-size: .9rem;
+    }
+    .search-text {
+        font-size: 1rem;
     }
 
     /* -- Individual Product Pages -- */
@@ -1036,7 +1064,7 @@ ol.breadcrumb {
         max-width: 30%;
     }
     .home-img {
-        padding: 2px;
+        padding: 10px;
     }
     .home-img img {
         height: 90%;
@@ -1126,6 +1154,12 @@ ol.breadcrumb {
     }
     .contact-form {
         padding: 5% 20% 0 20%;
+    }
+
+    /* -- Shop Pages -- */
+    .search-text {
+        margin: 30px 0;
+        font-size: 1.3rem;
     }
 }
 
@@ -1218,7 +1252,7 @@ ol.breadcrumb {
         max-width: 30%;
     }
     .home-img {
-        padding: 2px;
+        padding: 13px;
     }
     .home-img img {
         height: 90%;
@@ -1232,6 +1266,10 @@ ol.breadcrumb {
     .product-info,
     .product-add {
         font-size: 1.1rem;
+    }
+    .search-text {
+        margin: 30px 0;
+        font-size: 1.3rem;
     }
 
     /* -- Individual Product Pages -- */

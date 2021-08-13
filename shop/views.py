@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
+from django.core.paginator import Paginator
 
 
 # ------ All Products ------
@@ -13,8 +14,13 @@ def all_products(request):
     """
     products = Product.objects.all()
 
+    # from django docs
+    paginator = Paginator(products, 12)  # Show 12 products per page.
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'products': products,
+        'products': page_obj,
     }
 
     return render(request, 'shop/shop_products.html', context)
