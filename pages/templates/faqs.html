@@ -15,7 +15,7 @@
         <!-- Page Content -->
         <div class="row page-content">
             <div class="col-12">
-                <p>Below is a list of some of our frequently asked questions to help in your enquity.</p>
+                <p>Below is a list of some of our frequently asked questions to help in your enquiry.</p>
                 <p>If you can't find an answer to your question, feel free to get in touch, via our <strong><a class="account-link" href="{% url 'view_contact' %}">Contact</a></strong> page.</p>
                 <p>For a detailed outline of our Academy, visit our <strong><a href="{% url 'view_programme' %}" class="account-link">Academy Programme</a></strong> page.</p>
             </div>
@@ -23,10 +23,10 @@
                 <button class="btn" id="hideAccordianCards">Hide All</button>
                 <button class="btn" id="showAccordianCards">Show All</button>
             </div>
-            {% for question in questions %}
-                <div class="col-12 w-100">
+            <div class="col-12 w-100">
+                {% for question in questions %}
                     <div id="accordion">
-                        <div class="card">
+                        <div class="card col-box">
                         <div class="col-title card-header" id="questionCollapse">
                             <h5 class="mb-0 text-center text-md-left">
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#col_{{ question.id }}" aria-expanded="false" aria-controls="col_{{ question.id }}">
@@ -35,15 +35,15 @@
                             </h5>
                         </div>
                     
-                        <div id="col_{{ question.id }}" class="question-col collapse show" aria-labelledby="questionCollapse" data-parent="#accordion">
+                        <div id="col_{{ question.id }}" class="question-col collapse" aria-labelledby="questionCollapse">
                             <div class="card-body col-text container-fluid">
                                 {{ question.answer }}
                             </div>
                         </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

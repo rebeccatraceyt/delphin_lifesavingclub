@@ -71,7 +71,7 @@
     
                                     <div class="row bag-row">
                                         <!-- Update Box-->
-                                        <div class="col-12">
+                                        <div class="col-12 update-box">
                                             <form action="{% url 'update_bag' bag_item.item_id %}" class="form update-form" method="POST">
                                                 {% csrf_token %}
                                                 <div class="form-group">

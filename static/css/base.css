@@ -16,6 +16,8 @@
     --red: #B8060B;
     --black: #0A0A0A;
     --blue: #BBF2ED;
+    --grey: #808080;
+    --light-grey: #bbb9b9;
 
     /* Misc Colour Variables */
     --border-shadow: rgba(10, 10, 10, 0.663);
@@ -61,6 +63,7 @@ a, a:hover, a:focus, a:active {
 }
 .dropdown-item.active,
 .dropdown-item:focus,
+.active i,
 .active a {
     color: var(--red);
     background-color: var(--white);
@@ -96,9 +99,9 @@ a, a:hover, a:focus, a:active {
     font-size: 2.1rem;
 }
 .btn-shadow {
-    -webkit-box-shadow: var(--grey) 0 0 10px;
-    -moz-box-shadow: var(--grey) 0 0 10px;
-    box-shadow: var(--grey) 0 0 10px;
+    -webkit-box-shadow: var(--grey) 0 0 5px;
+    -moz-box-shadow: var(--grey) 0 0 5px;
+    box-shadow: var(--grey) 0 0 5px;
 }
 .extra-p-btm {
     /* for sections needing more bottom padding for UI */
@@ -288,7 +291,7 @@ footer {
 .home-btn a {
     background-color: var(--black);
     color: var(--white);
-    font-size: 2rem;
+    font-size: 1.2rem;
     padding: 15px 20px;
     width: 100%;
     border-radius: 2px;
@@ -464,12 +467,14 @@ ol.breadcrumb {
     font-size: .7rem;
     margin-bottom: 0;
 }
-.bag-qty {
-    padding: 5px;
+.update-box {
+    margin-bottom: 15px;
+}
+.update-form {
+    margin-top: 10px;
 }
 .update-btn {
-    font-size: .9rem;
-    padding: 0 5px;
+    font-size: .8rem;
     transition: all 0.5s ease 0s;
 }
 .update-btn:hover,
@@ -498,7 +503,7 @@ ol.breadcrumb {
     font-size: 1.3rem;
 }
 .bag-total p {
-    font-size: .9rem;
+    font-size: .7rem;
 }
 .bag-total hr {
     margin-right: 0;
@@ -511,12 +516,12 @@ ol.breadcrumb {
 .bag-back-btn,
 .bag-checkout-btn {
     margin: 10px 2px;
-    padding: 13px;
+    padding: 13px 10px;
     width: 100%;
     border-radius: 2px;
     transition: all 0.5s ease 0s;
     border: 1px solid var(--black);
-    font-size: 1rem;
+    font-size: .8rem;
 }
 .bag-checkout-btn {
     background-color: var(--black);
@@ -726,10 +731,16 @@ ol.breadcrumb {
 .col-toggle button:focus {
     color: var(--yellow);
 }
-.col-title.card-header {
-    background-color: var(--border-light);
+.col-box {
     outline: 1px solid var(--black);
-    border-radius: 2px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: var(--grey) 0 0 5px;
+    -moz-box-shadow: var(--grey) 0 0 5px;
+    box-shadow: var(--grey) 0 0 5px;
+}
+.col-title.card-header {
+    background-color: var(--light-grey);
+    border-radius: 1px;
 }
 .col-title h5 > button,
 .col-title h5 > button:hover,
@@ -877,12 +888,18 @@ ol.breadcrumb {
     .bag-qty {
         width: 40%;
     }
+    .update-form {
+        margin-bottom: -10px;
+    }
     .bag-total h6,
     .bag-total h5 {
         font-size: 1.8rem;
     }
     .bag-total hr {
         width: 50%;
+    }
+    .bag-total p {
+        font-size: .9rem;
     }
     .bag-btns {
         text-align: right;
@@ -891,7 +908,7 @@ ol.breadcrumb {
     .bag-checkout-btn {
         margin: 10px 0px 10px 5px;
         width: 80%;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     /* -- Checkout Pages -- */
@@ -1051,13 +1068,19 @@ ol.breadcrumb {
     .bag-total hr {
         width: 50%;
     }
+    .bag-total p {
+        font-size: .9rem;
+    }
     .bag-btns {
         text-align: right;
+    }
+    .update-form {
+        margin-bottom: -10px;
     }
     .bag-back-btn,
     .bag-checkout-btn {
         margin: 10px 5px;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     /* -- Accounts Pages -- */
@@ -1244,8 +1267,14 @@ ol.breadcrumb {
     .bag-total h5 {
         font-size: 1.8rem;
     }
+    .bag-total p {
+        font-size: .9rem;
+    }
     .bag-total hr {
         width: 50%;
+    }
+    .update-form {
+        margin-bottom: -10px;
     }
     .bag-btns {
         text-align: right;
@@ -1253,7 +1282,7 @@ ol.breadcrumb {
     .bag-back-btn,
     .bag-checkout-btn {
         margin: 10px 5px;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     /* -- Checkout Pages -- */

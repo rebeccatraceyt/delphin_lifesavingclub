@@ -41,10 +41,10 @@
                         Shop
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">Shop Apparel</a>
-                        <a class="dropdown-item" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>
+                        <a class="dropdown-item {% if url_name == 'apparel' %}active{% endif %}" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">Shop Apparel</a>
+                        <a class="dropdown-item {% if url_name == 'courses' %}active{% endif %}" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'all_products' %}">View All</a>
+                        <a class="dropdown-item {% if url_name == 'all_products' %}active{% endif %}" href="{% url 'all_products' %}">View All</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

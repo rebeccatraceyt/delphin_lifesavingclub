@@ -25,10 +25,10 @@
                 <button class="btn" id="hideAccordianCards">Hide All</button>
                 <button class="btn" id="showAccordianCards">Show All</button>
             </div>
-            {% for programme in programmes %}
-                <div class="col-12 w-100">
+            <div class="col-12 w-100">
+                {% for programme in programmes %}
                     <div id="accordion">
-                        <div class="card">
+                        <div class="card col-box">
                         <div class="col-title card-header" id="programmeCollapse">
                             <h5 class="mb-0 text-center text-md-left">
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#col_{{ programme.id }}" aria-expanded="false" aria-controls="col_{{ programme.id }}">
@@ -37,15 +37,15 @@
                             </h5>
                         </div>
                     
-                        <div id="col_{{ programme.id }}" class="programme-col collapse show" aria-labelledby="programmeCollapse" data-parent="#accordion">
+                        <div id="col_{{ programme.id }}" class="programme-col collapse" aria-labelledby="programmeCollapse">
                             <div class="card-body col-text container-fluid">
                                 {{ programme.description }}
                             </div>
                         </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}
