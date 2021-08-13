@@ -28,7 +28,7 @@
                     <h3>All T-Shirts</h3>
                 {% elif request.get_full_path == '/shop/apparel?category=jacket_hoodies' %}
                     <h3>All Jackets & Hoodies</h3>
-                {% elif request.get_full_path == '/shop/apparel?category=accessories' %}
+                {% elif request.get_full_path == '/shop/apparel?category=accessories' or request.get_full_path == '/shop/apparel?category=accessories,swim_accessories' %}
                     <h3>All Accessories</h3>
                 {% elif request.get_full_path == '/shop/apparel?category=swimwear' %}
                     <h3>All Swimwear</h3>

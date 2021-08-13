@@ -101,24 +101,46 @@
             {% endif %}
             {% if not search_term or products|length < 1 %}
                 <div class="col-12">
-                    <div class="row text-center d-flex justify-content-center">
-                        <div class="col-12 col-md-6 col-lg-6 home-link d-flex justify-content-center">
-                            <div class="row">
-                                <div class="col-12 home-img">
-                                    <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
-                                </div>
-                                <div class="col-12 home-btn">
-                                    <a class="btn-shadow" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">Shop Apparel</a>
+                    <div class="container-fluid">
+                        <div class="row text-center d-flex justify-content-center">
+                            <div class="col-12 col-md-6 col-lg-3 home-link d-flex justify-content-center">
+                                <div class="row">
+                                    <div class="col-12 home-img">
+                                        <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
+                                    </div>
+                                    <div class="col-12 home-btn">
+                                        <a class="btn-shadow" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies">Shop Apparel</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 home-link d-flex justify-content-center">
-                            <div class="row">
-                                <div class="col-12 home-img">
-                                    <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
+                            <div class="col-12 col-md-6 col-lg-3 home-link d-flex justify-content-center">
+                                <div class="row">
+                                    <div class="col-12 home-img">
+                                        <img src="{% static 'img/home-swim.png' %}" alt="Delphin Swimwear">
+                                    </div>
+                                    <div class="col-12 home-btn">
+                                        <a class="btn-shadow" href="{% url 'apparel' %}?category=swimwear">Shop Swimwear</a>
+                                    </div>
                                 </div>
-                                <div class="col-12 home-btn">
-                                    <a class="btn-shadow" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3 home-link d-flex justify-content-center">
+                                <div class="row">
+                                    <div class="col-12 home-img">
+                                        <img src="{% static 'img/home-acc.png' %}" alt="Delphin Accessories">
+                                    </div>
+                                    <div class="col-12 home-btn">
+                                        <a class="btn-shadow" href="{% url 'apparel' %}?category=accessories,swim_accessories">Shop Accessories</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3 home-link d-flex justify-content-center">
+                                <div class="row">
+                                    <div class="col-12 home-img">
+                                        <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
+                                    </div>
+                                    <div class="col-12 home-btn">
+                                        <a class="btn-shadow" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

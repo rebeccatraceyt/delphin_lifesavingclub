@@ -279,21 +279,25 @@ footer {
 #home-logo {
     margin: 5% auto;
     padding: 5%;
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 70%;
+    max-height: 70%;
 }
 #home-intro {
     background-color: var(--border-shadow);
     border-radius: 10px;
     color: var(--white);
+    font-size: 1rem;
     max-width: 80%;
     max-height: 80%;
-    padding: 20px;
+    padding: 10px 20px;
+}
+#home-intro p {
+    margin-bottom: .3rem;
 }
 #home-intro h3 {
     font-family: var(--title-font);
     color: var(--yellow);
-
+    font-size: 1.4rem;
 }
 .home-link {
     padding: 20px;
@@ -874,7 +878,7 @@ ol.breadcrumb {
     }
     #home-intro {
         font-size: 1.6rem;
-        max-width: 90%;
+        max-width: 80%;
     }
     #home-intro h3 {
         font-size: 1.8rem;
@@ -1040,20 +1044,20 @@ ol.breadcrumb {
         margin: 1% 0;
     }
     #home-hero {
-        height: 93vh;
+        height: 95vh;
     }
     #home-logo {
         margin: 2% auto;
         padding: 10%;
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 60%;
+        max-height: 60%;
     }
     #home-intro {
         padding: 30px;
         margin: auto;
         border-radius: 15px;
-        font-size: 1.1rem;
-        max-width: 50%;
+        font-size: 1.6rem;
+        max-width: 80%;
         max-height: 60%;
     }
     #home-intro h3 {
@@ -1268,7 +1272,7 @@ ol.breadcrumb {
         font-size: 1.1rem;
     }
     .search-text {
-        margin: 30px 0;
+        margin: 20px 0;
         font-size: 1.3rem;
     }
 
