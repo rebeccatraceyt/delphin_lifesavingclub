@@ -116,6 +116,7 @@ nav.navbar {
 }
 #nav-logo img {
     height: 50px;
+    width: auto;
 }
 .nav-link, .dropdown-item {
     font-size: 1.7rem;
@@ -264,7 +265,6 @@ footer {
     background-color: var(--border-shadow);
     border-radius: 10px;
     color: var(--white);
-    font-size: 1.2rem;
     max-width: 80%;
     max-height: 80%;
     padding: 20px;
@@ -1121,6 +1121,9 @@ ol.breadcrumb {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem;
+    }
+    .nav-link, .dropdown-item {
+        font-size: 1.4rem;
     }
     .nav-item:hover,
     .nav-item:focus,
