@@ -48,7 +48,36 @@ class TestSearchProductsView(TestCase):
         self.assertTemplateUsed(response, 'shop/search_shop.html')
 
 
-# ------ Courses ------
+class TestProductDetailView(TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    def test_view_url_exists_at_desired_location(self):
+        """ Test URL is in correct location """
+        product = Product.objects.create(name='test product',
+                                         price='22',
+                                         image='test.png',
+                                         description='test desc',
+                                         )
+        response = self.client.get(
+            '/shop/product/{0}'.format(product.id))
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_uses_correct_template(self):
+        """ Test correct template """
+        product = Product.objects.create(name='test product',
+                                         price='22',
+                                         image='test.png',
+                                         description='test desc',
+                                         pk='4',
+                                         )
+        response = self.client.get(
+            '/shop/product/{0}'.format(product.id))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'shop/product.html')
+
+
+# ------ All Courses ------
 
 
 class TestAllCoursesView(TestCase):
@@ -88,36 +117,7 @@ class TestAllCoursesView(TestCase):
         self.assertTemplateUsed(response, 'shop/courses.html')
 
 
-class TestProductDetailView(TestCase):
-    def setUp(self):
-        self.client = Client()
-
-    def test_view_url_exists_at_desired_location(self):
-        """ Test URL is in correct location """
-        product = Product.objects.create(name='test product',
-                                         price='22',
-                                         image='test.png',
-                                         description='test desc',
-                                         )
-        response = self.client.get(
-            '/shop/product/{0}'.format(product.id))
-        self.assertEqual(response.status_code, 200)
-
-    def test_view_uses_correct_template(self):
-        """ Test correct template """
-        product = Product.objects.create(name='test product',
-                                         price='22',
-                                         image='test.png',
-                                         description='test desc',
-                                         pk='4',
-                                         )
-        response = self.client.get(
-            '/shop/product/{0}'.format(product.id))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'shop/product.html')
-
-
-# ------ Apparel ------
+# ------ All Apparel ------
 
 
 class TestAllApparelView(TestCase):

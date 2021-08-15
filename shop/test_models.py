@@ -1,7 +1,6 @@
 from django.test import TestCase
 from .models import (
-    Time,
-    Size,
+    ProductOption,
     Category,
     Product,
 )
@@ -28,48 +27,26 @@ class TestCategoryModel(TestCase):
         self.assertEqual('test', str(category))
 
 
-# ------ Course Filters ------
+# ------ Product Filters ------
 
 
-class TestTimeModel(TestCase):
-    """Test Time Model"""
+class TestProductOptionModel(TestCase):
+    """Test Product Options Model"""
 
-    def test_time_model(self):
-        # Create Test Time
-        time = Time(time='Test Time')
+    def test_product_option_model(self):
+        # Create Test ProductOption
+        product_option = ProductOption(product_option='Test Product Option')
 
-        # Save Test Time
-        time.save()
-
-        # check that Field == Value
-        self.assertEqual(time.time, "Test Time")
-
-    def test_time_as_string(self):
-        time = Time(time='test')
-        time.save()
-        self.assertEqual('test', str(time))
-
-
-# ------ Apparel Filters ------
-
-
-class TestSizeModel(TestCase):
-    """Test Size Model"""
-
-    def test_size_model(self):
-        # Create Test Size
-        size = Size(size='Test Size')
-
-        # Save Test Size
-        size.save()
+        # Save Test Option
+        product_option.save()
 
         # check that Field == Value
-        self.assertEqual(size.size, "Test Size")
+        self.assertEqual(product_option.product_option, "Test Product Option")
 
-    def test_size_as_string(self):
-        size = Size(size='test')
-        size.save()
-        self.assertEqual('test', str(size))
+    def test_product_option_as_string(self):
+        product_option = ProductOption(product_option='test')
+        product_option.save()
+        self.assertEqual('test', str(product_option))
 
 
 # ------ All Products ------
@@ -78,12 +55,12 @@ class TestSizeModel(TestCase):
 class TestProductModel(TestCase):
     """Test Product Model"""
 
-    def test_course_model(self):
+    def test_product_model(self):
         # Create Test Category
         category = Category.objects.create(name='Test Category')
 
-        # Create Test Time
-        time = Time.objects.create(time='Test Time')
+        # Create Test Option
+        product_option = ProductOption(product_option='Test Product Option')
 
         # Create Test Product
         product = Product(name='test product',
@@ -93,7 +70,7 @@ class TestProductModel(TestCase):
 
         # Save Test Product
         product.category_id = category.id
-        product.time_id = time.id
+        product.product_option_id = product_option.id
         product.save()
 
         # check that Field == Value
@@ -101,5 +78,5 @@ class TestProductModel(TestCase):
         self.assertEqual(product.description, "test description")
         self.assertEqual(product.price, "90.00")
         self.assertEqual(product.image, "img.jpg")
-        self.assertEqual(product.category_id, 1)
-        self.assertEqual(product.time_id, 1)
+        self.assertEqual(product.category_id, category.id)
+        self.assertEqual(product.product_option_id, product_option.id)
