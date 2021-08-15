@@ -92,7 +92,7 @@
                                         </button>
                                     </div>
                                     <input id="id_qty_{{ product.id }}" class="form-control form-control-sm qty_input"
-                                           type="number" name="quantity" value="1" min="1" max="99"
+                                           type="number" name="quantity" value="1" min="1" max="{% if product.is_course %}12{% else %}30{% endif %}"
                                            data-item_id="{{ product.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-sm btn-black rounded-0"
