@@ -1,54 +1,50 @@
-from django.test import TestCase, Client
+from django.test import TestCase, Client, RequestFactory
 from django.urls import reverse
 from shop.models import Product
-
-
-class TestCheckoutView(TestCase):
-    def setUp(self):
-        self.client = Client()
-
-    def test_view_url_exists_at_desired_location(self):
-        """ Test URL is in correct location """
-        response = self.client.get('/checkout/', follow=True)
-        self.assertEqual(response.status_code, 200)
-
-    def test_view_url_accessible_by_name(self):
-        """ Test URL is accessible """
-        response = self.client.get(reverse('checkout'))
-        self.assertEqual(response.status_code, 302)
-
-    def test_view_uses_correct_template(self):
-        """ Test correct template redirects to all_products """
-        response = self.client.get(reverse('checkout'))
-        self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, '/shop/')
+from django.contrib.auth.models import User
 
 
 class TestOrderDetailsView(TestCase):
     def setUp(self):
-        self.client = Client()
+        """ Creates user instance for login status """
+        self.factory = RequestFactory()
+        self.user = User.objects.create(username='testuser',
+                                        email='test@email.com',
+                                        password="testing321")
 
     def test_view_url_exists_at_desired_location(self):
         """ Test URL is in correct location """
+        # login the user
+        client = Client()
+        client.login(username='testuser', password="testing789")
+
         response = self.client.get('/checkout/', follow=True)
         self.assertEqual(response.status_code, 200)
 
     def test_view_url_accessible_by_name(self):
         """ Test URL is accessible """
+        # login the user
+        client = Client()
+        client.login(username='testuser', password="testing789")
+
         response = self.client.get(reverse('order_review'))
         self.assertEqual(response.status_code, 302)
 
     def test_view_uses_correct_template(self):
         """ Test correct template redirects to all_products """
+        # login the user
+        client = Client()
+        client.login(username='testuser', password="testing789")
+
         response = self.client.get(reverse('checkout'))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, '/shop/')
+        self.assertRedirects(response, '/accounts/login/?next=/checkout/')
 
     def test_post_valid_order(self):
         """ Test order post """
         # login the user
-        self.client.login(username='username',
-                          password='password')
+        client = Client()
+        client.login(username='testuser', password="testing789")
 
         # create an item
         item = Product.objects.create(name='test product',
@@ -82,4 +78,4 @@ class TestOrderDetailsView(TestCase):
             follow=True)
 
         self.assertEqual(response.status_code, 200)
-        self.assertRedirects(response, '/shop/')
+        self.assertRedirects(response, '/accounts/login/?next=/checkout/')
