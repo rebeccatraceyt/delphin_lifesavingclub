@@ -71,5 +71,5 @@ select option[value=""] {
 .loading-spinner .icon i {
   border-radius: 50%;
   color: #B8060B;
-  background-color: #E5DC3F;
+  background-color: #fff;
 }
