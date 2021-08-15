@@ -1,0 +1,250 @@
+[
+   {
+      "model":"shop.productoption",
+      "pk":1,
+      "fields":{
+         "product_option":"XS",
+         "option_name":"XSmall"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":2,
+      "fields":{
+         "product_option":"S",
+         "option_name":"Small"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":3,
+      "fields":{
+         "product_option":"M",
+         "option_name":"Medium"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":4,
+      "fields":{
+         "product_option":"L",
+         "option_name":"Large"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":5,
+      "fields":{
+         "product_option":"XL",
+         "option_name":"XLarge"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":6,
+      "fields":{
+         "product_option":"Y-XS",
+         "option_name":"Youth XSmall"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":7,
+      "fields":{
+         "product_option":"Y-S",
+         "option_name":"Youth Small"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":8,
+      "fields":{
+         "product_option":"Y-M",
+         "option_name":"Youth Medium"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":9,
+      "fields":{
+         "product_option":"Y-L",
+         "option_name":"Youth Large"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":10,
+      "fields":{
+         "product_option":"Y-XL",
+         "option_name":"Youth XLarge"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":11,
+      "fields":{
+         "product_option":"OneSize",
+         "option_name":"ONE SIZE"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":12,
+      "fields":{
+         "product_option":"MON_10-00",
+         "option_name":"Mon 10:00 - 10:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":13,
+      "fields":{
+         "product_option":"WED_10-00",
+         "option_name":"Wed 10:00 - 10:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":14,
+      "fields":{
+         "product_option":"FRI_10-00",
+         "option_name":"Fri 10:00 - 10:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":15,
+      "fields":{
+         "product_option":"SAT_10-30",
+         "option_name":"Sat 10:30 - 11:00"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":16,
+      "fields":{
+         "product_option":"MON_17-00",
+         "option_name":"Mon 17:00 - 17:45"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":17,
+      "fields":{
+         "product_option":"SAT_11-00",
+         "option_name":"Sat 11:00 - 11:45"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":18,
+      "fields":{
+         "product_option":"WED_17-00",
+         "option_name":"Wed 17:00 - 17:45"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":19,
+      "fields":{
+         "product_option":"FRI_17-00",
+         "option_name":"Fri 17:00 - 17:45"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":20,
+      "fields":{
+         "product_option":"MON_17-45",
+         "option_name":"Mon 17:45 - 18:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":21,
+      "fields":{
+         "product_option":"WED_17-45",
+         "option_name":"Wed 17:45 - 18:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":22,
+      "fields":{
+         "product_option":"FRI_17-45",
+         "option_name":"Fri 17:45 - 18:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":23,
+      "fields":{
+         "product_option":"SAT_11-45",
+         "option_name":"Sat 11:45 - 12:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":24,
+      "fields":{
+         "product_option":"MON_18-30",
+         "option_name":"Mon 18:30 - 19:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":25,
+      "fields":{
+         "product_option":"WED_18-30",
+         "option_name":"Wed 18:30 - 19:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":26,
+      "fields":{
+         "product_option":"FRI_18-30",
+         "option_name":"Fri 18:30 - 19:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":27,
+      "fields":{
+         "product_option":"SAT_12-30",
+         "option_name":"Sat 12:30 - 13:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":28,
+      "fields":{
+         "product_option":"MON_19-30",
+         "option_name":"Mon 19:30 - 20:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":29,
+      "fields":{
+         "product_option":"WED_19-30",
+         "option_name":"Wed 19:30 - 20:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":30,
+      "fields":{
+         "product_option":"FRI_19-30",
+         "option_name":"Fri 19:30 - 20:30"
+      }
+   },
+   {
+      "model":"shop.productoption",
+      "pk":31,
+      "fields":{
+         "product_option":"SAT_13-30",
+         "option_name":"Sat 13:30 - 14:30"
+      }
+   }
+]

@@ -70,19 +70,14 @@
                         <div class="col-12 py-sm-1">
                             {% if product.is_course %}
                                 <p class="m-0"><strong>Class:</strong></p>
-                                <select class="form-control custom-select w-50" name="product_select" id="id_product_select">
-                                    {% for times in product.course_times.all %}
-                                        <option value="{{ times.time }}" selected>{{ times.time.time_name }}</option>
-                                    {% endfor %}
-                                </select>
                             {% else %}
                                 <p class="m-0"><strong>Size:</strong></p>
-                                <select class="form-control custom-select w-50" name="product_select" id="id_product_select">
-                                    {% for sizes in product.apparel_sizes.all %}
-                                        <option value="{{ sizes.size }}" selected>{{ sizes.size.size_name }}</option>
-                                    {% endfor %}
-                                </select>
                             {% endif %}
+                            <select class="form-control custom-select w-50" name="product_select" id="id_product_select">
+                                {% for options in product.product_options.all %}
+                                    <option value="{{ options.product_select }}" selected>{{ options.product_select.option_name }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
                         <div class="col-12 py-1">
                             <p class="m-0"><strong>Quantity:</strong></p>

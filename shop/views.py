@@ -65,13 +65,11 @@ def product_detail(request, product_id):
     Returns specified product
     """
     product = get_object_or_404(Product, pk=product_id)
-    course_times = product.times.all()
-    apparel_sizes = product.sizes.all()
+    product_options = product.product_select.all()
 
     context = {
         'product': product,
-        'course_times': course_times,
-        'apparel_sizes': apparel_sizes,
+        'product_options': product_options,
     }
 
     return render(request, 'shop/product.html', context)

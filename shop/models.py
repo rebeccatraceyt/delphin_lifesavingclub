@@ -23,38 +23,22 @@ class Category(models.Model):
         return str(self.friendly_name)
 
 
-# ------ Course Filters ------
+# ------ Product Filters ------
 
 
-class Time(models.Model):
+class ProductOption(models.Model):
     """
-    Defines course times
+    Defines options available for each product:
+    course times and apparel sizes
     """
-    time = models.CharField(max_length=255)
-    time_name = models.CharField(max_length=255, default='monday')
+    product_option = models.CharField(max_length=255)
+    option_name = models.CharField(max_length=255, default='monday')
 
     def __str__(self):
-        return str(self.time)
+        return str(self.product_option)
 
     def get_time_name(self):
-        return str(self.time_name)
-
-
-# ------ Apparel Filters ------
-
-
-class Size(models.Model):
-    """
-    Defines apparel size
-    """
-    size = models.CharField(max_length=255)
-    size_name = models.CharField(max_length=255, default='small')
-
-    def __str__(self):
-        return str(self.size)
-
-    def get_size_name(self):
-        return str(self.size_name)
+        return str(self.option_name)
 
 
 # ------ All Products ------
@@ -70,51 +54,34 @@ class Product(models.Model):
                                  null=True,
                                  blank=True,
                                  on_delete=models.SET_NULL)
+    product_select = models.ManyToManyField(ProductOption,
+                                            through='ProductSelect',
+                                            related_name='product_options',
+                                            blank=True)
     is_course = models.BooleanField(default=False, null=True, blank=True)
-    times = models.ManyToManyField(Time,
-                                   through='CourseTime',
-                                   related_name='course_time',
-                                   blank=True)
     is_apparel = models.BooleanField(default=False, null=True, blank=True)
-    sizes = models.ManyToManyField(Size,
-                                   through='ApparelSize',
-                                   related_name='apparel_size',
-                                   blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return str(self.name)
 
 
-# ------ ManyToMany Through Tables ------
+# ------ ManyToMany Through Table ------
 
 
-class CourseTime(models.Model):
+class ProductSelect(models.Model):
     """
-    Establishes relationship between Course and Time.
+    Establishes relationship between Product and Product Options.
     Counts stock
     """
-    time = models.ForeignKey(Time, on_delete=models.CASCADE)
-    course = models.ForeignKey(Product,
-                               on_delete=models.CASCADE,
-                               related_name='course_times')
-    stock_count = models.IntegerField(default=12)
-
-    def __str__(self):
-        return str(self.stock_count)
-
-
-class ApparelSize(models.Model):
-    """
-    Establishes relationship between Apparel and Size.
-    Counts stock
-    ref: https://tinyurl.com/ps257c2r
-    """
-    size = models.ForeignKey(Size, on_delete=models.CASCADE)
-    apparel = models.ForeignKey(Product,
+    product_select = models.ForeignKey(ProductOption, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product,
                                 on_delete=models.CASCADE,
-                                related_name='apparel_sizes')
+                                related_name='product_options')
     stock_count = models.IntegerField(default=30)
 
     def __str__(self):
-        return str(self.stock_count)
+        return str(self.product_select)
+
+    def get_product(self):
+        return str(self.product)

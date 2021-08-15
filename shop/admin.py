@@ -1,11 +1,9 @@
 from django.contrib import admin
 from .models import (
     Category,
-    Time,
-    Size,
+    ProductOption,
     Product,
-    CourseTime,
-    ApparelSize,
+    ProductSelect,
 )
 
 
@@ -25,44 +23,22 @@ class CategoryAdmin(admin.ModelAdmin):
 # ------ Courses Tables and Filters ------
 
 
-class CourseTimeInline(admin.TabularInline):
+class ProductSelectInline(admin.TabularInline):
     """
     Defines inline class for Course Time
     """
-    model = CourseTime
+    model = ProductSelect
     extra = 1
 
 
-class TimeAdmin(admin.ModelAdmin):
+class ProductOptionAdmin(admin.ModelAdmin):
     """
     Create admin views for Course Times
     """
-    inlines = (CourseTimeInline,)
+    inlines = (ProductSelectInline,)
     list_display = (
-        'time',
-        'time_name',
-    )
-
-
-# ------ Apparel Tables and Filters ------
-
-
-class ApparelSizeInline(admin.TabularInline):
-    """
-    Defines inline class for Apparel Size
-    """
-    model = ApparelSize
-    extra = 1
-
-
-class SizeAdmin(admin.ModelAdmin):
-    """
-    Create admin views for Apparel Sizes
-    """
-    inlines = (ApparelSizeInline,)
-    list_display = (
-        'size',
-        'size_name',
+        'product_option',
+        'option_name',
     )
 
 
@@ -73,8 +49,7 @@ class ProductAdmin(admin.ModelAdmin):
     """
     Create admin views for all Products
     """
-    inlines = (CourseTimeInline,
-               ApparelSizeInline,)
+    inlines = (ProductSelectInline,)
     list_display = (
         'name',
         'description',
@@ -87,6 +62,5 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Time, TimeAdmin)
-admin.site.register(Size, SizeAdmin)
+admin.site.register(ProductOption, ProductOptionAdmin)
 admin.site.register(Product, ProductAdmin)
