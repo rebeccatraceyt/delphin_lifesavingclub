@@ -313,7 +313,7 @@ footer {
 .home-btn a {
     background-color: var(--black);
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 15px 20px;
     width: 100%;
     border-radius: 2px;
