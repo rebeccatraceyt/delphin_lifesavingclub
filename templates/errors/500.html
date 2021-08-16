@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container page-margins">
+        <div class="row">
+            <div class="col-12 page-title">
+                <h3>500</h3>
+                <hr class="section-divider">
+            </div>
+            <div class="col-12 page-content">
+                <p>Sorry, there is an issue with our servers - Please try again later.</p>
+                <p class="text-muted">If the problem persists, please contact us via our <strong><a class="page-link" href="{% url 'view_contact' %}">Contact</a></strong> page.</p>
+                <p>Return <a href="{% url 'home' %}">Home</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

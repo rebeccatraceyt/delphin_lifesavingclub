@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container page-margins">
+        <div class="row">
+            <div class="col-12 page-title">
+                <h3>403</h3>
+                <hr class="section-divider">
+            </div>
+            <div class="col-12 page-content">
+                <p>Your browser sent a request that the server couldn't understand. Please contact us for assistance.</p>
+                <p>Return <a href="{% url 'home' %}">Home</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
