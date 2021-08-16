@@ -6,23 +6,28 @@
 
 {% block inner_content %}
 
-
-<form class="extra-p-btm" method="post" action="{% url 'account_logout' %}">
-    <div class="row">
-        <div class="col-12">
-            <p>{% trans 'Are you sure you want to sign out?' %}</p>
-        </div>
-        <div class="col-12">
-            {% csrf_token %}
-            {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-            {% endif %}
-        </div>
-        <div class="col-6 col-md-3">
-            <button class="account-btn w-100" type="submit">{% trans "Sign Out" %}</button>
-        </div>
+<div class="row extra-p-btm">
+    <div class="col-12 py-2 px-3 account-text">
+        <form method="post" action="{% url 'account_logout' %}">
+            <div class="row">
+                <div class="col-12">
+                    <p>{% trans 'Are you sure you want to sign out?' %}</p>
+                </div>
+                <div class="col-12">
+                    {% csrf_token %}
+                    {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 profile-btn-left">
+                    <button class="w-100 profile-btns" type="submit">{% trans "Sign Out" %}</button>
+                </div>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 
 
 {% endblock %}

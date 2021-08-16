@@ -99,6 +99,13 @@ a, a:hover, a:focus, a:active {
     font-family: var(--title-font);
     font-size: 2.1rem;
 }
+.page-link {
+    transition: all 0.5s ease 0s;
+}
+.page-link:hover,
+.page-link:focus {
+    color: var(--red);
+}
 .btn-shadow {
     -webkit-box-shadow: var(--grey) 0 0 5px;
     -moz-box-shadow: var(--grey) 0 0 5px;
@@ -106,7 +113,7 @@ a, a:hover, a:focus, a:active {
 }
 .extra-p-btm {
     /* for sections needing more bottom padding for UI */
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
 }
 
 /* --- Navbar --- */
@@ -704,7 +711,7 @@ ol.breadcrumb {
     padding: 10px;
     text-align: center;
     border-radius: 2px;
-    max-width: 80%;
+    max-width: 100%;
     color: var(--white);
     transition: all 0.5s ease 0s;
 }
@@ -714,33 +721,17 @@ ol.breadcrumb {
 }
 
 /* --- AllAuth Pages --- */
-.account-content .account-text {
-    padding: 1% 2%;
-}
 .account-text h4{
     font-family: var(--title-font);
     font-size: 1.7rem;
     text-align: center;
 }
+.account-text h5 {
+    font-family: var(--title-font);
+    font-size: 1.3rem;
+}
 .account-text p {
     font-size: 1.1rem;
-}
-.account-btn,
-.account-btn-link {
-    background-color: var(--black);
-    border-radius: 2px;
-    text-align: center;
-    color: var(--yellow);
-    border: 1px solid var(--black);
-}
-.account-btn {
-    padding: 6px 10px;
-}
-.account-btn:hover,
-.account-btn:focus,
-.account-btn-link:hover,
-.account-btn-link:focus {
-    color: var(--white);
 }
 .account-hr {
     border: 0;
@@ -750,16 +741,11 @@ ol.breadcrumb {
     background-color:var(--border-dark);
     height: 1px;
 }
-.account-reg-text {
-    padding-bottom: 1.5rem;
+.login-content {
+    margin: 2% auto 10% auto;
+}
+.login-reg-text {
     padding-top: 1.5rem;
-}
-.account-link {
-    transition: all 0.5s ease 0s;
-}
-.account-link:hover,
-.account-link:focus {
-    color: var(--red);
 }
 
 /* --- General Pages --- */
@@ -1000,6 +986,13 @@ ol.breadcrumb {
     .profile-btns-box {
         margin-top: 10px;
     }
+    .profile-btn-left {
+        max-width: 40%;
+        justify-content: left;
+    }
+    .profile-btn-left button {
+        margin-left: 0;
+    }
     .profile-btns {
         max-width: 95%;
     }
@@ -1009,8 +1002,12 @@ ol.breadcrumb {
         padding-right: 40%s;
         max-width: 60%;
     }
-    .account-reg-text {
-        padding-bottom: 3.2rem;
+    .login-content {
+        margin: 0;
+        padding: 1% 3%;
+    }
+    .login-reg-text {
+        padding-bottom: 2.7rem;
         padding-top: 2.7rem;
     }
 
@@ -1152,6 +1149,13 @@ ol.breadcrumb {
     .profile-btns-box {
         margin-top: 10px;
     }
+    .profile-btn-left {
+        max-width: 30%;
+        justify-content: left;
+    }
+    .profile-btn-left button {
+        margin-left: 0;
+    }
     .profile-btns {
         max-width: 95%;
     }
@@ -1161,11 +1165,12 @@ ol.breadcrumb {
         padding-right: 40%s;
         max-width: 60%;
     }
-    .account-content .account-text {
-        padding: 1% 5%;
+    .login-content {
+        margin: 0;
+        padding: 1% 3%;
     }
-    .account-reg-text {
-        padding-bottom: 3.3rem;
+    .login-reg-text {
+        padding-bottom: 2.8rem;
         padding-top: 2.6rem;
     }
 
@@ -1410,6 +1415,16 @@ ol.breadcrumb {
     .profile-btns-box {
         margin-top: 10px;
     }
+    .profile-btn-left {
+        max-width: 20%;
+        justify-content: left;
+    }
+    .profile-btn-left button {
+        margin-left: 0;
+    }
+    .profile-btn-left button {
+        margin-left: 0;
+    }
     .profile-btns {
         max-width: 95%;
     }
@@ -1419,11 +1434,15 @@ ol.breadcrumb {
         padding-right: 40%s;
         max-width: 40%;
     }
-    .account-content .account-text {
-        padding: 1% 10%;
+    .login-content {
+        margin: 0;
+        padding: 1% 3%;
     }
-    .account-reg-text {
-        padding-bottom: 3.3rem;
+    .login-content .account-text {
+        padding: 0 5%;
+    }
+    .login-reg-text {
+        padding-bottom: 2.8rem;
         padding-top: 2.6rem;
     }
 
