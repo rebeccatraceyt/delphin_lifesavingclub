@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="Email Confirmation" content="Order Confirmation Email "/>
+        <meta name="Email Confirmation" content="Order Confirmation Email"/>
 
         <title>Email Confirmation - Order: {{ order.order_number }}</title>
     </head>
@@ -14,8 +14,8 @@
         <p>Thank you for your order!</p>
         <p>This is a confirmation of your order at Delphin Lifesaving Club. Your order information is below:</p>
         
-        <p><strong>Order Number:</strong> <small>{{ order.order_number }}</small></p>
-        <p><strong>Order Date:</strong> <small>{{ order.date }}</small></p>
+        <p><strong>Order Number:</strong>{{ order.order_number }</p>
+        <p><strong>Order Date:</strong>{{ order.date }</p>
 
         {% for item in order.Lineitems.all %}
             <p>
@@ -23,7 +23,7 @@
             </p>
         {% endfor %}
 
-        <h5>Order Total: €{{ order.grand_total }}</h5>
+        <h4>Order Total: €{{ order.grand_total }}</h4>
 
         <hr>
         <h4>For Apparel Orders</h4>
@@ -48,16 +48,16 @@
         <hr>
         <h4>For Course Orders</h4>
         <p>Present this email, as proof of purchase, upon registration on your first session.</p>
-        <p><small>Please Note: All course bookings do not guarantee class placement. 
+        <p><em>Please Note: All course bookings do not guarantee class placement. 
             The Teacher will assesss all swimmers on their first session to ensure they are in the correct course/level. 
             Any adjusts will be made accordingly with the utmost effort made to maintain day and time.
-        </small></p>
+        </em></p>
         <p> Further information can be found on our <a href="https://delphin-lifesavingclub.herokuapp.com/pages/faqs">FAQs</a> page.</p>
 
         <hr>
-        <p>If you have any questions, feel free to get in touch at {{ contact_email }}</p>
+        <p>If you have any questions, feel free to get in touch at {{ contact_email }} or via our <a href="https://delphin-lifesavingclub.herokuapp.com/pages/contact">Contact</a> page.</p>
         <p>
-            See you soon!
+            Happy Swimming!
         </p>
         <p>
             The Delphin Team

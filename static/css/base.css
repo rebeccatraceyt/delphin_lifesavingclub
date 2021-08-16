@@ -173,7 +173,6 @@ footer {
 }
 .footer-text {
     color: var(--white);
-    line-height: revert;
 }
 .footer-icons>.row>.col-4>a>i,
 .footer-text a {
@@ -1000,7 +999,7 @@ ol.breadcrumb {
 
     /* -- AllAuth Pages -- */
     .account-form {
-        padding-right: 40%s;
+        padding-right: 40%;
         max-width: 60%;
     }
     .login-content {
@@ -1163,7 +1162,7 @@ ol.breadcrumb {
 
     /* -- AllAuth Pages -- */
     .account-form {
-        padding-right: 40%s;
+        padding-right: 40%;
         max-width: 60%;
     }
     .login-content {
@@ -1432,7 +1431,7 @@ ol.breadcrumb {
 
     /* -- AllAuth Pages -- */
     .account-form {
-        padding-right: 40%s;
+        padding-right: 40%;
         max-width: 40%;
     }
     .login-content {

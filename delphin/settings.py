@@ -39,13 +39,6 @@ ALLOWED_HOSTS = ['127.0.0.1',
 
 INSTALLED_APPS = [
 
-    # my apps
-    'pages',
-    'shop',
-    'shopping_bag',
-    'checkout',
-    'users',
-
     # django apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +46,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # my apps
+    'pages',
+    'shop',
+    'shopping_bag',
+    'checkout',
+    'users',
+
+    # allauth apps
     'django.contrib.sites',
     'allauth',
     'allauth.account',
