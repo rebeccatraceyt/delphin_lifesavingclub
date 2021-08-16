@@ -42,6 +42,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item {% if url_name == 'apparel' %}active{% endif %}" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories">Shop Apparel</a>
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'courses' %}active{% endif %}" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'all_products' %}active{% endif %}" href="{% url 'all_products' %}">View All</a>
@@ -64,11 +65,19 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
-                <li class="nav-item {% if url_name == 'profile' %}active{% endif %}">
-                    <a class="nav-link" href="{% url 'profile' %}">Account</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Log out</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg-right text-lg-right" aria-labelledby="accountDropdown">
+                        <a class="dropdown-item {% if url_name == 'profile' %}active{% endif %}" href="{% url 'profile' %}">My Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item {% if url_name == 'past_orders' %}active{% endif %}" href="{% url 'past_orders' %}">Order History</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
+                        
+                    </div>
                 </li>
                 {% else %}
                 <li class="nav-item">

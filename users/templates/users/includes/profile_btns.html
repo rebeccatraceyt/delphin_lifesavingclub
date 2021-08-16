@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row profile-btns-box">
+        <div class="col-12 profile-btns btn-shadow ">
+            {% with request.resolver_match.url_name as url_name %}
+                {% if url_name == 'profile' %}
+                    <a href="{% url 'past_orders' %}">View Past Orders</a>
+                {% else %}
+                    <a href="{% url 'profile' %}">Update Delivery Information</a>
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div class="col-12 profile-btns btn-shadow ">
+            <a href="{% url 'account_change_password' %}">Change Password</a>
+        </div>
+        <div class="col-12 profile-btns btn-shadow ">
+            <a href="{% url 'account_email' %}">Account Settings</a>
+        </div>
+        <div class="col-12 profile-btns btn-shadow ">
+            <a href="{% url 'account_logout' %}">Logout</a>
+        </div>
+    </div>
+</div>

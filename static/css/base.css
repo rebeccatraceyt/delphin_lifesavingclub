@@ -660,6 +660,10 @@ ol.breadcrumb {
     color: var(--white);
     font-size: 1.2rem;
 }
+.bag-submit-btn:hover,
+.bag-submit-btn:focus {
+    color: var(--yellow);
+}
 .bag-btns p {
     margin: 0 1rem;
 }
@@ -690,7 +694,26 @@ ol.breadcrumb {
     color: var(--red);
 }
 
-/* --- AllAuth Accounts Pages --- */
+/* --- Accounts Pages --- */
+.profile-btns {
+    border: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--black);
+    margin: 2% auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2px;
+    max-width: 80%;
+    color: var(--white);
+    transition: all 0.5s ease 0s;
+}
+.profile-btns:hover,
+.profile-btns:focus {
+    color: var(--yellow);
+}
+
+/* --- AllAuth Pages --- */
 .account-content .account-text {
     padding: 1% 2%;
 }
@@ -860,6 +883,9 @@ ol.breadcrumb {
     .page-title h3 {
         font-size: 2.5rem;
     }
+    .lg-border {
+        border-right: 1px solid var(--border-light);
+    }
 
     /* -- Home Page -- */
     .home-content {
@@ -971,12 +997,17 @@ ol.breadcrumb {
     }
 
     /* -- Accounts Pages -- */
+    .profile-btns-box {
+        margin-top: 10px;
+    }
+    .profile-btns {
+        max-width: 95%;
+    }
+
+    /* -- AllAuth Pages -- */
     .account-form {
         padding-right: 40%s;
         max-width: 60%;
-    }
-    .lg-border {
-        border-right: 1px solid var(--border-light);
     }
     .account-reg-text {
         padding-bottom: 3.2rem;
@@ -1016,6 +1047,11 @@ ol.breadcrumb {
 
 /* Breakpoint on Larger Tablet device */
 @media (min-width: 992px) and (max-width: 1024px) {
+
+    /* -- Special Styling -- */
+    .lg-border {
+        border-right: 1px solid var(--border-light);
+    }
 
     /* -- Navbar -- */
     .bag-icon-lg i {
@@ -1113,15 +1149,20 @@ ol.breadcrumb {
     }
 
     /* -- Accounts Pages -- */
+    .profile-btns-box {
+        margin-top: 10px;
+    }
+    .profile-btns {
+        max-width: 95%;
+    }
+
+    /* -- AllAuth Pages -- */
     .account-form {
         padding-right: 40%s;
         max-width: 60%;
     }
     .account-content .account-text {
         padding: 1% 5%;
-    }
-    .lg-border {
-        border-right: 1px solid var(--border-light);
     }
     .account-reg-text {
         padding-bottom: 3.3rem;
@@ -1174,6 +1215,9 @@ ol.breadcrumb {
     }
     .page-title h3 {
         font-size: 2.5rem;
+    }
+    .lg-border {
+        border-right: 1px solid var(--border-light);
     }
 
     /* -- Navbar -- */
@@ -1363,15 +1407,20 @@ ol.breadcrumb {
     }
 
     /* -- Accounts Pages -- */
+    .profile-btns-box {
+        margin-top: 10px;
+    }
+    .profile-btns {
+        max-width: 95%;
+    }
+
+    /* -- AllAuth Pages -- */
     .account-form {
         padding-right: 40%s;
         max-width: 40%;
     }
     .account-content .account-text {
         padding: 1% 10%;
-    }
-    .lg-border {
-        border-right: 1px solid var(--border-light);
     }
     .account-reg-text {
         padding-bottom: 3.3rem;
