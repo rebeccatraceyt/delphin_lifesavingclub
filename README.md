@@ -484,10 +484,21 @@ Testing information can be found in a separate testing [file](TESTING.md "Link t
 
 ## Deployment
 To further develop this project, a clone can be made using the following steps:
-### 1. Database Creation
 
+*Deployment Instructions assume you are working on a MacOS and may differ on other operating systems. Please check documentation specific for your operating system*
 
-### 2. Local Copy Creation
+### Prerequisites
+To run the project on your own IDE, ensure you have the following:
+
+- An IDE (such as [Visual Studio Code](https://code.visualstudio.com/) or [GitPod](https://www.gitpod.io/))
+- [Python](https://www.python.org/downloads/) (*this project uses version 3.6*)
+- [PIP](https://pypi.org/project/pip/) for package installation
+- [Git](https://git-scm.com/downloads) for project version control
+- [AWS](https://aws.amazon.com/) account with a set up [S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+
+- [Stripe](https://dashboard.stripe.com/register) Account for payment functionality
+
+### 1. Local Copy Creation
 A Local Clone of the repository can be made in two ways:
 
 - **Forking the Repository:**
@@ -498,6 +509,7 @@ A Local Clone of the repository can be made in two ways:
      2. Locate the [GitHub Repository](https://github.com/rebeccatraceyt/bake-it-til-you-make-it "Link to GitHub Repo").
      3. At the top of the repository, on the right side of the page, select "Fork".
      4. You should now have a copy of the original repository in your GitHub account.
+
 
 -  **Creating a Clone**
 
@@ -525,24 +537,62 @@ A Local Clone of the repository can be made in two ways:
 
      (Further reading and troubleshooting on cloning a repository from GitHub [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository "Link to GitHub troubleshooting"))
 
-Once a local clone is created, the environment variables have to be set:
 
-1. Create a `.gitignore` file in the project's root directory.
-2. In the terminal window, type `touch env.py` to create the file that will contain the environment variables. 
-3. Add `env.py` to the `.gitignore` file.
-4. Within the `env.py` file, enter the project's environment variables:
-```
-import os
+-  **Local Deployment**
 
-os.environ.setdefault("IP", "0.0.0.0")
-os.environ.setdefault("PORT", "5000")
-os.environ.setdefault("SECRET_KEY", <your_secret_key>)
-os.environ.setdefault("MONGO_URI", "mongodb+srv://<username>:<password>@<cluster_name>-ocous.mongodb.net/<database_name>?retryWrites=true&w=majority" )
-os.environ.setdefault("MONGO_DBNAME", <your_mongo_db_name>)
-```
-For the `MONGO_URI` ensure to replace `<username>`, `<password>`, `<cluster_name>` and `<database_name>` with the appropriate alternatives.
+     Once a local clone is created, follow the below steps to deploy locally:
+     1. Install all project requirments using the below command in the CLI terminal:
+     ```
+     $ pip3 install -r requirements.txt
+     ```
+     2. Launch the project server using the below command in the CLI terminal:
+     ```
+     $ python3 manage.py runserver
+     ```
+     3. A server should be running locally on http://127.0.0.1:8000/. In running the server, a new SQLite3 database file (`db.sqlite3`) will be created in the root directory.
+     4. Create a `.gitignore` file in the project's root directory.
+     5. Create an `env.py` file in the root directory.
+     6. Add `env.py` to the `.gitignore` file.
+     7. Within the `env.py` file, enter the project's environment variables:
+     ```
+     import os
+
+     os.environ.setdefault("SECRET_KEY", <your_secret_key>)
+     os.environ.setdefault("DEVELOPMENT", '1')
+     os.environ.setdefault("STRIPE_PUBLIC_KEY", <your_key>)
+     os.environ.setdefault("STRIPE_SECRET_KEY", <your_key>)
+     os.environ.setdefault("STRIPE_WH_SECRET", <your_key>)
+     ```
+     - A secret key can be generated using [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)*
+
+     - Stripe Public and Secret keys can be generated after Stripe account signup. Keys are found in 'Developers' Section, under 'API Keys'
+
+     - Webhook key (WH) can be generated under 'Developers' section of your stripe Dashboard. Select 'Add endpoint' and enter:*
+
+     ```
+     https://<yourhosturl>/checkout/wh/
+     ```
+
+     - Select 'Receive All Events' and 'Add Endpoint' and view your 'signing secret' 
 
 
+     8. Migrations will need to be made to create the local database and can be done using the following commands in the CLI terminal:
+     ```
+     $ python3 manage.py makemigrations
+     ```
+     ```
+     $ python3 manage.py migrate
+     ```
+     9. A Super User will needed to be created to gain access to the Django Admin Page and can be created using the following commands in the CLI terminal:
+     ```
+     $ python3 manage.py createsuperuser
+     ```
+     10. Finally, you will need to import the fixtures folders found in the `Pages` and `Shop` apps. The `JSON` files contain all data needed to host the database and can be imported using the following commands in the CLI terminal:
+     ```
+     $ python3 manage.py loaddata <file_name>
+     ```
+     - Ensure you import them in the correct order, ensuring that `ManyToMany` tables are imported last to avoid errors.
+     11. Once this is complete, the project should run within your local development environment.
 
 ### 3. Heroku App Creation
 The website requires back-end technology, including a server, application and database. It is because of this that the project was deployed on **Heroku**, a container-based cloud Platform as a Service. There are two ways to deploy on Heroku:
@@ -586,8 +636,6 @@ Once these steps are completed, continue with the process:
 IP | 0.0.0.0
 PORT | 5000
 SECRET_KEY | `<your_secret_key>`
-MONGO_URI | `mongodb+srv://<username>:<password>@<cluster_name>-ocous.mongodb.net/<database_name>?retryWrites=true&w=majority`
-MONGO_DBNAME | `<your_mongo_db_name>`
 
 6. Navigate back to the `Deploy` tab and scroll down to `Automatic Deploys`.
 7. Ensure that the `master` branch is selected, then select `Enable Automatic Deploys`.
