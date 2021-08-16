@@ -35,7 +35,9 @@
 10. [Technical Support](#Technical-Support)
 ***
 
-![Delphin Responsiveness](static/images/readme-files/responsive.png)
+<div align="center">
+<a href="https://ibb.co/rfzcd3S"><img src="https://i.ibb.co/Dgv8rYy/delphin-responsive.png" alt="Delphin Site Responsive example"></a>
+</div>
 
 ***
 
@@ -272,6 +274,131 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
 
 ### Data Models
 
+<div align='center'>
+<a href="https://ibb.co/Cw5CtfX"><img src="https://i.ibb.co/6yR9Zkp/delphin-models.png" alt="Delphin Data Models" width=700></a>
+</div>
+
+*model diagram created using [DrawSQL](https://drawsql.app/ "DrawSQL page")*
+
+A full list of the data models used on the site are below:
+
+#### `User Model`
+
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| User    | user | OneToOneField(User) | on_delete=models.CASCADE |
+| Full Name | default_full_name | Charfield | max_length=50,<br /> null=True,<br /> blank=True|
+| Phone Number | default_phone_number | Charfield | max_length=20,<br /> null=True,<br /> blank=True|
+| Street Address 1 | default_street_address1 | Charfield | max_length=80,<br /> null=True,<br /> blank=True|
+| Street Address 2 | default_street_address2 | Charfield | max_length=80,<br /> null=True,<br /> blank=True|
+| Town Or City | default_town_or_city | Charfield | max_length=40,<br /> null=True,<br /> blank=True|
+| County | default_county | Charfield | max_length=80,<br /> null=True,<br /> blank=True|
+| Postcode | default_postcode | Charfield | max_length=20,<br /> null=True,<br /> blank=True|
+| Country | default_country | CountryField | blank_label='Country',<br /> null=True,<br /> blank=True|
+
+#### Users App
+
+##### `UserProfile` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| User | user | OneToOneField(User) | on_delete=models.CASCADE |
+| Full Name | default_full_name | Charfield | max_length=50,<br /> null=True,<br /> blank=True|
+| Phone Number | default_phone_number | Charfield | max_length=20,<br /> null=True,<br /> blank=True|
+| Street Address 1 | default_street_address1 | Charfield | max_length=80,<br /> null=True,<br /> blank=True|
+| Street Address 2 | default_street_address2 | Charfield | max_length=80,<br /> null=True,<br /> blank=True|
+| Town Or City | default_town_or_city | Charfield | max_length=40,<br /> null=True,<br /> blank=True|
+| County | default_county | Charfield | max_length=80,<br /> null=True,<br /> blank=True|
+| Postcode | default_postcode | Charfield | max_length=20,<br /> null=True,<br /> blank=True|
+| Country | default_country | CountryField | blank_label='Country',<br /> null=True,<br /> blank=True|
+
+#### Shop App
+
+##### `Category` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| Programmable Name | name | charfield | max_length=254 |
+| Friendly Name | friendly_name | Charfield | max_length=254 |
+
+##### `ProductOption` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| Programmable Name | product_option | charfield | max_length=255 |
+| Friendly Name | option_name | Charfield | max_length=255, <br /> default='Monday' |
+
+##### `Product` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| Product Name | name | charfield | max_length=254 |
+| Description | description | Textfield | default='test' |
+| Price | price | Decimalfield | max_digits=6,<br /> decimal_places=2 |
+| Category | category | ForeignKey(Category) | null=True,<br /> blank=True,<br/> on_delete=models.SET_NULL |
+| Product Select | product_select | ManyToManyField(ProductOption) | through='ProductSelect',<br /> related_name='product_options',<br /> blank=True |
+| Course Check | is_course | Boolean | default=False,<br /> null=True,<br /> blank=True |
+| Apparel Check | is_apparel | Boolean | default=False,<br /> null=True,<br /> blank=True |
+| Image | image | Imagefield | null=True,<br /> blank=True |
+
+
+##### `ProductSelect` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| Selected Product Option | product_select | ForeignKey(ProductOption) | on_delete=models.CASCADE |
+| Selected Product | product | ForeignKey(Product) | on_delete=models.CASCADE,<br /> related_name='product_options' |
+| Stock Count | stock_count | IntegerField | default=30|
+
+#### Checkout App
+
+##### `Order` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| Order Number | order_number | Charfield | max_length=32,<br /> null=False,<br /> editable=False|
+| User | user_profile | ForeignKey(User) | null=True,<br /> blank=True,<br/> on_delete=models.SET_NULL,<br />r elated='orders' |
+| Full Name | full_name | Charfield | max_length=50,<br /> null=False,<br /> blank=False|
+| Email Address | email | EmailField | max_length=254,<br /> null=False,<br/> blank=False| 
+| Phone Number | phone_number | Charfield | max_length=20,<br /> null=False,<br /> blank=False|
+| Street Address 1 | street_address1 | Charfield | max_length=80,<br />null=False,<br /> blank=False|
+| Street Address 2 | street_address2 | Charfield | max_length=80,<br /> null=True,<br /> blank=True|
+| Town Or City | town_or_city | Charfield | max_length=40,<br /> null=False,<br /> blank=False|
+| County | county | Charfield | max_length=80,<br /> null=False,<br /> blank=False|
+| Postcode | postcode | Charfield | max_length=20,<br /> null=False,<br /> blank=False|
+| Country | country | CountryField | blank_label='Country*',<br /> null=False,<br /> blank=False|
+| Order Date | date | DateField | auto_now_add=True |
+| Delivery Cost | delivery_cost | DecimalField | max_digits=6,<br /> decimal_places=2,<br /> null=False,<br /> default=0|
+| Order Total | order_total | DecimalField | max_digits=10,<br /> decimal_places=2,<br /> null=False,<br /> default=0|
+| Grand Total | grand_total | DecimalField | max_digits=10,<br /> decimal_places=2,<br /> null=False,<br /> default=0|
+| Original Bag | original_bag | TextField | null=False,<br /> blank=False,<br /> default=''|
+| Stripe Payment Intent ID | stripe_pid | CharField | max_length=254,<br /> null=False,<br /> blank=False,<br /> default=''|
+
+##### `OrderLineItem` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| Order | order | ForeignKey(Order) | null=False,<br /> blank=False,<br/> on_delete=models.CASCADE,<br /> related_name='lineitems' |
+| Product | product | ForeignKey(Product) | null=False,<br /> blank=False,<br/> on_delete=models.CASCADE |
+| Selected Product Option | product_select | charfield | max_length=10,<br /> null=False,<br /> blank=False|
+| Quantity | quantity | IntegerField | null=False,<br /> blank=False,<br/> default=0 |
+| Lineitem Total | lineitem_total | DecimalField | max_digits=6,<br/> decimal_places=2,<br/> null=False,<br /> blank=False,<br/> editable=False |
+
+
+#### Pages App
+
+##### `SwimCategory` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| Programmable Name | name | charfield | max_length=254 |
+| Friendly Name | friendly_name | Charfield | max_length=254 |
+
+##### `SwimProgramme` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| Programme Name | name | charfield | max_length=254 |
+| Description  | description | Textfield | |
+| Age Range | age | charfield | max_length=254 |
+| Swim Category | swim_category | ForeignKey(SwimCategory) | null=True,<br /> blank=True,<br/> on_delete=models.SET_NULL |
+
+##### `FAQ` Model
+| Name      | Database Key  | Field Type | Type Validation |
+|--------------|--------------|--------------|--------------|
+| Question | question | charfield | max_length=254 |
+| Answer | answer | TextField |  |
 
 ## Features
 
