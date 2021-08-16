@@ -27,9 +27,6 @@
      4. [Database Management](#Database-Management)
 6. [Testing](#Testing) ☞ **[Testing.md](TESTING.md)**
 7. [Deployment](#Deployment)
-     1. [1. Database Creation](#1-Database-Creation)
-     2. [2. Local Copy Creation](#2-Local-Copy-Creation)
-     3. [3. Heroku App Creation](#3-Heroku-App-Creation)
 8. [Credits](#Credits)
 9. [Acknowledgements](#Acknowledgements)
 10. [Technical Support](#Technical-Support)
@@ -266,6 +263,7 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
      - The product imagery used digital renderings of the available orders, with a complete list of credits in a separate file, found [here]()
 
 [Back to top ⇧](#table-of-contents)
+***
 
 ## Information Architecture
 ### Database
@@ -400,6 +398,10 @@ A full list of the data models used on the site are below:
 | Question | question | charfield | max_length=254 |
 | Answer | answer | TextField |  |
 
+
+[Back to top ⇧](#table-of-contents)
+***
+
 ## Features
 
 ### Design Features
@@ -416,10 +418,12 @@ A full list of the data models used on the site are below:
 
 
 [Back to top ⇧](#table-of-contents)
+***
 
 ## Issues and Bugs 
 
 [Back to top ⇧](#table-of-contents)
+***
 
 ## Technologies Used
 ### Languages
@@ -477,10 +481,13 @@ A full list of the data models used on the site are below:
      - Pillow was used to aid in image processing on the database
 
 [Back to top ⇧](#table-of-contents)
+***
 
 ## Testing
 
 Testing information can be found in a separate testing [file](TESTING.md "Link to testing file")
+
+***
 
 ## Deployment
 To further develop this project, a clone can be made using the following steps:
@@ -498,62 +505,56 @@ To run the project on your own IDE, ensure you have the following:
 
 - [Stripe](https://dashboard.stripe.com/register) Account for payment functionality
 
-### 1. Local Copy Creation
+### Local Copy Creation
 A Local Clone of the repository can be made in two ways:
 
-- **Forking the Repository:**
+**1. Forking the Repository:**
 
-     By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps:
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps:
 
-     1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
-     2. Locate the [GitHub Repository](https://github.com/rebeccatraceyt/bake-it-til-you-make-it "Link to GitHub Repo").
-     3. At the top of the repository, on the right side of the page, select "Fork".
-     4. You should now have a copy of the original repository in your GitHub account.
+1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
+2. Locate the [GitHub Repository](https://github.com/rebeccatraceyt/bake-it-til-you-make-it "Link to GitHub Repo").
+3. At the top of the repository, on the right side of the page, select "Fork".
+4. You should now have a copy of the original repository in your GitHub account.
 
+**2. Creating a Clone:**
 
--  **Creating a Clone**
+How to run this project locally:
+1. Install the [GitPod Browser](https://www.gitpod.io/docs/browser-extension/ "Link to Gitpod Browser extension download") Extension for Chrome.
+2. After installation, restart the browser.
+3. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
+2. Locate the [GitHub Repository](https://github.com/rebeccatraceyt/bake-it-til-you-make-it "Link to GitHub Repo").
+5. Click the green "GitPod" button in the top right corner of the repository.
+This will trigger a new gitPod workspace to be created from the code in github where you can work locally.
 
-     How to run this project locally:
-     1. Install the [GitPod Browser](https://www.gitpod.io/docs/browser-extension/ "Link to Gitpod Browser extension download") Extension for Chrome.
-     2. After installation, restart the browser.
-     3. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
-     2. Locate the [GitHub Repository](https://github.com/rebeccatraceyt/bake-it-til-you-make-it "Link to GitHub Repo").
-     5. Click the green "GitPod" button in the top right corner of the repository.
-     This will trigger a new gitPod workspace to be created from the code in github where you can work locally.
+How to run this project within a local IDE, such as VSCode:
 
-     How to run this project within a local IDE, such as VSCode:
-
-     1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
-     2. Locate the [GitHub Repository](https://github.com/rebeccatraceyt/bake-it-til-you-make-it "Link to GitHub Repo").
-     3. Under the repository name, click "Clone or download".
-     4. In the Clone with HTTPs section, copy the clone URL for the repository.
-     5. In your local IDE open the terminal.
-     6. Change the current working directory to the location where you want the cloned directory to be made.
-     7. Type 'git clone', and then paste the URL you copied in Step 3.
+1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
+2. Locate the [GitHub Repository](https://github.com/rebeccatraceyt/bake-it-til-you-make-it "Link to GitHub Repo").
+3. Under the repository name, click "Clone or download".
+4. In the Clone with HTTPs section, copy the clone URL for the repository.
+5. In your local IDE open the terminal.
+6. Change the current working directory to the location where you want the cloned directory to be made.
+7. Type 'git clone', and then paste the URL you copied in Step 3.
      ```
      git clone https://github.com/USERNAME/REPOSITORY
      ```
-     8. Press Enter. Your local clone will be created.
+8. Press Enter. Your local clone will be created.
 
-     (Further reading and troubleshooting on cloning a repository from GitHub [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository "Link to GitHub troubleshooting"))
+     *(Further reading and troubleshooting on cloning a repository from GitHub [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository "Link to GitHub troubleshooting"))*
 
 
--  **Local Deployment**
+### Local Deployment
 
-     Once a local clone is created, follow the below steps to deploy locally:
-     1. Install all project requirments using the below command in the CLI terminal:
+Once a local clone is created, follow the below steps to deploy locally:
+1. Install all project requirments using the below command in the CLI terminal:
      ```
-     $ pip3 install -r requirements.txt
+     pip3 install -r requirements.txt
      ```
-     2. Launch the project server using the below command in the CLI terminal:
-     ```
-     $ python3 manage.py runserver
-     ```
-     3. A server should be running locally on http://127.0.0.1:8000/. In running the server, a new SQLite3 database file (`db.sqlite3`) will be created in the root directory.
-     4. Create a `.gitignore` file in the project's root directory.
-     5. Create an `env.py` file in the root directory.
-     6. Add `env.py` to the `.gitignore` file.
-     7. Within the `env.py` file, enter the project's environment variables:
+2. Create a `.gitignore` file in the project's root directory.
+3. Create an `env.py` file in the root directory.
+4. Add `env.py` to the `.gitignore` file.
+5. Within the `env.py` file, enter the project's environment variables:
      ```
      import os
 
@@ -575,77 +576,307 @@ A Local Clone of the repository can be made in two ways:
 
      - Select 'Receive All Events' and 'Add Endpoint' and view your 'signing secret' 
 
+6. Migrations will need to be made to create the local database and can be done using the following commands in the CLI terminal:
+     ```
+     python3 manage.py makemigrations
+     ```
+     ```
+     python3 manage.py migrate
+     ```
+7. Next, you will need to import the fixtures folders found in the `Pages` and `Shop` apps. The `JSON` files contain all data needed to host the database and can be imported using the following commands in the CLI terminal:
+     ```
+     python3 manage.py loaddata swim_category
+     ```
+     ```
+     python3 manage.py loaddata swim_programme
+     ```
+     ```
+     python3 manage.py loaddata faq
+     ```
+     ```
+     python3 manage.py loaddata category
+     ```
+     ```
+     python3 manage.py loaddata product
+     ```
+     ```
+     python3 manage.py loaddata product_option
+     ```
+     ```
+     python3 manage.py loaddata product_select
+     ```
+     - Ensure you import them in the correct order (as above), ensuring that the `ManyToMany` table is imported last, to avoid errors.
 
-     8. Migrations will need to be made to create the local database and can be done using the following commands in the CLI terminal:
+8. A `superuser` will needed to be created to gain access to the Django Admin Page and can be created using the following commands in the CLI terminal:
      ```
-     $ python3 manage.py makemigrations
+     python3 manage.py createsuperuser
      ```
+9. Launch the project server using the below command in the CLI terminal:
      ```
-     $ python3 manage.py migrate
+     python3 manage.py runserver
      ```
-     9. A Super User will needed to be created to gain access to the Django Admin Page and can be created using the following commands in the CLI terminal:
-     ```
-     $ python3 manage.py createsuperuser
-     ```
-     10. Finally, you will need to import the fixtures folders found in the `Pages` and `Shop` apps. The `JSON` files contain all data needed to host the database and can be imported using the following commands in the CLI terminal:
-     ```
-     $ python3 manage.py loaddata <file_name>
-     ```
-     - Ensure you import them in the correct order, ensuring that `ManyToMany` tables are imported last to avoid errors.
-     11. Once this is complete, the project should run within your local development environment.
+10. A server should be running locally on http://127.0.0.1:8000/. In running the server, a new SQLite3 database file (`db.sqlite3`) will be created in the root directory.
 
-### 3. Heroku App Creation
+*Once this is complete, the project should run within your local development environment.*
+
+### Heroku App Creation
 The website requires back-end technology, including a server, application and database. It is because of this that the project was deployed on **Heroku**, a container-based cloud Platform as a Service. There are two ways to deploy on Heroku:
 
 - Using the Heroku Command Line Interface
 - Connect to GitHub Repository (the developer recommends this method)
 
-Before deployment can be carried out on Heroku, the following steps must be carried out:
-
-1. Create a `requirements.txt` file to install all requirements. In the terminal window, type the following command:
-```
-pip3 install -r requirements.txt
-```
-2. Create a `Procfile` file so that Heroku knows which file runs the app. In the terminal window, type the following command:
-```
-echo web: python app.py > Procfile
-```
-*Remove the blank line that may occur at the end of the Procfile to avoid any issues*
-
-
-3. Push the two files to the repository:
-```
-git add requirements.txt
-git commit -m "Add requirements.txt"
-
-git add Procfile 
-git commit -m "Add Procfile"
-
-git push
-```
-Once these steps are completed, continue with the process:
-
+**Create Heroku App**
 1. Log into [Heroku](https://id.heroku.com/login "Link to Heroku login page") or [create an account](https://signup.heroku.com/login "Link to Heroku sign-up page").
-2. Select the `New` button on the top-right of the page, and choose `Create New App`. Give your app a unique name and set the region (in this instance: **Europe**). Then click `Create App`.
+2. Select the `New` button on the top-right of the page, and choose `Create New App`. Give your app a unique name (something that is the same, or similar to, your Django App) and set the region (in this instance: **Europe**). Then click `Create App`.
 3. Navigate to the `Deploy` tab on the dashboard and select `Connect to GitHub`.
 4. Search for the repository name (ensuring it is spelled correctly). Once located, click `Connect`. 
-5. Navigate to the `Setting` tab on the dashboard and select `Reveal Config Vars`, entering the necessary key/values as below:
 
-| Key | Value |
- --- | ---
-IP | 0.0.0.0
-PORT | 5000
-SECRET_KEY | `<your_secret_key>`
+**Create PostgreSQL Database**
+1. On the Heroku dashboard, navigate to `Resources` section.
+2. In the search bar, enter `postgres` and select `Heroku Postgres`.
+3. For this project, the plan name os `Hobby Dev - Free`, but feel free to select your own.
+4. Once a plan is selected, `Submit Order Form`.
 
-6. Navigate back to the `Deploy` tab and scroll down to `Automatic Deploys`.
-7. Ensure that the `master` branch is selected, then select `Enable Automatic Deploys`.
+**Configure Heroku Variables**
+1. On the Heroku dashboard, navigate to `Settings` and locate `Reveal Config Vars` button to set the following necessary variables for the project (Note: You may not have all variable values yet, add the ones that you have available and add the others in due course):
+
+     | Key      | Value  |
+     |--------------|--------------|
+     | AWS_ACCESS_KEY_ID | `Your AWS Access Key` |
+     | AWS_SECRET_ACCESS_KEY | `Your AWS Secret Access Key` |
+     | DATABASE_URL | `Your Database URL` |
+     | EMAIL_HOST_PASS | `Your Email Password` |
+     | EMAIL_HOST_USER | `Your Email Address`|
+     | SECRET_KEY | `Your Secret Key` |
+     | STRIPE_PUBLIC_KEY | `Your Stripe Public Key` |
+     | STRIPE_SECRET_KEY | `Your Stripe Secret Key` |
+     | STRIPE_WH_SECRET | `Your Stripe WH Key` |
+     | USE_AWS | `TRUE` |
+     ***Ensure all values are the same as the values set in your `env.py` file***
+
+2. Navigate back to the `Deploy` tab and scroll down to `Automatic Deploys`.
+3. Ensure that the `master` branch is selected, then select `Enable Automatic Deploys`.
+
+**Configure PostgreSQL Database**
+1. In the project CLI, install the following dependancies to use Postgres:
+     ```
+     pip3 install dj_database_url
+     ```
+     ```
+     pip3 install psycopg2_binary
+     ```
+     ```
+     pip3 install gunicorn
+     ```
+2. Freeze new dependancies using `$ pip3 freeze > requirements.txt`
+3. Create a `Procfile` file so that Heroku knows which file runs the app. In the terminal window, type the following command:
+     ```
+     $ echo web: python app.py > Procfile
+     ```
+     *Remove the blank line that may occur at the end of the Procfile to avoid any issues*
+4. Push the two files to the repository:
+     ```
+     $ git add .
+     $ git commit -m "Commit Message"
+     $ git push
+     ```
+5. In the project's `settings.py` file:
+     - Add `import dj_database_url` to imports section (top)
+     - Locate `DATABASES` constant variable within the file and replace it with the following:
+          ```
+          if "DATABASE_URL" in os.environ:
+               DATABASES = {"default": dj_database_url.parse(os.environ ["DATABASE_URL"])}
+          else:
+               DATABASES = {
+               "default": {
+                    "ENGINE": "django.db.backends.sqlite3",
+                    "NAME": BASE_DIR / "db.sqlite3",
+               }
+          }
+
+          ```
+6. Backup current SQLite database by entering the following into the CLI:
+     ```
+     ./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+     ```
+7. Login into your Heroku CLI using: 
+     ```
+     heroku login -i
+     ```
+8. Migrate models to the new Postgres database:
+     ```
+     python manage.py makemigrations
+     ```
+     ```
+     python manage.py migrate
+     ```
+9. A new `superuser` will needed to be created to gain access to the Django Admin Page and can be created using the following commands in the CLI terminal:
+     ```
+     python3 manage.py createsuperuser
+     ```
+10. Reload the data into the new database using the folowing:
+     ```
+     ./manage.py loaddata db.json
+     ```
+11. Temporarily disable `COLLECTSTATIC` to prevent Heroku from collecting static files until they have been set up on AWS:
+     ```
+     heroku config:set DISABLE_COLLECTSTATIC=1 --app <your app name>
+     ```
+     *`--app` command is necessary if you have more than one heroku apps*
+12. Add Heroku to the `ALLOWED HOSTS` varible in `settings.py`: 
+     ```
+     ALLOWED_HOSTS = ['127.0.0.1',
+                      '<your app name>.herokuapp.com',
+                      'localhost']
+     ```
+13. Push these changes to Github:
+     ```
+     $ git add .
+     $ git commit -m "Commit Message"
+     $ git push
+     ```
+14. Set up push to Heroku:
+     ```
+     heroku git:remote -a <your app name>
+     ```
+15. Push to Heroku:
+     ```
+     git push heroku main
+     ```
 
 Heroku will receive the pushed code from the GitHub repository and host the application with the required packages set out. 
 
 The deployed version can now be viewed by selecting `View App` in the top-right of the page.
 
+### AWS S3 Bucket Creation
+All Static and Media files in the production version of this site are hosted on an [Amazon Web Services](https://aws.amazon.com/ "Link to Amazon Web Services")(AWS) S3 Bucket. 
+
+To create your own bucket,
+1. Log into [Amazon AWS](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Ffromtb%3Dtrue%26hashArgs%3D%2523%26isauthcode%3Dtrue%26state%3DhashArgsFromTB_us-east-1_5214b8df504a8629&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=VZ2MXWWFffZ9ITDaY-O8yEnyikt3FflPh7PpibLEGRk&code_challenge_method=SHA-256 "Link to Amazon AWS login page") or [create an account](https://portal.aws.amazon.com/billing/signup?refid=em_127222&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start "Link to Amazon AWS sign-up page").
+
+**Create AWS S3 Bucket**
+1. Navigate to the [S3 Bucket](https://aws.amazon.com/s3/ "Link to S3 Bucket page") and create a unique bucket for your application using the `Create Bucket` button:
+     - Give your bucket a name (same or similar to Django and Heroku app names)
+     - Select the region closest to you
+     - Uncheck Block Public Access and tick to acknowledge that the bucket will be public
+     - Click `Create Bucket`
+2. On your Bucket Dashboard, locate the `Properities` section and configure the following:
+     - `Turn on Static Web Hosting`
+     - In index and errror, enter `index.html` and `error.html`
+     - Click `Save`
+3. On your Bucket Dashboard, locate the `Permissions` section and configure the following:
+     - In `CORS`:
+     ```
+     [
+          {
+               "AllowedHeaders": [
+                    "Authorization"
+               ],
+               "AllowedMethods": [
+                    "GET"
+               ],
+               "AllowedOrigins": [
+                    "*"
+               ],
+               "ExposeHeaders": []
+          }
+     ]
+
+     ```
+     - In `Bucket Policy`, click `Generate Policy` and follow the below steps:
+          - Click `Policy` > `S3 Bucket Policy`
+          - Add `*` to the `Principal Field` (selects all principals)
+          - Set `Action` to `Get Object`
+          - Paste in `ARN` from previous page
+          - Click `Add Statement`
+          - Click `Generate Policy`
+          - Copy and paste new policy into `Bucket Policy`
+          - Add `*/` to the end of the `Resources Key`
+          - Click `Save`
+     - In `Access Control List` set the `List Objects Permission` to `everyone`
+4. Access `IAM` Dashboard from `Sevices` dropdown list
+     - Create an new user group
+     - Create a policy from the `Policy` tab
+          - Select `Import Managed Policy`
+          - Select `S3 Full Access Policy`
+     - To override any existing content, in the `Resource` section, paste the following:
+          ```
+          [
+               arn:aws:s3:::<your-bucket-name>",
+               "arn:aws:s3:::<your-bucket-name>/*"
+          ]
+          ```
+     - Continue to `Create Policy`
+     - Attach new policy to the user group by locating the group and selecting `Attach Policy` next to your new policy.
+     - Navigate to `Users` tab and select `Add User` Create a name and ensure it has `Programmatic access`. Add new user to the group.
+     - Once the user is added, a `.csv` file will be provided.
+          - **Download this file and save these variables**
+          - Add variables to your Heroku Config Variables.
+5. Navigate to your Bucket and manually input all files in the `media` folder.
+For further information on creating a bucket, head to the [AWS Instructions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html "Create a bucket tutorial") page
+
+**Configure Bucket**
+1. In the project CLI, install the following dependancies to use AWS:
+     ```
+     pip3 install boto3
+     ```
+     ```
+     pip3 install django-storages
+     ```
+2. Freeze new dependancies using `$ pip3 freeze > requirements.txt`
+3. In the project's `settings.py` file, add `storages` to INSTALLED_APPS variable.
+4. In order to link your new AWS Bucket to your project, paste:
+     ```
+     if 'USE_AWS' in os.environ:
+          # Cache control
+          AWS_S3_OBJECT_PARAMETERS = {
+               'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+               'CacheControl': 'max-age=94608000',
+          }
+
+          # Bucket Config
+          AWS_STORAGE_BUCKET_NAME = 'your_bucket_name'
+          AWS_S3_REGION_NAME = 'your_region'
+          AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+          AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+          AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+          # Static and media files
+          STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+          STATICFILES_LOCATION = 'static'
+          DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+          MEDIAFILES_LOCATION = 'media'
+
+          # Override static and media URLs in production
+          STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+          MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+     ```
+5. Create a `custom_storages.py` file in your project's root directory. Inside it, include the Static and Media Storage locations:
+     ```
+     from django.conf import settings
+     from storages.backends.s3boto3 import S3Boto3Storage
+
+     class StaticStorage(S3Boto3Storage):
+     location = settings.STATICFILES_LOCATION
+
+     class MediaStorage(S3Boto3Storage):
+     location = settings.MEDIAFILES_LOCATION
+     ```
+6. Delete `DISABLE_COLLECTSTATIC` variable from your Heroku Config Variables
+7. Push these changes to Github:
+     ```
+     $ git add .
+     $ git commit -m "Commit Message"
+     $ git push
+     ```
+
+<div align='center'>
+<h2>Congratulations!</h2>
+<h4>Your project is ready to use. Have fun!</h4>
+</div>
 
 [Back to top ⇧](#table-of-contents)
+***
 
 ## Credits 
 The developer consulted multiple sites in order to better understand the code they needed to implement their deisgn. 
@@ -659,6 +890,7 @@ For code that was copied and edited, the developer made sure to reference this w
 - [JSfiddle](https://jsfiddle.net/ "Link to JSfiddle page")
 
 [Back to top ⇧](#table-of-contents)
+***
 
 ## Acknowledgements
 The developer would like to thank the following:
