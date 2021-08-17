@@ -495,6 +495,9 @@ ol.breadcrumb {
 .modal-body {
     font-size: 1.1rem;
 }
+.modal-btn {
+    font-size: 1.5rem;
+}
 
 /* --- Shopping Bag Pages --- */
 .bag-content {
@@ -814,7 +817,7 @@ ol.breadcrumb {
 
 /* Contact */
 .contact-text {
-    font-size: .8rem;
+    font-size: 1rem;
 }
 .contact-text.phone-email {
     /* Specify phone and email div */
@@ -937,6 +940,9 @@ ol.breadcrumb {
     .detail-price {
         text-align: left;
     }
+    .product-list {
+        width: 50%;
+    }
 
     /* -- Shopping Bag Pages -- */
     .bag-items {
@@ -1051,7 +1057,7 @@ ol.breadcrumb {
         padding: 10px;
     }
     .contact-text {
-        font-size: 1rem;
+        font-size: .9rem;
         padding-bottom: 5px;
     }
     .contact-text table {
@@ -1213,7 +1219,7 @@ ol.breadcrumb {
         padding: 10px;
     }
     .contact-text {
-        font-size: 1rem;
+        font-size: .9rem;
         padding-bottom: 5px;
     }
     .contact-text h4 {
@@ -1234,6 +1240,11 @@ ol.breadcrumb {
     .search-text {
         margin: 30px 0;
         font-size: 1.3rem;
+    }
+
+    /* -- Individual Product Pages -- */
+    .product-list {
+        width: 50%;
     }
 }
 
@@ -1353,6 +1364,9 @@ ol.breadcrumb {
     .detail-price {
         text-align: left;
         font-size: 1.6rem;
+    }
+    .product-list {
+        width: 50%;
     }
 
     /* -- Shopping Bag Pages -- */

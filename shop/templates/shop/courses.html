@@ -24,17 +24,20 @@
             <div class="col-12 page-title">
                 <!-- Conditional Page Titles
                     ref: https://tinyurl.com/jfktjads-->
-                {% if request.get_full_path == '/shop/courses?category=swimming_jnr' %}
-                    <h3>0 - 4 years</h3>
-                {% elif request.get_full_path == '/shop/courses?category=swimming_snr' %}
-                    <h3>5 - 12 years</h3>
-                {% elif request.get_full_path == '/shop/courses?category=lifesaving' %}
-                    <h3>8 - 16 years</h3>
-                {% elif request.get_full_path == '/shop/courses?category=lifeguarding' %}
-                    <h3>16+ years</h3>
-                {% else %}
-                    <h3>All Courses</h3>
-                {% endif %}
+                <h3>
+                    {% if request.get_full_path == '/shop/courses?category=swimming_jnr' %}
+                        0 - 4 years
+                    {% elif request.get_full_path == '/shop/courses?category=swimming_snr' %}
+                        5 - 12 years
+                    {% elif request.get_full_path == '/shop/courses?category=lifesaving' %}
+                        8 - 16 years
+                    {% elif request.get_full_path == '/shop/courses?category=lifeguarding' %}
+                        16+ years
+                    {% else %}
+                        All Courses
+                    {% endif %}
+                    <a href="#" class="modal-btn" title="Course Information" data-toggle="modal" data-target="#infoModal"><i class="fas fa-info-circle"></i></a>
+                </h3>
                 <hr class="section-divider">
             </div>
             <div class="col-12 d-flex d-lg-none category-dropdown">
@@ -95,6 +98,28 @@
                     </div>
                 </div>
             {% endfor %}
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="courseInformationModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="courseInformationModal">Course Info</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="icon"><i class="modal-icon far fa-times-circle"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="mx-2 my-3">Classes can be purchased in blocks of 12 credits for Lifeguarding and 10 credits for all other classes.</p>
+                <p class="mx-2 my-3">Swimmers/Lifesavers are guaranteed a place in their respective course on a continuous basis, once a new block of credits are purchased prior to the end of the last class of their current block.</p>
+                <p class="mx-2 my-3">For new swimmers/lifesavers, place availabilty is specifed for each class on the course page, and is updated on a regular basis. If you do not see an availabilty, check back at a later date.</p>
+                <p class="mx-2 my-3">For further information, please see our <strong><a class="pages-link" href="{% url 'view_faqs' %}">FAQs</a></strong> page, or get in contact with our <strong><a class="pages-link" href="{% url 'view_contact' %}">Club Accounts</a></strong> team.</p>
+                <hr class="sm-divider">
+                <p class="mx-2 my-3 text-center">Happy Swimming!</p>
+            </div>
+        </div>
         </div>
     </div>
 {% endblock %}
