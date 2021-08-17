@@ -5,13 +5,13 @@
 {% block head_title %}{% trans "Account Settings" %}{% endblock %}
 
 {% block inner_content %}
-<div class="row extra-p-btm account-text">
+<div class="row login-content">
     <div class="col-12">
+        <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
+    </div>
+    <div class="col-sm-12 col-md-6 account-text lg-border">
         <div class="row">
             {% if user.emailaddress_set.all %}
-                <div class="col-12">
-                    <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
-                </div>
                 <div class="col-12">
                     <form action="{% url 'account_email' %}" class="email_list" method="post">
                         {% csrf_token %}
@@ -33,7 +33,7 @@
                                 </div>
                             {% endfor %}
                 
-                            <div class="buttonHolder profile-btn-left">
+                            <div class="buttonHolder ">
                                 <button class="profile-btns w-100 secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
                                 <button class="profile-btns w-100 secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
                                 <button class="profile-btns w-100 primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
@@ -48,25 +48,24 @@
             {% endif %}
         </div>
     </div>
-    <hr class="account-hr">
-    <div class="col-12">
+    <hr class="account-hr d-sm-block d-md-none">
+    <div class="col-sm-12 col-md-6 account-text">
         <h5 class="pb-2 text-left">{% trans "Add E-mail Address" %}</h5>
         <form method="post" action="{% url 'account_email' %}" class="add_email">
             <div class="row">
-                <div class="col-12 account-form">
+                <div class="col-12">
                     {% csrf_token %}
                     {{ form|crispy }}
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 profile-btn-left">
+                <div class="col-12">
                     <button class="w-100 profile-btns" name="action_add" type="submit">{% trans "Add E-mail" %}</button>
                 </div>
             </div>
         </form>
     </div>
-
-    </div>
+</div>
 
 
 
