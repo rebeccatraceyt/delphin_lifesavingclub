@@ -720,6 +720,18 @@ ol.breadcrumb {
 .profile-btns:focus {
     color: var(--yellow);
 }
+.table-btn a {
+    background-color: var(--black);
+    border-radius: 2px;
+    padding: 3px 10px;
+    margin: 2px auto;
+    color: var(--white);
+    transition: all 0.5s ease 0s;
+}
+.table-btn a:hover,
+.table-btn a:focus {
+    color: var(--yellow);
+}
 
 /* --- AllAuth Pages --- */
 .account-text h4{
@@ -859,7 +871,6 @@ ol.breadcrumb {
     font-size: .8rem;
     font-weight: 700;
 }
-
 
 /* --- Media Queries --- */
 

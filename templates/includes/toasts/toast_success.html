@@ -14,7 +14,7 @@
             </div>
         </div>
         {% if grand_total and not just_message %}
-            <p class="toast-count"><span>Your Bag</span> ({{ product_count }} items)</p>
+            <p class="toast-count"><span>Your Bag</span> ({{ product_count }} {% if product_count == 1 %}item{% else %}items{% endif %})</p>
             <div class="bag-snippet">
                 {% for bag_item in bag_items %}
                     <div class="row">
