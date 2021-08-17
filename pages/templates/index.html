@@ -29,7 +29,9 @@
                         <div class="col-12 col-md-6 col-lg-3 home-link d-flex justify-content-center">
                             <div class="row">
                                 <div class="col-12 home-img">
-                                    <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
+                                    <a href="{% url 'apparel' %}?category=tshirts,jacket_hoodies">
+                                        <img src="{% static 'img/home-apparel.png' %}" alt="Delphin Jacket">
+                                    </a>
                                 </div>
                                 <div class="col-12 home-btn">
                                     <a class="btn-shadow" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies">Shop Apparel</a>
@@ -39,7 +41,9 @@
                         <div class="col-12 col-md-6 col-lg-3 home-link d-flex justify-content-center">
                             <div class="row">
                                 <div class="col-12 home-img">
-                                    <img src="{% static 'img/home-swim.png' %}" alt="Delphin Swimwear">
+                                    <a href="{% url 'apparel' %}?category=swimwear">
+                                        <img src="{% static 'img/home-swim.png' %}" alt="Delphin Swimwear">
+                                    </a>
                                 </div>
                                 <div class="col-12 home-btn">
                                     <a class="btn-shadow" href="{% url 'apparel' %}?category=swimwear">Shop Swimwear</a>
@@ -49,7 +53,9 @@
                         <div class="col-12 col-md-6 col-lg-3 home-link d-flex justify-content-center">
                             <div class="row">
                                 <div class="col-12 home-img">
-                                    <img src="{% static 'img/home-acc.png' %}" alt="Delphin Accessories">
+                                    <a href="{% url 'apparel' %}?category=accessories,swim_accessories">
+                                        <img src="{% static 'img/home-acc.png' %}" alt="Delphin Accessories">
+                                    </a>
                                 </div>
                                 <div class="col-12 home-btn">
                                     <a class="btn-shadow" href="{% url 'apparel' %}?category=accessories,swim_accessories">Shop Accessories</a>
@@ -59,7 +65,9 @@
                         <div class="col-12 col-md-6 col-lg-3 home-link d-flex justify-content-center">
                             <div class="row">
                                 <div class="col-12 home-img">
-                                    <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
+                                    <a href="{% url 'apparel' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">
+                                        <img src="{% static 'img/home-courses.png' %}" alt="Delphin Course Logo">
+                                    </a>
                                 </div>
                                 <div class="col-12 home-btn">
                                     <a class="btn-shadow" href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding">Shop Courses</a>
