@@ -134,6 +134,7 @@
 {% block postloadjs %}
 {{ block.super }}
     <script>
+        // ref: https://tinyurl.com/25f4rpa4
         $('select').change(function(){
             $('.qty_input').attr('max', $(this).find(":selected").data('stock'));
         });

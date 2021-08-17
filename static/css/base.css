@@ -65,7 +65,9 @@ a, a:hover, a:focus, a:active {
 .dropdown-item.active,
 .dropdown-item:focus,
 .active i,
-.active a {
+.active a,
+span.active,
+.dropdown-toggle.active::after {
     color: var(--red);
     background-color: var(--white);
 }

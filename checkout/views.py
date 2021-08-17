@@ -133,12 +133,12 @@ def order_details(request):
                         # get selected option (size or class)
                         product_options = ProductOption.objects.get(
                             product_option=select)
-                        
+
                         # create relationship between option and product
                         product_select = ProductSelect.objects.filter(
                             product_select=product_options,
                             product=product)
-                        
+
                         # assign it to the order
                         product_selected = product_select[0]
 
