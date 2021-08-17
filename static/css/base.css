@@ -454,7 +454,6 @@ ol.breadcrumb {
 }
 .detail-return,
 .detail-add {
-    max-width: 85%;
     text-align: center;
     margin: auto;
     padding: 5px;
@@ -1327,10 +1326,6 @@ ol.breadcrumb {
     .detail-price {
         text-align: left;
         font-size: 1.6rem;
-    }
-    .detail-return,
-    .detail-add input {
-        max-width: 80%;
     }
 
     /* -- Shopping Bag Pages -- */
