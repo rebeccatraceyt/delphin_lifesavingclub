@@ -11,7 +11,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
-from shop.models import Product
+from shop.models import Product, ProductSelect, ProductOption
 from shopping_bag.contexts import bag_content
 
 from users.models import UserProfile
@@ -129,13 +129,30 @@ def order_details(request):
                     product = Product.objects.get(id=item_id)
                     for select, quantity in item_data[
                                 'items_by_select'].items():
+
+                        # get selected option (size or class)
+                        product_options = ProductOption.objects.get(
+                            product_option=select)
+                        
+                        # create relationship between option and product
+                        product_select = ProductSelect.objects.filter(
+                            product_select=product_options,
+                            product=product)
+                        
+                        # assign it to the order
+                        product_selected = product_select[0]
+
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
                             quantity=quantity,
-                            product_select=select,
+                            product_select=product_selected,
                         )
                         order_line_item.save()
+
+                        product_selected.stock_count -= order_line_item.quantity
+                        product_selected.save()
+
                 except Product.DoesNotExist:
                     # if product is not found
                     messages.error(request, (

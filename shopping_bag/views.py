@@ -26,9 +26,7 @@ def add_to_bag(request, item_id):
     redirect_url = request.POST.get('redirect_url')
 
     # get products
-    select = None
-    if 'product_select' in request.POST:
-        select = request.POST['product_select']
+    select = request.POST['product_select']
 
     current_bag = request.session.get('current_bag', {})
 
@@ -66,9 +64,7 @@ def update_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
 
     # get products
-    select = None
-    if 'product_select' in request.POST:
-        select = request.POST['product_select']
+    select = request.POST['product_select']
 
     current_bag = request.session.get('current_bag', {})
 

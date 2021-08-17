@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404
 from decimal import Decimal
 from django.conf import settings
-from shop.models import Product
+from shop.models import Product, ProductOption, ProductSelect
 
 
 def bag_content(request):
@@ -23,6 +23,12 @@ def bag_content(request):
         product = get_object_or_404(Product, pk=item_id)
 
         for select, quantity in item_data['items_by_select'].items():
+            product_options = ProductOption.objects.get(
+                product_option=select)
+            product_select = ProductSelect.objects.filter(
+                product_select=product_options,
+                product=product)
+            product_selected = product_select[0]
 
             total += quantity * product.price
             product_count += quantity
@@ -30,7 +36,7 @@ def bag_content(request):
                 'item_id': item_id,
                 'quantity': quantity,
                 'product': product,
-                'product_select': select,
+                'product_select': product_selected,
             })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:

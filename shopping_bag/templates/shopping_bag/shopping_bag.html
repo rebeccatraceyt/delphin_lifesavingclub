@@ -78,24 +78,24 @@
                                                     <div class="input-group bag-qty qty-btns">
                                                         <div class="input-group-prepend">
                                                             <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                                                                data-item_id="{{ bag_item.product_select }}" id="decrement-qty_{{ bag_item.product_select }}">
+                                                                data-item_id="{{ bag_item.product_select.id }}" id="decrement-qty_{{ bag_item.product_select.id }}">
                                                                 <span>
                                                                     <i class="fas fa-minus fa-sm"></i>
                                                                 </span>
                                                             </button>
                                                         </div>
-                                                        <input id="id_qty_{{ bag_item.product_select }}" class="form-control form-control-sm qty_input" type="number"
-                                                            name="quantity" value="{{ bag_item.quantity }}" min="1" max="{% if bag_item.product.is_course %}12{% else %}30{% endif %}"
-                                                            data-item_id="{{ bag_item.product_select }}">
+                                                        <input id="id_qty_{{ bag_item.product_select.id }}" class="form-control form-control-sm qty_input" type="number"
+                                                            name="quantity" value="{{ bag_item.quantity }}" min="1" max="{{ bag_item.product_select.stock_count }}"
+                                                            data-item_id="{{ bag_item.product_select.id }}">
                                                         <div class="input-group-append">
                                                             <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                                data-item_id="{{ bag_item.product_select }}" id="increment-qty_{{ bag_item.product_select }}">
+                                                                data-item_id="{{ bag_item.product_select.id }}" id="increment-qty_{{ bag_item.product_select.id }}">
                                                                 <span>
                                                                     <i class="fas fa-plus fa-sm"></i>
                                                                 </span>
                                                             </button>
                                                         </div>
-                                                        <input type="hidden" name="product_select" value="{{ bag_item.product_select }}">
+                                                        <input type="hidden" name="product_select.id" value="{{ bag_item.product_select.id }}">
                                                     </div>
                                                 </div>
                                             </form>

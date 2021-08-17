@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
+from .models import Product, Category, ProductSelect
 from django.core.paginator import Paginator
 
 
@@ -67,9 +67,15 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product_options = product.product_select.all()
 
+    product_select = ProductSelect.objects.filter(
+        product_select=product_options,
+        product=product)
+    product_selected = product_select
+
     context = {
         'product': product,
         'product_options': product_options,
+        'product_selected': product_selected,
     }
 
     return render(request, 'shop/product.html', context)
