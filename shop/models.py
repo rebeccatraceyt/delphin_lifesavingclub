@@ -60,6 +60,8 @@ class Product(models.Model):
                                             blank=True)
     is_course = models.BooleanField(default=False, null=True, blank=True)
     is_apparel = models.BooleanField(default=False, null=True, blank=True)
+    course_info = models.TextField(default='test', null=True, blank=True)
+    course_age = models.CharField(max_length=255, default='10 years')
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):

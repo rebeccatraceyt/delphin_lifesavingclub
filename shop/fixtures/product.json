@@ -451,6 +451,8 @@
          "category":6,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"6 to 18 months",
+         "course_info":"Our Adult & Baby sessions familiarize babies with the aquatic environment. The adult will be guided how to support and engage with their child safely in the water. The class focuses on fun, using toys and songs introducing floating, kicking, and other fundamental aquatic skills supported by parent/guardian in the water.",
          "image":"swim-babies.png"
       }
    },
@@ -464,6 +466,8 @@
          "category":6,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"19 to 36 months",
+         "course_info":"Our Adult & Toddler class has been designed to develop your child’s independence in the water. The class focuses on developing kicking, paddling, floating and aquatic breathing. The aim of this class is to gradually introduce independent swimming with and without aquatic aids.",
          "image":"swim-toddlers.png"
       }
    },
@@ -477,6 +481,8 @@
          "category":6,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"3+ years",
+         "course_info":"The first step for the independent swimmer developing confidence been on their own in the water. Moving short distances using sculling action with hands and leg kick and introducing submersion and jumping into the water.",
          "image":"swim-splash.png"
       }
    },
@@ -490,6 +496,8 @@
          "category":7,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"5+ years",
+         "course_info":"After mastering the foundation skills in our Splash classes swimmers are now at the starting point for developing the essential technique for each stroke and other aquatic skills, helping them along their swimming pathway. The class focuses on good body position on front and back, aquatic breathing and submersion while allowing swimmers to explore and discover movement through the water.",
          "image":"swim-lvl1.png"
       }
    },
@@ -503,6 +511,8 @@
          "category":7,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"5+ years",
+         "course_info":"This level focuses on moving through the water with a more refined and productive streamline body position. When swimmers progress from this level they will be able to maintain a good streamline body position while using the appropriate leg kick for each stroke.",
          "image":"swim-lvl2.png"
       }
    },
@@ -511,11 +521,13 @@
       "pk":40,
       "fields":{
          "name":"Level 3",
-         "description":"Age 6 upwards - Developing propulsion from leg kick while introducing arm pull",
+         "description":"Age 5 upwards - Developing propulsion from leg kick while introducing arm pull",
          "price":"90.00",
          "category":7,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"5+ years",
+         "course_info":"This level focuses on moving through the water with an effective leg action while using the appropriate arm action for each stroke. Building on previously learnt skills for body position and streamlining this is the start of the full stroke. With repetition muscle memory will occur allowing the swimmer to master leg kick while introducing arm action for each stroke.",
          "image":"swim-lvl3.png"
       }
    },
@@ -529,6 +541,8 @@
          "category":7,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"6+ years",
+         "course_info":"This level combines all previously learnt skills to develop the four competitive strokes; Frontcrawl, Backstroke, Breaststroke and Butterfly. Developing push and glide skills with transition into stroke starting with leg kick the swimmer focuses on developing the propulsive arm action for each stroke.",
          "image":"swim-lvl4.png"
       }
    },
@@ -542,6 +556,8 @@
          "category":7,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"7+ years",
+         "course_info":"Swimming lengths in deep water, building stamina and developing the last stage of the stroke – timing. This class focuses on discovering how we move in water, what action makes us move forward. Developing the most valuable skill in swimming, how to feel the water to create the propulsive phase for arms and leg action.",
          "image":"swim-lvl5.png"
       }
    },
@@ -555,6 +571,8 @@
          "category":7,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"7+ years",
+         "course_info":"This level focuses on developing endurance. First step in learning how to train, building the stroke while combining other aquatic skills such as starts and turns with the introduction to the pace clock and understanding stroke length to increase speed while reducing effort.",
          "image":"swim-lvl6.png"
       }
    },
@@ -568,6 +586,8 @@
          "category":7,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"8+ years",
+         "course_info":"This level focuses on skill and technique development building stamina and endurance covering more distance in longer sessions. Swimmers will gain knowledge in aspects of a coaching session from reading the pace clock to understanding how sets work breaking the session into – warmup, main set, contrasting set and cooldown.",
          "image":"swim-lvl7.png"
       }
    },
@@ -581,6 +601,8 @@
          "category":7,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"8+ years",
+         "course_info":"Progressing from the introduction to set training to completing sets designed to develop stroke technique and increase speed. This level focuses on introducing the swimmer to other aquatic sports including water polo and survival skills.",
          "image":"swim-lvl8.png"
       }
    },
@@ -594,6 +616,8 @@
          "category":8,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"8+ years",
+         "course_info":"RLSS UK’s Rookie Lifeguard programme is taught using colourful materials, and fun, varied lifesaving and rescue activities to give children the skills they need to be confident in the pool or the sea and enjoy water safely, whether in shallow or deeper water.",
          "image":"swim-rookie.png"
       }
    },
@@ -607,6 +631,8 @@
          "category":8,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"12+ years",
+         "course_info":"The Survive & Save programme is the RLSS UK lifesaving award scheme for anyone aged 12 years and over. The awards are challenging but fun to complete and are arranged into Bronze, Silver and Gold levels to ensure that participants get the opportunity to develop their lifesaving skills as they progress through the awards",
          "image":"swim-sands.png"
       }
    },
@@ -620,6 +646,8 @@
          "category":9,
          "is_course":true,
          "is_apparel":false,
+         "course_age":"16+ years",
+         "course_info":"The NPLQ is the most awarded lifeguard qualification in the UK and Ireland and is also internationally recognised. More than 40,000 pool lifeguards qualify with the RLSS UK every year, and there are currently more than 80,000 pool lifeguards qualified in the NPLQ – 95% of all UK pool lifeguard",
          "image":"swim-lifeguard.png"
       }
    }

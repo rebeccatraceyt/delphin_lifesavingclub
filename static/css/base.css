@@ -479,6 +479,22 @@ ol.breadcrumb {
 .detail-add input:focus {
     color: var(--yellow);
 }
+/* Course Info Modal */
+.modal-content {
+    background-color: var(--white);
+    border: 2px solid var(--black);
+}
+.modal-header {
+    background-color: var(--yellow-opaque);
+    border-bottom: 1px solid var(--black);
+}
+.modal-title {
+    font-family: var(--title-font);
+    font-size: 2rem;
+}
+.modal-body {
+    font-size: 1.1rem;
+}
 
 /* --- Shopping Bag Pages --- */
 .bag-content {
