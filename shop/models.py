@@ -74,7 +74,9 @@ class ProductSelect(models.Model):
     Establishes relationship between Product and Product Options.
     Counts stock
     """
-    product_select = models.ForeignKey(ProductOption, on_delete=models.CASCADE)
+    product_select = models.ForeignKey(ProductOption,
+                                       on_delete=models.CASCADE,
+                                       related_name='product_selected')
     product = models.ForeignKey(Product,
                                 on_delete=models.CASCADE,
                                 related_name='product_options')
