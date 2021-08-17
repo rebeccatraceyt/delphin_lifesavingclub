@@ -1,4 +1,4 @@
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello {{ user_display|title }}!
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello {{ user_display }}!
 
 Your account is almost ready to go, click the link to verify your email to complete your registration.
 
