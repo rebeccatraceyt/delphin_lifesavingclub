@@ -280,8 +280,8 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
 
 ### Data Models
 
-<div align='center'>
-<a href="https://ibb.co/Cw5CtfX"><img src="https://i.ibb.co/6yR9Zkp/delphin-models.png" alt="Delphin Data Models" width=700></a>
+<div style="margin:auto; width:90%; border:2px solid black; background-color:#E9F5F5">
+<img src="markdown-files/readme-files/models.png" alt="Lato Typography" />
 </div>
 
 *model diagram created using [DrawSQL](https://drawsql.app/ "DrawSQL page")*
@@ -303,6 +303,7 @@ A full list of the data models used on the site are below:
 | Country | default_country | CountryField | blank_label='Country',<br /> null=True,<br /> blank=True|
 
 #### Users App
+A custom User model was created using [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/index.html "Link to Allauth Docs") to ensure secure functionalty of user registration and authentication.
 
 ##### `UserProfile` Model
 | Name      | Database Key  | Field Type | Type Validation |
@@ -341,7 +342,11 @@ A full list of the data models used on the site are below:
 | Product Select | product_select | ManyToManyField(ProductOption) | through='ProductSelect',<br /> related_name='product_options',<br /> blank=True |
 | Course Check | is_course | Boolean | default=False,<br /> null=True,<br /> blank=True |
 | Apparel Check | is_apparel | Boolean | default=False,<br /> null=True,<br /> blank=True |
+| Course Information | course_info| TestField | default='Test',<br /> null=True,<br /> blank=True |
+| Course Age Range | course_age | CharField | max_length=255,<br /> default='10 years' |
 | Image | image | Imagefield | null=True,<br /> blank=True |
+
+> (***`course_info` and `course_age` were used to create unique modals for each course page, providing users with further information on each course, avoidin page over-crowding or unecessary linking to other pages.***)
 
 
 ##### `ProductSelect` Model
