@@ -77,7 +77,7 @@
                         <div class="col-12 py-sm-1">
                             <select class="form-control custom-select product-list" name="product_select" id="product_select">
                                 {% for options in product.product_options.all %}
-                                    <option id="id_select" value="{{ options.product_select }}" data-stock="{{ options.stock_count }}">{{ options.product_select.option_name }} {% if product.is_apparel %}({% if options.stock_count > 0 %}{{ options.stock_count }}{% else %}None{% endif %} in stock){% else %}({% if options.stock_count > 0 %}{{ options.stock_count }}{% else %}No{% endif %}{% if options.stock_count == 1%} Place{% else %} Places{% endif %} Available){% endif %}</option>
+                                    <option id="id_select" value="{{ options.product_select }}" data-stock="{{ options.stock_count }}" selected>{{ options.product_select.option_name }} {% if product.is_apparel %}({% if options.stock_count > 0 %}{{ options.stock_count }}{% else %}None{% endif %} in stock){% else %}({% if options.stock_count > 0 %}{{ options.stock_count }}{% else %}No{% endif %}{% if options.stock_count == 1%} Place{% else %} Places{% endif %} Available){% endif %}</option>
                                 {% endfor %}
                             </select>
                         </div>
