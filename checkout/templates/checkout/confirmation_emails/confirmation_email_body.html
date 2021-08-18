@@ -17,13 +17,13 @@
         <p><strong>Order Number:</strong> {{ order.order_number }}</p>
         <p><strong>Order Date:</strong> {{ order.date }}</p>
 
-        <p><strong>Items Ordered:</strong></p>
+        <p><strong>Order:</strong></p>
         <table>
             <thead>
                 <tr>
                     <th>Item</th>
+                    <th>QTY</th>
                     <th>Price</th>
-                    <th>Quantity</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,10 +33,10 @@
                             {{ item.product.name }} ({{ item.product_select }})
                         </td>
                         <td>
-                            €{{ item.product.price }}
+                            {{ item.quantity }} x 
                         </td>
                         <td>
-                            {{ item.quantity }}
+                            €{{ item.product.price }}
                         </td>
                     </tr>
                 {% endfor %}

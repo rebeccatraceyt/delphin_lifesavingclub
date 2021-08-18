@@ -828,9 +828,7 @@ ol.breadcrumb {
 
 /* Contact */
 .contact-text {
-    font-size: 1rem;
-}
-.contact-text.phone-email {
+    font-size: .9rem;
     margin: auto;
 }
 .contact-text h4 {
