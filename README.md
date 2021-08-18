@@ -600,7 +600,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 - **QR Codes**
      - Another feature that was looked into was providing unique QR codes with every class purchase. 
      - The club is currently looking into implementing this into their registration process, to avoid paperwork methods, and are only in the design stages. 
-     - The project time constraint was the deciding factor as the devloper needed to finish the design of the process and learn how to implement it in order to use it.
+     - The project time constraint was the deciding factor as the devloper needed to finish the design of the scanning process and learn how to implement it in order to use it.
 
 - **Swimmer Profiles**
      - As the club moves away from paperwork methods, integrating into a more technologically minded system (for GDPR reasons), we would want to expand this webshop into providing a 'Swimmer Profile', allowing swimmers to log in to see their progress week-by-week.
@@ -632,14 +632,14 @@ Each page of the websire features a consistently responsive and intuitive naviat
      - Django was used as the web framework for the application.
 - [AWS](https://aws.amazon.com/ "Link to AWS Homepage")
      - The Amazon Web Service **s3 Bucket** was used to store static and media files in the production database.
+- [Stripe](https://stripe.com/en-ie "Link to Stripe Homepage")
+     - Stripe was used to handle user payments on the webshop.
 - [Figma](https://www.figma.com/ "Link to Figma homepage")
      - Figma was used to create the wireframes during the design phase of the project.
 - [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
      - Am I Responsive was used in order to validate the responsiveness of the design throughout the process, and to generate mockup imagery to be used.
 - [Procreate](https://procreate.art/ "Link to ProCreate homepage")
      - Procreate was used to create and edit images as well as using the colour picker tool to ensure consistency throughout.
-- [Imgbb](https://imgbb.com/ "Link to Imgbb site") 
-     - ImgBB was used to externally host images used.
 - [Font Awesome](https://fontawesome.com/ "Link to Font Awesome site")
      - Font Awesome was used in conjunction with Iconify for icons used throughout the website.
 
@@ -663,11 +663,16 @@ Each page of the websire features a consistently responsive and intuitive naviat
 - [Heroku Postgres](https://www.heroku.com/postgres "Link to Heroku Postgres site")
      - Heroku Postgres was used for production database, provided by Heroku.
 
-### Packages
+### Main Packages
+- [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/index.html "Link to allauth docs")
+     - AllAuth was the primary method for user authentication, registration and account management.
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to Crispy Forms Doc")
-     - Crispy Forms was used to style Django Forms
+     - Crispy Forms was used to style Django Forms.
 - [Pillow](https://pillow.readthedocs.io/en/stable/ "Link to Pillow Doc")
-     - Pillow was used to aid in image processing on the database
+     - Pillow was used to aid in image processing on the database.
+- [Django Countries](https://pypi.org/project/django-countries/ "Link to Django Countries doc")
+     - Django countries was used to ensure correct country codes were used in user forms.
+
 
 [Back to top ⇧](#table-of-contents)
 ***
