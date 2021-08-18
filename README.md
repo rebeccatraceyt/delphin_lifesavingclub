@@ -418,13 +418,125 @@ A custom User model was created using [Django AllAuth](https://django-allauth.re
 ## Features
 
 ### Design Features
+Each page of the websire features a consistently responsive and intuitive naviational system:
+
+#### Navbar
+- A **navbar** is conventionally placed on the top of each page, excluding the checkout pages, containing easily identifiable and accessible navigational links with the club logo that redirects users to the home page.
+- The navbar utilises **dropdown** menus to provide a clean design, with each link appropriately categorised.
+- An **`active`** class provides feedback to users on their current location, through distinguishable differences on active links and their respective category title.
+- If the user is in session, an additional dropdown menu provides users with account functionality.
+- On mobile and tablet devices, the navigation menu collapses into a conventionally positioned **hamburger** menu, with all navigation links inside.
+- The shopping bag is centrally placed on mobile and tablet devices for quick and convenient access to the user's bag.
+- **Toasts** are displayed under the navbar, providing users with real-time feedback on their actions.
+
+#### Footer
+- The **footer** contains a convenient quick-links area for users to navigate to their preferred location with east
+- The links are divided into appropriate categories, allowing users to see the variety of pages the website has. Notably, they also provide a means to categories the Apparel and Courses available, allowing users to find their desired products quicker.
+- These links are displayed in three columns on larger devices, two columns and medium and single columns on small.
+- The footer also provides the Club **social links** and **copyright** information.
+
+#### Page Layout
+
+- A banner title is provided on each page to help users to quickly determine their location
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/ "Link to Jinja docs") was used to extend the base.html page, allowing for the utmost consistency and preservation of functionality across all pages. The extended block elements created the same basic layout for each page:
+
+```
+<nav>
+     <!-- Navigational content -->
+</nav>
+
+{% block messages %}
+     <!-- Appropriate toast messages -->
+{% endblock %}
+
+{% block content %}
+     <!-- Content unique to each page -->
+{% endblock %}
+
+<footer>
+     <!-- Footer content -->
+</footer>
+```
 
 ### Existing Features
 
-**[Home Page]( "Link to Home page")**
+**[Home Page](https://delphin-lifesavingclub.herokuapp.com/ "Link to Home page")**
 | Feature      | Description  |
-|--------------|--------------|
-|     |  |
+|:--------------:|--------------|
+|  Hero Image  | The hero image depicts a pool, clearly defining the website's affiliation and purpose for users (for club interaction) |
+| Club Statement and Logo | The club statement and logo are overlayed on the hero image, introducing the club. |
+| Duel Links | Links are displayed to provide users quick-link access to product categories. Both images and buttons redirect users to their respective categories. |
+
+**[All Products Page](https://delphin-lifesavingclub.herokuapp.com/shop/ "Link to All Products page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Breadcrumbs | Page breadcrumbs allow users to backtrack to the **Home** page |
+| Category Filters | Category filters are in place to allow users to refine their search. On mobile and tablet devices this is in a dropdown menu, on larger devices buttons are used. |
+| Product Links | All products are displayed on this page, allowing users to select their preference. The product cards provide users with a link from the product image and name to the product details page. |
+| Pagination | Pagination displays 12 products per page, avoiding unneccary scrolling. |
+
+**[Apparel Page](https://delphin-lifesavingclub.herokuapp.com/shop/apparel?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories "Link to Apparel page") & [Courses Page](https://delphin-lifesavingclub.herokuapp.com/shop/apparel?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding "Link to Courses page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Breadcrumbs | Allows users to return to the **All Products** or **Home** page. |
+| Sub-Category Filters | Allows users to refine their search to a particular product type (e.g. Apparel type or Course age range) |
+| Product Links | The product cards provide users with a link from the product image and name to the product details page. |
+| Course Information Modal | Specific to the Courses page, an information modal is displayed on click (represented by an **i** icon), providing information on purchasing a course.|
+
+**[Individual Product Page](https://delphin-lifesavingclub.herokuapp.com/shop/product/1 "Link to Example Product page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Breadcrumbs | Allows users to return the category page for that product (Apparel or Courses) or **Home** page. |
+| Dropdown Select Menu | Allows users to refine their product selection (sizes of Apparel and times for Courses). Information is provided for stock availabilty for all product selections.|
+|Quantity | An input with appending and prepending buttons allows users to alter their quantity selection. This feature is dynamically designed to become inactive if the quantity count is 1 or at the product's stock availabilty. |
+| Back Button | Returns users to their previous page, using JavaScript functionality.|
+| Add to Bag button | Allows users to add their selection to their shopping bag |
+
+**[Login Page](https://8000-blue-kiwi-tqdak6zi.ws-eu15.gitpod.io/accounts/login/ "Link to Login page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Input fields | Allows users to enter their username, or email, and password |
+| Radio button | Allows users to chose to remember their login details for convenience **(allauth functionality)** |
+| Reset Password link | Redirecting users to reset their password **(allauth functionality)** |
+| Register button | call-to-action button directing users to signup page |
+
+**[Register Page](https://8000-blue-kiwi-tqdak6zi.ws-eu15.gitpod.io/accounts/signup/ "Link to Register page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Input fields |  Allows users to enter their information to register an account |
+| Signup button | Allows users to create their account **(allauth functionality)**|
+
+**Shopping Bag Page (this page requires user authentication)**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Breadcrumbs | Page breadcrumbs allow users to backtrack to the **Home** page |
+| Duel Links | Links are displayed when user's **shopping bag is empty** to provide quick-link access to product categories. Both images and buttons redirect users to their respective categories. |
+| Keep Shopping button | Link redirects users to the **All Products** page. Available when at all stages (when bag is both empty and containing items.|
+| Remove button | Placed at the top right of each product, allowing users to quickly remove the product from the shopping bag. |
+|Quantity | An input with appending and prepending buttons allows users to alter their quantity selection. This feature is dynamically designed to become inactive if the quantity count is 1 or at the product's stock availabilty. |
+| Update button | Updates the bag with the users inputed quantity. |
+| Checkout button | Directs users to the first page of the checkout process.|
+
+**Order Review Page (this page requires user authentication)**
+| Feature      | Description  |
+|:--------------:|--------------|
+| No navbar or footer | This conventionally allows users to focus on the checkout process without distractions. |
+| Logo Link | Logo at the top of the page redirects users to the shopping bag for convienience |
+| Heads-up display | This shows the users the steps in the checkout process, giving them feedback on where they are and where they are going. |
+| Return buttton | Redirects users back to their shopping bag for editing. |
+| Checkout button | Directs users to the next page of the checkout process.| 
+
+**Order Details Page (this page requires user authentication)**
+| Feature      | Description  |
+|:--------------:|--------------|
+| No navbar or footer | This conventionally allows users to focus on the checkout process without distractions. |
+| Heads-up display | This shows the users the steps in the checkout process, giving them feedback on where they are and where they are going. Link allows them to return to the previous page |
+| Input fields | Allowing users enter their delivery information |
+| Checkbox button | Allowing users to chose to save their information to their profile |
+| Order Summary | Providing clear feedback on bag contents. On large screens, this is displayed on the right side of the screen. On mobile and tablet devices, this is displayed in a collapsable menu |
+| Edit buttton | Redirects users back to their shopping bag for editing. |
+| Complete Order button | Completes the checkout process.| 
+
 
 
 ### Features to Implement in the future
@@ -884,7 +996,7 @@ For further information on creating a bucket, head to the [AWS Instructions](htt
      ```
 
 <div align='center'>
-<h2>Congratulations!</h2>
+<h2><span style='font-size:20px;'>&#127882;</span> Congratulations! <span style='font-size:20px;'>&#127882;</span> </h2>
 <h4>Your project is ready to use. Have fun!</h4>
 </div>
 
