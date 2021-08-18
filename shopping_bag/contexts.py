@@ -23,7 +23,7 @@ def bag_content(request):
         product = get_object_or_404(Product, pk=item_id)
 
         for select, quantity in item_data['items_by_select'].items():
-            
+
             product_options = ProductOption.objects.get(
                 product_option=select)
             product_select = ProductSelect.objects.filter(

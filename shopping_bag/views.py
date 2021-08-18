@@ -67,8 +67,8 @@ def update_bag(request, item_id):
 
     # get products
     select = None
-    if 'product_select' in request.POST:
-        select = request.POST['product_select']
+    if 'product_select_id' in request.POST:
+        select = request.POST['product_select_id']
 
     current_bag = request.session.get('current_bag', {})
 
