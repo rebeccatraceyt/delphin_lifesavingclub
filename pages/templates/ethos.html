@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container page-margins">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-12 page-title">
+                    <h3>Club Ethos</h3>
+                <hr class="section-divider">
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="row ethos-content">
+            <p>
+                Delphin Lifesaving Club is a multi-generational Swimming and Lifesaving Club, with over thirty years of service in Swimming and Lifesaving in Dublin.
+            </p>
+            <p>
+                Our ethos is equality and respect within a fun learning envrionment.
+            </p>
+            <ul>
+                <li>
+                    Our instructors are fully qualified through the National Governing Body (NGB) for Swimming in Ireland and the Irish Branch of the Royal Lifesaving Society.
+                </li>
+                <li>
+                    We deliver our classes in a safe and child-focused envrionment, teaching one of the most important life skills: How to stay safe around all waterways.
+                </li>
+                <li>
+                    We provide a complete aquatic pathway, with swimmers progressing from learners to teachers and lifesavers progressing from basic first-aid training to fully-qualified Pool Lifeguards (you may even spot some of our past pupils on poolside!)
+                </li>
+            </ul>
+            <hr class="sm-divider">
+            <p id="end-ethos">
+                We look forward to seeing you in the pool soon!
+            </p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'js/contact_email.js' %}"></script>
+{% endblock %}

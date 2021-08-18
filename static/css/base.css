@@ -415,6 +415,7 @@ ol.breadcrumb {
 }
 
 /* --- Search Page --- */
+
 .search-bar input {
     border: 1px solid var(--black);
 }
@@ -436,6 +437,7 @@ ol.breadcrumb {
 }
 
 /* --- Individual Product Pages --- */
+
 .detail-sec {
     padding: 15px 0;
 }
@@ -500,6 +502,7 @@ ol.breadcrumb {
 }
 
 /* --- Shopping Bag Pages --- */
+
 .bag-content {
     padding: 0 15px;
     display: flex;
@@ -696,6 +699,7 @@ ol.breadcrumb {
 }
 
 /* --- Checkout Complete Page --- */
+
 .confirm-row {
     padding-bottom: 30px;
 }
@@ -722,6 +726,7 @@ ol.breadcrumb {
 }
 
 /* --- Accounts Pages --- */
+
 .profile-btns {
     border: none;
     display: flex;
@@ -753,6 +758,7 @@ ol.breadcrumb {
 }
 
 /* --- AllAuth Pages --- */
+
 .account-text h4{
     font-family: var(--title-font);
     font-size: 1.7rem;
@@ -820,7 +826,6 @@ ol.breadcrumb {
     font-size: 1rem;
 }
 .contact-text.phone-email {
-    /* Specify phone and email div */
     margin: auto;
 }
 .contact-text h4 {
@@ -889,6 +894,31 @@ ol.breadcrumb {
     color: var(--red);
     font-size: .8rem;
     font-weight: 700;
+}
+
+/* Ethos Page */
+.ethos-content {
+    margin: 3%;
+}
+.ethos-content p {
+    font-size: 1.1rem;
+}
+.ethos-content ul {
+    font-size: 1rem;
+    padding: 0 7%;
+    margin: auto;
+    list-style-type: circle;
+    list-style-position: outside;
+}
+.ethos-content li {
+    padding-bottom: 20px;
+}
+#end-ethos {
+    padding-top: 20px;
+    text-align: center;
+    margin: auto;
+    font-family: var(--title-font);
+    font-size: 1.6rem;
 }
 
 /* --- Media Queries --- */
@@ -1073,6 +1103,14 @@ ol.breadcrumb {
     .contact-form {
         padding: 5% 20% 0 20%;
     }
+    /* Ethos Page */
+    .ethos-content {
+        margin: 4%;
+    }
+    .ethos-content ul {
+        font-size: 1.1rem;
+        padding: 0 6%;
+    }
 }
 
 /* Breakpoint on Larger Tablet device */
@@ -1234,6 +1272,21 @@ ol.breadcrumb {
     }
     .contact-form {
         padding: 5% 20% 0 20%;
+    }
+
+    /* Ethos Page */
+    .ethos-content {
+        margin: 5%;
+    }
+    .ethos-content p {
+        font-size: 1.4rem;
+    }
+    .ethos-content ul {
+        font-size: 1.3rem;
+        padding: 0 6%;
+    }
+    #end-ethos {
+        font-size: 1.8rem;
     }
 
     /* -- Shop Pages -- */
@@ -1509,5 +1562,19 @@ ol.breadcrumb {
     }
     .contact-form {
         padding: 5% 20% 0 20%;
+    }
+    /* Ethos Page */
+    .ethos-content {
+        margin: 2% 5%;
+    }
+    .ethos-content p {
+        font-size: 1.4rem;
+    }
+    .ethos-content ul {
+        font-size: 1.3rem;
+        padding: 0 6%;
+    }
+    #end-ethos {
+        font-size: 2rem;
     }
 }

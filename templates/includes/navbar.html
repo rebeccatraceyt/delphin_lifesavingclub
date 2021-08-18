@@ -49,11 +49,13 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if url_name == 'view_programme' or url_name == 'view_faqs' or url_name == 'view_contact' %}active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle {% if url_name == 'view_programme' or url_name == 'view_faqs' or url_name == 'view_contact' or url_name == 'view_ethos' %}active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        <span class="{% if url_name == 'view_programme' or url_name == 'view_faqs' or url_name == 'view_contact' %}active{% endif %}" >About</span>
+                        <span class="{% if url_name == 'view_programme' or url_name == 'view_faqs' or url_name == 'view_contact' or url_name == 'view_ethos' %}active{% endif %}" >About</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item {% if url_name == 'view_ethos' %}active{% endif %}" href="{% url 'view_ethos' %}">Club Ethos</a>
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'view_programme' %}active{% endif %}" href="{% url 'view_programme' %}">Academy Programme</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'view_faqs' %}active{% endif %}" href="{% url 'view_faqs' %}">FAQs</a>

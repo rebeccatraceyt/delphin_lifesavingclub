@@ -44,3 +44,13 @@ def view_faqs(request):
         'questions': questions,
     }
     return render(request, 'faqs.html', context)
+
+
+def view_ethos(request):
+    """
+    Returns Club Ethos Page
+    """
+    context = {
+        'active_page': 'ethos',
+    }
+    return render(request, 'ethos.html', context)
