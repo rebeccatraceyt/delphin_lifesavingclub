@@ -711,7 +711,7 @@ ol.breadcrumb {
     font-size: 1.6rem;
 }
 .confirm-table table {
-    width: 90%;
+    width: 100%;
 }
 .confirm-table table td {
     border-bottom: 1px solid var(--border-light);
@@ -905,7 +905,7 @@ ol.breadcrumb {
 }
 .ethos-content ul {
     font-size: 1rem;
-    padding: 0 7%;
+    padding: 0 5%;
     margin: auto;
     list-style-type: circle;
     list-style-position: outside;

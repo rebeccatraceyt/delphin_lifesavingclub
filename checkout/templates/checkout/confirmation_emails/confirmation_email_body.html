@@ -19,7 +19,7 @@
 
         {% for item in order.lineitems.all %}
             <p>
-                {{ item.product.name }} - {{ item.product_select }}: {{ item.quantity }} x €{{ item.price }}
+                {{ item.product.name }} ({{ item.product_select }}): {{ item.quantity }} x €{{ item.product.price }}
             </p>
         {% endfor %}
 
@@ -33,6 +33,11 @@
                 <tr>
                     <td>{{ order.street_address1 }}</td>
                 </tr>
+                {% if order.street_address2 %}
+                <tr>
+                    <td>{{ order.street_address2 }}</td>
+                </tr>
+                {% endif %}
                 <tr>
                     <td>{{ order.town_or_city }}</td>
                 </tr>

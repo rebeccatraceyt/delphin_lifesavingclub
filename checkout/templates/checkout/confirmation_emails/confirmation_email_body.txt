@@ -8,7 +8,7 @@ Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
 {% for item in order.lineitems.all %}
-    {{ item.product.name }} - {{ item.product_select }}: {{ item.quantity }} x €{{ item.price }}
+    {{ item.product.name }} ({{ item.product_select }}): {{ item.quantity }} x €{{ item.product.price }}
 {% endfor %}
 
 Order Total: €{{ order.grand_total }}
@@ -16,6 +16,9 @@ Order Total: €{{ order.grand_total }}
 For Apparel Orders:
 Your order will be shipped to:
 {{ order.street_address1 }}
+{% if order.street_address2 %}
+{{ order.street_address2 }}
+{% endif %}
 {{ order.town_or_city }}
 {{ order.county }}
 {{ order.postcode }}
