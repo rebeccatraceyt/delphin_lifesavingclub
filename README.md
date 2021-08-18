@@ -434,6 +434,9 @@ Each page of the websire features a consistently responsive and intuitive naviat
 - The links are divided into appropriate categories, allowing users to see the variety of pages the website has. Notably, they also provide a means to categories the Apparel and Courses available, allowing users to find their desired products quicker.
 - These links are displayed in three columns on larger devices, two columns and medium and single columns on small.
 - The footer also provides the Club **social links** and **copyright** information.
+     - Link to Club Facebook page
+     - Mailto link to club emails
+     - Link to Clubs Whatsapp correspondence number
 
 #### Page Layout
 
@@ -458,7 +461,9 @@ Each page of the websire features a consistently responsive and intuitive naviat
 </footer>
 ```
 
-### Existing Features
+### Existing Features 
+
+<strong><u>General Pages:</u></strong>
 
 **[Home Page](https://delphin-lifesavingclub.herokuapp.com/ "Link to Home page")**
 | Feature      | Description  |
@@ -483,6 +488,14 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Product Links | The product cards provide users with a link from the product image and name to the product details page. |
 | Course Information Modal | Specific to the Courses page, an information modal is displayed on click (represented by an **i** icon), providing information on purchasing a course.|
 
+**[Search Page](https://delphin-lifesavingclub.herokuapp.com/shop/search "Link to Search page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Input field | Allowing users to enter their search query, with an appended search button. |
+| Category Buttons | Category filters provide users with a convenient quick-link to the categories, in lieu of searching for something. Both images and buttons redirect users to their respective categories. |
+| Category Filters | Category filters are in place to allow users to refine their search, directing to their prefered product type page. |
+| Dynamic feedback | When a user enters a term, there is dynamic text that displays the number of results returned and their search term. If there are no results, conditional text explains this to the user. |
+
 **[Individual Product Page](https://delphin-lifesavingclub.herokuapp.com/shop/product/1 "Link to Example Product page")**
 | Feature      | Description  |
 |:--------------:|--------------|
@@ -492,7 +505,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Back Button | Returns users to their previous page, using JavaScript functionality.|
 | Add to Bag button | Allows users to add their selection to their shopping bag |
 
-**[Login Page](https://8000-blue-kiwi-tqdak6zi.ws-eu15.gitpod.io/accounts/login/ "Link to Login page")**
+**[Login Page](https://delphin-lifesavingclub.herokuapp.com/accounts/login/ "Link to Login page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Input fields | Allows users to enter their username, or email, and password |
@@ -500,47 +513,98 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Reset Password link | Redirecting users to reset their password **(allauth functionality)** |
 | Register button | call-to-action button directing users to signup page |
 
-**[Register Page](https://8000-blue-kiwi-tqdak6zi.ws-eu15.gitpod.io/accounts/signup/ "Link to Register page")**
+**[Register Page](https://delphin-lifesavingclub.herokuapp.com/accounts/signup/ "Link to Register page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Input fields |  Allows users to enter their information to register an account |
 | Signup button | Allows users to create their account **(allauth functionality)**|
 
-**Shopping Bag Page (this page requires user authentication)**
+**[Club Ethos Page](https://delphin-lifesavingclub.herokuapp.com/pages/ethos "Link to Club Ethos page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Call to action links | Links directing users to external pages for clarity purposes. Opens page on new tab. |
+
+**[Academy Programme Page](https://delphin-lifesavingclub.herokuapp.com/pages/swim_programme "Link to Academy Programme page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Accordion | An accordion is used for each individual class, with the class name and age range displayed. Clicking the level opens the card and displays information pertaining to that level. |
+| Hide/Show Buttons | A `Hide All` and `Show All` button are used to provide users with the capacity to open all cards or close all cards, for convienience. |
+| Call to action links | Links directing users to external pages open on new tab, while internal pages are redirect users. |
+
+**[FAQs Page](https://delphin-lifesavingclub.herokuapp.com/pages/faqs "Link to FAQs page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Accordion | An accordion is used for each question, with the question displayed. Clicking the question opens the card and displays the answer. |
+| Hide/Show Buttons | A `Hide All` and `Show All` button are used to provide users with the capacity to open all cards or close all cards, for convienience. |
+| Call to action links | Internal links redirecting users to useful pages within the site. |
+
+**[Contact Page](https://delphin-lifesavingclub.herokuapp.com/pages/contact "Link to Contact page")**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Embeded Google Maps | A Google maps embed was used to provide users with an interactive map, with the pin dropped on the pool location. ([Map reference](https://www.embedgooglemap.net/ "Link to Google Maps Embedding page")) |
+| Phone Lin | An anchor link was used for the Membership Officers phone number to provide a convenient quick-link. |
+| Mailto action | Three emails are provided using the club email address, with the difference in the subject line to highlight the message for the appropriate officer (for convienience) in order to help the user to send the message quicker. |
+| Contact Form | Used for users to conveniently send a message to our Marketing team. Validated using [jQuery Validation](https://jqueryvalidation.org/ "Link to jQuery Validation page").|
+
+<strong><u>Authorised User Pages:</u></strong>
+
+**Shopping Bag Page**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Breadcrumbs | Page breadcrumbs allow users to backtrack to the **Home** page |
 | Duel Links | Links are displayed when user's **shopping bag is empty** to provide quick-link access to product categories. Both images and buttons redirect users to their respective categories. |
 | Keep Shopping button | Link redirects users to the **All Products** page. Available when at all stages (when bag is both empty and containing items.|
-| Remove button | Placed at the top right of each product, allowing users to quickly remove the product from the shopping bag. |
-|Quantity | An input with appending and prepending buttons allows users to alter their quantity selection. This feature is dynamically designed to become inactive if the quantity count is 1 or at the product's stock availabilty. |
+| Remove button | Placed at the top right of each product, allowing users to quickly **remove** the product from the shopping bag. |
+|Quantity | An input with appending and prepending buttons allows users to **alter their quantity selection**. This feature is dynamically designed to become inactive if the quantity count is 1 or at the product's stock availabilty. |
 | Update button | Updates the bag with the users inputed quantity. |
-| Checkout button | Directs users to the first page of the checkout process.|
+| Checkout button | Directs users to the **first** page of the checkout process.|
 
-**Order Review Page (this page requires user authentication)**
+**Order Review Page**
 | Feature      | Description  |
 |:--------------:|--------------|
-| No navbar or footer | This conventionally allows users to focus on the checkout process without distractions. |
-| Logo Link | Logo at the top of the page redirects users to the shopping bag for convienience |
-| Heads-up display | This shows the users the steps in the checkout process, giving them feedback on where they are and where they are going. |
-| Return buttton | Redirects users back to their shopping bag for editing. |
+| No navbar or footer | This conventionally allows users to **focus on the checkout** process without distractions. |
+| Logo Link | Logo at the top of the page **redirects users to the shopping bag** for convienience |
+| Heads-up display | This shows the users the steps in the checkout process, giving them **feedback on where they are** and where they are going. |
+| Return buttton | Redirects users back to their shopping bag for **editing**. |
 | Checkout button | Directs users to the next page of the checkout process.| 
 
-**Order Details Page (this page requires user authentication)**
+**Order Details Page**
 | Feature      | Description  |
 |:--------------:|--------------|
 | No navbar or footer | This conventionally allows users to focus on the checkout process without distractions. |
-| Heads-up display | This shows the users the steps in the checkout process, giving them feedback on where they are and where they are going. Link allows them to return to the previous page |
-| Input fields | Allowing users enter their delivery information |
-| Checkbox button | Allowing users to chose to save their information to their profile |
-| Order Summary | Providing clear feedback on bag contents. On large screens, this is displayed on the right side of the screen. On mobile and tablet devices, this is displayed in a collapsable menu |
-| Edit buttton | Redirects users back to their shopping bag for editing. |
+| Heads-up display | This shows the users the steps in the checkout process, giving them feedback on where they are and where they are going. Clicking the first number will return them to **to the previous page** |
+| Input fields | Allowing users **enter their delivery information** |
+| Checkbox button | Allowing users to chose to **save their information** to their profile |
+| Order Summary | Providing clear **feedback on bag contents**. On large screens, this is displayed on the right side of the screen. On mobile and tablet devices, this is displayed in a collapsable menu |
+| Edit buttton | Redirects users back to their shopping bag for **editing**. |
 | Complete Order button | Completes the checkout process.| 
 
+**User Profile Page**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Call to action Buttons | Displayed on the left side of the screen on larger devices and at the end of the page on mobile and tablet devices. Provide users with actions to take on their account, such as change password or emails, as well as logout and redirection to **Past Orders** page.|
+| Input fields | Allows users to add or edit their default information to provide them with a faster checkout experience.|
+| Update button | Saves new user information with toast used as feedback. |
 
+**Past Orders Page**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Call to action Buttons | Displayed on the left side of the screen on larger devices and at the end of the page on mobile and tablet devices. Provide users with actions to take on their account, such as change password or emails, as well as logout and redirection to **Profile** page.|
+| Call to action buttons | User's order history is displayed on the right side of the screen on larger devices and at the top (single column) on smaller screens. It provides a snapshop of order information, including date of purchase, number of items, order total and a call-to-action `View` button allowing them to view the Order Complete page with appropriate conditional text to let them know this is a past order. |
 
 ### Features to Implement in the future
+- **SwapShop Page**
+     - As children tend to grow out of their clothing quickly, a service we are looking into providing is a 'SwapShop' allowing swimmers to trade club gear (excluding swimwear) with others, passing it along to to others when they grow out of it.
+     - The devloper looked into implementing this, researching how to set up a virtual noticeboard, but it proved to require a far greater skillset than their current abilities.
 
+- **QR Codes**
+     - Another feature that was looked into was providing unique QR codes with every class purchase. 
+     - The club is currently looking into implementing this into their registration process, to avoid paperwork methods, and are only in the design stages. 
+     - The project time constraint was the deciding factor as the devloper needed to finish the design of the process and learn how to implement it in order to use it.
+
+- **Swimmer Profiles**
+     - As the club moves away from paperwork methods, integrating into a more technologically minded system (for GDPR reasons), we would want to expand this webshop into providing a 'Swimmer Profile', allowing swimmers to log in to see their progress week-by-week.
+     - Although looked into, the current skillset discouraged the developer to research this feature any further as they did not think they could do it the justice the feature deserves.
 
 [Back to top ⇧](#table-of-contents)
 ***
