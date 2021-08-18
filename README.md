@@ -1,8 +1,8 @@
-<h1 align="center">
-     <a href="https://ibb.co/MGb0ZWX" target="_blank"><img src="https://i.ibb.co/VQd4JrK/readme-logo.png" alt="Delphin Logo"></a>
-</h1>
+<div style="margin:auto">
+<img src="markdown-files/readme-files/readme-logo.png" alt="Delphin Logo" />
+</div>
 
-<div align="center">
+<div style="text-align:center">
 <p>The <strong>Delphin Lifesaving Club</strong> e-shop was designed, built and deployed by Rebecca Tracey-Timoney as the fourth and final Milestone Project to be completed for the duel Software Development Diploma from The Code Institute and UCD. The purpose of this online shop is to provide a virtual shopping environment for club members (future and current) to browse and purchase Delphin products, including classes and club apparel. The website provides a smooth and uncomplicated online shopping experience for users, with its simplistic and intuitive design.</p>
 
 [View the live project here](https://delphin-lifesavingclub.herokuapp.com/ "Link to Delphin page")
@@ -32,8 +32,8 @@
 10. [Technical Support](#Technical-Support)
 ***
 
-<div align="center">
-<a href="https://ibb.co/rfzcd3S"><img src="https://i.ibb.co/Dgv8rYy/delphin-responsive.png" alt="Delphin Site Responsive example"></a>
+<div style="text-align:center">
+<img src="markdown-files/readme-files/delphin-res.png" alt="Delphin Responsivness Example" />
 </div>
 
 ***
@@ -42,7 +42,7 @@
 ### Project Goals
 #### User Goals
 The User is looking to:
-- Securely purchase available Club courses
+- Securely purchase available Club course credits
 - Securely purchase club apparel
 - Contact the Delphin Team
 - Learn about the club (for prospective members)
@@ -51,7 +51,7 @@ The User is looking to:
 The Developer is looking to:
 - Provide and professional and trustworthy webshop, helping users to meet their goals.
 - Reach a wider audience of prospective members through online intergration, making it easier to get involved.
-- Provide a seamless process, allowing swimmers to pre-purchase lessons, prior to registration, avoiding unnecessary waiting times on location.
+- Provide a seamless process, allowing swimmers to pre-purchase lesson credits, prior to registration, avoiding unnecessary waiting times on location.
 - Showcase the variety of lessons that Delphin provides.
 - Showcase the Club's apparel collection
 - Demonstrate their proficiency in a variety of software development skills, using newly learned languages and libraries as well as a document database system.
@@ -76,7 +76,7 @@ The Developer is looking to:
 **As a new visitor, I want to:**
 
 1. View the club's Academy programme, to ascertain if the club is right fit.
-2. Complete the registration process, to create an account.
+2. Create an account, to unlock registered user features.
 
 **As a returning visitor, I want to:**
 
@@ -87,6 +87,7 @@ The Developer is looking to:
 5. View shopping bag to get an overview of products I wish to order.
 6. Remove products from my bag, to suit my needs.
 7. Update a product's quantity, to suit my needs.
+8. Get real-time feedback on available stock, to make purchase decisions.
 8. Proceed to a secure checkout, to make a purchase.
 9. Have clear visual feedback of the order process, to understand all steps of the process.
 10. Be able to edit my bag at all times, to allow change of mind.
@@ -155,8 +156,8 @@ The website needs to enable the **client** to:
 
 With these goals in mind, a strategy table was created to determine the trade-off between importance and viability with the following results:
 
-<div align='center'>
-<a href="https://ibb.co/ZB371pN"><img src="https://i.ibb.co/2vwHY15/opportunity-matrix.png" alt="opportunity-matrix" width='600'></a>
+<div style="margin:auto; width:400px">
+<img src="markdown-files/readme-files/opportunity-matrix.png" alt="Delphin Opportunity Matrix" />
 </div>
 
 <strong>2. <u>Scope</u></strong>
@@ -210,14 +211,20 @@ A scope was defined to identify what needed to be done in order to align feature
 The website's navigation was organized in order to ensure that users could navigate through the site with ease and efficiency, with the following results: 
 
 
+<div style="margin:auto; width:90%">
 <strong>Navigation Structure for User Management:</strong>
-<a href="https://ibb.co/XbyBWtJ"><img src="https://i.ibb.co/6mvhyFs/user-mng-ia.png" alt="user-mng-ia" border="0"></a>
+<img src="markdown-files/readme-files/user-mng-ia.png" alt="User Management Information Architecture" />
+</div>
 
+<div style="margin:auto; width:90%">
 <strong>Navigation Structure for Product Management:</strong>
-<a href="https://ibb.co/YBFCJ3V"><img src="https://i.ibb.co/VYc1btk/product-mng-ia.png" alt="product-mng-ia" border="0"></a>
+<img src="markdown-files/readme-files/product-mng-ia.png" alt="Product Management Information Architecture" />
+</div>
 
+<div style="margin:auto; width:90%">
 <strong>Navigation Structure for Transaction Management:</strong>
-<a href="https://ibb.co/k2SjcHL"><img src="https://i.ibb.co/QvKLmbW/transaction-mng-ia.png" alt="transaction-mng-ia" border="0"></a>
+<img src="markdown-files/readme-files/transaction-mng-ia.png" alt="Transaction Management Information Architecture" />
+</div>
 
 <strong>4. <u>Skeleton</u></strong>
 
@@ -234,8 +241,9 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
      - The red colour is specific to Lifeguarding and is used to highlight anything Lifeguarding related.
 
      - The Blus is an accent colour used in the club logo and beyond for colour contrast.
-<div align='center'>
-<a href="https://ibb.co/bP75jTv"><img src="https://i.ibb.co/mGS5rky/delphin-cp.png" alt="delphin-cp" width='400'></a>
+
+<div style="margin:auto; width:90%; border:2px solid black">
+<img src="markdown-files/readme-files/delphin-cp.png" alt="Delphin Colour Palette" />
 </div>
 
 
@@ -251,9 +259,9 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
 
      - The secondary font is an updated version of the font used in the club's typography for logo and official letters. The font is paired well with the primary font, in order provide a minimally contrasting font combination serving as a practical and professional typeface with a hint of playfulness. This highlights the club's character for being professional, yet friendly, setting the tone for new and unfamiliar vistiors.
 
-<div align='center'>
-<a href="https://ibb.co/7Vtnr4t"><img src="https://i.ibb.co/1KGrR6G/lato.png" alt="lato" width='600'></a>
-<a href="https://ibb.co/Z28KWkQ"><img src="https://i.ibb.co/z6RbG03/londrina.png" alt="londrina" width='600'></a>
+<div style="margin:auto; width:90%; border:2px solid black">
+<img src="markdown-files/readme-files/lato.png" alt="Lato Typography" />
+<img src="markdown-files/readme-files/londrina.png" alt="Londrina Typography" />
 </div>
 
 - <strong>Imagery</strong>
