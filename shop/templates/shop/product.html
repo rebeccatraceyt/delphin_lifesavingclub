@@ -161,6 +161,10 @@
         $('select').change(function(){
             $('.qty_input').attr('max', $(this).find(":selected").data('stock'));
         });
+
+        $('select').ready(function(){
+            $('.qty_input').attr('max', $(this).find(":selected").data('stock'));
+        });
     </script>
 {% include 'shop/includes/quantity_input_script.html' %}
 {% endblock %}
