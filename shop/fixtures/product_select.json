@@ -2266,5 +2266,14 @@
          "product":35,
          "stock_count":12
       }
+   },
+   {
+      "model":"shop.productselect",
+      "pk":255,
+      "fields":{
+         "product_select":11,
+         "product":29,
+         "stock_count":30
+      }
    }
 ]
