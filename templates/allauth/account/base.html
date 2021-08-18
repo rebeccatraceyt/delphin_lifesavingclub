@@ -2,6 +2,11 @@
 
 {% block content %}
     <div class="container page-margins">
+
+        <!-- Page Breadcrumbs -->
+        {% block breadcrumb_content %}
+        {% endblock%}
+
         <!-- Page Header -->
         <div class="row">
             <div class="col-12 page-title">
@@ -12,6 +17,8 @@
                 <hr class="section-divider">
             </div>
         </div>
+
+        <!-- Page Content -->
         <div class="row">
             <div class="col-12 account-inner-content">
                 {% block inner_content %}
