@@ -17,11 +17,31 @@
         <p><strong>Order Number:</strong> {{ order.order_number }}</p>
         <p><strong>Order Date:</strong> {{ order.date }}</p>
 
-        {% for item in order.lineitems.all %}
-            <p>
-                {{ item.product.name }} ({{ item.product_select }}): {{ item.quantity }} x €{{ item.product.price }}
-            </p>
-        {% endfor %}
+        <p><strong>Items Ordered:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in order.lineitems.all%}
+                    <tr>
+                        <td>
+                            {{ item.product.name }} ({{ item.product_select }})
+                        </td>
+                        <td>
+                            €{{ item.product.price }}
+                        </td>
+                        <td>
+                            {{ item.quantity }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
         <h4>Order Total: €{{ order.grand_total }}</h4>
 
