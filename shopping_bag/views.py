@@ -1,7 +1,7 @@
 from django.shortcuts import (render, redirect, reverse,
                               HttpResponse, get_object_or_404)
 from django.contrib import messages
-from shop.models import Product
+from shop.models import Product, ProductOption, ProductSelect
 from django.contrib.auth.decorators import login_required
 
 
@@ -26,7 +26,9 @@ def add_to_bag(request, item_id):
     redirect_url = request.POST.get('redirect_url')
 
     # get products
-    select = request.POST['product_select']
+    select = None
+    if 'product_select' in request.POST:
+        select = request.POST['product_select']
 
     current_bag = request.session.get('current_bag', {})
 
@@ -64,7 +66,9 @@ def update_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
 
     # get products
-    select = request.POST['product_select']
+    select = None
+    if 'product_select' in request.POST:
+        select = request.POST['product_select']
 
     current_bag = request.session.get('current_bag', {})
 
@@ -73,11 +77,6 @@ def update_bag(request, item_id):
         messages.success(
                 request,
                 f'{product.name} qty updated')
-    else:
-        del current_bag[item_id]['items_by_select'][select]
-        if not current_bag[item_id]['items_by_select']:
-            current_bag.pop(item_id)
-        messages.success(request, f'{product.name} removed from bag')
 
     # override session variable with update
     request.session['current_bag'] = current_bag
