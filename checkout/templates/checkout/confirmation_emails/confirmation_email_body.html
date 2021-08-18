@@ -14,10 +14,10 @@
         <p>Thank you for your order!</p>
         <p>This is a confirmation of your order at Delphin Lifesaving Club. Your order information is below:</p>
         
-        <p><strong>Order Number:</strong>{{ order.order_number }}</p>
-        <p><strong>Order Date:</strong>{{ order.date }}</p>
+        <p><strong>Order Number:</strong> {{ order.order_number }}</p>
+        <p><strong>Order Date:</strong> {{ order.date }}</p>
 
-        {% for item in order.Lineitems.all %}
+        {% for item in order.lineitems.all %}
             <p>
                 {{ item.product.name }} - {{ item.product_select }}: {{ item.quantity }} x €{{ item.price }}
             </p>
