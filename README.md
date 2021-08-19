@@ -569,6 +569,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Category Buttons | Category filters provide users with a convenient quick-link to the categories, in lieu of searching for something. Both images and buttons redirect users to their respective categories. |
 | Category Filters | Category filters are in place to allow users to refine their search, directing to their prefered product type page. |
 | Dynamic feedback | When a user enters a term, there is dynamic text that displays the number of results returned and their search term. If there are no results, conditional text explains this to the user. |
+| Reset Button | Clicking the **Search title** will reset the search bar.|
 
 **[Individual Product Page](https://delphin-lifesavingclub.herokuapp.com/shop/product/1 "Link to Example Product page")**
 | Feature      | Description  |
@@ -616,7 +617,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Feature      | Description  |
 |:--------------:|--------------|
 | Embeded Google Maps | A Google maps embed was used to provide users with an interactive map, with the pin dropped on the pool location. ([Map reference](https://www.embedgooglemap.net/ "Link to Google Maps Embedding page")) |
-| Phone Lin | An anchor link was used for the Membership Officers phone number to provide a convenient quick-link. |
+| Phone Link | An anchor link was used for the Membership Officers phone number to provide a convenient quick-link. |
 | Mailto action | Three emails are provided using the club email address, with the difference in the subject line to highlight the message for the appropriate officer (for convienience) in order to help the user to send the message quicker. |
 | Contact Form | Used for users to conveniently send a message to our Marketing team. Validated using [jQuery Validation](https://jqueryvalidation.org/ "Link to jQuery Validation page").|
 

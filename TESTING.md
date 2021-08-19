@@ -165,63 +165,36 @@ Manual testing was conducted on the following elements that appear on every page
 
 - Clicking the Logo located on the top-left of the screen will redirect the user back to the **Home Page**:
 
-    ![Logo Click](static/images/testing-files/manual/logo-click.gif)
+    ![Logo Click](markdown-files/testing-files/manual/logo.gif)
 
 - Hovering over the **Navigation Links** will trigger the hover effect, confirming the page the user is on:
 
-    ![Navigation Bar Hover class](static/images/testing-files/manual/nav-hover.gif)
+    ![Navigation Bar Hover class](markdown-files/testing-files/manual/nav-hover.gif)
 
 - Collapsible `hamburger` button on mobile and tablet devices reveals **Navigation** menu:
 
-    ![Collapsible Navigation Bar](static/images/testing-files/manual/nav-mob.gif)
+    ![Collapsible Navigation Bar](markdown-files/testing-files/manual/mobile-nav.gif)
 
-- Hovering over the **Footer** icons will trigger the hover effect, confirming the action the user is about to take:
+- Navigational menu differs for authenticated and unauthenticated users:
+
+    **Non-Registered User** <br />
+    ![Navigation Changes](markdown-files/testing-files/manual/non-user.png)
+ 
+    **Registered User** <br />
+    ![Navigation Changes](markdown-files/testing-files/manual/user.png)
+
+- Hovering over the **Footer** links will trigger the hover effect, confirming the action the user is about to take:
     
-    ![Footer Hover class](static/images/testing-files/manual/footer-hover.gif)
+    ![Footer Hover class](markdown-files/testing-files/manual/footer-hover.gif)
 
-- Clicking the **Footer Social Icons** opens the Developers social platform in a new tab:
+- Clicking the **Footer Social Icons** opens the social platform in a new tab:
 
-    - **GitHub:**
-    ![Github Link](static/images/testing-files/manual/github.gif)
+    - **Facebook:** <br />
+    ![Facebook Link](markdown-files/testing-files/manual/facebook.gif)
 
-    - **LinkedIn:**
-    ![LinkedIn Link](static/images/testing-files/manual/linkedin.gif)
+    - **WhatsApp:** <br />
+    ![WhatsApp Link](markdown-files/testing-files/manual/whatsapp.gif)
 
-- Clicking the **Footer Contact Icon** opens the contact modal, with the appropriate user feedback:
-
-    ![Contact Form](static/images/testing-files/manual/contact.gif)
-
-- Clicking the **Disclaimer** icon triggers the disclaimer notice: 
-
-    ![Disclaimer](static/images/testing-files/manual/disclaimer.gif)
-
-- The user can log out from numerous points:
-
-    - My Recipes:
-
-        ![Log out @ My Recipes](static/images/testing-files/manual/lo-recipes.gif)
-    
-    - My Favourites:
-
-        ![Log out @ My Favourites](static/images/testing-files/manual/lo-faves.gif)
-    
-    - Quick Links:
-
-        ![Log out @ Quick Links](static/images/testing-files/manual/lo-quicklink.gif)
-    
-    - On Mobile Devices:
-
-        ![Log out on mobile](static/images/testing-files/manual/lo-mobile.gif)
-
-- Recipes can be accessed by clicking:
-
-    - Image
-
-        ![Recipe Image Click](static/images/testing-files/manual/recipe-img.gif)
-
-    - Name
-
-        ![Recipe Image Name](static/images/testing-files/manual/recipe-name.gif)
 
 ### Page Elements Testing
 
@@ -229,231 +202,338 @@ Manual testing was conducted on the following elements that appear on every page
 
 Manual testing was conducted on the following elements on the **Home** Page:
 
-- Using the **Carousel Controls**, the user can browse the featured recipes (the last four to be uploaded):
+- Clicking the **Category Links**, directs the user to their desired location:
 
-    ![Carousel Controls](static/images/testing-files/manual/carousel.gif)
+    ![Category](markdown-files/testing-files/manual/home-link.gif)
 
-- Hovering over the **Call to Action** buttons will provide feedback to the user: 
+- Home Page Responsiveness:
 
-    ![Home Page Buttons](static/images/testing-files/manual/home-btns.gif)
+    ![Home Page Responsiveness](markdown-files/testing-files/manual/home-res.gif)
 
-- The Responsiveness of the **Home Page**:
+#### All Products Page
 
-    ![Home Page Responsiveness](static/images/testing-files/manual/home-res.gif)
+Manual testing was conducted on the following elements on the **All Products** Page:
 
-#### Find A Recipe Page
+- Clicking the **Breadcrumb Links**, directs the user back:
 
-Manual testing was conducted on the following elements on the **Find A Recipe** Page:
+    ![Breadcrumbs](markdown-files/testing-files/manual/products-bc.gif)
 
-- The Search Bar allows users to enter their search query:
+- Clicking the **Category Filters** directs the user to their desired category:
 
-    - When Results are found:
-    
-        ![Search Results](static/images/testing-files/manual/search-results.gif)
+    ![Category](markdown-files/testing-files/manual/category-filter.gif)
 
-    - No Results Found:
-    
-        ![No Search Results](static/images/testing-files/manual/search-no-results.gif)
+- Clicking the **Products** directs users to the product's details page:
 
-- The **Dropdown** Menus allow the user to filter their search:
+    **Product Image** <br />
+    ![Product Image](markdown-files/testing-files/manual/img-click.gif)
 
-    - Category Search:
-    
-        ![Category Filter Search](static/images/testing-files/manual/category.gif)
+    **Product Name** <br />
+    ![Product Name](markdown-files/testing-files/manual/name-click.gif)
 
-    - Difficulty Search:
-    
-        ![Level Filter Search](static/images/testing-files/manual/level.gif)
+- Clicking the **Pagnination Links** directs users to the next page:
 
-- The **Pagination** function only displays 6 recipes at a time, allowing the user to browse through pages without suffering from information-overload:
+    ![Pagination](markdown-files/testing-files/manual/pagination.gif)
 
-    ![Pagination](static/images/testing-files/manual/paginate.gif)
+- All Products Page Responsiveness:
 
-- The Responsiveness of the **Find A Recipe Page**:
+    ![All Products Page Responsiveness](markdown-files/testing-files/manual/all-products-res.gif)
 
-    ![Find A Recipe Responsiveness](static/images/testing-files/manual/search-res.gif)
+#### Apparel and Courses Pages
 
-#### Sign Up Page
+Manual testing was conducted on the following elements on the **Apparel and Courses** Page:
 
-Manual testing was conducted on the following elements on the **Sign Up** Page:
+- Clicking the **Breadcrumb Links**, directs the user back:
 
-- User can intuitively create an account: 
+    ![Breadcrumbs](markdown-files/testing-files/manual/category-bc.gif)
 
-    ![Registration Process](static/images/testing-files/manual/register.gif)
+- Clicking the **Sub-category Filters** directs the user to their desired category:
 
-- Clicking **Login** redirects user to login page:
+    ![Sub-Categories](markdown-files/testing-files/manual/sub-cate-filter.gif)
 
-    ![Sign Up to Log in](static/images/testing-files/manual/reg-log.gif)
+- Clicking the `information` icon on the Course page opens the Course Information modal:
 
-- The Responsiveness of the **Sign Up Page**:
+    ![Course Modal](markdown-files/testing-files/manual/course-modal.gif)
 
-    ![Sign Up Page Responsiveness](static/images/testing-files/manual/register-res.gif)
+- Apparel and Course Page Responsiveness:
+
+    ![Apparel and Course Page Responsiveness](markdown-files/testing-files/manual/category-res.gif)
+
+#### Search Page
+
+Manual testing was conducted on the following elements on the **Search** Page:
+
+- Using the search bar, users will be provided with the appropriate response:
+
+    **With Results** <br />
+    ![Search Results](markdown-files/testing-files/manual/search-results.gif)
+
+    **With No Results** <br />
+    ![No Search Results](markdown-files/testing-files/manual/search-no-results.gif)
+
+- Clicking the **Search** title will reset the search:
+
+    ![Search Reset](markdown-files/testing-files/manual/search-reset.gif)
+
+- Clicking the **Category Buttons** directs the user to their desired category:
+
+    ![Category Buttons](markdown-files/testing-files/manual/search-category.gif)
+
+- Clicking the **Category Filters** directs the user to their desired category:
+
+    ![Category Filters](markdown-files/testing-files/manual/search-filters.gif)
+
+- Search Page Responsiveness:
+
+    ![Search Page Responsiveness](markdown-files/testing-files/manual/search-res.gif)
+
+#### Individual Product Page
+
+Manual testing was conducted on the following elements on the **Individual Product** Page:
+
+- Clicking the **Breadcrumb Links**, directs the user back:
+
+    ![Breadcrumbs](markdown-files/testing-files/manual/product-bc.gif)
+
+- Clicking the **Dropdown** menu allows users to select their desired product variation (size or class time). providing stock count for each:
+
+    ![Dropdown](markdown-files/testing-files/manual/product-select.gif)
+
+- Clicking the **Quantity Buttons** allows users to control their selected quantity:
+
+    **Maximum** <br />
+    ![Maximum](markdown-files/testing-files/manual/product-qty-max.gif)
+
+    **Minimum** <br />
+    ![Minimum](markdown-files/testing-files/manual/product-qty-min.gif)
+
+- Clicking the `course information` link on Course pages opens the Course Information modal:
+
+    ![Course Modal](markdown-files/testing-files/manual/product-modal.gif)
+
+- Clicking the **Back Button** brings user to their previous page: 
+
+    ![Back Button](markdown-files/testing-files/manual/product-back.gif)
+
+- Clicking the **Add to Bag Button** adds the product to the user's bag, providing a toast for real-time feedback: 
+
+    ![Add to Bag](markdown-files/testing-files/manual/add-to-bag.gif)
+
+- Individual Product Page Responsiveness:
+
+    ![Individual Product Page Responsiveness](markdown-files/testing-files/manual/product-res.gif)
+
+#### Signup Page
+
+Manual testing was conducted on the following elements on the **Signup** Page:
+
+- Using the input field, the user can enter their details and click the **Signup** button, which directs the user to the verification page:
+
+    ![Signup](markdown-files/testing-files/manual/register-process.gif)
+
+- Clicking the link provided in the email will invite the user to confirm their email:
+
+    ![Verify Button](markdown-files/testing-files/manual/confirm.png)
+
+- Signup Page Responsiveness:
+
+    ![Signup Page Responsiveness](markdown-files/testing-files/manual/register-res.gif)
+
 
 #### Login Page
 
 Manual testing was conducted on the following elements on the **Login** Page:
 
-- User can intuitively enter their details to log into their account:
+- Using the input field, the user can enter their login details and click the **Login** button, which directs the user to the Home page:
 
-    ![Login Process](static/images/testing-files/manual/login.gif)
+    ![Login](markdown-files/testing-files/manual/login-process.gif)
 
-- Clicking **Sign Up** redirects user to registration page:
+- Clicking the **Register Button** directs the user to the sign up page:
 
-    ![Log in to Sign Up](static/images/testing-files/manual/log-reg.gif)
+    ![Signup](markdown-files/testing-files/manual/click-to-reg.gif)
 
-- The Responsiveness of the **Login Page**:
+- Login Page Responsiveness:
 
-    ![Login Page Responsiveness](static/images/testing-files/manual/login-res.gif)
+    ![Login Page Responsiveness](markdown-files/testing-files/manual/login-res.gif)
 
-#### My Recipes Page
+#### Club Ethos Page
 
-Manual testing was conducted on the following elements on the **My Recipes** Page:
+Manual testing was conducted on the following elements on the **Club Ethos** Page:
 
-- Hovering over **Call to Action** buttons provide user feedback: 
+- Clicking the **External Links** opens a new tab:
 
-    ![My Recipes buttons hover class](static/images/testing-files/manual/recipe-btns.gif)
+    **SwimIreland** <br />
+    ![Swim Ireland Button](markdown-files/testing-files/manual/link-si.gif)
 
-- The Responsiveness of the **My Recipes Page**:
+    **RLSS** <br />
+    ![RLSS Button](markdown-files/testing-files/manual/link-rlss.gif)
 
-    ![My Recipes Responsiveness](static/images/testing-files/manual/myrecipes-res.gif)
+- Club Ethos Page Responsiveness:
 
-#### My Favourites Page
+    ![Club Ethos Page Responsiveness](markdown-files/testing-files/manual/ethos-res.gif)
 
-Manual testing was conducted on the following elements on the **My Favourites** Page:
+#### Academy Programme Page
 
-- Hovering over **Call to Action** buttons provide user feedback: 
+Manual testing was conducted on the following elements on the **Academy Programme** Page:
 
-    ![My Recipes buttons hover class](static/images/testing-files/manual/fave-btns.gif)
+- Clicking the accordion titles opens the accordions, displaying information:
 
-- The Responsiveness of the **My Favourites Page**:
+    ![Accordion Button](markdown-files/testing-files/manual/prog-accordion.gif)
 
-    ![My Recipes Responsiveness](static/images/testing-files/manual/faves-res.gif)
+- Clicking **Hide/Show** all allows user control of the page:
 
-#### Edit User Page
+    ![Hide/Show Button](markdown-files/testing-files/manual/prog-all.gif)
 
-Manual testing was conducted on the following elements on the **Edit User** Page:
+- Academy Programme Page Responsiveness:
 
-- User can intuitively edit their profile: 
-    
-    ![Edit User Process](static/images/testing-files/manual/edit-user.gif)
+    ![Academy Programme Page Responsiveness](markdown-files/testing-files/manual/prog-res.gif)
 
-- Clicking **Cancel** redirects user to My Recipes page:
+#### FAQs Page
 
-    ![Edit User - Cancel button](static/images/testing-files/manual/edit-user-cancel.gif)
+Manual testing was conducted on the following elements on the **FAQs** Page:
 
-- The Responsiveness of the **Edit User Page**:
+- Clicking the accordion titles opens the accordions, displaying information:
 
-    ![Edit User Page Responsiveness](static/images/testing-files/manual/edit-user-res.gif)
+    ![Accordion Button](markdown-files/testing-files/manual/faq-accordion.gif)
 
-#### Edit Accounts Page
+- Clicking **Hide/Show** all allows user control of the page:
 
-Manual testing was conducted on the following elements on the **Edit Accounts** Page:
+    ![Hide/Show Button](markdown-files/testing-files/manual/faq-all.gif)
 
-- User can intuitively edit their account:
+- FAQs Page Responsiveness:
 
-    ![Edit Account Process](static/images/testing-files/manual/edit-acc.gif)
+    ![FAQs Page Responsiveness](markdown-files/testing-files/manual/faq-res.gif)
 
-- Clicking **Back** redirects user to Edit Profile page:
+#### Contact Page
 
-    ![Edit Account - Back button](static/images/testing-files/manual/edit-acc-back.gif)
+Manual testing was conducted on the following elements on the **Contact** Page:
 
-- Clicking **Delete Account** opens **Delete Modal**:
+- Clicking the **Embedded Google Maps** allows the user to control the map:
 
-    ![Delete Account Modal](static/images/testing-files/manual/delete-acc.gif)
+    ![Accordion Button](markdown-files/testing-files/manual/contact-map.gif)
 
-- The Responsiveness of the **Edit Accounts Page**:
+- Sending a message on the contact form, provides real-time feedback to the user:
 
-    ![Edit Account Page Responsiveness](static/images/testing-files/manual/edit-acc-res.gif)
+    ![Contact form Button](markdown-files/testing-files/manual/contact-form.gif)
 
-#### Create Recipe Page
+- Contact Page Responsiveness:
 
-Manual testing was conducted on the following elements on the **Create Recipe** Page:
+    ![Contact Page Responsiveness](markdown-files/testing-files/manual/contact-res.gif)
 
-- The creative process for entering recipe details is as follows:
-    
-    - Enter Recipe name
+#### Shopping Bag Page
 
-        ![Enter Recipe Name](static/images/testing-files/manual/create-name.gif)
+Manual testing was conducted on the following elements on the **Shopping Bag** Page:
 
-    - Enter image url, an image preview will be displayed:
-    
-        ![Enter Recipe Img URL](static/images/testing-files/manual/create-img.gif)
+- Clicking the **Breadcrumb Links**, directs the user back to the home page:
 
-    - User can use **Dropdown** menus to refine recipe:
+    ![Breadcrumbs](markdown-files/testing-files/manual/bag-bc.gif)
 
-        ![Refine Recipe by Dropdowns](static/images/testing-files/manual/create-dropdown.gif)
+- Clicking the **Keep Shopping** button returns user to the All Products page:
 
-    - Add and remove ingredients **dynamically**:
+    ![Keep Shopping](markdown-files/testing-files/manual/bag-keep-shop.gif)
 
-        ![Add and Remove Ingredients](static/images/testing-files/manual/create-ingred.gif)
+- Clicking the `x` button removes the product from the bag:
 
-    - Add and remove directions **dynamically**:
+    ![Remove Button](markdown-files/testing-files/manual/bag-remove.gif)
 
-        ![Add and Remove Directions](static/images/testing-files/manual/create-direct.gif)
+- Clicking the **Quantity Buttons** allows users to control their selected quantity:
 
-- Clicking **Save** will redirect the user to My Recipes page: 
+    **Maximum** <br />
+    ![Maximum](markdown-files/testing-files/manual/bag-qty-max.gif)
 
-    ![Click Save](static/images/testing-files/manual/create-save.gif)
+    **Minimum** <br />
+    ![Minimum](markdown-files/testing-files/manual/bag-qty-min.gif)
 
-- Clicking **Cancel** will return the user back to the previous page: 
+- Clicking the **Update Button** updates the bag with the user's selected quantity:
 
-    ![Click Cancel](static/images/testing-files/manual/create-cancel.gif)
+    ![Update](markdown-files/testing-files/manual/bag-update.gif)
 
-- The Responsiveness of the **Create Recipe Page**:
+- Clicking the **Checkout Button** brings the user to the order review page:
 
-    ![Create Recipe Page Responsiveness](static/images/testing-files/manual/create-res.gif)
+    ![Checkout](markdown-files/testing-files/manual/bag-checkout.gif)
 
-#### Edit Recipe Page
+- Shopping Bag Page Responsiveness:
 
-Manual testing was conducted on the following elements on the **Edit Recipe** Page:
+    ![Shopping Bag Page Responsiveness](markdown-files/testing-files/manual/bag-res.gif)
 
-- Current information will be the default value, User can edit as needed:
+#### Order Review Page
 
-    ![Edit Recipe Process](static/images/testing-files/manual/edit-rec.gif)
+Manual testing was conducted on the following elements on the **Order Review** Page:
 
-- Clicking **Cancel** will return the user back to the recipe page: 
+- Clicking the **Logo** returns the user to the shopping bag:
 
-    ![Edit Recipe Cancel button](static/images/testing-files/manual/edit-cancel.gif)
+    ![Logo Button](markdown-files/testing-files/manual/or-logo.gif)
 
-- Clicking **Delete** opens **Delete Modal**:
+- Clicking **Return to Bag** returns the user to the shopping bag:
 
-    ![Edit Recipe Delete Modal](static/images/testing-files/manual/edit-delete.gif)
+    ![Return Button](markdown-files/testing-files/manual/or-return.gif)
 
-- The Responsiveness of the **Edit Recipe Page**:
+- Clicking the **Checkout Button** brings the user to the order details page:
 
-    ![Edit Recipe Page Responsiveness ](static/images/testing-files/manual/edit-rec-res.gif)
- 
-#### Recipe Page
+    ![Checkout](markdown-files/testing-files/manual/or-checkout.gif)
 
-Manual testing was conducted on the following elements on the **Recipe** Page:
+- Order Review Page Responsiveness:
 
-- Clicking the **Back** button will return the user to the previous page: 
+    ![Order Review Page Responsiveness](markdown-files/testing-files/manual/or-res.gif)
 
-    ![Recipe Page Back button](static/images/testing-files/manual/rec-back.gif)
+#### Order Details Page
 
-- If the user is not logged in, the **Login To Add Favourites** Button will redirect them to the **Login** page: 
+Manual testing was conducted on the following elements on the **Order Details** Page:
 
-    ![Non-User on Recipe Page](static/images/testing-files/manual/rec-non.gif)
+- Clicking the **Logo** returns the user to the shopping bag:
 
-- If the user is **not** the recipe author, they can add the recipe to, or remove it from their Favourites:
+    ![Logo Button](markdown-files/testing-files/manual/od-logo.gif)
 
-    ![Not Author on Recipe Page](static/images/testing-files/manual/rec-user.gif)
+- Clicking the **first circle** in the HUD returns the user to the Order Review page:
 
-- If the user **is** the author, they can edit or delete the recipe:
+    ![Circle Button](markdown-files/testing-files/manual/od-link.gif)
 
-    ![Author on Recipe Page](static/images/testing-files/manual/rec-auth.gif)
+- Clicking **Edit Bag** returns the user to the shopping bag:
 
-    - **Edit** directs to **Edit Recipe Page**:
-    
-        ![Recipe to Edit Recipe](static/images/testing-files/manual/rec-edit.gif)
+    ![Edit Button](markdown-files/testing-files/manual/od-edit.gif)
 
-    - **Delete** opens the **Delete Modal**:
-    
-        ![Recipe Delete Modal](static/images/testing-files/manual/rec-delete.gif)
+- On mobile devices, the order summary collapses for convienience:
 
-- The Responsiveness of the **Recipe Page**:
+    ![Order Summary](markdown-files/testing-files/manual/od-mobile.gif)
 
-    ![Recipe Page Responsiveness](static/images/testing-files/manual/rec-res.gif)
+- The input fields allow the user to enter their details and clicking the **Complete Order Button** brings the user to the order complete page:
+
+    ![information fields](markdown-files/testing-files/manual/od-process.gif)
+
+- Order Details Page Responsiveness:
+
+    ![Order Details Page Responsiveness](markdown-files/testing-files/manual/od-res.gif)
+
+#### User Profile Page
+
+Manual testing was conducted on the following elements on the **User Profile** Page:
+
+- Clicking the **Buttons** allows the user to control the page:
+
+    ![Buttons](markdown-files/testing-files/manual/profile-btns.gif)
+
+- The input fields allow the user to enter their details and clicking **Update Information** saves the new default information:
+
+    ![information fields](markdown-files/testing-files/manual/profile-update.gif)
+
+- User Profile Page Responsiveness:
+
+    ![User Profile Page Responsiveness](markdown-files/testing-files/manual/profile-res.gif)
+
+#### Past Orders Page
+
+Manual testing was conducted on the following elements on the **Past Orders** Page:
+
+- Clicking the **Buttons** allows the user to control the page:
+
+    ![Buttons](markdown-files/testing-files/manual/past-btns.gif)
+
+- Clicking **View Bag** directs the user to their selected past order page:
+
+    ![View Button](markdown-files/testing-files/manual/past-view.gif)
+
+- Past Orders Page Responsiveness:
+
+    ![Past Orders Page Responsiveness](markdown-files/testing-files/manual/past-res.gif)
 
 
 [Back to top ⇧](#table-of-contents)
