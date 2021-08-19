@@ -27,6 +27,13 @@ Your order will be shipped to:
 For Course Orders:
 Present this email, as proof of purchase, upon registration on your first session.
 Further information can be found on our website.
+For Course Orders
+Your class credits will begin the next calendar week (Monday to Sunday). Present this email at the check-in desk on your first session to complete registration.
+Please Note:
+All course bookings do not guarantee class placement. 
+The Teacher will assesss all swimmers on their first session to ensure they are in the correct course/level. 
+Any adjustments will be made accordingly with the utmost effort made to maintain day and time.
+Further information can be found on our FAQs page: https://delphin-lifesavingclub.herokuapp.com/pages/faqs"
 
 If you have any questions, feel free to get in touch.
 

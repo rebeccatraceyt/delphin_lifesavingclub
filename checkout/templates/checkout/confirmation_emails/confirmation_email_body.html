@@ -19,24 +19,17 @@
 
         <p><strong>Order:</strong></p>
         <table>
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>QTY</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
             <tbody>
                 {% for item in order.lineitems.all%}
                     <tr>
                         <td>
-                            {{ item.product.name }} ({{ item.product_select }})
+                            {{ item.product.name }} ({{ item.product_select }}) 
                         </td>
                         <td>
-                            {{ item.quantity }} x 
+                             {{ item.quantity }} x 
                         </td>
                         <td>
-                            €{{ item.product.price }}
+                             €{{ item.product.price }}
                         </td>
                     </tr>
                 {% endfor %}
@@ -46,8 +39,8 @@
         <h4>Order Total: €{{ order.grand_total }}</h4>
 
         <hr>
-        <h4>For Apparel Orders</h4>
-        <p>Your order will be shipped to:</p>
+        <h4>For Apparel Orders:</h4>
+        <p>Your order will be shipped to your designated address within 3 - 5 working days:</p>
         <table>
             <tbody>
                 <tr>
@@ -72,10 +65,12 @@
 
         <hr>
         <h4>For Course Orders</h4>
-        <p>Present this email, as proof of purchase, upon registration on your first session.</p>
-        <p><em>Please Note: All course bookings do not guarantee class placement. 
+        <p>Your class credits will begin the next calendar week (Monday to Sunday). Present this email at the check-in desk on your first session to complete registration.</p>
+        <p><strong>Please Note:</strong></p> 
+        <p><em>
+            All course bookings do not guarantee class placement. 
             The Teacher will assesss all swimmers on their first session to ensure they are in the correct course/level. 
-            Any adjusts will be made accordingly with the utmost effort made to maintain day and time.
+            Any adjustments will be made accordingly with the utmost effort made to maintain day and time.
         </em></p>
         <p> Further information can be found on our <a href="https://delphin-lifesavingclub.herokuapp.com/pages/faqs">FAQs</a> page.</p>
 
