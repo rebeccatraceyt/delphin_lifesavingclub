@@ -15,21 +15,18 @@
      2. [User Stories](#User-Stories)
      3. [Development Planes](#Development-Planes)
 2. [Information Architecture](#Information-Architecture)
+     1. [Database](#Database)
+     2. [Data Models](#Data-Models)
 3. [Features](#Features)
      1. [Design Features](#Design-Features) 
      2. [Existing Features](#Existing-Features)
      3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
 4. [Issues and Bugs](#Issues-and-Bugs)
 5. [Technologies Used](#Technologies-Used)
-     1. [Languages](#Languages)
-     2. [Tools](#Tools)
-     3. [Libraries](#Libraries)
-     4. [Database Management](#Database-Management)
 6. [Testing](#Testing) ☞ **[Testing.md](TESTING.md)**
 7. [Deployment](#Deployment)
 8. [Credits](#Credits)
 9. [Acknowledgements](#Acknowledgements)
-10. [Technical Support](#Technical-Support)
 ***
 
 <div style="text-align:center">
@@ -610,6 +607,20 @@ Each page of the websire features a consistently responsive and intuitive naviat
 ***
 
 ## Issues and Bugs 
+
+The developer encountered a number of issues during the development of the website, with the noteworthy ones listed below, along with solutions or ideas to implement in the future.
+
+**Pagination** <br />
+In implementing the pagination feature (allowing only 12 products to be displayed on the page at any given time), the developer encountered an issue wherby, when applying pagination on the filtered pages, **[All Apparel](https://delphin-lifesavingclub.herokuapp.com/shop/apparel?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories "Link to All Apparel page"), [All Courses](https://delphin-lifesavingclub.herokuapp.com/shop/courses?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding "Link to All Courses page") and [Search](https://delphin-lifesavingclub.herokuapp.com/shop/search "Link to Search page")**, the feature would reset the filters set (e.g. the product categories) from the second page, meaning, that instead of the refined search the user had selected, all products would be displayed. This was not practical and rendered the category filtering system useless, so the devloper had to omit the pagination on these pages. The work around was to provide category filtering buttons at the top of the page, so that the user did not have to scroll through all products, but could instead just display the sub-categories they desired.
+
+**Users App** <br />
+The original design of the User model was called the `Profile` model. This was a fatal error on the developers part as it clashed with the integrated profile authorisation from `allauth`. As a result, the developer had to revert two commits and re-create the profile app as the new `users` app to restore functionality.
+
+**Google Maps Embed** <br />
+The developers original design called for a Google Maps API to be used on the contacts page, giving users the ability to view the pool location with ease and clarity. On researching the methods of implementation, they discovered there were issues in using the API, the primary problem being authorisation when deploying on Heroku. From various sources, it was clear that additional variables were necessary in order to create a functioning map. It was decided, in order to avoid these additional steps, that an embedding of the map would be used instead. Sourced from [Google Map Generator](https://google-map-generator.com/ "Link to Google Maps Generator homepage").
+
+**Quantity Counter** <br />
+The biggest issue the developer faced was implementing the `stock_count` functionality. The feature was in the original designs, and the developer heavily researched how to create it, using `ManyToMany` relationships amongst their models. Through plenty of trial and error, and with the incredible patience of their mentor, the developer was able to achieve functionality. An issue arose in the implementation with a clash between the `stock_count` and `quantity` fields, where the user could select more than the product's current stock and put it in their bag. The developer was able to fix this by adapting a sourced solution from [Stack Overflow](https://stackoverflow.com/questions/30785074/set-max-value-of-input-based-on-selections-data-attribute "Link to the solution page").
 
 [Back to top ⇧](#table-of-contents)
 ***
