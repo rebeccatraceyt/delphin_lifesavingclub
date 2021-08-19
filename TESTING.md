@@ -103,7 +103,7 @@ User stories were tested to ensure the needs of the user were being met, with th
 - Similar to the Academy Programme page, the FAQs are displayed in a featured accordion, with each question as the title of the accordion card.
 - Clicking the question opens the card, revealing the answer for the user.
 
-**New Visitors**
+### New Visitors
 
 | **1. As a new visitor, I want to create an account, to unlock registered user features.** |
 |----------------------------------------------------------------------------|
@@ -113,7 +113,7 @@ User stories were tested to ensure the needs of the user were being met, with th
 - Register will lead users to the signup page, allowing the user to enter their details and create their account.
 - The register page is also availble on the login page for convenience.
 
-**Returning Visitors**
+### Returning Visitors
 
 | **1. As a returning visitor, I want to easily log into my existing account, to unlock registered user features.** |
 |----------------------------------------------------------------------------|
