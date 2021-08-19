@@ -550,13 +550,13 @@ Manual testing was conducted on the following elements on the **Past Orders** Pa
 
 -  [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "Link to W3C CSS Validator") was used to validate the `CSS` code used with the following result:
 
-    **Base CSS**
+    **Base CSS**<br />
     ![Style sheet validation results](markdown-files/testing-files/automated/base-css.png)
 
-    **Checkout CSS**
+    **Checkout CSS**<br />
     ![Style sheet validation results](markdown-files/testing-files/automated/checkout-css.png)
 
-    **Profile CSS**
+    **Profile CSS**<br />
     ![Style sheet validation results](markdown-files/testing-files/automated/profile-css.png)
 
 
@@ -564,18 +564,38 @@ Manual testing was conducted on the following elements on the **Past Orders** Pa
 
     - Errors highlighted in `contact_email.js` pertain to [SweetAlert2](https://sweetalert2.github.io/ "Link to Sweet Alert 2 page") (used for contact form feedback) and [jQuery Validation](https://jqueryvalidation.org/ "Link to jQuery Validation page")(used for validating contact form):
 
-        ![Style sheet validation results](markdown-files/testing-files/automated/contact-js.png)
+        ![JS validation results](markdown-files/testing-files/automated/contact-js.png)
     
     - Errors highlighted in `strip_elements.js` pertain to [Stripe](https://stripe.com/en-ie "Link to Stripe Homepage") import:
 
-        ![Style sheet validation results](markdown-files/testing-files/automated/stripe-js.png)
-
+        ![JS validation results](markdown-files/testing-files/automated/stripe-js.png)
 
     - There were no errors highlighted in `profile.js` or `base.js` files
 
 - [PEP8 Online](http://pep8online.com/ "Link to PEP8 Online") was used to validate `Python` code.
-    
-    - All highlighted errors and warnings were resolved.
+
+    - A `line too long` linting error was highlighted in `settings.py` within the `AUTH_PASSWORD_VALIDATORS` variable (required by AllAuth).
+
+    - Working with their mentor, the devloper decided to ignore this error as the lines could not be broken down without losing necessary password validation functionality, using the the [Flake8 Ignoring Violations](https://flake8.pycqa.org/en/latest/user/violations.html#in-line-ignoring-errors "Link to Flake8 docs") comment `# noqa`, with the final code as:
+
+        ```
+        AUTH_PASSWORD_VALIDATORS = [
+            {
+                'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
+            },
+            {
+                'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa
+            },
+            {
+                'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa
+            },
+            {
+                'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa
+            },
+        ]
+        ```
+
+    - All other highlighted errors and warnings were resolved.
 
 ### Browser Validation
 **Chrome:**
