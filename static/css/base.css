@@ -820,6 +820,10 @@ ol.breadcrumb {
     border-radius: 1px;
     border-bottom: 1px solid var(--black);
 }
+.col-title h5 > button {
+    padding: 0;
+    font-weight: 900;
+}
 .col-title h5 > button,
 .col-title h5 > button:hover,
 .col-title h5 > button:focus {
@@ -1084,6 +1088,8 @@ ol.breadcrumb {
     }
     .col-title h5 > button {
         font-size: 1.1rem;
+        padding: 3px;
+        font-weight: 500;
     }
     /* Contact Page */
     .contact-content {
@@ -1254,6 +1260,11 @@ ol.breadcrumb {
     }
     .col-title h5 > button {
         font-size: 1.1rem;
+    }
+    .col-title h5 > button {
+        font-size: 1.2rem;
+        padding: 3px;
+        font-weight: 500;
     }
     /* Contact Page */
     .contact-content {
@@ -1544,6 +1555,11 @@ ol.breadcrumb {
     }
     .col-title h5 > button {
         font-size: 1.1rem;
+    }
+    .col-title h5 > button {
+        font-size: 1.1rem;
+        padding: 3px 10px;
+        font-weight: 500;
     }
     /* Contact Page */
     .contact-content {

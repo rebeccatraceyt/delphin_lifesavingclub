@@ -24,8 +24,8 @@
 
             <!-- Show/Hide all buttons -->
             <div class="col-12 col-toggle d-flex justify-content-center justify-content-md-start">
-                <button class="btn" id="hideAccordianCards">Hide All</button>
-                <button class="btn" id="showAccordianCards">Show All</button>
+                <button class="btn" id="hideAccordianCards">Hide Text</button>
+                <button class="btn" id="showAccordianCards">Show Text</button>
             </div>
 
             <!-- Programme Iteration -->
@@ -36,7 +36,7 @@
                         <div class="col-title card-header" id="programmeCollapse">
                             <h5 class="mb-0 text-center text-md-left">
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#col_{{ programme.id }}" aria-expanded="false" aria-controls="col_{{ programme.id }}">
-                                    {{ programme.name }} ({{ programme.age }})
+                                    {{ programme.name }} ({{ programme.age }}) <span class="icon"><i class="fas fa-angle-down"></i></span>
                                 </button>
                             </h5>
                         </div>
