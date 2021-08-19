@@ -5,14 +5,15 @@
 
 {% block content %}
     <div class="container page-margins">
-        <div class="row">
-            <div class="col-12 page-title">
-                <h3>404</h3>
-                <hr class="section-divider">
+        <div class="row error-box extra-p-btm">
+            <div class="col-12">
+                <a class="error-img" href="{% url 'home' %}">
+                    <img src="{% static 'img/404.png' %}" alt="Home Link">
+                </a>
+                <p>Ooop! It seems that page does not exist...</p>
             </div>
-            <div class="col-12 page-content">
-                <p>Ooop! That page does not exist</p>
-                <p>Return <a href="{% url 'home' %}">Home</a></p>
+            <div class="col-12 error-link">
+                <a href="{% url 'home' %}">Return to Safety</a>
             </div>
         </div>
     </div>
