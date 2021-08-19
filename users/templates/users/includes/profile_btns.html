@@ -1,8 +1,10 @@
 {% load static %}
 
+<!-- Displays user profile buttons -->
 <div class="container-fluid">
     <div class="row profile-btns-box">
         <div class="col-12 profile-btns btn-shadow ">
+            <!-- Conditional to current page -->
             {% with request.resolver_match.url_name as url_name %}
                 {% if url_name == 'profile' %}
                     <a href="{% url 'past_orders' %}">View Past Orders</a>
@@ -11,6 +13,8 @@
                 {% endif %}
             {% endwith %}
         </div>
+
+        <!-- AllAuth pages -->
         <div class="col-12 profile-btns btn-shadow ">
             <a href="{% url 'account_change_password' %}">Change Password</a>
         </div>

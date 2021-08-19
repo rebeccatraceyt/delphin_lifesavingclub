@@ -19,10 +19,14 @@
                 <p>If you can't find an answer to your question, feel free to get in touch, via our <strong><a class="pages-link" href="{% url 'view_contact' %}">Contact</a></strong> page.</p>
                 <p>For a detailed outline of our Academy, visit our <strong><a href="{% url 'view_programme' %}" class="pages-link">Academy Programme</a></strong> page.</p>
             </div>
+
+            <!-- Show/Hide all buttons -->
             <div class="col-12 col-toggle d-flex justify-content-center justify-content-md-start">
                 <button class="btn" id="hideAccordianCards">Hide All</button>
                 <button class="btn" id="showAccordianCards">Show All</button>
             </div>
+
+            <!-- Questions Iteration -->
             <div class="col-12 w-100">
                 {% for question in questions %}
                     <div id="accordion">

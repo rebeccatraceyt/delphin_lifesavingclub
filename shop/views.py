@@ -67,6 +67,7 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product_options = product.product_select.all()
 
+    # gets the product variations to select
     product_select = ProductSelect.objects.filter(
         product_select=product_options,
         product=product)

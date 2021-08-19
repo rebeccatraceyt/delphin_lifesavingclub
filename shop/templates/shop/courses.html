@@ -40,6 +40,8 @@
                 </h3>
                 <hr class="section-divider">
             </div>
+
+            <!-- Category Dropdown -->
             <div class="col-12 d-flex d-lg-none category-dropdown">
                 <div class="dropdown show">
                     <button class="btn category-toggle dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,6 +57,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Category Buttons -->
             <div class="col-12 d-none d-lg-block category-links text-center">
                 <a href="{% url 'courses' %}?category=swimming_jnr" >0 - 4 years</a>
                 <a href="{% url 'courses' %}?category=swimming_snr">5 - 12 years</a>
@@ -66,6 +70,8 @@
 
         <!-- Page Content -->
         <div class="row products-sec">
+
+            <!-- Product Cards -->
             {% for product in products %}
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3 px-md-1">
                     <div class="row product-card">

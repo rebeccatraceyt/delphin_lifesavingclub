@@ -21,10 +21,14 @@
                 <p>Our Lifesaving Programme is delivered through the <strong><a class="pages-link" href="https://www.rlss.org.uk/Pages/Category/our-awards" target="_blank" rel="noopener">Royal Lifesaving Society</a></strong> , with course criteria, materials and exams produced by RLSS UK and delivered through our RLSS Instructors and Tutors</p>
                 <p>Further information regarding our Academy can be found on our <strong><a class="pages-link" href="{% url 'view_faqs' %}">FAQs</a></strong> page.</p>
             </div>
+
+            <!-- Show/Hide all buttons -->
             <div class="col-12 col-toggle d-flex justify-content-center justify-content-md-start">
                 <button class="btn" id="hideAccordianCards">Hide All</button>
                 <button class="btn" id="showAccordianCards">Show All</button>
             </div>
+
+            <!-- Programme Iteration -->
             <div class="col-12 w-100">
                 {% for programme in programmes %}
                     <div id="accordion">

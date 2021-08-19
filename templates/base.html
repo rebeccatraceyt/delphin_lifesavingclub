@@ -48,10 +48,13 @@
 
     </head>
     <body>
+
+        <!-- Navbar -->
         {% if navbar != False %}
             {% include 'includes/navbar.html' %}
         {% endif %}
 
+        <!-- Toasts -->
         {% if messages %}
             <div class="message-container">
                 {% for message in messages %}
@@ -70,13 +73,16 @@
             </div>
         {% endif %}
         
+        <!-- Page Content -->
         {% block content %}
         {% endblock %}
         
+        <!-- Footer -->
         {% if footer != False %}
             {% include 'includes/footer.html' %}
         {% endif %}
 
+        <!-- Extra JS -->
         {% block postloadjs %}
             <script type="module" src="{% static 'js/base.js' %}"></script>
             <script type="text/javascript">

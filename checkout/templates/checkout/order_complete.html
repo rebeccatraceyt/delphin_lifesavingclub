@@ -9,6 +9,7 @@
 {% block content %}
     <div class="container page-margins">
 
+        <!-- Conditional for Past Orders view -->
         {% if not from_profile %}
             <!-- Checkout Logo and Progress Bar -->
             {% include 'checkout/includes/checkout_header.html' %}
@@ -30,6 +31,8 @@
         <!-- Page Content -->
         <div class="row">
             <div class="col-12 confirm-text">
+
+                <!-- Conditional for Past Orders view -->
                 {% if not from_profile %}
                     <p>Thank you for your order, your order number is: <small>{{ order.order_number }}</small>.</p>
                     <p>A confirmation email has been sent to: <strong>{{ order.email }}</strong>.</p>
@@ -54,6 +57,8 @@
             </div>
             <hr class="sm-divider">
         </div>
+
+        <!-- Order Summary -->
         <div class="row confirm-row">
             <div class="col-12 confirm-text">
                 <h5>Order Summary:</h5>
@@ -83,6 +88,8 @@
                 {% endfor %}
             </div>
         </div>
+
+        <!-- Details Summary -->
         <div class="row confirm-row">
             <div class="col-12 confirm-text">
                 <h5>Delivering To:</h5>
@@ -126,6 +133,8 @@
                 </table>
             </div>
         </div>
+
+        <!-- Billing Summary -->
         <div class="row confirm-row">
             <div class="col-12 confirm-text">
                 <h5>Billing Info:</h5>
@@ -148,6 +157,7 @@
             </div>
         </div>
 
+        <!-- Conditional for Past Orders view -->
         {% if from_profile %}
             <div class="row">
                 <div class="col-12 edit-btn d-flex align-items-end justify-content-end">

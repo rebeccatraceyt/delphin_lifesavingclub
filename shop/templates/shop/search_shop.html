@@ -16,6 +16,8 @@
                 </h3>
                 <hr class="section-divider">
             </div>
+
+            <!-- Search Box -->
             <div class="col-12">
                 <form>
                     <div class="input-group mb-4 search-bar">
@@ -30,6 +32,8 @@
                     </div>
                 </form>
             </div>
+
+            <!-- Search Filters -->
             {% if search_term %}
                 <div class="col-12 category-links text-center">
                     <a class="btn-shadow" href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories" >Apparel</a>
@@ -45,6 +49,8 @@
         <!-- Page Content -->
         <div class="row products-sec">
             {% if search_term %}
+
+                <!-- If NO results -->
                 {% if products|length < 1 %}
                     <div class="col-12 search-text">
                         <h3>
@@ -56,12 +62,16 @@
                             Search again, or select a category:
                         </p>
                     </div>
+
+                <!-- If results -->
                 {% else %}
                     <div class="col-12">
                         <p>
                             {{ products|length }} {% if products|length > 1 %}products{%else%}product{%endif%} {% if search_term %} found for: "{{ search_term }}"{% endif %}
                         </p>
                     </div>
+
+                    <!-- Product Card -->
                     {% for product in products %}
                         <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3 px-md-1">
                             <div class="row product-card">
@@ -99,6 +109,8 @@
                     {% endfor %}
                 {% endif %}
             {% endif %}
+
+            <!-- Search Category Buttons -->
             {% if not search_term or products|length < 1 %}
                 <div class="col-12">
                     <div class="container-fluid">

@@ -1,9 +1,10 @@
 
 {% load static %}
 
+<!-- Adapted from: https://tinyurl.com/3w3ymm7z -->
 <nav class="navbar sticky-top navbar-expand-lg">
-    <!-- Copied and edited from: https://tinyurl.com/3w3ymm7z -->
 
+    <!-- Navbar Logo -->
     <a id="nav-logo" class="navbar-brand px-1 mr-md-1" href="{% url 'home' %}">
         <img src="{% static 'img/logo-black.png' %}" alt="Delphin Logo">
     </a>
@@ -23,11 +24,13 @@
         </a>
     </div>
 
+    <!-- Navbar Hamburger -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
         aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <i id="navbar-icon" class="fas fa-bars"></i>
     </button>
 
+    <!-- Navbar Menu -->    
     <div class="collapse navbar-collapse" id="navbar">
         <!-- ref: https://tinyurl.com/3z8yvps3 -->
         {% with request.resolver_match.url_name as url_name %}
