@@ -737,19 +737,32 @@ ol.breadcrumb {
     border: none;
     display: flex;
     justify-content: center;
-    background-color: var(--black);
+    
     margin: 2% auto;
     padding: 10px;
     text-align: center;
     border-radius: 2px;
     max-width: 100%;
-    color: var(--white);
+    
     transition: all 0.5s ease 0s;
 }
-.profile-btns:hover,
-.profile-btns:focus {
+.profile-blk {
+    background-color: var(--black);
+    color: var(--white);
+}
+.profile-wht {
+    outline: 2px solid var(--black);
+}
+.profile-blk:hover,
+.profile-blk:focus {
     color: var(--yellow);
 }
+.profile-wht:hover,
+.profile-wht:focus {
+    background-color: var(--black);
+    color: var(--white);
+}
+
 .table-btn a {
     background-color: var(--black);
     border-radius: 2px;
