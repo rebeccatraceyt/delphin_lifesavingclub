@@ -1,4 +1,4 @@
-<div style="margin:auto; text-align:center">
+<div align='center'>
 <img src="markdown-files/readme-files/readme-logo.png" alt="Delphin Logo" />
 <h1> Image credits </h1>
 </div>
@@ -24,7 +24,7 @@
 
 ***
 
-<div style="text-align:center">
+<div align='center'>
 <img src="markdown-files/readme-files/delphin-res.png" alt="Delphin Responsivness Example" />
 </div>
 
@@ -36,65 +36,77 @@ User stories were tested to ensure the needs of the user were being met, with th
 
 ### General Users
 
-**1. As a user I want to view all products, to purchase my desired items.**
-- In the `Shop` dropdown menu on the navigation menu, users have the selection to `Shop Apparel`, `Shop Courses` or `View All`.
+| **1. As a user I want to view all products, to purchase my desired items.** |
+|----------------------------------------------------------------------------|
+- In the `Shop` dropdown menu on the navigation menu, users have the selection to `Shop Apparel`, `Shop Courses` or `View All`. 
 - `View All` will direct users to the `All Products` page.
-- There are breadcrumbs on both `All Apparel` and `All Courses` pages, allowing users quick access to the `All Product` page.
+- There are breadcrumbs on both `All Apparel` and `All Courses` pages, allowing users quick access to the `All Product` page. 
 
-**2. As a user I want to filter through categories, to only see relevant products.**
-- On all `Shop` pages, there are filters for categories, and sub-categories.
-- The `All Products` page has the `Apparel` and `Courses` category button filters.
-- The `Apparel` and `Courses` pages have their respective sub-category button filters (apparel type and age range).
+| **2. As a user I want to filter through categories, to only see relevant products.** |
+|----------------------------------------------------------------------------|
+- On all `Shop` pages, there are filters for categories, and sub-categories. 
+- The `All Products` page has the `Apparel` and `Courses` category button filters. 
+- The `Apparel` and `Courses` pages have their respective sub-category button filters (apparel type and age range). 
 
-**3. As a user I want to use a search query, to find a specific product or product type.**
-- Users can use the category filters available on the `Shop` pages to quickly search for their product category.
-- There is a `Search` page, distinguished by a conventional search icon on the navigation menu, directing users to the search page, where they can type in their query.
+| **3. As a user I want to use a search query, to find a specific product or product type.** |
+|----------------------------------------------------------------------------|
+- Users can use the category filters available on the `Shop` pages to quickly search for their product category. 
+- There is a `Search` page, distinguished by a conventional search icon on the navigation menu, directing users to the search page, where they can type in their query. 
 
-**4. As a user I want to add items to my shopping bag, to begin the order process.**
-- On all product detail pages, there is a call-to-action button that allows users to add their desired product to their shopping bag.
-- The user will not be able to view items in their shopping bag if they are not authenticated.
+| **4. As a user I want to add items to my shopping bag, to begin the order process.** |
+|----------------------------------------------------------------------------|
+- On all product detail pages, there is a call-to-action button that allows users to add their desired product to their shopping bag. 
+- The user will not be able to view items in their shopping bag if they are not authenticated. 
 
-**5. As a user I want to receive visual feedback that my item has been added to the bag, to confirm my selection.**
-- On clicking the `Add to Bag` button on the product detail page, a toast will provide feedback to the user that the product has been successfully added to their shopping bag.
-- To view their shopping bag they will have to login.
+| **5. As a user I want to receive visual feedback that my item has been added to the bag, to confirm my selection.** |
+|----------------------------------------------------------------------------|
+- On clicking the `Add to Bag` button on the product detail page, a toast will provide feedback to the user that the product has been successfully added to their shopping bag. 
+- To view their shopping bag they will have to login. 
 
-**6. As a user I want to select a course on a specific day, to suit my needs.**
-- Each course has their own specific class times and days.
-- The user is able to select their preferred time/day using the `select` dropdown menu on the product details page.
-- Each class provides information to the user of how many places are available for that particular class.
+| **6. As a user I want to select a course on a specific day, to suit my needs.** |
+|----------------------------------------------------------------------------|
+- Each course has their own specific class times and days. 
+- The user is able to select their preferred time/day using the `select` dropdown menu on the product details page. 
+- Each class provides information to the user of how many places are available for that particular class. 
 
-**7. As a user I want to select apparel in a specific size, to suit my needs.**
-- Similar to the courses, all apparel products have a selection of sizes available.
-- Users can select their size using the `select` dropdown menu.
-- Each product provides information of the the stock numbers to the user.
+| **7. As a user I want to select apparel in a specific size, to suit my needs.** |
+|----------------------------------------------------------------------------|
+- Similar to the courses, all apparel products have a selection of sizes available. 
+- Users can select their size using the `select` dropdown menu. 
+- Each product provides information of the the stock numbers to the user. 
 
-**8. As a user I want to view contact information for the club, to communicate with team.**
+| **8. As a user I want to view contact information for the club, to communicate with team.** |
+|----------------------------------------------------------------------------|
 - The `Contact` page is available in the `About` dropdown menu of the navigation menu. 
-- Clicking it will direct users to the contact page, which provides multiple points of contact:
-    - Phone Number link
-    - Email address to notable Club Officers
-    - A map pinpointing the clubs location
-    - A Contact form for general enquiries
+- Clicking it will direct users to the contact page, which provides multiple points of contact: 
+    - Phone Number link 
+    - Email address to notable Club Officers |
+    - A map pinpointing the clubs location  
+    - A Contact form for general enquiries  |
 
-**9. As a user I want to connect with the club on one of their social apps, to communicate with the team.**
+| **9. As a user I want to connect with the club on one of their social apps, to communicate with the team.** |
+|----------------------------------------------------------------------------|
 - On the footer (displayed on all pages, with the exception of the checkout pages) there are social links, providing quick access to the clubs social accounts:
     - Facebook
     - Whatsapp
     - Mailto
 
-**10. As a user I want to get a breakdown of classes offered, to find one that suits my needs.**
+| **10. As a user I want to get a breakdown of classes offered, to find one that suits my needs.** |
+|----------------------------------------------------------------------------|
 - The `Academy Programme` page is located in the `About` dropdown list of the navigation menu.
 - The page hosts an accordian feature with each class that the club offers housed in their own accordion, with the class name and age range as the title of each.
 - Clicking their desired class will open the accordion, providing users with the necessary information about each.
 
-**11. As a user I want to navigate to a page that could help me with my enquiry, to answer my question.**
+| **11. As a user I want to navigate to a page that could help me with my enquiry, to answer my question.** |
+|----------------------------------------------------------------------------|
 - The `Frequently Asked Questions` page is located in the `About` dropdown list of the navigation menu.
 - Similar to the Academy Programme page, the FAQs are displayed in a featured accordion, with each question as the title of the accordion card.
 - Clicking the question opens the card, revealing the answer for the user.
 
 **New Visitors**
 
-**1. As a new visitor, I want to create an account, to unlock registered user features.**
+| **1. As a new visitor, I want to create an account, to unlock registered user features.** |
+|----------------------------------------------------------------------------|
 - If the user is not authenticated, two links will be displayed on the navigation menu:
     - `Register`
     - `Login`
@@ -103,53 +115,65 @@ User stories were tested to ensure the needs of the user were being met, with th
 
 **Returning Visitors**
 
-**1. As a returning visitor, I want to easily log into my existing account, to unlock registered user features.**
+| **1. As a returning visitor, I want to easily log into my existing account, to unlock registered user features.** |
+|----------------------------------------------------------------------------|
 - If the user is not authenticated, the login page will be clearly displayed on the navigation menu.
 - Clicking it directs the user to the login page, where they can enter their details to log into their account.
 
-**2. As a returning visitor, I want to view my previous orders, to keep a record of my transaction.**
+| **2. As a returning visitor, I want to view my previous orders, to keep a record of my transaction.** |
+|----------------------------------------------------------------------------|
 - When a user is authenticated, a mew dropdown menu is displayed. The `Account` dropdown menu provides users with quick access to their order history.
 - On the `Order History` page, the user will be presented with a table of their previous orders (if they have any) or conditional text.
 - Each order displays the date of the order, the number of items and the grand total of the order.
 - A call-to-action `View` button allows users to view the entire order details.
 
-**3. As a returning visitor, I want to save default information, to save time for future orders.**
+| **3. As a returning visitor, I want to save default information, to save time for future orders.** |
+|----------------------------------------------------------------------------|
 - On the `Account` dropdown menu, there is a quick link to the users profile page, there they can enter their default information for faster checkout.
 - Additionally, the user can click the checkbox available on the checkout page to save their information.
 
-**4. As a returning visitor, I want to edit default information, to update any necessary fields.**
+| **4. As a returning visitor, I want to edit default information, to update any necessary fields.** |
+|----------------------------------------------------------------------------|
 - Directing to the user's profile page will display the user's saved default information.
 - There they can edit their information, as needed, and click the call-to-action `Update` button.
 
-**5. As a returning visitor, I want to view shopping bag to get an overview of products I wish to order.**
+| **5. As a returning visitor, I want to view shopping bag to get an overview of products I wish to order.** |
+|----------------------------------------------------------------------------|
 - When the user adds to their shopping bag, a toast will appear providing real-time information that the product was sucessfully added, as well as a snapshot of the contents currently in their bag.
 - Clicking either the toast or the bag icon will direct the user to their shopping bag to view and edit as they wish.
 
-**6. As a returning visitor, I want to remove products from my bag, to suit my needs.**
+| **6. As a returning visitor, I want to remove products from my bag, to suit my needs.** |
+|----------------------------------------------------------------------------|
 - In the shopping bag, there is a conventional `x` icon placed at the top-right of each product box.
 - Clicking this item will remove the product from their shopping bag.
 
-**7. As a returning visitor, I want to update a product's quantity, to suit my needs.**
+| **7. As a returning visitor, I want to update a product's quantity, to suit my needs.** |
+|----------------------------------------------------------------------------|
 - Within the shopping bag, the user can update the quantity of a particular product by using the prepending and appending buttons on the quantity box.
 - They can then save their changes by clicking the call-to-action `Update` button.
 
-**8. As a returning visitor, I want to get real-time feedback on available stock, to make purchase decisions.**
+| **8. As a returning visitor, I want to get real-time feedback on available stock, to make purchase decisions.** |
+|----------------------------------------------------------------------------|
 - Each product variation has it's own stock count displayed on the product details page.
 - This provides users with real-time stock numbers, allowing them to select up that number.
 - The buttons on the quantity box dynamically change, based on the stock count of the product selected and the quantity the user has inputted.
 
-**8. As a returning visitor, I want to proceed to a secure checkout, to make a purchase.**
+| **9. As a returning visitor, I want to proceed to a secure checkout, to make a purchase.** |
+|----------------------------------------------------------------------------|
 - In the shopping bag, a `Secure Checkout` button directs users to the first page of the checkout process.
 
-**9. As a returning visitor, I want to have clear visual feedback of the order process, to understand all steps of the process.**
+| **10. As a returning visitor, I want to have clear visual feedback of the order process, to understand all steps of the process.** |
+|----------------------------------------------------------------------------|
 - Each step of the checkout process provides a Heads Up display of the checkout process. 
 - This display changes page to page, with clear feedback to the user of their current location in the process.
 
-**10. As a returning visitor, I want to be able to edit my bag at all times, to allow change of mind.**
+| **11. As a returning visitor, I want to be able to edit my bag at all times, to allow change of mind.** |
+|----------------------------------------------------------------------------|
 - The user can edit their bag in the shopping bag.
 - An Edit button is available on every page of the checkout process, allowing the users to return to their shopping bag for editing.
 
-**11. As a returning visitor, I want to receive a summary of my order via email to confirm that my transaction has been process.**
+| **12. As a returning visitor, I want to receive a summary of my order via email to confirm that my transaction has been process.** |
+|----------------------------------------------------------------------------|
 - When a user successfully checks out, a confirmation email will be sent to their specified email address.
 - This email will provide order information including the date, total and a list of ordered items.
 - Further information, such as delivery times and course instructions are available in the email.

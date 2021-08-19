@@ -1,8 +1,8 @@
-<div style="margin:auto">
+<div align='center'>
 <img src="markdown-files/readme-files/readme-logo.png" alt="Delphin Logo" />
 </div>
 
-<div style="text-align:center">
+<div align='center'>
 <p>The <strong>Delphin Lifesaving Club</strong> e-shop was designed, built and deployed by Rebecca Tracey-Timoney as the fourth and final Milestone Project to be completed for the duel Software Development Diploma from The Code Institute and UCD. The purpose of this online shop is to provide a virtual shopping environment for club members (future and current) to browse and purchase Delphin products, including classes and club apparel. The website provides a smooth and uncomplicated online shopping experience for users, with its simplistic and intuitive design.</p>
 
 [View the live project here](https://delphin-lifesavingclub.herokuapp.com/ "Link to Delphin page")
@@ -29,7 +29,7 @@
 9. [Acknowledgements](#Acknowledgements)
 ***
 
-<div style="text-align:center">
+<div align='center'>
 <img src="markdown-files/readme-files/delphin-res.png" alt="Delphin Responsivness Example" />
 </div>
 
@@ -152,8 +152,8 @@ The website needs to enable the **client** to:
 
 With these goals in mind, a strategy table was created to determine the trade-off between importance and viability with the following results:
 
-<div style="margin:auto; width:400px">
-<img src="markdown-files/readme-files/opportunity-matrix.png" alt="Delphin Opportunity Matrix" />
+<div align='center'>
+<img src="markdown-files/readme-files/opportunity-matrix.png" style='width:300px' alt="Delphin Opportunity Matrix" />
 </div>
 
 <strong>2. <u>Scope</u></strong>
@@ -207,17 +207,17 @@ A scope was defined to identify what needed to be done in order to align feature
 The website's navigation was organized in order to ensure that users could navigate through the site with ease and efficiency, with the following results: 
 
 
-<div style="margin:auto; width:90%">
+<div align='center'align='center'>
 <strong>Navigation Structure for User Management:</strong>
 <img src="markdown-files/readme-files/user-mng-ia.png" alt="User Management Information Architecture" />
 </div>
 
-<div style="margin:auto; width:90%">
+<div align='center'align='center'>
 <strong>Navigation Structure for Product Management:</strong>
 <img src="markdown-files/readme-files/product-mng-ia.png" alt="Product Management Information Architecture" />
 </div>
 
-<div style="margin:auto; width:90%">
+<div align='center'align='center'>
 <strong>Navigation Structure for Transaction Management:</strong>
 <img src="markdown-files/readme-files/transaction-mng-ia.png" alt="Transaction Management Information Architecture" />
 </div>
@@ -226,72 +226,72 @@ The website's navigation was organized in order to ensure that users could navig
 
 Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file/Hx5A1pBFoMZs2BYT781Te6/Delphin "Link to Delphin Workspace") with providing a positive user experience in mind:
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Home Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/home.png" alt="Home Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>All Products Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/all-products.png" alt="All Products Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Search Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/search.png" alt="Search Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Individual Product Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/product-detail.png" alt="Individual Product Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Add Product Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/product-add.png" alt="Add Product Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Login Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/login.png" alt="Login Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Register Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/signup.png" alt="Register Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Club Ethos Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/ethos.png" alt="Club Ethos Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Academy Programme Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/programme.png" alt="Academy Programme Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Contact Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/contact.png" alt="Contact Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Shopping Bag Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/bag.png" alt="Shopping Bag Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Checkout Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/checkout.png" alt="Checkout Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>Order Summary Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/summary.png" alt="Order Summary Page Wireframe" />
 </div>
 
-<div style="margin:auto; width:80%">
+<div align='center'>
 <strong>User Profile Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/profile.png" alt="User Profile Page Wireframe" />
 </div>
@@ -316,7 +316,7 @@ While the developer relied heavily on these Wireframes in order to maintain the 
 
      - The Blus is an accent colour used in the club logo and beyond for colour contrast.
 
-<div style="margin:auto; width:90%; border:2px solid black">
+<div align='center'>
 <img src="markdown-files/readme-files/delphin-cp.png" alt="Delphin Colour Palette" />
 </div>
 
@@ -326,17 +326,14 @@ While the developer relied heavily on these Wireframes in order to maintain the 
 
      - The primary font chosen is [Lato](https://fonts.google.com/specimen/Lato "Link to Lato Google Fonts page"). A humanist sans-serif typeface, Lato is semi-rounded with a structured, but friendly warmth.
 
+          ![Lato Typography Example](markdown-files/readme-files/lato.png)
 
      - The Secondary font (accent font) chosen is [Londrina Solid](https://fonts.google.com/specimen/Londrina+Solid "Link to Londrina Solid Google Fonts page"). A newfolk typeface, with a rough, handwritten feel, for versatile screen display.
 
-
+          ![Londrina Typography Example](markdown-files/readme-files/londrina.png)
 
      - The secondary font is an updated version of the font used in the club's typography for logo and official letters. The font is paired well with the primary font, in order provide a minimally contrasting font combination serving as a practical and professional typeface with a hint of playfulness. This highlights the club's character for being professional, yet friendly, setting the tone for new and unfamiliar vistiors.
 
-<div style="margin:auto; width:90%; border:2px solid black">
-<img src="markdown-files/readme-files/lato.png" alt="Lato Typography" />
-<img src="markdown-files/readme-files/londrina.png" alt="Londrina Typography" />
-</div>
 
 - <strong>Imagery</strong>
 
@@ -354,7 +351,7 @@ While the developer relied heavily on these Wireframes in order to maintain the 
 
 ### Data Models
 
-<div style="margin:auto; width:90%; border:2px solid black; background-color:#E9F5F5">
+<div align='center'>
 <img src="markdown-files/readme-files/models.png" alt="Lato Typography" />
 </div>
 
@@ -517,27 +514,27 @@ Each page of the websire features a consistently responsive and intuitive naviat
 - A banner title is provided on each page to help users to quickly determine their location
 - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/ "Link to Jinja docs") was used to extend the base.html page, allowing for the utmost consistency and preservation of functionality across all pages. The extended block elements created the same basic layout for each page:
 
-```
-<nav>
-     <!-- Navigational content -->
-</nav>
+     ```
+     <nav>
+          <!-- Navigational content -->
+     </nav>
 
-{% block messages %}
-     <!-- Appropriate toast messages -->
-{% endblock %}
+     {% block messages %}
+          <!-- Appropriate toast messages -->
+     {% endblock %}
 
-{% block content %}
-     <!-- Content unique to each page -->
-{% endblock %}
+     {% block content %}
+          <!-- Content unique to each page -->
+     {% endblock %}
 
-<footer>
-     <!-- Footer content -->
-</footer>
-```
+     <footer>
+          <!-- Footer content -->
+     </footer>
+     ```
 
 ### Existing Features 
 
-<strong><u>General Pages:</u></strong>
+#### **General Pages:**
 
 **[Home Page](https://delphin-lifesavingclub.herokuapp.com/ "Link to Home page")**
 | Feature      | Description  |
@@ -621,7 +618,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Mailto action | Three emails are provided using the club email address, with the difference in the subject line to highlight the message for the appropriate officer (for convienience) in order to help the user to send the message quicker. |
 | Contact Form | Used for users to conveniently send a message to our Marketing team. Validated using [jQuery Validation](https://jqueryvalidation.org/ "Link to jQuery Validation page").|
 
-<strong><u>Authorised User Pages:</u></strong>
+#### **Authorised User Pages:**
 
 **Shopping Bag Page**
 | Feature      | Description  |
@@ -1153,7 +1150,7 @@ For further information on creating a bucket, head to the [AWS Instructions](htt
      $ git push
      ```
 
-<div style='text-align:center'>
+<div align='center'>
 <h2><span style='font-size:20px;'>&#127882;</span> Congratulations! <span style='font-size:20px;'>&#127882;</span> </h2>
 <h4>Your project is ready to use. Have fun!</h4>
 </div>
