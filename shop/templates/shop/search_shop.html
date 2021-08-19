@@ -59,7 +59,7 @@
                 {% else %}
                     <div class="col-12">
                         <p>
-                            {{ products|length }} products {% if search_term %} found for: "{{ search_term }}"{% endif %}
+                            {{ products|length }} {% if products|length > 1 %}products{%else%}product{%endif%} {% if search_term %} found for: "{{ search_term }}"{% endif %}
                         </p>
                     </div>
                     {% for product in products %}
