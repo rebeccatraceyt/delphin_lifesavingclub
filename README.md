@@ -72,8 +72,7 @@ The Developer is looking to:
 
 **As a new visitor, I want to:**
 
-1. View the club's Academy programme, to ascertain if the club is right fit.
-2. Create an account, to unlock registered user features.
+1. Create an account, to unlock registered user features.
 
 **As a returning visitor, I want to:**
 

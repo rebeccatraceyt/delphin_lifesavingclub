@@ -13,7 +13,6 @@ def shopping_bag(request):
     return render(request, 'shopping_bag/shopping_bag.html')
 
 
-@login_required
 def add_to_bag(request, item_id):
     """
     Submit form to view
