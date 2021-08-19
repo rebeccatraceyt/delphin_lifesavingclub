@@ -36,7 +36,7 @@
       "pk":5,
       "fields":{
          "question":"What should I bring to my Lifesaving class?",
-         "answer":"Along with the things specified above, please bring a set of clothing that can be worn in the pool (pajamas or leggings & top combo), ensure it has long sleeves/legs and is light enough not to drag (unless you want the challenge!)."
+         "answer":"Along with the items specified above, please bring a set of clothing that can be worn in the pool (pajamas or leggings & top combo), ensure it has long sleeves/legs and is light enough not to drag (unless you want the challenge!)."
       }
    },
    {
@@ -116,7 +116,7 @@
       "pk":15,
       "fields":{
          "question":"How many lifesaving exams are there?",
-         "answer":" Rookie lifesaving has 3 stages – Bronze, Silver and Gold, each are examined. Survive and Save also has 3 stages – Bronze, Silver and Gold, each examined. The Pool Lifeguard has two stages of examination, Theory and Practical. Teachers endeavour to carry out exams each term, but this may not be the case for all swimmers."
+         "answer":" Both Rookie lifesaving and Survive and Save have 3 stages – Bronze, Silver and Gold, with exams the end of each. The Pool Lifeguard has two examination stages, Theory and Practical."
       }
    },
    {
@@ -133,6 +133,14 @@
       "fields":{
          "question":"What qualification do you get at the end of the Lifeguard?",
          "answer":"National Pool Lifeguard with a bolt on for National Beach Lifeguard qualifying the lifesaver to work as a lifeguard in Ireland and Great Britain with equivalency to Australia, New Zealand and South Africa Lifeguard qualifications."
+      }
+   },
+   {
+      "model":"pages.faq",
+      "pk":18,
+      "fields":{
+         "question":"How can I become a Swim Teacher?",
+         "answer":"Swimmers/Parents who show interest in being on poolbank will be invited to assist in class delivery, with the hope to potentially progress to completing their Swim Ireland teaching/coacing qualifications."
       }
    }
 ]
