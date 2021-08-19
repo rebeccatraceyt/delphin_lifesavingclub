@@ -226,6 +226,84 @@ The website's navigation was organized in order to ensure that users could navig
 
 Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file/Hx5A1pBFoMZs2BYT781Te6/Delphin "Link to Delphin Workspace") with providing a positive user experience in mind:
 
+<div style="margin:auto; width:80%">
+<strong>Home Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/home.png" alt="Home Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>All Products Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/all-products.png" alt="All Products Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Search Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/search.png" alt="Search Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Individual Product Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/product-detail.png" alt="Individual Product Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Add Product Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/product-add.png" alt="Add Product Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Login Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/login.png" alt="Login Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Register Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/signup.png" alt="Register Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Club Ethos Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/ethos.png" alt="Club Ethos Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Academy Programme Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/programme.png" alt="Academy Programme Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Contact Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/contact.png" alt="Contact Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Shopping Bag Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/bag.png" alt="Shopping Bag Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Checkout Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/checkout.png" alt="Checkout Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>Order Summary Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/summary.png" alt="Order Summary Page Wireframe" />
+</div>
+
+<div style="margin:auto; width:80%">
+<strong>User Profile Page Wireframe:</strong>
+<img src="markdown-files/readme-files/wireframes/profile.png" alt="User Profile Page Wireframe" />
+</div>
+
+**Post Mock-Up Design Changes**
+While the developer relied heavily on these Wireframes in order to maintain the desired design, there are several differences between the Mockups and the final product:
+
+- Primarily, the majority of the page content was changed to better suit the club and the information it wanted to display.
+- The addtion of an `Order Review` page was needed in order to provide a better user checkout story.
+- The `All Product` page filters were necessarily divided into `Apparel` and `Courses` page. The initial design was to have one page for all products but this became too messy for UI reasons.
+- The `Profile` page was split into two pages for a better user experience. Dividing the information update section and the order history provided a much needed and less 'busier' experience.
+- As stated in the TESTING file, earlier testing stages altered the category buttons on the `Home`, `Shopping Bag` and `Search` pages, providing a wider variety of categories for the user to better refine their search.
 
 <strong>5. <u>Surface</u></strong>
 
