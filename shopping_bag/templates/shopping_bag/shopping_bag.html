@@ -84,7 +84,7 @@
                                                                 </span>
                                                             </button>
                                                         </div>
-                                                        <label for="quantity" class="sr-only">Quantity Input Field</label>
+                                                        <label for="id_qty_{{ bag_item.product_select.id }}" class="sr-only">Quantity Input Field</label>
                                                         <input id="id_qty_{{ bag_item.product_select.id }}" class="form-control form-control-sm qty_input" type="number"
                                                             name="quantity" value="{{ bag_item.quantity }}" min="1" max="{{ bag_item.product_select.stock_count }}"
                                                             data-item_id="{{ bag_item.product_select.id }}" aria-label="Current Quantity">
@@ -155,7 +155,7 @@
                             </a>
                         </div>
                         <!-- Copied from Home page for consistency -->
-                        <div class="home-content" class="col-12">
+                        <div class="home-content col-12">
                             <div class="row text-center d-flex justify-content-center">
                                 <div class="col-12 col-md-6 col-lg-3 home-link d-flex justify-content-center">
                                     <div class="row">
@@ -218,7 +218,7 @@
 {{ block.super }}
 {% include 'shop/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-btn').click(function(e) {
         var form = $(this).prev('.update-form');

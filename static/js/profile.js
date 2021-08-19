@@ -11,7 +11,7 @@ let countrySelected = $('#id_default_country').val();
 if(!countrySelected) {
     // If country selected is false, add css to placeholder
     $('#id_default_country').css('color', '#aab7c4');
-};
+}
 
 // capture change event
 $('#id_default_country').change(function() {

@@ -11,7 +11,8 @@ class TestOrderForm(TestCase):
                           'town_or_city': "Test Town",
                           'street_address1': "Test Street Address1",
                           'street_address2': "Test Street Address2",
-                          'county': "Co. Test",})
+                          'county': "Co. Test",
+                          })
         self.assertFalse(form.is_valid())
 
     def test_full_name_is_required(self):

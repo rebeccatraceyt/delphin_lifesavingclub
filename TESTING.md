@@ -466,21 +466,32 @@ Manual testing was conducted on the following elements on the **Recipe** Page:
 
 - [W3C Markup Validator](https://validator.w3.org/ "Link to W3C Markup Validator") was used to validate the `HTML` code used, using the `Validate by URI` method.
 
-    - All errors that were highlighted were resolved.
+    - All highlighted errors were resolved.
 
 -  [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "Link to W3C CSS Validator") was used to validate the `CSS` code used with the following result:
 
-    ![Style sheet validation results](static/images/testing-files/automated/css-val.png)
+    **Base CSS**
+    ![Style sheet validation results](markdown-files/testing-files/automated/base-css.png)
+
+    **Checkout CSS**
+    ![Style sheet validation results](markdown-files/testing-files/automated/checkout-css.png)
+
+    **Profile CSS**
+    ![Style sheet validation results](markdown-files/testing-files/automated/profile-css.png)
 
 
 - [JSHint](https://jshint.com/ "Link to JSHint") was used to validate the `JavaScript` and `JQuery` code used.
 
-    - Errors highlighted in `script.js` pertain to [SweetAlert2](https://sweetalert2.github.io/ "Link to Sweet Alert 2 page") (used for contact form feedback) and [jQuery Validation](https://jqueryvalidation.org/ "Link to jQuery Validation page")(used for validating contact form) as well as the `onclick` functions used for image preview and disclaimer:
+    - Errors highlighted in `contact_email.js` pertain to [SweetAlert2](https://sweetalert2.github.io/ "Link to Sweet Alert 2 page") (used for contact form feedback) and [jQuery Validation](https://jqueryvalidation.org/ "Link to jQuery Validation page")(used for validating contact form):
 
-        ![Script Validation Results](static/images/testing-files/automated/js-val.png) 
+        ![Style sheet validation results](markdown-files/testing-files/automated/contact-js.png)
+    
+    - Errors highlighted in `strip_elements.js` pertain to [Stripe](https://stripe.com/en-ie "Link to Stripe Homepage") import:
+
+        ![Style sheet validation results](markdown-files/testing-files/automated/stripe-js.png)
 
 
-    - There were no errors highlighted in `recipe.js` file
+    - There were no errors highlighted in `profile.js` or `base.js` files
 
 - [PEP8 Online](http://pep8online.com/ "Link to PEP8 Online") was used to validate `Python` code.
     
@@ -571,24 +582,10 @@ Family members and friends were asked to review the site and documentation to po
 
 | It was through this testing that the following changes were made:|
 |-----------------------|
-| Update to Logo to be more conventionally positioned. The original designs were for a floating logo but that was quickly replaced due to the issues it caused (most notable `padding` and `z-index` errors).|
-| Change to Recipe Card `font-size` and `max-length` in order to create consistency across all recipes. It was noted that some of the recipe names were longer than others, creating a spacing issue, taking away from the User Experience.|
-| Create conditional buttons for each category in order to better distinguish the differences, giving these graphical cues helped users to visual the category.|
-| Create a 'quick-links' function for users to create a more streamline experience. |
-| Create a separate **Accounts Settings** page just for changing password or deleting account, in order to avoid the "danger" zone as much as possible. |
-| Create a live image preview window, allowing the user to see the current image on the **Edit User** and **Edit Recipe** pages.|
-| A **breadcrumbs** button on the Recipe page, allowing the users to return to their previous page for convenience.|
-| Create a *Search Again* button on the **Find Recipes** search results in order to provide the user with easy return access.|
+| Update to the navigation mobile menu | Originally, all links were displayed on the navbar on mobile and tablet devices, but this was quickly changed as it was noted that the menu was too long and not user-friendly. |
+| Button style update | Button and anchor links were re-styled to be more consistent in their look and behaviour throughout the site, creating a positive user experience. |
+| Divide of categories | Originally, there were only two category filter buttons on the `Home`, `Shopping Bag` and `Search` pages. It was recommended in the early testing stages to include all types of categories, to allow users a more refined experience, as well as removing the dead white space surrounding them. |
 
 [Back to top ⇧](#table-of-contents)
 
 ***
-
-## Note to Accessor
-If you would like to log in, to gain access to the full functionality of the site, a *test* account has been created *(login information provided in Project Submission)*. This account has recipes already created and favourited, for your convenience.
-
-The developer recommends that you create your own account in order to get the complete experience in using the site. A [Recipes](recipe-example.md) File has been created for you to copy and paste a recipe to get the **Creating a Recipe** experience (without having to search the internet).
-
-***
-
-[Back to top ⇧](#table-of-contents)
