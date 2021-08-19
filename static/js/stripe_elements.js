@@ -10,17 +10,17 @@ Step 3 - Call the confirm card payemnt: Use client_secret in the template to cal
 */
 
 // Get public key and client secret
-var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
-var clientSecret = $('#id_client_secret').text().slice(1, -1);
+let stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+let clientSecret = $('#id_client_secret').text().slice(1, -1);
 
 // Set up Stripe
-var stripe = Stripe(stripePublicKey);
+let stripe = Stripe(stripePublicKey);
 
 // Create an instance of stripe elements
-var elements = stripe.elements();
+let elements = stripe.elements();
 
 // Styling of card element
-var style = {
+let style = {
     base: {
         color: '#0A0A0A',
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
@@ -37,16 +37,16 @@ var style = {
 };
 
 // Create card element
-var card = elements.create('card', {style: style});
+let card = elements.create('card', {style: style});
 
 // mount card to card div
 card.mount('#card-element');
 
 // Handle realtime validation erros on the card element
 card.addEventListener('change', function (event) {
-    var errorDiv = document.getElementById('card-errors');
+    let errorDiv = document.getElementById('card-errors');
     if (event.error) {
-        var html = `
+        let html = `
             <span class="icon" role="alert">
                 <i class="fas fa-times"></i>
             </span>
@@ -58,7 +58,7 @@ card.addEventListener('change', function (event) {
     }
 });
 
-var form = document.getElementById('payment-form');
+let form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
     // Prevents default POST action when submit is clicked
@@ -70,21 +70,21 @@ form.addEventListener('submit', function(ev) {
     $('#loading-overlay').fadeToggle(100);
 
     // Get boolean value of save info box (checked or not)
-    var saveInfo = Boolean($('#id-save-info').attr('checked'));
+    let saveInfo = Boolean($('#id-save-info').attr('checked'));
 
     // From using {% csrf_token %} in the form
-    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    let csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
 
     // pass information to new view 
     // and clients secret for payment intent
-    var postData = {
+    let postData = {
         'csrfmiddlewaretoken' : csrfToken,
         'client_secret': clientSecret,
         'save_info': saveInfo,
     };
 
     // url variable
-    var url = '/checkout/cache_checkout_data/';
+    let url = '/checkout/cache_checkout_data/';
 
     // post data to the view (the url) which updates payment intent
     // .done waits for response that payment intent was updated,
@@ -128,8 +128,8 @@ form.addEventListener('submit', function(ev) {
             // Then execute this function
             if (result.error) {
                 // put error message in card-error div
-                var errorDiv = document.getElementById('card-errors');
-                var html = `
+                let errorDiv = document.getElementById('card-errors');
+                let html = `
                     <span class="icon" role="alert">
                     <i class="fas fa-times"></i>
                     </span>
@@ -138,6 +138,8 @@ form.addEventListener('submit', function(ev) {
     
                 // if there is an error, re-enable card element and submit button
                 $(errorDiv).html(html);
+                $('#payment-form').fadeToggle(100);
+                $('#loading-overlay').fadeToggle(100);
                 card.update({ 'disabled': false});
                 $('#submit-button').attr('disabled', false);
             } else {
