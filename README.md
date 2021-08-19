@@ -227,72 +227,72 @@ The website's navigation was organized in order to ensure that users could navig
 Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file/Hx5A1pBFoMZs2BYT781Te6/Delphin "Link to Delphin Workspace") with providing a positive user experience in mind:
 
 <div style="margin:auto; width:80%">
-<strong>Home Page Wireframe:</strong>
+<strong>Home Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/home.png" alt="Home Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>All Products Page Wireframe:</strong>
+<strong>All Products Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/all-products.png" alt="All Products Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Search Page Wireframe:</strong>
+<strong>Search Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/search.png" alt="Search Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Individual Product Page Wireframe:</strong>
+<strong>Individual Product Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/product-detail.png" alt="Individual Product Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Add Product Wireframe:</strong>
+<strong>Add Product Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/product-add.png" alt="Add Product Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Login Page Wireframe:</strong>
+<strong>Login Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/login.png" alt="Login Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Register Page Wireframe:</strong>
+<strong>Register Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/signup.png" alt="Register Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Club Ethos Page Wireframe:</strong>
+<strong>Club Ethos Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/ethos.png" alt="Club Ethos Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Academy Programme Page Wireframe:</strong>
+<strong>Academy Programme Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/programme.png" alt="Academy Programme Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Contact Page Wireframe:</strong>
+<strong>Contact Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/contact.png" alt="Contact Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Shopping Bag Page Wireframe:</strong>
+<strong>Shopping Bag Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/bag.png" alt="Shopping Bag Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Checkout Page Wireframe:</strong>
+<strong>Checkout Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/checkout.png" alt="Checkout Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>Order Summary Page Wireframe:</strong>
+<strong>Order Summary Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/summary.png" alt="Order Summary Page Wireframe" />
 </div>
 
 <div style="margin:auto; width:80%">
-<strong>User Profile Page Wireframe:</strong>
+<strong>User Profile Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/profile.png" alt="User Profile Page Wireframe" />
 </div>
 
@@ -1177,6 +1177,9 @@ For code that was copied and edited, the developer made sure to reference this w
 
 ## Acknowledgements
 The developer would like to thank the following:
+- Their family and friends for the unrelenting support and encouragement they provided, most notably their ***very*** honest opinions during the testing phase.
+- The Slack community for the support and inspiration they gave.
+- Their mentor Seun for her patience and guidance throughout the process.
 
 [Back to top ⇧](#table-of-contents)
 
