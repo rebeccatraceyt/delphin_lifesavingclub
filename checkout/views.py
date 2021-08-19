@@ -150,7 +150,9 @@ def order_details(request):
                         )
                         order_line_item.save()
 
-                        product_selected.stock_count -= order_line_item.quantity
+                        product_selected.stock_count -= (
+                            order_line_item.quantity
+                            )
                         product_selected.save()
 
                 except Product.DoesNotExist:

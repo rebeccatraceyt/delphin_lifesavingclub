@@ -96,8 +96,12 @@ class StripeWH_Handler:
                 # if save_info is checked, add the data to profile
                 profile.default_full_name = shipping_details.name
                 profile.default_phone_number = shipping_details.phone
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_street_address1 = (
+                    shipping_details.address.line1
+                    )
+                profile.default_street_address2 = (
+                    shipping_details.address.line2
+                    )
                 profile.default_town_or_city = shipping_details.address.city
                 profile.default_county = shipping_details.address.state
                 profile.default_postcode = shipping_details.address.postal_code
@@ -176,7 +180,8 @@ class StripeWH_Handler:
                     # get product id out of bag
                     product = Product.objects.get(id=item_id)
                     # else, if product has size
-                    for select, quantity in item_data['items_by_select'].items():
+                    for select, quantity in item_data[
+                            'items_by_select'].items():
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
