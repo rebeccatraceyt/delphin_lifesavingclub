@@ -489,70 +489,78 @@ Manual testing was conducted on the following elements on the **Recipe** Page:
 ### Browser Validation
 **Chrome:**
 
-![Chrome test image](static/images/testing-files/automated/chrome.png)
+![Chrome test image](markdown-files/testing-files/automated/chrome.png)
 
 **Safari:**
 
-![Safari test image](static/images/testing-files/automated/safari.png)
+![Safari test image](markdown-files/testing-files/automated/safari.png)
 
 **Edge:**
 
-![Edge test image](static/images/testing-files/automated/edge.png)
+![Edge test image](markdown-files/testing-files/automated/edge.png)
 
 
 **Opera:**
 
-![Opera test image](static/images/testing-files/automated/opera.png)
+![Opera test image](markdown-files/testing-files/automated/opera.png)
 
 **Firefox:**
 
-![Firefox test image](static/images/testing-files/automated/firefox.png)
+![Firefox test image](markdown-files/testing-files/automated/firefox.png)
 
 ### Lighthouse Auditing
 
 #### Desktop
 | Page | Performance | Accessibility | Best Practice | SEO |
 |------|:-------------:|:---------------:|:---------------:|:-----:|
-| Home Page | 86% | 100% | 80% | 100% |
-| Find Recipes | 99% | 92% | 80% | 90% |
-| Login | 97% | 100% | 80% | 100% |
-| Register | 99% | 100% | 80% | 100% |
-| Edit User | 99% | 100% | 80% | 100% |
-| Edit Account | 99% | 100% | 80% | 100% |
-| My Recipes | 97% | 100% | 80% | 100% |
-| My Favourites | 98% | 100% | 80% | 90% |
-| Create Recipe | 99% | 100% | 80% | 100% |
-| Edit Recipe | 98% | 90% | 80% | 100% |
-| Recipe Page | 96% | 100% | 80% | 90% |
+| Home Page | 70% | 91% | 93% | 100% |
+| Shop Pages | 73% | 91% | 100% | 100% |
+| Login | 98% | 92% | 100% | 100% |
+| Register | 98% | 92% | 100% | 100% |
+| Search | 85% | 92% | 100% | 100% |
+| Ethos Page | 95% | 91% | 87% | 100% |
+| Academy Programme | 88% | 90% | 100% | 96% |
+| FAQs | 98% | 90% | 100% | 100% |
+| Contact | 98% | 90% | 93% | 100% |
+| My Profile | 97% | 92% | 100% | 100% |
+| Order History | 97% | 91% | 100% | 100% |
+| Shopping Bag | 85% | 78% | 100% | 100% |
+| Review Order Page | 81% | 91% | 100% | 100% |
+| Order Details Page | 89% | 94% | 100% | 100% |
+| Order Complete Page | 94% | 90% | 93% | 100% |
 
 #### Mobile
 | Page | Performance | Accessibility | Best Practice | SEO |
 |------|:-------------:|:---------------:|:---------------:|:-----:|
-| Home Page | 86% | 100% | 93% | 100% |
-| Find Recipes | 73% | 92% | 93% | 90% |
-| Login | 93% | 100% | 87% | 100% |
-| Register | 92% | 100% | 87% | 100% |
-| Edit User | 70% | 100% | 87% | 100% |
-| Edit Account | 92% | 100% | 87% | 100% |
-| My Recipes | 79% | 100% | 93% | 100% |
-| My Favourites | 89% | 100% | 93% | 90% |
-| Create Recipe | 92% | 100% | 87% | 100% |
-| Edit Recipe | 82% | 90% | 87% | 100% |
-| Recipe Page | 74% | 100% | 87% | 92% |
+| Home Page | 73% | 88% | 100% | 95% |
+| Shop Pages | 65% | 88% | 100% | 97% |
+| Login | 89% | 92% | 100% | 94% |
+| Register | 92% | 89% | 100% | 94% |
+| Search | 70% | 92% | 100% | 95% |
+| Ethos Page | 89% | 88% | 97% | 93% |
+| Academy Programme | 95% | 91% | 87% | 100% |
+| FAQs | 88% | 86% | 100% | 96% |
+| Contact | 89% | 87% | 93% | 94% |
+| My Profile | 85% | 92% | 100% | 95% |
+| Order History | 82% | 88% | 100% | 96% |
+| Shopping Bag | 74% | 71% | 100% | 94% |
+| Review Order Page | 79% | 91% | 100% | 100% |
+| Order Details Page | 72% | 96% | 100% | 100% |
+| Order Complete Page | 89% | 87% | 93% | 93% |
 
 #### Breakdown of Results
 
-| Page | Error / Warning | Comment |
-|:-----:|:---------------:|:-------|
-| All Pages | Largest Contentful Paint | The images rendered on each page threw this error due to a number of reasons. The developer was able to pre-load their **own** images rendered using the `rel="preload"` attribute in **HTML** and using `-webkit-image-set()` in **CSS** ([Source](https://web.dev/preload-responsive-images/)). The problem still persists due to the use of third party images throughout the site.|
-| All Pages | Render-blocking resources | This warning stems from the use of `emailJS` for the contact form. The developer attempted to resolve this issue using the `defer` attribute within the script tag, but this only created an issue whereby the function sending the email was not called. |
-| Home Page | Tap targets not sized appropriately | Relating to the carousel controls. Issue was resolved by resizing the anchor tag of the controls. |
-| Home Page | Defer offscreen images | This relates to the carousel feature of the home page. The researched solution was to 'lazy-load' the images but that is not an option in this release due to the use of image urls, in lieu of uploads. |
-| My Favourites | Links are not crawlable | Relating to the `.page-link` class in the Bootstrap Pagination controls. |
-| All Pages | Avoid enormous network payload | This warning relates to the use of external images throughout the site. The payload size fluctuated significantly because of this. The solution to this would be to upload images directly to the site, but this feature is not included in this release |
-| Find Recipes | Size Images | This issue (like many others before) pertains to the use of external images, where the resource size is far greater than the displayed size. |
-| All Pages | Does not use HTTPS | In researching this error, the only conclusive reason for it is the use of mixed content throughout the site. |
-
+| Error / Warning | Comment |
+|:---------------:|:-------|
+| Reduce unused JavaScript | This was pertaining to the jQuery minified link. |
+| Reduce unused CSS | This was pertaining to the Boostrap minified link. |
+| Use HTTP/2 | The developer chose not to use HTTP/2 as it required additional support for functionality. |
+| Logo image does not specify `width` and `height` | The developer tried to correct this, but specifying these attributes caused a clash with other bootstrap classes, resulting in sizing issues. |
+| Links to cross-origin destinations are unsafe | This was recified by implementing the `rel="noopener"` attribute to external links. |
+| ARIA IDs are not unique | This was cause by the navbar and accordion menus. The #navbarDropdown ID was changed to a more specific ID for each category. The #programmeCollapse and #questionCollapse ID's pertain to the Jinja for loop used to iterate through the content and could not be changed. |
+| Missing accessibility name for input fields | This was recified by using the Bootstrap `.sr-only` class on a label.|
+| Text not appropriately sized | This highlighted that the footer text was too small, which was then rectified. |
+| Links do not have a discernible name | This was the `mailto` button on the footer. An `aria-label` was used to fix this. |
 
 [Back to top ⇧](#table-of-contents)
 

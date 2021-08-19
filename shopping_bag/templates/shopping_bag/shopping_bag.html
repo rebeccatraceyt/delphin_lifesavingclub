@@ -78,18 +78,19 @@
                                                     <div class="input-group bag-qty qty-btns">
                                                         <div class="input-group-prepend">
                                                             <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                                                                data-item_id="{{ bag_item.product_select.id }}" id="decrement-qty_{{ bag_item.product_select.id }}">
+                                                                data-item_id="{{ bag_item.product_select.id }}" id="decrement-qty_{{ bag_item.product_select.id }}" aria-label="Decrease Quantity">
                                                                 <span>
                                                                     <i class="fas fa-minus fa-sm"></i>
                                                                 </span>
                                                             </button>
                                                         </div>
+                                                        <label for="quantity" class="sr-only">Quantity Input Field</label>
                                                         <input id="id_qty_{{ bag_item.product_select.id }}" class="form-control form-control-sm qty_input" type="number"
                                                             name="quantity" value="{{ bag_item.quantity }}" min="1" max="{{ bag_item.product_select.stock_count }}"
-                                                            data-item_id="{{ bag_item.product_select.id }}">
+                                                            data-item_id="{{ bag_item.product_select.id }}" aria-label="Current Quantity">
                                                         <div class="input-group-append">
                                                             <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                                data-item_id="{{ bag_item.product_select.id }}" id="increment-qty_{{ bag_item.product_select.id }}">
+                                                                data-item_id="{{ bag_item.product_select.id }}" id="increment-qty_{{ bag_item.product_select.id }}" aria-label="Increase Quantity">
                                                                 <span>
                                                                     <i class="fas fa-plus fa-sm"></i>
                                                                 </span>
