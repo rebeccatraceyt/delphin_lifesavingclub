@@ -268,7 +268,7 @@ Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file
 
      - The imagery used was created by the developer using the application [Procreate](https://procreate.art/ "Link to Procreate") in order to create a consistency of the elements while maintaining the look and feel of the application.
 
-     - The product imagery used digital renderings of the available orders, with a complete list of credits in a separate file, found [here]()
+     - The product imagery used digital renderings and, where permitted, the developer edited them to display the Club imagery and colour scheme. A complete list of credits can be found in a separate file [here](image_credits.md).
 
 [Back to top ⇧](#table-of-contents)
 ***
@@ -1064,7 +1064,7 @@ For further information on creating a bucket, head to the [AWS Instructions](htt
      $ git push
      ```
 
-<div align='center'>
+<div style='text-align:center'>
 <h2><span style='font-size:20px;'>&#127882;</span> Congratulations! <span style='font-size:20px;'>&#127882;</span> </h2>
 <h4>Your project is ready to use. Have fun!</h4>
 </div>
