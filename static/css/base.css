@@ -872,6 +872,7 @@ ol.breadcrumb {
 .contact-style-input {
     width: 100%;
     padding: 7px;
+    font-family: var(--body-font);
     border: 2px solid var(--border-dark);
 
     -webkit-border-radius: 4px;
@@ -881,6 +882,10 @@ ol.breadcrumb {
     margin-top: 6px;
     margin-bottom: 1px;
     resize: none;
+}
+.contact-style-input::placeholder {
+    color: #aab7c4;
+    font-family: var(--title-font);
 }
 .contact-btn {
     background-color: var(--black);
