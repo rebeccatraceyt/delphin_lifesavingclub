@@ -150,6 +150,8 @@ def order_details(request):
                         )
                         order_line_item.save()
 
+                        # reduces selected option stock count
+                        # by quantity ordered
                         product_selected.stock_count -= (
                                 order_line_item.quantity
                             )

@@ -43,6 +43,7 @@ class FAQAdmin(admin.ModelAdmin):
     )
 
 
+# Register Swim Programe and FAQs models
 admin.site.register(SwimCategory, SwimCategoryAdmin)
 admin.site.register(SwimProgramme, SwimProgrammeAdmin)
 admin.site.register(FAQ, FAQAdmin)

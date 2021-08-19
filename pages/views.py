@@ -14,7 +14,7 @@ def view_home(request):
 
 def view_contact(request):
     """
-    Returns homepage
+    Returns contact page
     """
     context = {
         'active_page': 'contact',
