@@ -16,6 +16,12 @@ urlpatterns = [
     path('users/', include('users.urls')),
 ]
 
+# Error Handlers
+handler400 = 'delphin.views.error_400_view'
+handler403 = 'delphin.views.error_403_view'
+handler404 = 'delphin.views.error_404_view'
+handler500 = 'delphin.views.error_500_view'
+
 # Check debug status
 if settings.DEBUG:
     urlpatterns += static(
