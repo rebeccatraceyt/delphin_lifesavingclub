@@ -1,9 +1,9 @@
 <div align='center'>
 <img src="markdown-files/readme-files/readme-logo.png" alt="Delphin Logo" />
-<h1> TESTING.md </h1>
+<h1> Testing </h1>
 </div>
 
-[Return to README.md file](README.md "Link to README file")
+[Return to README file](README.md "Link to README file")
 
 [View live project](https://delphin-lifesavingclub.herokuapp.com/ "Link to Live project")
 

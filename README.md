@@ -620,7 +620,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 **Order Review Page**
 | Feature      | Description  |
 |:--------------:|--------------|
-| No navbar or footer | This conventionally allows users to **focus on the checkout** process without distractions. |
+| No navbar or footer | This conventionally removed, to minimalist checkout interface , preventing users from breaking the checkout process. ([Source](https://www.smashingmagazine.com/2009/05/12-tips-for-designing-an-excellent-checkout-process/#8-keep-the-checkout-interface-simple "Link to Smashing Magazine")) |
 | Logo Link | Logo at the top of the page **redirects users to the shopping bag** for convienience |
 | Heads-up display | This shows the users the steps in the checkout process, giving them **feedback on where they are** and where they are going. |
 | Return buttton | Redirects users back to their shopping bag for **editing**. |
@@ -629,13 +629,20 @@ Each page of the websire features a consistently responsive and intuitive naviat
 **Order Details Page**
 | Feature      | Description  |
 |:--------------:|--------------|
-| No navbar or footer | This conventionally allows users to focus on the checkout process without distractions. |
+| No navbar or footer | This conventionally removed, to minimalist checkout interface , preventing users from breaking the checkout process. ([Source](https://www.smashingmagazine.com/2009/05/12-tips-for-designing-an-excellent-checkout-process/#8-keep-the-checkout-interface-simple "Link to Smashing Magazine")) |
 | Heads-up display | This shows the users the steps in the checkout process, giving them feedback on where they are and where they are going. Clicking the first number will return them to **to the previous page** |
 | Input fields | Allowing users **enter their delivery information** |
 | Checkbox button | Allowing users to chose to **save their information** to their profile |
 | Order Summary | Providing clear **feedback on bag contents**. On large screens, this is displayed on the right side of the screen. On mobile and tablet devices, this is displayed in a collapsable menu |
 | Edit buttton | Redirects users back to their shopping bag for **editing**. |
 | Complete Order button | Completes the checkout process.| 
+
+**Order Complete Page**
+| Feature      | Description  |
+|:--------------:|--------------|
+| Internal links | Subtle links providing users with quick-link access to `FAQs` and `Contact` pages, for convienience. |
+| Product Buttons | Products ordered are displayed in a table (along with other order information, such as price and quantity) and act as buttons to the product detail page, for convienience. |
+
 
 **User Profile Page**
 | Feature      | Description  |
