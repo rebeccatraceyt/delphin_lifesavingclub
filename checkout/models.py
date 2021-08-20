@@ -77,6 +77,10 @@ class Order(models.Model):
         super().save(*args, **kwargs)
 
     class Meta:
+        """
+        Orders sorted by date
+        ref: https://tinyurl.com/3v38mtn5
+        """
         ordering = ['-date']
 
     def __str__(self):

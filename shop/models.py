@@ -65,6 +65,10 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     class Meta:
+        """
+        Products sorted by name
+        ref: https://tinyurl.com/3v38mtn5
+        """
         ordering = ['name']
 
     def __str__(self):
