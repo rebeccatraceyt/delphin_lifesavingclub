@@ -2,26 +2,23 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}{{ product.name }}{% endblock %}
 
 {% block content %}
     <div class="container page-margins">
 
         <!-- Page Breadcrumbs -->
-        <div class="row">
-            <div class="col-12">
-                <nav aria-label="page breadcrumbs">
-                    <ol class="breadcrumb bg-white">
-                        <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-dark">Home</a></li>
-                        {% if product.is_course %}
-                            <li class="breadcrumb-item"><a href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding" class="text-dark">All Courses</a></li>
-                        {% else %}
-                            <li class="breadcrumb-item"><a href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories" class="text-dark">All Apparel</a></li>
-                        {% endif %}
-                        <li class="breadcrumb-item active text-secondary" aria-current="page">{{ product.name }}</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+        {% block breadcrumb_content %}
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-dark">Home</a></li>
+                {% if product.is_course %}
+                    <li class="breadcrumb-item"><a href="{% url 'courses' %}?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding" class="text-dark">All Courses</a></li>
+                {% else %}
+                    <li class="breadcrumb-item"><a href="{% url 'apparel' %}?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories" class="text-dark">All Apparel</a></li>
+                {% endif %}
+                <li class="breadcrumb-item active text-secondary" aria-current="page">{{ product.name }}</li>
+            </ol>
+        {% endblock %}
 
         <!-- Page Header -->
         <div class="row">

@@ -4,16 +4,10 @@
 
 <!-- Page Breadcrumbs -->
 {% block breadcrumb_content %}
-<div class="row">
-    <div class="col-12">
-        <nav aria-label="page breadcrumbs">
-            <ol class="breadcrumb bg-white">
-                <li class="breadcrumb-item"><a href="{% url 'profile' %}" class="text-dark">My Profile</a></li>
-                <li class="breadcrumb-item active text-secondary" aria-current="page">Logout</li>
-            </ol>
-        </nav>
-    </div>
-</div>
+<ol class="breadcrumb bg-white">
+    <li class="breadcrumb-item"><a href="{% url 'profile' %}" class="text-dark">My Profile</a></li>
+    <li class="breadcrumb-item active text-secondary" aria-current="page">Logout</li>
+</ol>
 {% endblock%}
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}

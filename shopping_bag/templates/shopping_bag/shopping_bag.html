@@ -3,21 +3,19 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block extra_title %}Shopping Bag{% endblock %}
 
 {% block content %}
     <div class="container page-margins">
 
         <!-- Page Breadcrumbs -->
-        <div class="row">
-            <div class="col-12">
-                <nav aria-label="page breadcrumbs">
-                    <ol class="breadcrumb bg-white">
-                        <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-dark">Home</a></li>
-                        <li class="breadcrumb-item active text-secondary" aria-current="page">View Shopping Bag</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+        {% block breadcrumb_content %}
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-dark">Home</a></li>
+                <li class="breadcrumb-item active text-secondary" aria-current="page">View Shopping Bag</li>
+            </ol>
+        {% endblock %}
+
 
         <!-- Page Header -->
         <div class="row">

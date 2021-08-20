@@ -44,7 +44,7 @@
         {% endblock %}
         
         <!-- Page title -->
-        <title>Delphin Lifesaving Club {% block extra_title %}{% endblock %}</title>
+        <title>Delphin Lifesaving Club - {% block extra_title %}{% endblock %}</title>
 
     </head>
     <body>
@@ -75,6 +75,18 @@
         
         <!-- Page Content -->
         {% block content %}
+            {% block breadcrumb_section %}
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="page breadcrumbs">
+                        {% block breadcrumb_content %}
+                        {% endblock %}
+                    </nav>
+                </div>
+            </div>
+                    
+            {% endblock %}
+
         {% endblock %}
         
         <!-- Footer -->
