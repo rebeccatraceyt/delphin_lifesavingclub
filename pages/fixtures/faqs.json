@@ -84,7 +84,7 @@
       "pk":11,
       "fields":{
          "question":"Do you cater for Adults learning to swim?",
-         "answer":"We are not currently delivering an Adult programme."
+         "answer":"We are not currently delivering an Adult programme, but are in the process of creating our Adult Learn to Swim Programme. If you are interested, speak to a member of the team for more information."
       }
    },
    {
@@ -116,7 +116,7 @@
       "pk":15,
       "fields":{
          "question":"How many lifesaving exams are there?",
-         "answer":" Both Rookie lifesaving and Survive and Save have 3 stages – Bronze, Silver and Gold, with exams the end of each. The Pool Lifeguard has two examination stages, Theory and Practical."
+         "answer":" Both Rookie lifesaving and Survive and Save have 3 stages – Bronze, Silver and Gold, with exams at the end of each. The Pool Lifeguard has two examination stages: Theory and Practical."
       }
    },
    {
@@ -132,7 +132,7 @@
       "pk":17,
       "fields":{
          "question":"What qualification do you get at the end of the Lifeguard?",
-         "answer":"National Pool Lifeguard with a bolt on for National Beach Lifeguard qualifying the lifesaver to work as a lifeguard in Ireland and Great Britain with equivalency to Australia, New Zealand and South Africa Lifeguard qualifications."
+         "answer":"National Pool Lifeguard with a bolt on for National Beach Lifeguard qualifying the lifesaver to work as a lifeguard in Ireland and Great Britain with qualification equivalency in Australia, New Zealand and South Africa."
       }
    },
    {
@@ -140,7 +140,7 @@
       "pk":18,
       "fields":{
          "question":"How can I become a Swim Teacher?",
-         "answer":"Swimmers/Parents who show interest in being on poolbank will be invited to assist in class delivery, with the hope to potentially progress to completing their Swim Ireland teaching/coacing qualifications."
+         "answer":"Swimmers/Parents who show interest in being on poolbank will be invited to assist in class delivery, with the hope to potentially completing their Swim Ireland teaching/coacing qualifications."
       }
    }
 ]

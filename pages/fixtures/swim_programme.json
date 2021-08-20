@@ -114,7 +114,7 @@
       "pk":12,
       "fields":{
          "name":"Rookie Lifesaving",
-         "description":"RLSS UK’s Rookie Lifeguard programme is taught using colourful materials, and fun, varied lifesaving and rescue activities to give children the skills they need to be confident in the pool or the sea and enjoy water safely, whether in shallow or deeper water",
+         "description":"RLSS UK’s Rookie Lifeguard programme is taught using colourful materials, and fun, varied lifesaving and rescue activities to give children the skills they need to be confident in the pool or the sea and enjoy water safely, whether in shallow or deeper water.",
          "age":"8+ yrs",
          "swim_category":3
       }
@@ -124,7 +124,7 @@
       "pk":13,
       "fields":{
          "name":"Survive & Save",
-         "description":"The Survive & Save programme is the RLSS UK lifesaving award scheme for anyone aged 12 years and over. The awards are challenging but fun to complete and are arranged into Bronze, Silver and Gold levels to ensure that participants get the opportunity to develop their lifesaving skills as they progress through the awards",
+         "description":"The Survive & Save programme is the RLSS UK lifesaving award scheme for anyone aged 12 years and over. The awards are challenging but fun to complete and are arranged into Bronze, Silver and Gold levels to ensure that participants get the opportunity to develop their lifesaving skills as they progress through the awards.",
          "age":"12+ yrs",
          "swim_category":3
       }
@@ -134,7 +134,7 @@
       "pk":14,
       "fields":{
          "name":"Lifeguard",
-         "description":"The NPLQ is the most awarded lifeguard qualification in the UK and Ireland and is also internationally recognised. More than 40,000 pool lifeguards qualify with the RLSS UK every year, and there are currently more than 80,000 pool lifeguards qualified in the NPLQ – 95% of all UK pool lifeguard",
+         "description":"The NPLQ is the most awarded lifeguard qualification in the UK and Ireland and is also internationally recognised. More than 40,000 pool lifeguards qualify with the RLSS UK every year, and there are currently more than 80,000 pool lifeguards qualified in the NPLQ – 95% of all UK pool lifeguard.",
          "age":"16+ yrs",
          "swim_category":4
       }
@@ -144,7 +144,7 @@
       "pk":15,
       "fields":{
          "name":"Swimming Teacher",
-         "description":"We offer the opportunity to Swimmers to become Swimming Teachers/Coaches, through the Swim Ireland Education process. With our very own in-house Swim Ireland tutor you will earn your teacher/coach license.",
+         "description":"We offer the opportunity to Swimmers to become Swimming Teachers/Coaches, through the Swim Ireland Education process. With our very own in-house Swim Ireland Tutor, you will earn your teacher/coach license.",
          "age":"16+ yrs",
          "swim_category":4
       }
