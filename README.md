@@ -560,7 +560,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Breadcrumbs | Allows users to return the category page for that product (Apparel or Courses) or **Home** page. |
 | Dropdown Select Menu | Allows users to refine their product selection (sizes of Apparel and times for Courses). Information is provided for stock availabilty for all product selections.|
 |Quantity | An input with appending and prepending buttons allows users to alter their quantity selection. This feature is dynamically designed to become inactive if the quantity count is 1 or at the product's stock availabilty. |
-| Back Button | Returns users to their previous page, using JavaScript functionality.|
+| Back Button | Returns users back to the shop page, for convenience.|
 | Add to Bag button | Allows users to add their selection to their shopping bag |
 
 **[Login Page](https://delphin-lifesavingclub.herokuapp.com/accounts/login/ "Link to Login page")**

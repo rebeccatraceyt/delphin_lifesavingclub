@@ -21,6 +21,7 @@ def all_products(request):
 
     context = {
         'products': page_obj,
+        'from_shop': True,
     }
 
     return render(request, 'shop/shop_products.html', context)
@@ -102,6 +103,7 @@ def courses(request):
     context = {
         'products': products,
         'current_category': categories,
+        'from_courses': True,
     }
 
     return render(request, 'shop/courses.html', context)
@@ -127,6 +129,7 @@ def apparel(request):
     context = {
         'products': products,
         'current_category': categories,
+        'from_apparel': True,
     }
 
     return render(request, 'shop/apparel.html', context)
