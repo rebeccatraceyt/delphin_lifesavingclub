@@ -1,6 +1,6 @@
 <div align='center'>
 <img src="markdown-files/readme-files/readme-logo.png" alt="Delphin Logo" />
-<h1> Image credits </h1>
+<h1> TESTING.md </h1>
 </div>
 
 [Return to README.md file](README.md "Link to README file")
@@ -708,8 +708,9 @@ Manual testing was conducted on the following elements on the **Past Orders** Pa
 ## User testing 
 Family members and friends were asked to review the site and documentation to point out any bugs and/or user experience issues. Their helpful advice throughout the process led to many UX changes in order to create a better experience. 
 
-| It was through this testing that the following changes were made:|
-|-----------------------|
+It was through this testing that the following changes were made:
+| Update | Comments |
+|-----------------------|----------|
 | Update to the navigation mobile menu | Originally, all links were displayed on the navbar on mobile and tablet devices, but this was quickly changed as it was noted that the menu was too long and not user-friendly. |
 | Button style update | Button and anchor links were re-styled to be more consistent in their look and behaviour throughout the site, creating a positive user experience. |
 | Divide of categories | Originally, there were only two category filter buttons on the `Home`, `Shopping Bag` and `Search` pages. It was recommended in the early testing stages to include all types of categories, to allow users a more refined experience, as well as removing the dead white space surrounding them. |
