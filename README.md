@@ -227,72 +227,58 @@ The website's navigation was organized in order to ensure that users could navig
 Wireframe mockups were created in a [Figma Workspace](https://www.figma.com/file/Hx5A1pBFoMZs2BYT781Te6/Delphin "Link to Delphin Workspace") with providing a positive user experience in mind:
 
 <div align='center'>
-<strong>Home Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/home.png" alt="Home Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>All Products Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/all-products.png" alt="All Products Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Search Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/search.png" alt="Search Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Individual Product Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/product-detail.png" alt="Individual Product Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Add Product Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/product-add.png" alt="Add Product Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Login Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/login.png" alt="Login Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Register Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/signup.png" alt="Register Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Club Ethos Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/ethos.png" alt="Club Ethos Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Academy Programme Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/programme.png" alt="Academy Programme Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Contact Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/contact.png" alt="Contact Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Shopping Bag Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/bag.png" alt="Shopping Bag Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Checkout Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/checkout.png" alt="Checkout Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>Order Summary Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/summary.png" alt="Order Summary Page Wireframe" />
 </div>
 
 <div align='center'>
-<strong>User Profile Page Wireframe:</strong><br />
 <img src="markdown-files/readme-files/wireframes/profile.png" alt="User Profile Page Wireframe" />
 </div>
 
