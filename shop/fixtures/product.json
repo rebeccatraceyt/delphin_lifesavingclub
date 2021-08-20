@@ -9,6 +9,8 @@
          "category":1,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-bball.png"
       }
    },
@@ -22,6 +24,8 @@
          "category":3,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-bottle.png"
       }
    },
@@ -35,6 +39,8 @@
          "category":3,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-hat.png"
       }
    },
@@ -48,6 +54,8 @@
          "category":2,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-hoodie.png"
       }
    },
@@ -61,6 +69,8 @@
          "category":4,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-racers.png"
       }
    },
@@ -74,6 +84,8 @@
          "category":4,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-shorts.png"
       }
    },
@@ -87,6 +99,8 @@
          "category":3,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-sports.png"
       }
    },
@@ -100,6 +114,8 @@
          "category":3,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-string.png"
       }
    },
@@ -113,6 +129,8 @@
          "category":4,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-togs.png"
       }
    },
@@ -126,6 +144,8 @@
          "category":1,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-tshirt.png"
       }
    },
@@ -139,6 +159,8 @@
          "category":2,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"blk-zipper.png"
       }
    },
@@ -152,6 +174,8 @@
          "category":5,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"goggles-mirror.png"
       }
    },
@@ -165,6 +189,8 @@
          "category":5,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"goggles-junior.png"
       }
    },
@@ -178,6 +204,8 @@
          "category":1,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-bball.png"
       }
    },
@@ -191,6 +219,8 @@
          "category":3,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-bottle.png"
       }
    },
@@ -204,6 +234,8 @@
          "category":5,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-ff.png"
       }
    },
@@ -217,6 +249,8 @@
          "category":3,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-hat.png"
       }
    },
@@ -230,6 +264,8 @@
          "category":2,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-hoodie.png"
       }
    },
@@ -243,6 +279,8 @@
          "category":4,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-racers.png"
       }
    },
@@ -256,6 +294,8 @@
          "category":4,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-shorts.png"
       }
    },
@@ -269,6 +309,8 @@
          "category":4,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-suit.png"
       }
    },
@@ -282,6 +324,8 @@
          "category":4,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-togs.png"
       }
    },
@@ -295,6 +339,8 @@
          "category":1,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"red-tshirt.png"
       }
    },
@@ -308,6 +354,8 @@
          "category":1,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"wht-bball.png"
       }
    },
@@ -321,6 +369,8 @@
          "category":3,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"wht-bottle.png"
       }
    },
@@ -334,6 +384,8 @@
          "category":5,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"wht-towel.png"
       }
    },
@@ -347,6 +399,8 @@
          "category":1,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"wht-tshirt.png"
       }
    },
@@ -360,6 +414,8 @@
          "category":5,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"yellow-armbands.png"
       }
    },
@@ -373,6 +429,8 @@
          "category":5,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"yellow-cap.png"
       }
    },
@@ -386,6 +444,8 @@
          "category":5,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"yellow-ff.png"
       }
    },
@@ -399,6 +459,8 @@
          "category":3,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"yellow-string.png"
       }
    },
@@ -412,6 +474,8 @@
          "category":5,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"yellow-towel.png"
       }
    },
@@ -425,6 +489,8 @@
          "category":1,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"yellow-tshirt.png"
       }
    },
@@ -438,6 +504,8 @@
          "category":2,
          "is_course":false,
          "is_apparel":true,
+         "course_age":"N/A",
+         "course_info":"N/A",
          "image":"yellow-zipper.png"
       }
    },

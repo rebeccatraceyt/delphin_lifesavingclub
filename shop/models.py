@@ -65,19 +65,6 @@ class Product(models.Model):
     course_age = models.CharField(max_length=255, default='10 years')
     image = models.ImageField(null=True, blank=True)
 
-    def image_tag(self):
-        """
-        Displays thumbnail on admin views
-        ref: https://newbedev.com/django-display-image-in-admin-interface
-        """
-        if self.image:
-            return mark_safe(
-                '<img src="%s" style="width: 45px; height:45px;" />'
-                % self.image.url)
-        else:
-            return 'No Image Found'
-    image_tag.short_description = 'Image'
-
     def __str__(self):
         return str(self.name)
 

@@ -1,4 +1,5 @@
 from django.contrib import admin
+import admin_thumbnails
 from .models import (
     Category,
     ProductOption,
@@ -48,6 +49,7 @@ class ProductOptionAdmin(admin.ModelAdmin):
 # ------ All Products ------
 
 
+@admin_thumbnails.thumbnail('image', 'Image')
 class ProductAdmin(admin.ModelAdmin):
     """
     Create admin views for all Products
@@ -60,7 +62,7 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'is_course',
         'is_apparel',
-        'image_tag',
+        'image_thumbnail',
     )
 
 
