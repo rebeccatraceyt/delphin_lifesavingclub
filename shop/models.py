@@ -64,6 +64,9 @@ class Product(models.Model):
     course_age = models.CharField(max_length=255, default='10 years')
     image = models.ImageField(null=True, blank=True)
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return str(self.name)
 

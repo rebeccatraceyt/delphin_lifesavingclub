@@ -76,6 +76,9 @@ class Order(models.Model):
             self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
 
+    class Meta:
+        ordering = ['-date']
+
     def __str__(self):
         return self.order_number
 
