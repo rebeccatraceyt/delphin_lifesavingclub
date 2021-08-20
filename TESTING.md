@@ -570,7 +570,9 @@ Manual testing was conducted on the following elements on the **Past Orders** Pa
 
 - [W3C Markup Validator](https://validator.w3.org/ "Link to W3C Markup Validator") was used to validate the `HTML` code used, using the `Validate by URI` method.
 
-    - All highlighted errors were resolved.
+    - `Duplicate ID` errors were highlighted on the `Academy Programme` and `FAQs` pages. These are due to the iteration of database data and could not be modified.
+    
+    - All other highlighted errors were resolved.
 
 -  [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "Link to W3C CSS Validator") was used to validate the `CSS` code used with the following result:
 
