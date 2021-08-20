@@ -6,7 +6,13 @@
 <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
 {% endblock %}
 
-{% block extra_title %}Thank You{% endblock %}
+{% block extra_title %}
+    {% if not from_profile %}
+        Thank You
+    {% else %}
+        Order {{ order.date }}
+    {% endif %}
+{% endblock %}
 
 {% block content %}
     <div class="container page-margins">
@@ -15,6 +21,13 @@
         {% if not from_profile %}
             <!-- Checkout Logo and Progress Bar -->
             {% include 'checkout/includes/checkout_header.html' %}
+        {% else %}
+            {% block breadcrumb_content %}
+                <ol class="breadcrumb bg-white">
+                    <li class="breadcrumb-item"><a href="{% url 'past_orders' %}" class="text-dark">Past Orders</a></li>
+                    <li class="breadcrumb-item active text-secondary" aria-current="page">{{ order.order_number|truncatechars:9 }}</li>
+                </ol>
+            {% endblock %}
         {% endif %}
         
 
