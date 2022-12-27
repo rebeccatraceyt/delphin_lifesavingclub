@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Product, Category, ProductSelect
 from django.core.paginator import Paginator
+from .forms import ProductForm
 
 
 # ------ All Products ------
@@ -133,3 +135,36 @@ def apparel(request):
     }
 
     return render(request, 'shop/apparel.html', context)
+
+
+# ------ Admin ------
+
+@login_required
+def add_product(request):
+    """
+    Add a product to the store
+    """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you do not have permission to do that')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add product \
+                Please ensure all fields are valid')
+    else:
+        # ensures form errors aren't wiped out
+        form = ProductForm()
+
+    template = 'shop/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

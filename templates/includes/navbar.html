@@ -76,6 +76,10 @@
                         <span class="{% if url_name == 'profile' or url_name == 'past_orders' or url_name == 'account_logout' %}active{% endif %}" >Account</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg-right text-lg-right" aria-labelledby="accountDropdown">
+                        {% if request.user.is_superuser %}
+                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                        <div class="dropdown-divider"></div>
+                        {% endif %}
                         <a class="dropdown-item {% if url_name == 'profile' %}active{% endif %}" href="{% url 'profile' %}">My Profile</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item {% if url_name == 'past_orders' %}active{% endif %}" href="{% url 'past_orders' %}">Order History</a>

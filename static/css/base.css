@@ -462,6 +462,7 @@ ol.breadcrumb {
     padding: 5px;
     font-size: .9rem;
     border: 1px solid var(--black);
+    cursor: pointer;
 }
 .detail-return a,
 .detail-add input {
@@ -479,7 +480,9 @@ ol.breadcrumb {
     font-weight: bold;
 }
 .detail-add input:hover,
-.detail-add input:focus {
+.detail-add input:focus,
+label.detail-add:hover,
+label.detail-add input:focus {
     color: var(--yellow);
 }
 /* Course Info Modal */
@@ -944,6 +947,12 @@ ol.breadcrumb {
     margin: auto;
     font-family: var(--title-font);
     font-size: 1.6rem;
+}
+
+
+/* --- Admin Pages --- */
+input[type="file"] {
+    display: none;
 }
 
 /* --- Error Pages --- */
