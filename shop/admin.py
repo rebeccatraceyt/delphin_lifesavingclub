@@ -63,6 +63,7 @@ class ProductAdmin(admin.ModelAdmin):
         'is_course',
         'is_apparel',
         'image_thumbnail',
+        'approved',
     )
 
 

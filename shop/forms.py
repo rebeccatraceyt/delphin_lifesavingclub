@@ -65,7 +65,11 @@ class ProductForm(forms.ModelForm):
         required=True,
         widget=CustomClearableFileInput
         )
-     
+
+    approved = forms.BooleanField(
+        label="Approve Product",
+        required=False)
+
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-genetate

@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-12 px-md-5 px-lg-3">
                 <p class="text-muted">
-                    Fill all required fields to complete your order
+                    Fill all required fields to create new product
                 </p>
 
                 <!-- Product form -->
@@ -90,6 +90,16 @@
                             {{ form.image }}
                         </div>
                     </fieldset>
+
+                    {% if request.user.is_superuser %}    
+                    <fieldset class="my-2">
+                        <legend class="form-label">Product Approval</legend>
+                        <p class="text-muted">
+                            Only tick this box once the product has been reviewed
+                        </p>
+                        {{ form.approved | as_crispy_field }}
+                    </fieldset>
+                    {% endif %}
 
                     <div class="row justify-content-end">
                         <!-- Add Product Btns -->

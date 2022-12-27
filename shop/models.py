@@ -48,7 +48,8 @@ class Product(models.Model):
     """ Defines all products """
 
     name = models.CharField(max_length=254)
-    description = models.TextField(default='A brief description of the product')
+    description = models.TextField(
+        default='A brief description of the product')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     is_course = models.BooleanField(default=False, blank=False)
     is_apparel = models.BooleanField(default=False, blank=False)
@@ -63,6 +64,7 @@ class Product(models.Model):
     course_info = models.TextField(default='N/A', blank=False)
     course_age = models.CharField(max_length=255, default='10 years')
     image = models.ImageField(null=True, blank=True)
+    approved = models.BooleanField(default=False)
 
     class Meta:
         """
