@@ -3,33 +3,36 @@
 
 {% block extra_title %}Add Product{% endblock %}
 
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
-    <div class="overlay"></div>
     <div class="container page-margins">
 
         <!-- Page Header -->
         <div class="row">
             <div class="col-12 page-title">
-                <h3>Add a Product</h3>
+                <h3>Product Manager</h3>
                 <hr class="section-divider">
             </div>
         </div>
 
         <!-- Page Content -->
-        <div class="row">
-            <div class="col-12 px-md-5 px-lg-3">
-                <p class="text-muted">
-                    Fill all required fields to create new product
-                </p>
+        <div class="row page-content">
+
+
+            <!-- Include buttons -->
+            <div class="col-12 col-md-4 lg-border order-md-1">
+                {% include 'shop/includes/product_management_btns.html' %}
+            </div>
+
+            <hr class="account-hr d-md-none">
+
+            <div class="col-12 col-md-8 px-md-5 order-md-2">
+
+                <div class="page-title">
+                    <h4>Add Product</h4>
+                    <p class="text-muted">
+                        Fill all required fields to create new product
+                    </p>
+                </div>
 
                 <!-- Product form -->
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
@@ -103,12 +106,12 @@
 
                     <div class="row justify-content-end">
                         <!-- Add Product Btns -->
-                        <div class="col-6 detail-btns">
+                        <div class="col-12 col-xl-6 detail-btns">
                             <div class="row ">
                                 <!-- Returns user to previous page -->
                                 <div class="col-6 no-gutters">
                                     <div class="detail-return btn-shadow">
-                                        <a title="Back to Shop" href="{% url 'all_products' %}">
+                                        <a title="Back to Product Manager" href="{% url 'product_management' %}">
                                             Cancel
                                         </a>
                                     </div>

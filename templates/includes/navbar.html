@@ -77,7 +77,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg-right text-lg-right" aria-labelledby="accountDropdown">
                         {% if request.user.is_superuser %}
-                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                        <a href="{% url 'product_management' %}" class="dropdown-item">Product Management</a>
                         <div class="dropdown-divider"></div>
                         {% endif %}
                         <a class="dropdown-item {% if url_name == 'profile' %}active{% endif %}" href="{% url 'profile' %}">My Profile</a>

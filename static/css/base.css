@@ -101,6 +101,10 @@ span.active,
     font-family: var(--title-font);
     font-size: 2.1rem;
 }
+.page-title h4 {
+    font-family: var(--title-font);
+    font-size: 2.2rem;
+}
 .pages-link {
     color: var(--black);
     transition: all 0.5s ease 0s;
@@ -951,9 +955,25 @@ label.detail-add input:focus {
 
 
 /* --- Admin Pages --- */
+/* choose image btn */
 input[type="file"] {
     display: none;
 }
+
+/* review & approve */
+.review-btn {
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
+}
+
+.review-btn:hover,
+.review-btn:focus {
+    color: var(--yellow);
+}
+
 
 /* --- Error Pages --- */
 .error-box {

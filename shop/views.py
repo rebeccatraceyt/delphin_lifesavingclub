@@ -140,6 +140,26 @@ def apparel(request):
 # ------ Admin ------
 
 @login_required
+def product_management(request):
+    """
+    Manage products in the store
+    """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you do not have permission to do that')
+        return redirect(reverse('home'))
+
+    to_be_approved = Product.objects.filter(approved=False)
+
+    template = 'shop/product_management.html'
+    context = {
+        'to_be_approved': to_be_approved,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
 def add_product(request):
     """
     Add a product to the store

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block extra_title %}Product Management{% endblock %}
+
+{% block content %}
+    <div class="container page-margins">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-12 page-title">
+                <h3>Product Manager</h3>
+                <hr class="section-divider">
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="row page-content">
+
+            <!-- Include buttons -->
+            <div class="col-12 col-md-4 lg-border order-md-1">
+                {% include 'shop/includes/product_management_btns.html' %}
+            </div>
+
+            <hr class="account-hr d-md-none">
+
+            <div class="col-12 col-md-8 px-md-5 order-md-2">
+                <div class="row">
+                    <div class="col-12 page-title">
+                        <h4>Products to review:</h4>
+                        <p class="text-muted text-center text-md-left">
+                            All products must be reviewed before approval
+                        </p>
+                    </div>
+                    <!-- Product Card -->
+                    {% for product in to_be_approved %}
+                    <div class="col-12 col-md-4 p-3 px-md-1">
+                        <div class="row product-card">
+                            <div class="col-12 p-0">
+                                {% if product.image.url %}
+                                    <a class="product-img" href="{% url 'product_detail' product.id %}">
+                                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                {% else %}
+                                    <a class="product-img" href="{% url 'product_detail' product.id %}">
+                                        <img src="{% static 'img/no-image.png' %}" alt="{{ product.name }}">
+                                    </a>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <h3 class="product-name">{{ product.name }}</h3>
+                                </a>
+                            </div>
+                            <div class="col-12 review-btn">
+                                <a href="#">
+                                    Review and Approve
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+        
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'js/profile.js' %}"></script>
+{% endblock %}
