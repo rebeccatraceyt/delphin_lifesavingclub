@@ -14,7 +14,7 @@ def all_products(request):
     """
     Returns all products
     """
-    products = Product.objects.all()
+    products = Product.objects.filter(approved=True)
 
     # from django docs
     paginator = Paginator(products, 12)  # Show 12 products per page.
@@ -36,7 +36,7 @@ def search(request):
     Edited from Boutique Ado Mini Project
     """
 
-    products = Product.objects.all()
+    products = Product.objects.filter(approved=True)
 
     # set default to none to avoid errors
     query = None
@@ -68,21 +68,45 @@ def product_detail(request, product_id):
     Returns specified product
     """
     product = get_object_or_404(Product, pk=product_id)
-    product_options = product.product_select.all()
 
-    # gets the product variations to select
-    product_select = ProductSelect.objects.filter(
-        product_select=product_options,
-        product=product)
-    product_selected = product_select
+    if not request.user.is_superuser:
+        if product.approved:
+            product_options = product.product_select.all()
 
-    context = {
-        'product': product,
-        'product_options': product_options,
-        'product_selected': product_selected,
-    }
+            # gets the product variations to select
+            product_select = ProductSelect.objects.filter(
+                product_select=product_options,
+                product=product)
+            product_selected = product_select
 
-    return render(request, 'shop/product.html', context)
+            context = {
+                'product': product,
+                'product_options': product_options,
+                'product_selected': product_selected,
+            }
+        
+            return render(request, 'shop/product.html', context)
+    
+        else:
+            messages.error(request, 'Sorry, this product does not exist yet')
+            return redirect(reverse('home'))
+    
+    else:
+        product_options = product.product_select.all()
+
+        # gets the product variations to select
+        product_select = ProductSelect.objects.filter(
+            product_select=product_options,
+            product=product)
+        product_selected = product_select
+
+        context = {
+            'product': product,
+            'product_options': product_options,
+            'product_selected': product_selected,
+        }
+    
+        return render(request, 'shop/product.html', context)
 
 
 # ------ Courses ------
@@ -93,7 +117,7 @@ def courses(request):
     Returns All Courses
     """
 
-    products = Product.objects.all()
+    products = Product.objects.filter(approved=True)
     categories = None
 
     if request.GET:
@@ -119,7 +143,7 @@ def apparel(request):
     Returns All Apparel
     """
 
-    products = Product.objects.all()
+    products = Product.objects.filter(approved=True)
     categories = None
 
     if request.GET:
@@ -237,7 +261,7 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that')
         return redirect(reverse('home'))
-    
+
     # get product (or 404)
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
