@@ -63,6 +63,21 @@
 
             <!-- Product Info -->
             <div class="col-12 col-md-6 col-lg-6 detail-text p-sm-4 p-md-1">
+
+                {% if request.user.is_superuser %}
+                    <div class="row pl-3 pb-3">
+                        <div class="col-12 col-md-6 col-lg-4 review-btn rounded-lg">
+                            {% if product.approved %}
+                                <i class="far fa-check-circle"></i> Approved
+                            {% else %}
+                                <a href="{% url 'edit_product' product.id %}">
+                                    Review and Approve
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+                
                 <div class="row">
 
                     <!-- Course Weeks  -->
