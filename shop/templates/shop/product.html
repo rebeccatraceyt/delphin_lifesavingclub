@@ -22,11 +22,31 @@
 
         <!-- Page Header -->
         <div class="row">
-            <div class="col-12 page-title">
+            <div class="col-12 col-md-10 page-title">
                 <h3>{{ product.name }}</h3>
-                <hr class="section-divider">
             </div>
-            
+            {% if request.user.is_superuser %}
+            <div class="col-12 col-md-2">
+                <div class="row justify-content-end">
+                    <!-- Deletes Product -->
+                    <div class="col-6 no-gutters p-1">
+                        <div class="detail-return btn-shadow">
+                            <a title="Delete Product" href="{% url 'product_management' %}">
+                                Delete
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Directs user to Edit Product page -->
+                    <div class="col-6 no-gutters p-1">
+                        <div class="detail-add btn-shadow">
+                            <a title="Edit Product" href="{% url 'edit_product' product.id %}">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <hr class="section-divider">
         </div>
 
         <!-- Page Content -->

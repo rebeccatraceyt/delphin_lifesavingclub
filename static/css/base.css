@@ -469,7 +469,8 @@ ol.breadcrumb {
     cursor: pointer;
 }
 .detail-return a,
-.detail-add input {
+.detail-add input,
+.detail-add a {
     width: 100%;
     padding: 0 10px;
     transition: all 0.5s ease 0s;
@@ -486,7 +487,9 @@ ol.breadcrumb {
 .detail-add input:hover,
 .detail-add input:focus,
 label.detail-add:hover,
-label.detail-add input:focus {
+label.detail-add input:focus,
+.detail-add a:hover,
+.detail-add a:focus {
     color: var(--yellow);
 }
 /* Course Info Modal */

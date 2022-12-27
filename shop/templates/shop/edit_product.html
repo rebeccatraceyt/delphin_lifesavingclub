@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}Add Product{% endblock %}
+
+{% block content %}
+    <div class="container page-margins">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-12 page-title">
+                <h3>Product Manager</h3>
+                <hr class="section-divider">
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="row page-content">
+
+
+            <!-- Include buttons -->
+            <div class="col-12 col-md-4 lg-border order-md-1">
+                {% include 'shop/includes/product_management_btns.html' %}
+            </div>
+
+            <hr class="account-hr d-md-none">
+
+            <div class="col-12 col-md-8 px-md-5 order-md-2">
+
+                <div class="page-title">
+                    <h4>Edit Product:</h4>
+                </div>
+
+                <!-- Product form -->
+                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <fieldset class="my-2">
+                        <legend class="form-label">Product Name</legend>
+                        {{ form.name | as_crispy_field }}
+                    </fieldset>
+
+                    <fieldset class="my-2">
+                        <legend class="form-label">Product Description</legend>
+                        {{ form.description | as_crispy_field }}
+                    </fieldset>
+
+                    <fieldset class="my-2">
+                        <legend class="form-label">Product Price</legend>
+                        {{ form.price | as_crispy_field }}
+                    </fieldset>
+
+                    <fieldset class="my-2">
+                        <legend class="form-label">Product Type</legend>
+                        <p class="text-muted">
+                            Only select one option
+                        </p>
+                        <div class="col-6 p-0">
+                            {{ form.is_course | as_crispy_field }}
+                        </div>
+                        <div class="col-6 p-0">
+                            {{ form.is_apparel | as_crispy_field }}
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="my-2">
+                        <legend class="form-label">Product Category</legend>
+                        {{ form.category | as_crispy_field }}
+                    </fieldset>
+
+                    <fieldset class="my-2">
+                        <legend class="form-label">Product Options</legend>
+                        <p class="text-muted">
+                            Select all that apply
+                        </p>
+                        {{ form.product_select | as_crispy_field }}
+                    </fieldset>
+
+                    <fieldset class="my-2">
+                        <legend class="form-label">Course Information</legend>
+                        <p class="text-muted">
+                            Only complete these fields if applicable
+                        </p>
+                        {{ form.course_info | as_crispy_field }}
+                        {{ form.course_age | as_crispy_field }}
+                    </fieldset>
+
+                    <fieldset class="my-2">
+                        <legend class="form-label">Product Image</legend>
+                        <div class="p-0">
+                            {{ form.image }}
+                        </div>
+                    </fieldset>
+
+                    {% if request.user.is_superuser %}    
+                    <fieldset class="my-2">
+                        <legend class="form-label">Product Approval</legend>
+                        <p class="text-muted">
+                            Only tick this box once the product has been reviewed
+                        </p>
+                        {{ form.approved | as_crispy_field }}
+                    </fieldset>
+                    {% endif %}
+
+                    <div class="row justify-content-end">
+                        <!-- Add Product Btns -->
+                        <div class="col-12 col-xl-6 detail-btns">
+                            <div class="row ">
+                                <!-- Returns user to previous page -->
+                                <div class="col-6 no-gutters">
+                                    <div class="detail-return btn-shadow">
+                                        <a title="Back to Product Manager" href="{% url 'product_management' %}">
+                                            Cancel
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Adds item to shopping bag -->
+                                <div class="col-6 no-gutters">
+                                    <div class="detail-add btn-shadow">
+                                        <input type="submit" value="Edit Product">
+                                    </div>
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- Handles notification to user of what the new image is
+Listen to change event and get the new image -->
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
+{% endblock %}
