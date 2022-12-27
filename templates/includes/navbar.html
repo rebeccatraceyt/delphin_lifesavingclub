@@ -72,9 +72,9 @@
                 {% if user.is_authenticated %}
                 {% if request.user.is_superuser %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if url_name == 'product_management' or url_name == 'add_product' %}active{% endif %}" href="#" id="adminDropdown" role="button" data-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle {% if url_name == 'product_management' or url_name == 'add_product' or url_name == 'edit_product' %}active{% endif %}" href="#" id="adminDropdown" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            <span class="{% if url_name == 'product_management' or url_name == 'add_product' %}active{% endif %}" >Admin</span>
+                            <span class="{% if url_name == 'product_management' or url_name == 'add_product' or url_name == 'edit_product' %}active{% endif %}" >Admin</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg-right text-lg-right" aria-labelledby="adminDropdown">
                             <a href="{% url 'product_management' %}" class="dropdown-item">Product Management</a>

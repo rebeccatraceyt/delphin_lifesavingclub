@@ -7,7 +7,12 @@
             <a href="{% url 'add_product' %}">Add Product</a>
         </div>
         <div class="col-12 profile-btns profile-blk btn-shadow ">
-            <a href="{% url 'product_management' %}">Products to review</a>
+            <a href="{% url 'product_management' %}">Products to Review</a>
         </div>
+        {% if editing == True %}
+        <div class="col-12 profile-btns profile-wht btn-shadow ">
+            <a href="{% url 'delete_product' product.id  %}">Delete Product</a>
+        </div>
+        {% endif %}
     </div>
 </div>
