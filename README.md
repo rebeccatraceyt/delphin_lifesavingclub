@@ -5,7 +5,7 @@
 <div align='center'>
 <p>The <strong>Delphin Lifesaving Club</strong> e-shop was designed, built and deployed by Rebecca Tracey-Timoney as the fourth and final Milestone Project to be completed for the duel Software Development Diploma from The Code Institute and UCD. The purpose of this online shop is to provide a virtual shopping environment for club members (future and current) to browse and purchase Delphin products, including classes and club apparel. The website provides a smooth and uncomplicated online shopping experience for users, with its simplistic and intuitive design.</p>
 
-[View the live project here](https://delphin-lifesavingclub.herokuapp.com/ "Link to Delphin page")
+[View the live project here](https://delphin-lifesavingclub.onrender.com/ "Link to Delphin page")
 <hr>
 </div>
 
@@ -522,14 +522,14 @@ Each page of the websire features a consistently responsive and intuitive naviat
 
 #### **General Pages:**
 
-**[Home Page](https://delphin-lifesavingclub.herokuapp.com/ "Link to Home page")**
+**[Home Page](https://delphin-lifesavingclub.onrender.com/ "Link to Home page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 |  Hero Image  | The hero image depicts a pool, clearly defining the website's affiliation and purpose for users (for club interaction) |
 | Club Statement and Logo | The club statement and logo are overlayed on the hero image, introducing the club. |
 | Duel Links | Links are displayed to provide users quick-link access to product categories. Both images and buttons redirect users to their respective categories. |
 
-**[All Products Page](https://delphin-lifesavingclub.herokuapp.com/shop/ "Link to All Products page")**
+**[All Products Page](https://delphin-lifesavingclub.onrender.com/shop/ "Link to All Products page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Breadcrumbs | Page breadcrumbs allow users to backtrack to the **Home** page |
@@ -537,7 +537,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Product Links | All products are displayed on this page, allowing users to select their preference. The product cards provide users with a link from the product image and name to the product details page. |
 | Pagination | Pagination displays 12 products per page, avoiding unneccary scrolling. |
 
-**[Apparel Page](https://delphin-lifesavingclub.herokuapp.com/shop/apparel?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories "Link to Apparel page") & [Courses Page](https://delphin-lifesavingclub.herokuapp.com/shop/apparel?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding "Link to Courses page")**
+**[Apparel Page](https://delphin-lifesavingclub.onrender.com/shop/apparel?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories "Link to Apparel page") & [Courses Page](https://delphin-lifesavingclub.onrender.com/shop/apparel?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding "Link to Courses page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Breadcrumbs | Allows users to return to the **All Products** or **Home** page. |
@@ -545,7 +545,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Product Links | The product cards provide users with a link from the product image and name to the product details page. |
 | Course Information Modal | Specific to the Courses page, an information modal is displayed on click (represented by an **i** icon), providing information on purchasing a course.|
 
-**[Search Page](https://delphin-lifesavingclub.herokuapp.com/shop/search "Link to Search page")**
+**[Search Page](https://delphin-lifesavingclub.onrender.com/shop/search "Link to Search page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Input field | Allowing users to enter their search query, with an appended search button. |
@@ -554,7 +554,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Dynamic feedback | When a user enters a term, there is dynamic text that displays the number of results returned and their search term. If there are no results, conditional text explains this to the user. |
 | Reset Button | Clicking the **Search title** will reset the search bar.|
 
-**[Individual Product Page](https://delphin-lifesavingclub.herokuapp.com/shop/product/1 "Link to Example Product page")**
+**[Individual Product Page](https://delphin-lifesavingclub.onrender.com/shop/product/1 "Link to Example Product page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Breadcrumbs | Allows users to return the category page for that product (Apparel or Courses) or **Home** page. |
@@ -563,7 +563,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Back Button | Returns users back to the shop page, for convenience.|
 | Add to Bag button | Allows users to add their selection to their shopping bag |
 
-**[Login Page](https://delphin-lifesavingclub.herokuapp.com/accounts/login/ "Link to Login page")**
+**[Login Page](https://delphin-lifesavingclub.onrender.com/accounts/login/ "Link to Login page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Input fields | Allows users to enter their username, or email, and password |
@@ -571,32 +571,32 @@ Each page of the websire features a consistently responsive and intuitive naviat
 | Reset Password link | Redirecting users to reset their password **(allauth functionality)** |
 | Register button | call-to-action button directing users to signup page |
 
-**[Register Page](https://delphin-lifesavingclub.herokuapp.com/accounts/signup/ "Link to Register page")**
+**[Register Page](https://delphin-lifesavingclub.onrender.com/accounts/signup/ "Link to Register page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Input fields |  Allows users to enter their information to register an account |
 | Signup button | Allows users to create their account **(allauth functionality)**|
 
-**[Club Ethos Page](https://delphin-lifesavingclub.herokuapp.com/pages/ethos "Link to Club Ethos page")**
+**[Club Ethos Page](https://delphin-lifesavingclub.onrender.com/pages/ethos "Link to Club Ethos page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Call to action links | Links directing users to external pages for clarity purposes. Opens page on new tab. |
 
-**[Academy Programme Page](https://delphin-lifesavingclub.herokuapp.com/pages/swim_programme "Link to Academy Programme page")**
+**[Academy Programme Page](https://delphin-lifesavingclub.onrender.com/pages/swim_programme "Link to Academy Programme page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Accordion | An accordion is used for each individual class, with the class name and age range displayed. Clicking the level opens the card and displays information pertaining to that level. |
 | Hide/Show Buttons | A `Hide All` and `Show All` button are used to provide users with the capacity to open all cards or close all cards, for convienience. |
 | Call to action links | Links directing users to external pages open on new tab, while internal pages are redirect users. |
 
-**[FAQs Page](https://delphin-lifesavingclub.herokuapp.com/pages/faqs "Link to FAQs page")**
+**[FAQs Page](https://delphin-lifesavingclub.onrender.com/pages/faqs "Link to FAQs page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Accordion | An accordion is used for each question, with the question displayed. Clicking the question opens the card and displays the answer. |
 | Hide/Show Buttons | A `Hide All` and `Show All` button are used to provide users with the capacity to open all cards or close all cards, for convienience. |
 | Call to action links | Internal links redirecting users to useful pages within the site. |
 
-**[Contact Page](https://delphin-lifesavingclub.herokuapp.com/pages/contact "Link to Contact page")**
+**[Contact Page](https://delphin-lifesavingclub.onrender.com/pages/contact "Link to Contact page")**
 | Feature      | Description  |
 |:--------------:|--------------|
 | Embeded Google Maps | A Google maps embed was used to provide users with an interactive map, with the pin dropped on the pool location. ([Map reference](https://www.embedgooglemap.net/ "Link to Google Maps Embedding page")) |
@@ -679,7 +679,7 @@ Each page of the websire features a consistently responsive and intuitive naviat
 The developer encountered a number of issues during the development of the website, with the noteworthy ones listed below, along with solutions or ideas to implement in the future.
 
 **Pagination** <br />
-In implementing the pagination feature (allowing only 12 products to be displayed on the page at any given time), the developer encountered an issue wherby, when applying pagination on the filtered pages, **[All Apparel](https://delphin-lifesavingclub.herokuapp.com/shop/apparel?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories "Link to All Apparel page"), [All Courses](https://delphin-lifesavingclub.herokuapp.com/shop/courses?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding "Link to All Courses page") and [Search](https://delphin-lifesavingclub.herokuapp.com/shop/search "Link to Search page")**, the feature would reset the filters set (e.g. the product categories) from the second page, meaning, that instead of the refined search the user had selected, all products would be displayed. This was not practical and rendered the category filtering system useless, so the devloper had to omit the pagination on these pages. The work around was to provide category filtering buttons at the top of the page, so that the user did not have to scroll through all products, but could instead just display the sub-categories they desired.
+In implementing the pagination feature (allowing only 12 products to be displayed on the page at any given time), the developer encountered an issue wherby, when applying pagination on the filtered pages, **[All Apparel](https://delphin-lifesavingclub.onrender.com/shop/apparel?category=tshirts,jacket_hoodies,accessories,swimwear,swim_accessories "Link to All Apparel page"), [All Courses](https://delphin-lifesavingclub.onrender.com/shop/courses?category=swimming_jnr,swimming_snr,lifesaving,lifeguarding "Link to All Courses page") and [Search](https://delphin-lifesavingclub.onrender.com/shop/search "Link to Search page")**, the feature would reset the filters set (e.g. the product categories) from the second page, meaning, that instead of the refined search the user had selected, all products would be displayed. This was not practical and rendered the category filtering system useless, so the devloper had to omit the pagination on these pages. The work around was to provide category filtering buttons at the top of the page, so that the user did not have to scroll through all products, but could instead just display the sub-categories they desired.
 
 **Users App** <br />
 The original design of the User model was called the `Profile` model. This was a fatal error on the developers part as it clashed with the integrated profile authorisation from `allauth`. As a result, the developer had to revert two commits and re-create the profile app as the new `users` app to restore functionality.
